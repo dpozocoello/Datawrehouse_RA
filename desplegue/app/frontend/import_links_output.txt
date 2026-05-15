@@ -1,0 +1,12 @@
+--- Checking Import Links ---
+   inre_id  chsr_id prco_id
+0      138        8    None
+1      168       17    None
+2      156       18    None
+3      161        9    None
+4      157       18    None
+5      149        8    None
+6      146        8    None
+7      177       17    None
+8      141       15    None
+9      159       17    None

@@ -1,0 +1,65 @@
+--- Schema for stg.stg_chemical_sustances_records ---
+                     column_name                    data_type
+0                        chsr_id                       bigint
+1                        prco_id             double precision
+2  chsr_identification_rep_legal                         text
+3            chsr_name_rep_legal                         text
+4    chsr_substance_registration                         text
+5                      chsr_code                         text
+6               chsr_valid_since  timestamp without time zone
+7               chsr_valid_until  timestamp without time zone
+8                    chsr_status                      boolean
+
+
+--- Schema for dw.dim_chemical_importer ---
+         column_name                    data_type
+0       importer_key                      integer
+1        importer_id                       bigint
+2      importer_name            character varying
+3     identification            character varying
+4  registration_code            character varying
+5         is_current                      boolean
+6           date_add  timestamp without time zone
+7        date_update  timestamp without time zone
+
+
+--- Schema for dw.fact_chemical_import ---
+            column_name          data_type
+0           sk_proyecto             bigint
+1          chemical_key             bigint
+2          importer_key             bigint
+3             sk_tiempo             bigint
+4      geo_location_key             bigint
+5   quantity_authorized            numeric
+6            net_weight            numeric
+7          gross_weight            numeric
+8         import_status  character varying
+9       processing_code  character varying
+10      document_number  character varying
+11        source_system  character varying
+
+
+--- Schema for dw.fact_chemical_movement ---
+      column_name          data_type
+0     sk_proyecto             bigint
+1    chemical_key             bigint
+2    importer_key             bigint
+3       sk_tiempo             bigint
+4  quantity_entry            numeric
+5   quantity_exit            numeric
+6  invoice_number  character varying
+7   operator_name  character varying
+
+
+--- Schema for dw.fact_chemical_declaration ---
+         column_name data_type
+0        sk_proyecto    bigint
+1       importer_key    bigint
+2          sk_tiempo    bigint
+3   initial_quantity   numeric
+4     final_quantity   numeric
+5         is_on_time   boolean
+6   declaration_year   integer
+7  declaration_month   integer
+
+

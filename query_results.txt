@@ -1,0 +1,9 @@
+--- Querying Project in SUIA ---
+Columns: ['prco_id', 'prco_cua']
+
+--- Querying RGD Mapping ---
+Columns: ['wapr_id', 'ware_id', 'id_proyect', 'wapr_description_system']
+(9623, 10578, 220472, 'digitalizacion')
+
+--- Querying Project with prco_id = 220472 ---
+Columns: ['prco_id', 'prco_cua']

@@ -1,0 +1,31 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Documentación Data Warehouse RA</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 40px; }
+            h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+            pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ddd; }
+            code { font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; color: #d63384; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+            th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+            th { background-color: #f8f9fa; }
+            .page-break { page-break-before: always; }
+            .signatures { margin-top: 50px; display: flex; justify-content: space-between; }
+            .sig-box { border-top: 1px solid #000; width: 30%; text-align: center; padding-top: 10px; }
+        </style>
+    </head>
+    <body>
+        <h1>DOCUMENTACIÓN TÉCNICA: DATA WAREHOUSE RA - REGISTRO GENERADOR DE DESECHOS (RGD)<br>**Versión:** 2.1.0<br>**Fecha:** 13 de Mayo de 2026<br><br>---<br><br>#<h1>0. PORTADA Y CONTROL DE VERSIONES<br><br>##<h1>Proyecto: Estabilización y Granularidad del Pipeline RGD<br>**Responsable:** Ingeniería de Datos / Arquitectura de Datos<br>**Alcance:** Ingesta Integral, Modelado Dimensional y Geoposicionamiento.<br><br>| Versión | Fecha | Autor | Cambios |<br>| :--- | :--- | :--- | :--- |<br>| 1.0.0 | 01/04/2026 | Arquitecto RA | Estructura inicial del DWH. |<br>| 2.0.0 | 10/05/2026 | Ingeniería Datos | Integración de Puntos de Generación. |<br>| 2.1.0 | 13/05/2026 | Antigravity AI | Solución de Unicidad y Geo-Resolution. |<br><br>---<br><br>#<h1>1. ARQUITECTURA DEL SISTEMA<br><br>El sistema opera bajo un modelo **Híbrido de Ingeniería de Datos** que combina la robustez de Pentaho (Spoon) para orquestación legacy y Python para lógica avanzada de geoposicionamiento.<br><br>##<h1>Diagrama de Flujo de Datos<br>- **Fuentes**: SUIA III (Servidor 179) y COA (RCOA).<br>- **Staging**: Tablas temporales en el esquema `stg`.<br>- **Enriquecimiento**: Módulo Python `geo_resolver.py` inyecta geografía vía GeoJSON.<br>- **DW**: Almacenamiento final en el esquema `dw`.<br><br>---<br><br>#<h1>2. MODELO DIMENSIONAL (ESTRELLA)<br><br>Se ha implementado una granularidad a nivel de **Punto de Generación**, permitiendo análisis geoespaciales precisos.<br><br>##<h1>Entidades Principales<br>- **dim_waste_generator**: Metadatos del establecimiento.<br>- **dim_punto_generacion**: Ubicación exacta, coordenadas y geografía normalizada.<br>- **fact_waste_generation**: Hechos de generación, entrega y almacenamiento.<br><br>---<br><br>#<h1>3. PROCESOS ETL Y GEOPOSICIONAMIENTO<br><br>##<h1>Pipeline de Ingesta<br>1. **Extracción**: Python extrae datos enriquecidos con JOINs geográficos desde la fuente.<br>2. **Geo-Resolución**: Si un punto carece de provincia/cantón, el motor de Python realiza un cruce espacial usando coordenadas X/Y.<br>3. **Carga (UPSERT)**: Se utiliza lógica `ON CONFLICT` para mantener la integridad de los datos por Punto de Generación.<br><br>---<br><br>#<h1>4. GUÍA OPERACIONAL<br><br>##<h1>Protocolo de Mantenimiento<br>Para recuperar el sistema ante errores de restricción o duplicados:<br>1. Ejecutar `force_cleanup.py`.<br>2. Aplicar cambios con `apply_sql_changes.py`.<br>3. Lanzar el orquestador `run_full_rgd_etl.py`.<br><br>---<br><br>#<h1>5. GLOSARIO DE TÉRMINOS DE NEGOCIO<br><br>- **RGD**: Registro Generador de Desechos. Identificador único legal del establecimiento.<br>- **Punto de Generación**: Sitio físico específico dentro de un predio donde se origina el residuo.<br>- **Métrica Generada**: Volumen bruto de residuos reportados en el año fiscal.<br><br>---<br><br>#<h1>FIRMAS DE RESPONSABILIDAD<br><br>| ELABORADO POR | REVISADO POR | APROBADO POR |<br>| :--- | :--- | :--- |<br>| <br><br>____________________ | <br><br>____________________ | <br><br>____________________ |<br>| **Ingeniería de Datos** | **Arquitectura de Datos** | **Gerencia de TI / Producto** |<br>| Fecha: 13/05/2026 | Fecha: 13/05/2026 | Fecha: 13/05/2026 |<br>
+        <div class="page-break"></div>
+        <h2>Firmas de Responsabilidad</h2>
+        <div class="signatures">
+            <div class="sig-box">Elaborado por:<br>Ingeniería de Datos</div>
+            <div class="sig-box">Revisado por:<br>Arquitectura de Datos</div>
+            <div class="sig-box">Aprobado por:<br>Gerencia de TI</div>
+        </div>
+    </body>
+    </html>
+    

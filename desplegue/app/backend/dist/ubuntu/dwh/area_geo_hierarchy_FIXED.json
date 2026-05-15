@@ -1,0 +1,8348 @@
+[
+    {
+        "sk": 27410,
+        "province": "AGUA INTERIOR INSULAR",
+        "canton": "AGUA INTERIOR INSULAR",
+        "parish": "AGUA INTERIOR INSULAR"
+    },
+    {
+        "sk": 26835,
+        "province": "AGUAS INTERIORES",
+        "canton": "AGUA INTERIOR CONTINENTAL CENTRO",
+        "parish": "AGUA INTERIOR CONTINENTAL CENTRO"
+    },
+    {
+        "sk": 26563,
+        "province": "AGUAS INTERIORES",
+        "canton": "AGUA INTERIOR CONTINENTAL NORTE",
+        "parish": "AGUA INTERIOR CONTINENTAL NORTE"
+    },
+    {
+        "sk": 27240,
+        "province": "AGUAS INTERIORES",
+        "canton": "AGUA INTERIOR CONTINENTAL SUR",
+        "parish": "AGUA INTERIOR CONTINENTAL SUR"
+    },
+    {
+        "sk": 27044,
+        "province": "AGUAS INTERNACIONALES",
+        "canton": "AGUAS INTERNACIONALES",
+        "parish": "AGUAS INTERNACIONALES"
+    },
+    {
+        "sk": 26426,
+        "province": "AZUAY",
+        "canton": "CAMILO PONCE ENRÍQUEZ",
+        "parish": "CAMILO PONCE ENRIQUEZ"
+    },
+    {
+        "sk": 26486,
+        "province": "AZUAY",
+        "canton": "CAMILO PONCE ENRÍQUEZ",
+        "parish": "EL CARMEN DE PIJILÍ"
+    },
+    {
+        "sk": 27501,
+        "province": "AZUAY",
+        "canton": "CHORDELEG",
+        "parish": "CHORDELEG"
+    },
+    {
+        "sk": 26675,
+        "province": "AZUAY",
+        "canton": "CHORDELEG",
+        "parish": "LA UNION"
+    },
+    {
+        "sk": 26566,
+        "province": "AZUAY",
+        "canton": "CHORDELEG",
+        "parish": "LUIS GALARZA ORELLANA (CAB. EN DELEGSOL)"
+    },
+    {
+        "sk": 26991,
+        "province": "AZUAY",
+        "canton": "CHORDELEG",
+        "parish": "PRINCIPAL"
+    },
+    {
+        "sk": 27663,
+        "province": "AZUAY",
+        "canton": "CHORDELEG",
+        "parish": "SAN MARTIN DE PUZHIO"
+    },
+    {
+        "sk": 26336,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "BAÑOS"
+    },
+    {
+        "sk": 26536,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "BELLAVISTA"
+    },
+    {
+        "sk": 26802,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "CAÑARIBAMBA"
+    },
+    {
+        "sk": 27243,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "CHAUCHA"
+    },
+    {
+        "sk": 27583,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "CHECA (JIDCAY)"
+    },
+    {
+        "sk": 26973,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "CHIQUINTAD"
+    },
+    {
+        "sk": 27689,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "CUENCA"
+    },
+    {
+        "sk": 27367,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "CUENCA, CABECERA CANTONAL Y CAPITAL PROVINCIAL."
+    },
+    {
+        "sk": 26613,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "CUMBE"
+    },
+    {
+        "sk": 26364,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "EL BATÁN"
+    },
+    {
+        "sk": 26845,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "EL SAGRARIO"
+    },
+    {
+        "sk": 26540,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "EL VECINO"
+    },
+    {
+        "sk": 27523,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "GIL RAMÍREZ DÁVALOS"
+    },
+    {
+        "sk": 26878,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "HERMANO MIGUEL"
+    },
+    {
+        "sk": 26423,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "HUAYNACÁPAC"
+    },
+    {
+        "sk": 27290,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "LLACAO"
+    },
+    {
+        "sk": 26651,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "MACHÁNGARA"
+    },
+    {
+        "sk": 27144,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "MOLLETURO"
+    },
+    {
+        "sk": 27552,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "MONAY"
+    },
+    {
+        "sk": 27586,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "NULTI"
+    },
+    {
+        "sk": 26528,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "OCTAVIO CORDERO PALACIOS (STA. ROSA)"
+    },
+    {
+        "sk": 27130,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "PACCHA"
+    },
+    {
+        "sk": 26390,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "QUINGEO"
+    },
+    {
+        "sk": 27527,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "RICAURTE"
+    },
+    {
+        "sk": 27680,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SAGRARIO"
+    },
+    {
+        "sk": 26827,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SAN BLAS"
+    },
+    {
+        "sk": 27426,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SAN JOAQUIN"
+    },
+    {
+        "sk": 27345,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SAN SEBASTIAN"
+    },
+    {
+        "sk": 27319,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SAN SEBASTIÁN"
+    },
+    {
+        "sk": 27687,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SANTA ANA"
+    },
+    {
+        "sk": 26738,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SAYAUSI"
+    },
+    {
+        "sk": 26839,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SIDCAY"
+    },
+    {
+        "sk": 27081,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SININCAY"
+    },
+    {
+        "sk": 26378,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "SUCRE"
+    },
+    {
+        "sk": 26676,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "TARQUI"
+    },
+    {
+        "sk": 26437,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "TOTORACOCHA"
+    },
+    {
+        "sk": 27084,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "TURI"
+    },
+    {
+        "sk": 26401,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "VALLE"
+    },
+    {
+        "sk": 27483,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "VICTORIA DEL PORTETE (IRQUIS)"
+    },
+    {
+        "sk": 26624,
+        "province": "AZUAY",
+        "canton": "CUENCA",
+        "parish": "YANUNCAY"
+    },
+    {
+        "sk": 26361,
+        "province": "AZUAY",
+        "canton": "EL PAN",
+        "parish": "EL PAN"
+    },
+    {
+        "sk": 26446,
+        "province": "AZUAY",
+        "canton": "EL PAN",
+        "parish": "SAN VICENTE"
+    },
+    {
+        "sk": 26374,
+        "province": "AZUAY",
+        "canton": "GIRON",
+        "parish": "ASUNCION"
+    },
+    {
+        "sk": 27621,
+        "province": "AZUAY",
+        "canton": "GIRON",
+        "parish": "GIRON"
+    },
+    {
+        "sk": 26997,
+        "province": "AZUAY",
+        "canton": "GIRON",
+        "parish": "LA ASUNCION"
+    },
+    {
+        "sk": 26391,
+        "province": "AZUAY",
+        "canton": "GIRON",
+        "parish": "SAN GERARDO"
+    },
+    {
+        "sk": 27267,
+        "province": "AZUAY",
+        "canton": "GUACHAPALA",
+        "parish": "GUACHAPALA"
+    },
+    {
+        "sk": 26981,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "DANIEL CORDOVA TORAL (EL ORIENTE)"
+    },
+    {
+        "sk": 27304,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "GUALACEO, CABECERA CANTONAL"
+    },
+    {
+        "sk": 26673,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "JADAN"
+    },
+    {
+        "sk": 27100,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "LUIS CORDERO VEGA"
+    },
+    {
+        "sk": 26506,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "MARIANO MORENO"
+    },
+    {
+        "sk": 27671,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "REMIGIO CRESPO TORAL (GULAG)"
+    },
+    {
+        "sk": 26567,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "SAN JUAN"
+    },
+    {
+        "sk": 27173,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "SIMON BOLIVAR"
+    },
+    {
+        "sk": 27423,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "SIMON BOLIVAR (CAB. EN GAÑANZOL)"
+    },
+    {
+        "sk": 27490,
+        "province": "AZUAY",
+        "canton": "GUALACEO",
+        "parish": "ZHIDMAD"
+    },
+    {
+        "sk": 27660,
+        "province": "AZUAY",
+        "canton": "NABON",
+        "parish": "COCHAPATA"
+    },
+    {
+        "sk": 26453,
+        "province": "AZUAY",
+        "canton": "NABON",
+        "parish": "EL PROGRESO"
+    },
+    {
+        "sk": 26959,
+        "province": "AZUAY",
+        "canton": "NABON",
+        "parish": "EL PROGRESO (CAB. EN ZHOTA)"
+    },
+    {
+        "sk": 27651,
+        "province": "AZUAY",
+        "canton": "NABON",
+        "parish": "LAS NIEVES (CHAYA)"
+    },
+    {
+        "sk": 26956,
+        "province": "AZUAY",
+        "canton": "NABON",
+        "parish": "NABON"
+    },
+    {
+        "sk": 26306,
+        "province": "AZUAY",
+        "canton": "OÑA",
+        "parish": "OÑA"
+    },
+    {
+        "sk": 27145,
+        "province": "AZUAY",
+        "canton": "OÑA",
+        "parish": "SAN FELIPE DE OÑA"
+    },
+    {
+        "sk": 26309,
+        "province": "AZUAY",
+        "canton": "OÑA",
+        "parish": "SUSUDEL"
+    },
+    {
+        "sk": 26703,
+        "province": "AZUAY",
+        "canton": "PAUTE",
+        "parish": "BULAN (JOSE VICTOR IZQUIERDO)"
+    },
+    {
+        "sk": 27489,
+        "province": "AZUAY",
+        "canton": "PAUTE",
+        "parish": "CHICAN (GUILLERMO ORTEGA)"
+    },
+    {
+        "sk": 26828,
+        "province": "AZUAY",
+        "canton": "PAUTE",
+        "parish": "DUG DUG"
+    },
+    {
+        "sk": 26778,
+        "province": "AZUAY",
+        "canton": "PAUTE",
+        "parish": "EL CABO"
+    },
+    {
+        "sk": 27514,
+        "province": "AZUAY",
+        "canton": "PAUTE",
+        "parish": "GUARAINAG"
+    },
+    {
+        "sk": 27425,
+        "province": "AZUAY",
+        "canton": "PAUTE",
+        "parish": "PAUTE"
+    },
+    {
+        "sk": 27087,
+        "province": "AZUAY",
+        "canton": "PAUTE",
+        "parish": "SAN CRISTÓBAL"
+    },
+    {
+        "sk": 27357,
+        "province": "AZUAY",
+        "canton": "PAUTE",
+        "parish": "SAN CRISTOBAL (CARLOS ORDOÑEZ LAZO)"
+    },
+    {
+        "sk": 26678,
+        "province": "AZUAY",
+        "canton": "PAUTE",
+        "parish": "TOMEBAMBA"
+    },
+    {
+        "sk": 26821,
+        "province": "AZUAY",
+        "canton": "PUCARA",
+        "parish": "PUCARA"
+    },
+    {
+        "sk": 26721,
+        "province": "AZUAY",
+        "canton": "PUCARA",
+        "parish": "SAN RAFAEL DE SHARUG"
+    },
+    {
+        "sk": 26491,
+        "province": "AZUAY",
+        "canton": "SAN FERNANDO",
+        "parish": "CHUMBLIN"
+    },
+    {
+        "sk": 27685,
+        "province": "AZUAY",
+        "canton": "SAN FERNANDO",
+        "parish": "SAN FERNANDO"
+    },
+    {
+        "sk": 27257,
+        "province": "AZUAY",
+        "canton": "SANTA ISABEL",
+        "parish": "ABDON CALDERON (LA UNION)"
+    },
+    {
+        "sk": 27068,
+        "province": "AZUAY",
+        "canton": "SANTA ISABEL",
+        "parish": "ABDON CALDERON (SAN FRANCISCO)"
+    },
+    {
+        "sk": 27020,
+        "province": "AZUAY",
+        "canton": "SANTA ISABEL",
+        "parish": "EL CARMEN DE PIJILÍ"
+    },
+    {
+        "sk": 27089,
+        "province": "AZUAY",
+        "canton": "SANTA ISABEL",
+        "parish": "SAN SALVADOR DE CAÑARIBAMBA"
+    },
+    {
+        "sk": 27206,
+        "province": "AZUAY",
+        "canton": "SANTA ISABEL",
+        "parish": "SANTA ISABEL (CHAGUARURCO)"
+    },
+    {
+        "sk": 27424,
+        "province": "AZUAY",
+        "canton": "SANTA ISABEL",
+        "parish": "ZHAGLLI (SHAGLLI )"
+    },
+    {
+        "sk": 26412,
+        "province": "AZUAY",
+        "canton": "SEVILLA DE ORO",
+        "parish": "AMALUZA"
+    },
+    {
+        "sk": 27314,
+        "province": "AZUAY",
+        "canton": "SEVILLA DE ORO",
+        "parish": "PALMAS"
+    },
+    {
+        "sk": 26354,
+        "province": "AZUAY",
+        "canton": "SEVILLA DE ORO",
+        "parish": "SEVILLA DE ORO"
+    },
+    {
+        "sk": 26534,
+        "province": "AZUAY",
+        "canton": "SIGSIG",
+        "parish": "CUCHIL"
+    },
+    {
+        "sk": 27635,
+        "province": "AZUAY",
+        "canton": "SIGSIG",
+        "parish": "GIMA"
+    },
+    {
+        "sk": 27500,
+        "province": "AZUAY",
+        "canton": "SIGSIG",
+        "parish": "GUEL"
+    },
+    {
+        "sk": 27108,
+        "province": "AZUAY",
+        "canton": "SIGSIG",
+        "parish": "LUDO"
+    },
+    {
+        "sk": 26422,
+        "province": "AZUAY",
+        "canton": "SIGSIG",
+        "parish": "SAN BARTOLOME"
+    },
+    {
+        "sk": 26522,
+        "province": "AZUAY",
+        "canton": "SIGSIG",
+        "parish": "SAN JOSE DE RARANGA"
+    },
+    {
+        "sk": 27072,
+        "province": "AZUAY",
+        "canton": "SIGSIG",
+        "parish": "SIGSIG"
+    },
+    {
+        "sk": 26715,
+        "province": "BOLIVAR",
+        "canton": "CALUMA",
+        "parish": "CALUMA"
+    },
+    {
+        "sk": 27473,
+        "province": "BOLIVAR",
+        "canton": "CHILLANES",
+        "parish": "CHILLANES"
+    },
+    {
+        "sk": 26608,
+        "province": "BOLIVAR",
+        "canton": "CHILLANES",
+        "parish": "SAN JOSE DEL TAMBO (TAMBOPAMBA)"
+    },
+    {
+        "sk": 27177,
+        "province": "BOLIVAR",
+        "canton": "CHIMBO",
+        "parish": "ASUNCION"
+    },
+    {
+        "sk": 27277,
+        "province": "BOLIVAR",
+        "canton": "CHIMBO",
+        "parish": "ASUNCION (ASANCOTO)"
+    },
+    {
+        "sk": 26459,
+        "province": "BOLIVAR",
+        "canton": "CHIMBO",
+        "parish": "LA MAGDALENA (CHAPACOTO)"
+    },
+    {
+        "sk": 26860,
+        "province": "BOLIVAR",
+        "canton": "CHIMBO",
+        "parish": "SAN JOSE DE CHIMBO"
+    },
+    {
+        "sk": 26622,
+        "province": "BOLIVAR",
+        "canton": "CHIMBO",
+        "parish": "SAN SEBASTIAN"
+    },
+    {
+        "sk": 26656,
+        "province": "BOLIVAR",
+        "canton": "CHIMBO",
+        "parish": "TELIMBELA"
+    },
+    {
+        "sk": 27222,
+        "province": "BOLIVAR",
+        "canton": "ECHEANDIA",
+        "parish": "ECHEANDIA"
+    },
+    {
+        "sk": 27174,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "ÁNGEL POLIBIO CHÁVES"
+    },
+    {
+        "sk": 26816,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "FACUNDO VELA"
+    },
+    {
+        "sk": 27688,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "GABRIEL IGNACIO VEINTIMILLA"
+    },
+    {
+        "sk": 27433,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "GUANUJO"
+    },
+    {
+        "sk": 26488,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "GUARANDA, CABECERA CANTONAL Y CAPITAL PROVINCIAL"
+    },
+    {
+        "sk": 27522,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "JULIO E. MORENO (CATANAHUAN GRANDE)"
+    },
+    {
+        "sk": 26344,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "SALINAS"
+    },
+    {
+        "sk": 26723,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "SAN LORENZO"
+    },
+    {
+        "sk": 26894,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "SAN LUIS DE PAMBIL"
+    },
+    {
+        "sk": 26455,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "SAN SIMON (YACOTO)"
+    },
+    {
+        "sk": 27293,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "SANTA FE (SANTA FE)"
+    },
+    {
+        "sk": 26329,
+        "province": "BOLIVAR",
+        "canton": "GUARANDA",
+        "parish": "SIMIATUG"
+    },
+    {
+        "sk": 26476,
+        "province": "BOLIVAR",
+        "canton": "LAS NAVES",
+        "parish": "LAS MERCEDES"
+    },
+    {
+        "sk": 26643,
+        "province": "BOLIVAR",
+        "canton": "LAS NAVES",
+        "parish": "LAS NAVES"
+    },
+    {
+        "sk": 27557,
+        "province": "BOLIVAR",
+        "canton": "SAN MIGUEL",
+        "parish": "BALSAPAMBA"
+    },
+    {
+        "sk": 27228,
+        "province": "BOLIVAR",
+        "canton": "SAN MIGUEL",
+        "parish": "BILOVAN"
+    },
+    {
+        "sk": 26906,
+        "province": "BOLIVAR",
+        "canton": "SAN MIGUEL",
+        "parish": "REGULO DE MORA"
+    },
+    {
+        "sk": 26463,
+        "province": "BOLIVAR",
+        "canton": "SAN MIGUEL",
+        "parish": "SAN MIGUEL"
+    },
+    {
+        "sk": 27192,
+        "province": "BOLIVAR",
+        "canton": "SAN MIGUEL",
+        "parish": "SAN PABLO (SAN PABLO DE ATENAS)"
+    },
+    {
+        "sk": 27037,
+        "province": "BOLIVAR",
+        "canton": "SAN MIGUEL",
+        "parish": "SAN VICENTE"
+    },
+    {
+        "sk": 27474,
+        "province": "BOLIVAR",
+        "canton": "SAN MIGUEL",
+        "parish": "SANTIAGO"
+    },
+    {
+        "sk": 27099,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "AURELIO BAYAS MARTÍNEZ"
+    },
+    {
+        "sk": 26984,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "AZOGUES"
+    },
+    {
+        "sk": 26485,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "BORRERO"
+    },
+    {
+        "sk": 27212,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "COJITAMBO"
+    },
+    {
+        "sk": 27515,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "GUAPAN"
+    },
+    {
+        "sk": 26614,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "JAVIER LOYOLA (CHUQUIPATA)"
+    },
+    {
+        "sk": 27644,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "LUIS CORDERO"
+    },
+    {
+        "sk": 26586,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "PINDILIG"
+    },
+    {
+        "sk": 26312,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "RIVERA"
+    },
+    {
+        "sk": 27398,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "SAN FRANCISCO"
+    },
+    {
+        "sk": 26698,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "SAN MIGUEL"
+    },
+    {
+        "sk": 26949,
+        "province": "CAÑAR",
+        "canton": "AZOGUES",
+        "parish": "TADAY"
+    },
+    {
+        "sk": 27427,
+        "province": "CAÑAR",
+        "canton": "BIBLIAN",
+        "parish": "BIBLIAN"
+    },
+    {
+        "sk": 27381,
+        "province": "CAÑAR",
+        "canton": "BIBLIAN",
+        "parish": "JERUSALEN"
+    },
+    {
+        "sk": 26448,
+        "province": "CAÑAR",
+        "canton": "BIBLIAN",
+        "parish": "NAZON (CAB. EN PAMPA DE DOMINGUEZ)"
+    },
+    {
+        "sk": 27062,
+        "province": "CAÑAR",
+        "canton": "BIBLIAN",
+        "parish": "SAN FRANCISCO DE SAGEO"
+    },
+    {
+        "sk": 26547,
+        "province": "CAÑAR",
+        "canton": "BIBLIAN",
+        "parish": "TURUBAMBA"
+    },
+    {
+        "sk": 26505,
+        "province": "CAÑAR",
+        "canton": "BIBLIAN",
+        "parish": "TURUPAMBA"
+    },
+    {
+        "sk": 26468,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "CAÑAR"
+    },
+    {
+        "sk": 27324,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "CHONTAMARCA"
+    },
+    {
+        "sk": 27115,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "CHOROCOPTE"
+    },
+    {
+        "sk": 26504,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "DUCUR"
+    },
+    {
+        "sk": 26994,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "GENERAL MORALES (SOCARTE)"
+    },
+    {
+        "sk": 26559,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "GUALLETURO"
+    },
+    {
+        "sk": 26717,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "HONORATO VASQUEZ (TAMBO VIEJO)"
+    },
+    {
+        "sk": 27636,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "INGAPIRCA"
+    },
+    {
+        "sk": 26927,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "JUNCAL"
+    },
+    {
+        "sk": 27169,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "SAN ANTONIO"
+    },
+    {
+        "sk": 26884,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "VENTURA"
+    },
+    {
+        "sk": 26497,
+        "province": "CAÑAR",
+        "canton": "CAÑAR",
+        "parish": "ZHUD"
+    },
+    {
+        "sk": 26888,
+        "province": "CAÑAR",
+        "canton": "DELEG",
+        "parish": "DELEG"
+    },
+    {
+        "sk": 27004,
+        "province": "CAÑAR",
+        "canton": "DELEG",
+        "parish": "SOLANO"
+    },
+    {
+        "sk": 26420,
+        "province": "CAÑAR",
+        "canton": "EL TAMBO",
+        "parish": "EL TAMBO"
+    },
+    {
+        "sk": 27075,
+        "province": "CAÑAR",
+        "canton": "LA TRONCAL",
+        "parish": "LA TRONCAL"
+    },
+    {
+        "sk": 26562,
+        "province": "CAÑAR",
+        "canton": "LA TRONCAL",
+        "parish": "MANUEL J. CALLE"
+    },
+    {
+        "sk": 27309,
+        "province": "CAÑAR",
+        "canton": "LA TRONCAL",
+        "parish": "PANCHO NEGRO"
+    },
+    {
+        "sk": 26523,
+        "province": "CAÑAR",
+        "canton": "SUSCAL",
+        "parish": "SUSCAL"
+    },
+    {
+        "sk": 27137,
+        "province": "CARCHI",
+        "canton": "BOLIVAR",
+        "parish": "BOLIVAR"
+    },
+    {
+        "sk": 26317,
+        "province": "CARCHI",
+        "canton": "BOLIVAR",
+        "parish": "GARCIA MORENO"
+    },
+    {
+        "sk": 26377,
+        "province": "CARCHI",
+        "canton": "BOLIVAR",
+        "parish": "LOS ANDES"
+    },
+    {
+        "sk": 27253,
+        "province": "CARCHI",
+        "canton": "BOLIVAR",
+        "parish": "MONTE OLIVO"
+    },
+    {
+        "sk": 27134,
+        "province": "CARCHI",
+        "canton": "BOLIVAR",
+        "parish": "SAN RAFAEL"
+    },
+    {
+        "sk": 26340,
+        "province": "CARCHI",
+        "canton": "BOLIVAR",
+        "parish": "SAN VICENTE DE PUSIR"
+    },
+    {
+        "sk": 26551,
+        "province": "CARCHI",
+        "canton": "ESPEJO",
+        "parish": "27 DE SEPTIEMBRE"
+    },
+    {
+        "sk": 27113,
+        "province": "CARCHI",
+        "canton": "ESPEJO",
+        "parish": "EL ÁNGEL"
+    },
+    {
+        "sk": 27215,
+        "province": "CARCHI",
+        "canton": "ESPEJO",
+        "parish": "EL ÁNGEL, CABECERA CANTONAL"
+    },
+    {
+        "sk": 26574,
+        "province": "CARCHI",
+        "canton": "ESPEJO",
+        "parish": "EL GOALTAL"
+    },
+    {
+        "sk": 26812,
+        "province": "CARCHI",
+        "canton": "ESPEJO",
+        "parish": "LA LIBERTAD"
+    },
+    {
+        "sk": 27098,
+        "province": "CARCHI",
+        "canton": "ESPEJO",
+        "parish": "LA LIBERTAD (ALIZO)"
+    },
+    {
+        "sk": 26861,
+        "province": "CARCHI",
+        "canton": "ESPEJO",
+        "parish": "SAN ISIDRO"
+    },
+    {
+        "sk": 26895,
+        "province": "CARCHI",
+        "canton": "MIRA",
+        "parish": "CONCEPCION"
+    },
+    {
+        "sk": 27065,
+        "province": "CARCHI",
+        "canton": "MIRA",
+        "parish": "JIJON Y CAAMAÑO (CAB. EN RIO BLANCO)"
+    },
+    {
+        "sk": 26606,
+        "province": "CARCHI",
+        "canton": "MIRA",
+        "parish": "JUAN MONTALVO"
+    },
+    {
+        "sk": 27158,
+        "province": "CARCHI",
+        "canton": "MIRA",
+        "parish": "JUAN MONTALVO (SAN IGNACIO DE QUIL)"
+    },
+    {
+        "sk": 26489,
+        "province": "CARCHI",
+        "canton": "MIRA",
+        "parish": "MIRA (CHONTAHUASI)"
+    },
+    {
+        "sk": 27462,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "CHITAN DE NAVARRETE"
+    },
+    {
+        "sk": 27591,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "CRISTOBAL COLON"
+    },
+    {
+        "sk": 27649,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "FERNANDEZ SALVADOR"
+    },
+    {
+        "sk": 26305,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "GONZALEZ SUAREZ"
+    },
+    {
+        "sk": 27294,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "GONZÁLEZ SUÁREZ"
+    },
+    {
+        "sk": 26544,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "LA PAZ"
+    },
+    {
+        "sk": 27220,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "PIARTAL"
+    },
+    {
+        "sk": 26908,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "SAN GABRIEL"
+    },
+    {
+        "sk": 27224,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "SAN JOSE"
+    },
+    {
+        "sk": 27280,
+        "province": "CARCHI",
+        "canton": "MONTUFAR",
+        "parish": "SAN JOSÉ"
+    },
+    {
+        "sk": 26419,
+        "province": "CARCHI",
+        "canton": "SAN PEDRO DE HUACA",
+        "parish": "HUACA"
+    },
+    {
+        "sk": 26572,
+        "province": "CARCHI",
+        "canton": "SAN PEDRO DE HUACA",
+        "parish": "MARISCAL SUCRE"
+    },
+    {
+        "sk": 26937,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "EL CARMELO (EL PUN)"
+    },
+    {
+        "sk": 27505,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "EL CHICAL"
+    },
+    {
+        "sk": 27686,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "GONZALEZ SUAREZ"
+    },
+    {
+        "sk": 27254,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "GONZÁLEZ SUÁREZ"
+    },
+    {
+        "sk": 26299,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "JULIO ANDRADE (OREJUELA)"
+    },
+    {
+        "sk": 26760,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "MALDONADO"
+    },
+    {
+        "sk": 27353,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "PIOTER"
+    },
+    {
+        "sk": 27400,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "SANTA MARTHA DE CUBA"
+    },
+    {
+        "sk": 27133,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "TOBAR DONOSO (LA BOCANA DE CAMUMBI)"
+    },
+    {
+        "sk": 26498,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "TUFIÑO"
+    },
+    {
+        "sk": 26693,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "TULCAN"
+    },
+    {
+        "sk": 26932,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "URBINA"
+    },
+    {
+        "sk": 26560,
+        "province": "CARCHI",
+        "canton": "TULCAN",
+        "parish": "URBINA (TAYA)"
+    },
+    {
+        "sk": 26983,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "ACHUPALLAS"
+    },
+    {
+        "sk": 27393,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "ALAUSI"
+    },
+    {
+        "sk": 27066,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "CUMANDÁ"
+    },
+    {
+        "sk": 26375,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "GUASUNTOS"
+    },
+    {
+        "sk": 27318,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "HUIGRA"
+    },
+    {
+        "sk": 26539,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "MULTITUD"
+    },
+    {
+        "sk": 27061,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "PISTISHI (NARIZ DEL DIABLO)"
+    },
+    {
+        "sk": 26630,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "PUMALLACTA"
+    },
+    {
+        "sk": 26847,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "SEVILLA"
+    },
+    {
+        "sk": 27159,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "SIBAMBE"
+    },
+    {
+        "sk": 27120,
+        "province": "CHIMBORAZO",
+        "canton": "ALAUSI",
+        "parish": "TIXAN"
+    },
+    {
+        "sk": 26820,
+        "province": "CHIMBORAZO",
+        "canton": "CHAMBO",
+        "parish": "CHAMBO"
+    },
+    {
+        "sk": 27188,
+        "province": "CHIMBORAZO",
+        "canton": "CHUNCHI",
+        "parish": "CAPZOL"
+    },
+    {
+        "sk": 27104,
+        "province": "CHIMBORAZO",
+        "canton": "CHUNCHI",
+        "parish": "CHUNCHI"
+    },
+    {
+        "sk": 27086,
+        "province": "CHIMBORAZO",
+        "canton": "CHUNCHI",
+        "parish": "COMPUD"
+    },
+    {
+        "sk": 27225,
+        "province": "CHIMBORAZO",
+        "canton": "CHUNCHI",
+        "parish": "GONZOL"
+    },
+    {
+        "sk": 26677,
+        "province": "CHIMBORAZO",
+        "canton": "CHUNCHI",
+        "parish": "LLAGOS"
+    },
+    {
+        "sk": 27396,
+        "province": "CHIMBORAZO",
+        "canton": "COLTA",
+        "parish": "CAJABAMBA"
+    },
+    {
+        "sk": 26714,
+        "province": "CHIMBORAZO",
+        "canton": "COLTA",
+        "parish": "CAÑI"
+    },
+    {
+        "sk": 27317,
+        "province": "CHIMBORAZO",
+        "canton": "COLTA",
+        "parish": "COLUMBE"
+    },
+    {
+        "sk": 26347,
+        "province": "CHIMBORAZO",
+        "canton": "COLTA",
+        "parish": "JUAN DE VELASCO (PANGOR)"
+    },
+    {
+        "sk": 27590,
+        "province": "CHIMBORAZO",
+        "canton": "COLTA",
+        "parish": "SANTIAGO DE QUITO (CAB. EN SAN ANTONIO DE QUITO)"
+    },
+    {
+        "sk": 26564,
+        "province": "CHIMBORAZO",
+        "canton": "COLTA",
+        "parish": "SICALPA"
+    },
+    {
+        "sk": 27494,
+        "province": "CHIMBORAZO",
+        "canton": "COLTA",
+        "parish": "VILLA LA UNION (CAJABAMBA)"
+    },
+    {
+        "sk": 27373,
+        "province": "CHIMBORAZO",
+        "canton": "CUMANDA",
+        "parish": "CUMANDA"
+    },
+    {
+        "sk": 27592,
+        "province": "CHIMBORAZO",
+        "canton": "GUAMOTE",
+        "parish": "CEBADAS"
+    },
+    {
+        "sk": 26921,
+        "province": "CHIMBORAZO",
+        "canton": "GUAMOTE",
+        "parish": "GUAMOTE"
+    },
+    {
+        "sk": 26579,
+        "province": "CHIMBORAZO",
+        "canton": "GUAMOTE",
+        "parish": "PALMIRA"
+    },
+    {
+        "sk": 27603,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "EL ROSARIO"
+    },
+    {
+        "sk": 27266,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "GUANANDO"
+    },
+    {
+        "sk": 26311,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "GUANO"
+    },
+    {
+        "sk": 26323,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "ILAPO"
+    },
+    {
+        "sk": 26712,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "LA MATRIZ"
+    },
+    {
+        "sk": 26798,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "LA PROVIDENCIA"
+    },
+    {
+        "sk": 26653,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "SAN ANDRES"
+    },
+    {
+        "sk": 26409,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "SAN GERARDO DE PACAICAGUAN"
+    },
+    {
+        "sk": 27448,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "SAN ISIDRO DE PATULU"
+    },
+    {
+        "sk": 27378,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "SAN JOSE DEL CHAZO"
+    },
+    {
+        "sk": 27442,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "SANTA FE DE GALAN"
+    },
+    {
+        "sk": 27397,
+        "province": "CHIMBORAZO",
+        "canton": "GUANO",
+        "parish": "VALPARAISO"
+    },
+    {
+        "sk": 26647,
+        "province": "CHIMBORAZO",
+        "canton": "PALLATANGA",
+        "parish": "PALLATANGA"
+    },
+    {
+        "sk": 27025,
+        "province": "CHIMBORAZO",
+        "canton": "PENIPE",
+        "parish": "BILBAO (CAB. EN QUILLUYACU)"
+    },
+    {
+        "sk": 26383,
+        "province": "CHIMBORAZO",
+        "canton": "PENIPE",
+        "parish": "EL ALTAR"
+    },
+    {
+        "sk": 26767,
+        "province": "CHIMBORAZO",
+        "canton": "PENIPE",
+        "parish": "LA CANDELARIA"
+    },
+    {
+        "sk": 26768,
+        "province": "CHIMBORAZO",
+        "canton": "PENIPE",
+        "parish": "MATUS"
+    },
+    {
+        "sk": 27256,
+        "province": "CHIMBORAZO",
+        "canton": "PENIPE",
+        "parish": "PENIPE"
+    },
+    {
+        "sk": 27131,
+        "province": "CHIMBORAZO",
+        "canton": "PENIPE",
+        "parish": "PUELA"
+    },
+    {
+        "sk": 27659,
+        "province": "CHIMBORAZO",
+        "canton": "PENIPE",
+        "parish": "SAN ANTONIO DE BAYUSHIG"
+    },
+    {
+        "sk": 26933,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "CACHA (CAB. EN MACHANGARA)"
+    },
+    {
+        "sk": 26438,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "CALPI"
+    },
+    {
+        "sk": 26870,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "CUBIJIES"
+    },
+    {
+        "sk": 26546,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "FLORES"
+    },
+    {
+        "sk": 27055,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "LICAN"
+    },
+    {
+        "sk": 27126,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "LICTO"
+    },
+    {
+        "sk": 26917,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "LIZARZABURU"
+    },
+    {
+        "sk": 27639,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "MALDONADO"
+    },
+    {
+        "sk": 26766,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "PUNGALA"
+    },
+    {
+        "sk": 27429,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "PUNIN"
+    },
+    {
+        "sk": 27402,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "QUIMIAG"
+    },
+    {
+        "sk": 26941,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "RIOBAMBA"
+    },
+    {
+        "sk": 27260,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "SAN JUAN"
+    },
+    {
+        "sk": 26943,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "SAN LUIS"
+    },
+    {
+        "sk": 27631,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "VELASCO"
+    },
+    {
+        "sk": 27335,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "VELOZ"
+    },
+    {
+        "sk": 27652,
+        "province": "CHIMBORAZO",
+        "canton": "RIOBAMBA",
+        "parish": "YARUQUÍES"
+    },
+    {
+        "sk": 27638,
+        "province": "COTOPAXI",
+        "canton": "LA MANA",
+        "parish": "EL CARMEN"
+    },
+    {
+        "sk": 26561,
+        "province": "COTOPAXI",
+        "canton": "LA MANA",
+        "parish": "LA MANÁ"
+    },
+    {
+        "sk": 26893,
+        "province": "COTOPAXI",
+        "canton": "LA MANÁ",
+        "parish": "EL CARMEN"
+    },
+    {
+        "sk": 26875,
+        "province": "COTOPAXI",
+        "canton": "LA MANÁ",
+        "parish": "EL TRIUNFO"
+    },
+    {
+        "sk": 26753,
+        "province": "COTOPAXI",
+        "canton": "LA MANÁ",
+        "parish": "GUASAGANDA (CAB. EN GUASAGANDA CENTRO)"
+    },
+    {
+        "sk": 26924,
+        "province": "COTOPAXI",
+        "canton": "LA MANÁ",
+        "parish": "LA MANÁ"
+    },
+    {
+        "sk": 26843,
+        "province": "COTOPAXI",
+        "canton": "LA MANÁ",
+        "parish": "PUCAYACU"
+    },
+    {
+        "sk": 26986,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "11 DE NOVIEMBRE (ILINCHISI)"
+    },
+    {
+        "sk": 27536,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "ALAQUEZ (ALAQUES)"
+    },
+    {
+        "sk": 26942,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "BELISARIO QUEVEDO"
+    },
+    {
+        "sk": 26366,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "BELISARIO QUEVEDO (GUANAILIN)"
+    },
+    {
+        "sk": 27021,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "ELOY ALFARO  (SAN FELIPE)"
+    },
+    {
+        "sk": 26308,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "GUAYTACAMA (GUAITACAMA)"
+    },
+    {
+        "sk": 26655,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "IGNACIO FLORES (PARQUE FLORES)"
+    },
+    {
+        "sk": 26346,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "JOSEGUANGO BAJO"
+    },
+    {
+        "sk": 27520,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "JUAN MONTALVO"
+    },
+    {
+        "sk": 26432,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "JUAN MONTALVO (SAN SEBASTIÁN)"
+    },
+    {
+        "sk": 26728,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "LA MATRIZ"
+    },
+    {
+        "sk": 26857,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "LATACUNGA, CABECERA CANTONAL Y CAPITAL PROVINCIAL"
+    },
+    {
+        "sk": 26496,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "MULALO"
+    },
+    {
+        "sk": 26617,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "PALO QUEMADO"
+    },
+    {
+        "sk": 26557,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "POALO"
+    },
+    {
+        "sk": 27518,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "SAN BUENAVENTURA"
+    },
+    {
+        "sk": 26867,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "SAN JUAN DE PASTOCALLE"
+    },
+    {
+        "sk": 26842,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "TANICUCHI"
+    },
+    {
+        "sk": 27182,
+        "province": "COTOPAXI",
+        "canton": "LATACUNGA",
+        "parish": "TOACASO"
+    },
+    {
+        "sk": 26749,
+        "province": "COTOPAXI",
+        "canton": "PANGUA",
+        "parish": "EL CORAZON"
+    },
+    {
+        "sk": 26947,
+        "province": "COTOPAXI",
+        "canton": "PANGUA",
+        "parish": "MORASPUNGO"
+    },
+    {
+        "sk": 27434,
+        "province": "COTOPAXI",
+        "canton": "PANGUA",
+        "parish": "PINLLOPATA"
+    },
+    {
+        "sk": 27300,
+        "province": "COTOPAXI",
+        "canton": "PANGUA",
+        "parish": "RAMON CAMPAÑA"
+    },
+    {
+        "sk": 26456,
+        "province": "COTOPAXI",
+        "canton": "PUJILI",
+        "parish": "ANGAMARCA"
+    },
+    {
+        "sk": 27544,
+        "province": "COTOPAXI",
+        "canton": "PUJILI",
+        "parish": "GUANGAJE"
+    },
+    {
+        "sk": 26874,
+        "province": "COTOPAXI",
+        "canton": "PUJILI",
+        "parish": "LA VICTORIA"
+    },
+    {
+        "sk": 26905,
+        "province": "COTOPAXI",
+        "canton": "PUJILI",
+        "parish": "PILALO"
+    },
+    {
+        "sk": 27329,
+        "province": "COTOPAXI",
+        "canton": "PUJILI",
+        "parish": "PUJILI"
+    },
+    {
+        "sk": 27146,
+        "province": "COTOPAXI",
+        "canton": "PUJILI",
+        "parish": "TINGO"
+    },
+    {
+        "sk": 27676,
+        "province": "COTOPAXI",
+        "canton": "PUJILI",
+        "parish": "ZUMBAHUA"
+    },
+    {
+        "sk": 27148,
+        "province": "COTOPAXI",
+        "canton": "SALCEDO",
+        "parish": "ANTONIO JOSE HOLGUIN (SANTA LUCIA)"
+    },
+    {
+        "sk": 27553,
+        "province": "COTOPAXI",
+        "canton": "SALCEDO",
+        "parish": "CUSUBAMBA"
+    },
+    {
+        "sk": 26844,
+        "province": "COTOPAXI",
+        "canton": "SALCEDO",
+        "parish": "MULALILLO"
+    },
+    {
+        "sk": 27375,
+        "province": "COTOPAXI",
+        "canton": "SALCEDO",
+        "parish": "MULLIQUINDIL (SANTA ANA)"
+    },
+    {
+        "sk": 27543,
+        "province": "COTOPAXI",
+        "canton": "SALCEDO",
+        "parish": "PANZALEO"
+    },
+    {
+        "sk": 27029,
+        "province": "COTOPAXI",
+        "canton": "SALCEDO",
+        "parish": "SAN MIGUEL"
+    },
+    {
+        "sk": 26487,
+        "province": "COTOPAXI",
+        "canton": "SAN MIGUEL",
+        "parish": "CUSUBAMBA"
+    },
+    {
+        "sk": 26554,
+        "province": "COTOPAXI",
+        "canton": "SAN MIGUEL",
+        "parish": "PANZALEO"
+    },
+    {
+        "sk": 26478,
+        "province": "COTOPAXI",
+        "canton": "SAN MIGUEL",
+        "parish": "SAN MIGUEL"
+    },
+    {
+        "sk": 26916,
+        "province": "COTOPAXI",
+        "canton": "SAQUISILI",
+        "parish": "CANCHAGUA"
+    },
+    {
+        "sk": 26388,
+        "province": "COTOPAXI",
+        "canton": "SAQUISILI",
+        "parish": "CHANTILIN"
+    },
+    {
+        "sk": 27214,
+        "province": "COTOPAXI",
+        "canton": "SAQUISILI",
+        "parish": "COCHAPAMBA"
+    },
+    {
+        "sk": 27669,
+        "province": "COTOPAXI",
+        "canton": "SAQUISILI",
+        "parish": "SAQUISILI"
+    },
+    {
+        "sk": 26597,
+        "province": "COTOPAXI",
+        "canton": "SIGCHOS",
+        "parish": "CHUCCHILÁN (CHUGCHILÁN)"
+    },
+    {
+        "sk": 27510,
+        "province": "COTOPAXI",
+        "canton": "SIGCHOS",
+        "parish": "CHUGCHILLAN"
+    },
+    {
+        "sk": 26989,
+        "province": "COTOPAXI",
+        "canton": "SIGCHOS",
+        "parish": "ISINLIBÍ (ISINLIVÍ)"
+    },
+    {
+        "sk": 27112,
+        "province": "COTOPAXI",
+        "canton": "SIGCHOS",
+        "parish": "ISINLIVI"
+    },
+    {
+        "sk": 27561,
+        "province": "COTOPAXI",
+        "canton": "SIGCHOS",
+        "parish": "LAS PAMPAS"
+    },
+    {
+        "sk": 27311,
+        "province": "COTOPAXI",
+        "canton": "SIGCHOS",
+        "parish": "PALO QUEMADO"
+    },
+    {
+        "sk": 27361,
+        "province": "COTOPAXI",
+        "canton": "SIGCHOS",
+        "parish": "SIGCHOS"
+    },
+    {
+        "sk": 27519,
+        "province": "EL ORO",
+        "canton": "ARENILLAS",
+        "parish": "ARENILLAS"
+    },
+    {
+        "sk": 26397,
+        "province": "EL ORO",
+        "canton": "ARENILLAS",
+        "parish": "CARCABON"
+    },
+    {
+        "sk": 27447,
+        "province": "EL ORO",
+        "canton": "ARENILLAS",
+        "parish": "CHACRAS"
+    },
+    {
+        "sk": 26601,
+        "province": "EL ORO",
+        "canton": "ARENILLAS",
+        "parish": "LA CUCA"
+    },
+    {
+        "sk": 26512,
+        "province": "EL ORO",
+        "canton": "ARENILLAS",
+        "parish": "PALMALES"
+    },
+    {
+        "sk": 27377,
+        "province": "EL ORO",
+        "canton": "ATAHUALPA",
+        "parish": "AYAPAMBA"
+    },
+    {
+        "sk": 26877,
+        "province": "EL ORO",
+        "canton": "ATAHUALPA",
+        "parish": "CORDONCILLO"
+    },
+    {
+        "sk": 27017,
+        "province": "EL ORO",
+        "canton": "ATAHUALPA",
+        "parish": "MILAGRO"
+    },
+    {
+        "sk": 27198,
+        "province": "EL ORO",
+        "canton": "ATAHUALPA",
+        "parish": "PACCHA"
+    },
+    {
+        "sk": 27069,
+        "province": "EL ORO",
+        "canton": "ATAHUALPA",
+        "parish": "SAN JOSE"
+    },
+    {
+        "sk": 26898,
+        "province": "EL ORO",
+        "canton": "ATAHUALPA",
+        "parish": "SAN JUAN DE CERRO AZUL"
+    },
+    {
+        "sk": 27640,
+        "province": "EL ORO",
+        "canton": "BALSAS",
+        "parish": "BALSAS"
+    },
+    {
+        "sk": 27297,
+        "province": "EL ORO",
+        "canton": "BALSAS",
+        "parish": "BELLAMARIA"
+    },
+    {
+        "sk": 26880,
+        "province": "EL ORO",
+        "canton": "CHILLA",
+        "parish": "CHILLA"
+    },
+    {
+        "sk": 26358,
+        "province": "EL ORO",
+        "canton": "EL GUABO",
+        "parish": "BARBONES (SUCRE)"
+    },
+    {
+        "sk": 26946,
+        "province": "EL ORO",
+        "canton": "EL GUABO",
+        "parish": "EL GUABO"
+    },
+    {
+        "sk": 26963,
+        "province": "EL ORO",
+        "canton": "EL GUABO",
+        "parish": "LA IBERIA"
+    },
+    {
+        "sk": 27054,
+        "province": "EL ORO",
+        "canton": "EL GUABO",
+        "parish": "RIO BONITO"
+    },
+    {
+        "sk": 27438,
+        "province": "EL ORO",
+        "canton": "EL GUABO",
+        "parish": "TENDALES (CAB. EN PUERTO TENDALES)"
+    },
+    {
+        "sk": 26441,
+        "province": "EL ORO",
+        "canton": "HUAQUILLAS",
+        "parish": "ECUADOR"
+    },
+    {
+        "sk": 27412,
+        "province": "EL ORO",
+        "canton": "HUAQUILLAS",
+        "parish": "EL PARAISO"
+    },
+    {
+        "sk": 26382,
+        "province": "EL ORO",
+        "canton": "HUAQUILLAS",
+        "parish": "EL PARAÍSO"
+    },
+    {
+        "sk": 27041,
+        "province": "EL ORO",
+        "canton": "HUAQUILLAS",
+        "parish": "HUALTACO"
+    },
+    {
+        "sk": 26379,
+        "province": "EL ORO",
+        "canton": "HUAQUILLAS",
+        "parish": "HUAQUILLAS"
+    },
+    {
+        "sk": 26549,
+        "province": "EL ORO",
+        "canton": "HUAQUILLAS",
+        "parish": "MILTON REYES"
+    },
+    {
+        "sk": 27059,
+        "province": "EL ORO",
+        "canton": "HUAQUILLAS",
+        "parish": "UNIÓN LOJANA"
+    },
+    {
+        "sk": 27040,
+        "province": "EL ORO",
+        "canton": "LAS LAJAS",
+        "parish": "EL PARAISO"
+    },
+    {
+        "sk": 27542,
+        "province": "EL ORO",
+        "canton": "LAS LAJAS",
+        "parish": "LA LIBERTAD"
+    },
+    {
+        "sk": 26818,
+        "province": "EL ORO",
+        "canton": "LAS LAJAS",
+        "parish": "LA VICTORIA"
+    },
+    {
+        "sk": 26470,
+        "province": "EL ORO",
+        "canton": "LAS LAJAS",
+        "parish": "PLATANILLOS"
+    },
+    {
+        "sk": 26335,
+        "province": "EL ORO",
+        "canton": "LAS LAJAS",
+        "parish": "SAN ISIDRO"
+    },
+    {
+        "sk": 27363,
+        "province": "EL ORO",
+        "canton": "LAS LAJAS",
+        "parish": "VALLE HERMOSO"
+    },
+    {
+        "sk": 26396,
+        "province": "EL ORO",
+        "canton": "MACHALA",
+        "parish": "EL CAMBIO"
+    },
+    {
+        "sk": 27623,
+        "province": "EL ORO",
+        "canton": "MACHALA",
+        "parish": "EL RETIRO"
+    },
+    {
+        "sk": 27475,
+        "province": "EL ORO",
+        "canton": "MACHALA",
+        "parish": "LA PROVIDENCIA"
+    },
+    {
+        "sk": 27218,
+        "province": "EL ORO",
+        "canton": "MACHALA",
+        "parish": "MACHALA"
+    },
+    {
+        "sk": 26829,
+        "province": "EL ORO",
+        "canton": "MACHALA",
+        "parish": "MACHALA, CABECERA CANTONAL Y CAPITAL PROVINCIAL"
+    },
+    {
+        "sk": 26724,
+        "province": "EL ORO",
+        "canton": "MACHALA",
+        "parish": "NUEVE DE MAYO"
+    },
+    {
+        "sk": 26416,
+        "province": "EL ORO",
+        "canton": "MACHALA",
+        "parish": "PUERTO BOLÍVAR"
+    },
+    {
+        "sk": 26502,
+        "province": "EL ORO",
+        "canton": "MACHALA",
+        "parish": "PUERTO BOLIVAR (PUERTO MONTUFAR)"
+    },
+    {
+        "sk": 27012,
+        "province": "EL ORO",
+        "canton": "MARCABELI",
+        "parish": "EL INGENIO"
+    },
+    {
+        "sk": 27556,
+        "province": "EL ORO",
+        "canton": "MARCABELI",
+        "parish": "MARCABELI"
+    },
+    {
+        "sk": 26661,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "BOLIVAR"
+    },
+    {
+        "sk": 27541,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "BOLÍVAR"
+    },
+    {
+        "sk": 27237,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "BUENAVISTA"
+    },
+    {
+        "sk": 27279,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "CAÑAQUEMADA"
+    },
+    {
+        "sk": 26700,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "CASACAY"
+    },
+    {
+        "sk": 26315,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "LA PEAÑA"
+    },
+    {
+        "sk": 27595,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "LOMA DE FRANCO"
+    },
+    {
+        "sk": 27524,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "OCHOA LEÓN (MATRIZ)"
+    },
+    {
+        "sk": 26799,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "PASAJE"
+    },
+    {
+        "sk": 26483,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "PROGRESO"
+    },
+    {
+        "sk": 26460,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "TRES CERRITOS"
+    },
+    {
+        "sk": 27496,
+        "province": "EL ORO",
+        "canton": "PASAJE",
+        "parish": "UZHCURRUMI"
+    },
+    {
+        "sk": 27589,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "CAPIRO (CAB. EN LA CAPILLA DE CAPIRO)"
+    },
+    {
+        "sk": 27350,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "LA BOCANA"
+    },
+    {
+        "sk": 26763,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "LA SUSAYA"
+    },
+    {
+        "sk": 26759,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "MOROMORO (CAB. EN EL VADO)"
+    },
+    {
+        "sk": 26447,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "PIEDRAS"
+    },
+    {
+        "sk": 26975,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "PIÑAS"
+    },
+    {
+        "sk": 27480,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "PIÑAS GRANDE"
+    },
+    {
+        "sk": 26434,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "SAN ROQUE"
+    },
+    {
+        "sk": 27551,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "SAN ROQUE (AMBROSIO MALDONADO)"
+    },
+    {
+        "sk": 26524,
+        "province": "EL ORO",
+        "canton": "PIÑAS",
+        "parish": "SARACAY"
+    },
+    {
+        "sk": 27422,
+        "province": "EL ORO",
+        "canton": "PORTOVELO",
+        "parish": "CURTINCAPA"
+    },
+    {
+        "sk": 26373,
+        "province": "EL ORO",
+        "canton": "PORTOVELO",
+        "parish": "MORALES"
+    },
+    {
+        "sk": 27147,
+        "province": "EL ORO",
+        "canton": "PORTOVELO",
+        "parish": "PORTOVELO"
+    },
+    {
+        "sk": 26787,
+        "province": "EL ORO",
+        "canton": "PORTOVELO",
+        "parish": "SALATI"
+    },
+    {
+        "sk": 27354,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "BALNEARIO JAMBELÍ (SATÉLITE)"
+    },
+    {
+        "sk": 27349,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "BELLAMARIA"
+    },
+    {
+        "sk": 26548,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "BELLAVISTA"
+    },
+    {
+        "sk": 27160,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "JAMBELI"
+    },
+    {
+        "sk": 27248,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "JUMÓN (SATÉLITE)"
+    },
+    {
+        "sk": 27139,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "LA AVANZADA"
+    },
+    {
+        "sk": 26837,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "NUEVO SANTA ROSA"
+    },
+    {
+        "sk": 26902,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "PUERTO JELÍ"
+    },
+    {
+        "sk": 27239,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "SAN ANTONIO"
+    },
+    {
+        "sk": 27463,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "SANTA ROSA"
+    },
+    {
+        "sk": 26871,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "TORATA"
+    },
+    {
+        "sk": 26400,
+        "province": "EL ORO",
+        "canton": "SANTA ROSA",
+        "parish": "VICTORIA"
+    },
+    {
+        "sk": 26701,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "ABAÑIN"
+    },
+    {
+        "sk": 26823,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "ARCAPAMBA"
+    },
+    {
+        "sk": 26510,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "GUANAZAN"
+    },
+    {
+        "sk": 26394,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "GUIZHAGUIÑA"
+    },
+    {
+        "sk": 27281,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "HUERTAS"
+    },
+    {
+        "sk": 26387,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "MALVAS"
+    },
+    {
+        "sk": 26826,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "MULUNCAY GRANDE"
+    },
+    {
+        "sk": 26668,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "SALVIAS"
+    },
+    {
+        "sk": 27208,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "SINSAO"
+    },
+    {
+        "sk": 26310,
+        "province": "EL ORO",
+        "canton": "ZARUMA",
+        "parish": "ZARUMA"
+    },
+    {
+        "sk": 27387,
+        "province": "ESMERALDAS",
+        "canton": "ATACAMES",
+        "parish": "ATACAMES"
+    },
+    {
+        "sk": 26925,
+        "province": "ESMERALDAS",
+        "canton": "ATACAMES",
+        "parish": "LA UNION"
+    },
+    {
+        "sk": 26785,
+        "province": "ESMERALDAS",
+        "canton": "ATACAMES",
+        "parish": "SUA (CAB. EN LA BOCANA)"
+    },
+    {
+        "sk": 26533,
+        "province": "ESMERALDAS",
+        "canton": "ATACAMES",
+        "parish": "TONCHIGUE"
+    },
+    {
+        "sk": 26302,
+        "province": "ESMERALDAS",
+        "canton": "ATACAMES",
+        "parish": "TONSUPA"
+    },
+    {
+        "sk": 26813,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "ANCHAYACU"
+    },
+    {
+        "sk": 27380,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "ATAHUALPA (CAB. EN CAMARONES)"
+    },
+    {
+        "sk": 27481,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "BORBON"
+    },
+    {
+        "sk": 27488,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "COLON ELOY DEL MARIA"
+    },
+    {
+        "sk": 26627,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "LA TOLA"
+    },
+    {
+        "sk": 26635,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "LUIS VARGAS TORRES (CAB. EN PLAYA DE ORO)"
+    },
+    {
+        "sk": 26987,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "MALDONADO"
+    },
+    {
+        "sk": 27619,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "PAMPANAL DE BOLIVAR"
+    },
+    {
+        "sk": 27461,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "SAN FRANCISCO DE ONZOLE"
+    },
+    {
+        "sk": 27406,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "SAN JOSE DE CAYAPAS"
+    },
+    {
+        "sk": 27509,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "SANTA LUCIA DE LAS PEÑAS"
+    },
+    {
+        "sk": 27485,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "SANTO DOMINGO DE ONZOLE"
+    },
+    {
+        "sk": 26589,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "SELVA ALEGRE"
+    },
+    {
+        "sk": 26667,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "TELEMBI"
+    },
+    {
+        "sk": 27045,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "TIMBIRE"
+    },
+    {
+        "sk": 27486,
+        "province": "ESMERALDAS",
+        "canton": "ELOY ALFARO",
+        "parish": "VALDEZ (LIMONES)"
+    },
+    {
+        "sk": 27655,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "5 DE AGOSTO"
+    },
+    {
+        "sk": 27302,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "BARTOLOMÉ RUIZ (CÉSAR FRANCO CARRIÓN)"
+    },
+    {
+        "sk": 26331,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "CAMARONES (CAB. EN SAN VICENTE)"
+    },
+    {
+        "sk": 27455,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "CHINCA"
+    },
+    {
+        "sk": 27532,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "CORONEL CARLOS CONCHA TORRES (CAB. EN HUELE)"
+    },
+    {
+        "sk": 26629,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "ESMERALDAS"
+    },
+    {
+        "sk": 26865,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "LUIS TELLO  (LAS PALMAS)"
+    },
+    {
+        "sk": 26684,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "MAJUA"
+    },
+    {
+        "sk": 26771,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "SAN MATEO"
+    },
+    {
+        "sk": 26389,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "SIMÓN PLATA TORRES"
+    },
+    {
+        "sk": 27531,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "TABIAZO"
+    },
+    {
+        "sk": 27539,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "TACHINA"
+    },
+    {
+        "sk": 27176,
+        "province": "ESMERALDAS",
+        "canton": "ESMERALDAS",
+        "parish": "VUELTA LARGA"
+    },
+    {
+        "sk": 26958,
+        "province": "ESMERALDAS",
+        "canton": "MUISNE",
+        "parish": "BOLIVAR"
+    },
+    {
+        "sk": 26431,
+        "province": "ESMERALDAS",
+        "canton": "MUISNE",
+        "parish": "DAULE"
+    },
+    {
+        "sk": 26430,
+        "province": "ESMERALDAS",
+        "canton": "MUISNE",
+        "parish": "GALERA"
+    },
+    {
+        "sk": 26356,
+        "province": "ESMERALDAS",
+        "canton": "MUISNE",
+        "parish": "MUISNE"
+    },
+    {
+        "sk": 27252,
+        "province": "ESMERALDAS",
+        "canton": "MUISNE",
+        "parish": "QUINGUE (OLMEDO PERDOMO FRANCO)"
+    },
+    {
+        "sk": 27261,
+        "province": "ESMERALDAS",
+        "canton": "MUISNE",
+        "parish": "SALIMA"
+    },
+    {
+        "sk": 27497,
+        "province": "ESMERALDAS",
+        "canton": "MUISNE",
+        "parish": "SAN FRANCISCO"
+    },
+    {
+        "sk": 27205,
+        "province": "ESMERALDAS",
+        "canton": "MUISNE",
+        "parish": "SAN GREGORIO"
+    },
+    {
+        "sk": 26316,
+        "province": "ESMERALDAS",
+        "canton": "MUISNE",
+        "parish": "SAN JOSE DE CHAMANGA"
+    },
+    {
+        "sk": 26690,
+        "province": "ESMERALDAS",
+        "canton": "QUININDE",
+        "parish": "CHURA (CHANCAMA) (CAB. EN EL YERBERO)"
+    },
+    {
+        "sk": 26800,
+        "province": "ESMERALDAS",
+        "canton": "QUININDE",
+        "parish": "CUBE"
+    },
+    {
+        "sk": 27445,
+        "province": "ESMERALDAS",
+        "canton": "QUININDE",
+        "parish": "LA UNION"
+    },
+    {
+        "sk": 27471,
+        "province": "ESMERALDAS",
+        "canton": "QUININDE",
+        "parish": "MALIMPIA"
+    },
+    {
+        "sk": 26957,
+        "province": "ESMERALDAS",
+        "canton": "QUININDE",
+        "parish": "ROSA ZARATE (QUININDE)"
+    },
+    {
+        "sk": 27039,
+        "province": "ESMERALDAS",
+        "canton": "QUININDE",
+        "parish": "VICHE"
+    },
+    {
+        "sk": 26587,
+        "province": "ESMERALDAS",
+        "canton": "RIO VERDE",
+        "parish": "CHONTADURO"
+    },
+    {
+        "sk": 27103,
+        "province": "ESMERALDAS",
+        "canton": "RIO VERDE",
+        "parish": "CHUMUNDE"
+    },
+    {
+        "sk": 26415,
+        "province": "ESMERALDAS",
+        "canton": "RIO VERDE",
+        "parish": "LAGARTO"
+    },
+    {
+        "sk": 26892,
+        "province": "ESMERALDAS",
+        "canton": "RIO VERDE",
+        "parish": "MONTALVO (CAB EN HORQUETA)"
+    },
+    {
+        "sk": 27042,
+        "province": "ESMERALDAS",
+        "canton": "RIO VERDE",
+        "parish": "MONTALVO (CAB. EN HORQUETA)"
+    },
+    {
+        "sk": 26815,
+        "province": "ESMERALDAS",
+        "canton": "RIO VERDE",
+        "parish": "RIO VERDE"
+    },
+    {
+        "sk": 26623,
+        "province": "ESMERALDAS",
+        "canton": "RIO VERDE",
+        "parish": "RIOVERDE"
+    },
+    {
+        "sk": 26854,
+        "province": "ESMERALDAS",
+        "canton": "RIO VERDE",
+        "parish": "ROCAFUERTE"
+    },
+    {
+        "sk": 27459,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "5 DE JUNIO (CAB. EN UIMBI)"
+    },
+    {
+        "sk": 27109,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "ALTO TAMBO (CAB EN GUADUAL)"
+    },
+    {
+        "sk": 27019,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "ANCON (PICHANGAL) (CAB. EN PALMA REAL)"
+    },
+    {
+        "sk": 26784,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "CALDERON"
+    },
+    {
+        "sk": 27620,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "CARONDELET"
+    },
+    {
+        "sk": 27430,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "CONCEPCION"
+    },
+    {
+        "sk": 26320,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "MATAJE (CAB. EN SANTANDER)"
+    },
+    {
+        "sk": 27327,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "SAN JAVIER DE CACHAVI (CAB. EN SAN JAVIER)"
+    },
+    {
+        "sk": 27356,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "SAN LORENZO"
+    },
+    {
+        "sk": 27007,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "SANTA RITA"
+    },
+    {
+        "sk": 26863,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "TAMBILLO"
+    },
+    {
+        "sk": 26473,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "TULULBI (CAB. EN RICAURTE)"
+    },
+    {
+        "sk": 27609,
+        "province": "ESMERALDAS",
+        "canton": "SAN LORENZO",
+        "parish": "URBINA"
+    },
+    {
+        "sk": 27403,
+        "province": "GALAPAGOS",
+        "canton": "ISABELA",
+        "parish": "PUERTO VILLAMIL"
+    },
+    {
+        "sk": 27613,
+        "province": "GALAPAGOS",
+        "canton": "ISABELA",
+        "parish": "TOMAS DE BERLANGA (SANTO TOMAS)"
+    },
+    {
+        "sk": 26662,
+        "province": "GALAPAGOS",
+        "canton": "SAN CRISTOBAL",
+        "parish": "EL PROGRESO"
+    },
+    {
+        "sk": 26732,
+        "province": "GALAPAGOS",
+        "canton": "SAN CRISTOBAL",
+        "parish": "ISLA SANTA MARÍA (FLOREANA) (CAB. EN  PTO. VELASCO IBARRA)"
+    },
+    {
+        "sk": 27577,
+        "province": "GALAPAGOS",
+        "canton": "SAN CRISTOBAL",
+        "parish": "PUERTO BAQUERIZO MORENO"
+    },
+    {
+        "sk": 27601,
+        "province": "GALAPAGOS",
+        "canton": "SANTA CRUZ",
+        "parish": "BELLA VISTA"
+    },
+    {
+        "sk": 27646,
+        "province": "GALAPAGOS",
+        "canton": "SANTA CRUZ",
+        "parish": "BELLAVISTA"
+    },
+    {
+        "sk": 27372,
+        "province": "GALAPAGOS",
+        "canton": "SANTA CRUZ",
+        "parish": "PUERTO AYORA"
+    },
+    {
+        "sk": 27562,
+        "province": "GALAPAGOS",
+        "canton": "SANTA CRUZ",
+        "parish": "SANTA ROSA"
+    },
+    {
+        "sk": 26475,
+        "province": "GUAYAS",
+        "canton": "ALFREDO BAQUERIZO MORENO",
+        "parish": "ALFREDO BAQUERIZO MORENO (JUJAN)"
+    },
+    {
+        "sk": 27170,
+        "province": "GUAYAS",
+        "canton": "BALAO",
+        "parish": "BALAO"
+    },
+    {
+        "sk": 27593,
+        "province": "GUAYAS",
+        "canton": "BALZAR",
+        "parish": "BALZAR"
+    },
+    {
+        "sk": 27630,
+        "province": "GUAYAS",
+        "canton": "COLIMES",
+        "parish": "COLIMES"
+    },
+    {
+        "sk": 26380,
+        "province": "GUAYAS",
+        "canton": "COLIMES",
+        "parish": "SAN JACINTO"
+    },
+    {
+        "sk": 26558,
+        "province": "GUAYAS",
+        "canton": "CORONEL MARCELINO MARIDUEÑA",
+        "parish": "CORONEL MARCELINO MARIDUEÑA (SAN CARLOS)"
+    },
+    {
+        "sk": 27247,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "BANIFE"
+    },
+    {
+        "sk": 27246,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "DAULE"
+    },
+    {
+        "sk": 27374,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "DAULE, CABECERA CANTONAL"
+    },
+    {
+        "sk": 26838,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "EMILIANO CAICEDO MARCOS"
+    },
+    {
+        "sk": 27229,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "ISIDRO AYORA (SOLEDAD)"
+    },
+    {
+        "sk": 27030,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "JUAN BAUTISTA AGUIRRE (LOS TINTOS)"
+    },
+    {
+        "sk": 26576,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "LA AURORA (SATÉLITE)"
+    },
+    {
+        "sk": 26876,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "LAUREL"
+    },
+    {
+        "sk": 26920,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "LIMONAL"
+    },
+    {
+        "sk": 27048,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "LOS LOJAS (ENRIQUE BAQUERIZO MORENO)"
+    },
+    {
+        "sk": 27371,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "MAGRO"
+    },
+    {
+        "sk": 27338,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "PADRE JUAN BAUTISTA AGUIRRE"
+    },
+    {
+        "sk": 26583,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "SANTA CLARA"
+    },
+    {
+        "sk": 26322,
+        "province": "GUAYAS",
+        "canton": "DAULE",
+        "parish": "VICENTE PIEDRAHITA"
+    },
+    {
+        "sk": 27063,
+        "province": "GUAYAS",
+        "canton": "DURAN",
+        "parish": "DIVINO NIÑO"
+    },
+    {
+        "sk": 27364,
+        "province": "GUAYAS",
+        "canton": "DURAN",
+        "parish": "EL RECREO"
+    },
+    {
+        "sk": 27458,
+        "province": "GUAYAS",
+        "canton": "DURAN",
+        "parish": "ELOY ALFARO (DURÁN)"
+    },
+    {
+        "sk": 27249,
+        "province": "GUAYAS",
+        "canton": "DURAN",
+        "parish": "ELOY ALFARO (DURÁN), CABECERA CANTONAL"
+    },
+    {
+        "sk": 26961,
+        "province": "GUAYAS",
+        "canton": "EL EMPALME",
+        "parish": "EL ROSARIO"
+    },
+    {
+        "sk": 26804,
+        "province": "GUAYAS",
+        "canton": "EL EMPALME",
+        "parish": "GUAYAS (PUEBLO NUEVO)"
+    },
+    {
+        "sk": 27508,
+        "province": "GUAYAS",
+        "canton": "EL EMPALME",
+        "parish": "VELASCO IBARRA (CAB. EL EMPALME)"
+    },
+    {
+        "sk": 26324,
+        "province": "GUAYAS",
+        "canton": "EL TRIUNFO",
+        "parish": "EL TRIUNFO"
+    },
+    {
+        "sk": 26873,
+        "province": "GUAYAS",
+        "canton": "GENERAL ANTONIO ELIZALDE",
+        "parish": "GENERAL ANTONIO ELIZALDE (BUCAY)"
+    },
+    {
+        "sk": 27306,
+        "province": "GUAYAS",
+        "canton": "GENERAL ANTONIO ELIZALDE",
+        "parish": "GENERAL ELIZALDE (BUCAY)"
+    },
+    {
+        "sk": 27394,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "ALSHI (CAB EN 9 DE OCTUBRE)"
+    },
+    {
+        "sk": 27382,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "AYACUCHO"
+    },
+    {
+        "sk": 27168,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "BOLÍVAR  (SAGRARIO)"
+    },
+    {
+        "sk": 26650,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "CARBO (CONCEPCIÓN)"
+    },
+    {
+        "sk": 26659,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "CHONGON"
+    },
+    {
+        "sk": 27533,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "FEBRES CORDERO"
+    },
+    {
+        "sk": 27529,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "GARCIA MORENO"
+    },
+    {
+        "sk": 26332,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "GUAYAQUIL"
+    },
+    {
+        "sk": 27270,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "JUAN GOMEZ RENDON (PROGRESO)"
+    },
+    {
+        "sk": 26350,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "LETAMENDI"
+    },
+    {
+        "sk": 26752,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "MORRO"
+    },
+    {
+        "sk": 27242,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "NUEVE DE OCTUBRE"
+    },
+    {
+        "sk": 26950,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "OLMEDO  (SAN ALEJO)"
+    },
+    {
+        "sk": 26403,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "PASCUALES"
+    },
+    {
+        "sk": 27088,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "POSORJA"
+    },
+    {
+        "sk": 26479,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "PUNA"
+    },
+    {
+        "sk": 26399,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "ROCA"
+    },
+    {
+        "sk": 27150,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "ROCAFUERTE"
+    },
+    {
+        "sk": 26720,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "SUCRE"
+    },
+    {
+        "sk": 26342,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "TARQUI"
+    },
+    {
+        "sk": 27154,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "TENGUEL"
+    },
+    {
+        "sk": 27662,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "URDANETA"
+    },
+    {
+        "sk": 27090,
+        "province": "GUAYAS",
+        "canton": "GUAYAQUIL",
+        "parish": "XIMENA"
+    },
+    {
+        "sk": 26666,
+        "province": "GUAYAS",
+        "canton": "ISIDRO AYORA",
+        "parish": "ISIDRO AYORA"
+    },
+    {
+        "sk": 26634,
+        "province": "GUAYAS",
+        "canton": "LOMAS DE SARGENTILLO",
+        "parish": "LOMAS DE SARGENTILLO"
+    },
+    {
+        "sk": 27547,
+        "province": "GUAYAS",
+        "canton": "MILAGRO",
+        "parish": "CAMILO ANDRADE"
+    },
+    {
+        "sk": 27507,
+        "province": "GUAYAS",
+        "canton": "MILAGRO",
+        "parish": "CHIRIJOS"
+    },
+    {
+        "sk": 27670,
+        "province": "GUAYAS",
+        "canton": "MILAGRO",
+        "parish": "CHOBO"
+    },
+    {
+        "sk": 27525,
+        "province": "GUAYAS",
+        "canton": "MILAGRO",
+        "parish": "CORONEL ENRIQUE VALDEZ"
+    },
+    {
+        "sk": 27348,
+        "province": "GUAYAS",
+        "canton": "MILAGRO",
+        "parish": "ERNESTO SEMINARIO"
+    },
+    {
+        "sk": 26449,
+        "province": "GUAYAS",
+        "canton": "MILAGRO",
+        "parish": "MARISCAL SUCRE (HUAQUES)"
+    },
+    {
+        "sk": 27546,
+        "province": "GUAYAS",
+        "canton": "MILAGRO",
+        "parish": "MILAGRO"
+    },
+    {
+        "sk": 26736,
+        "province": "GUAYAS",
+        "canton": "MILAGRO",
+        "parish": "ROBERTO ASTUDILLO (CAB. EN CRUCE DE VENECIA)"
+    },
+    {
+        "sk": 27597,
+        "province": "GUAYAS",
+        "canton": "NARANJAL",
+        "parish": "JESUS MARIA"
+    },
+    {
+        "sk": 26303,
+        "province": "GUAYAS",
+        "canton": "NARANJAL",
+        "parish": "NARANJAL"
+    },
+    {
+        "sk": 27650,
+        "province": "GUAYAS",
+        "canton": "NARANJAL",
+        "parish": "SAN CARLOS"
+    },
+    {
+        "sk": 27263,
+        "province": "GUAYAS",
+        "canton": "NARANJAL",
+        "parish": "SANTA ROSA DE FLANDES"
+    },
+    {
+        "sk": 27617,
+        "province": "GUAYAS",
+        "canton": "NARANJAL",
+        "parish": "TAURA"
+    },
+    {
+        "sk": 26440,
+        "province": "GUAYAS",
+        "canton": "NARANJITO",
+        "parish": "NARANJITO"
+    },
+    {
+        "sk": 26964,
+        "province": "GUAYAS",
+        "canton": "NOBOL",
+        "parish": "NARCISA DE JESUS"
+    },
+    {
+        "sk": 27001,
+        "province": "GUAYAS",
+        "canton": "PALESTINA",
+        "parish": "PALESTINA"
+    },
+    {
+        "sk": 27658,
+        "province": "GUAYAS",
+        "canton": "PEDRO CARBO",
+        "parish": "PEDRO CARBO"
+    },
+    {
+        "sk": 26809,
+        "province": "GUAYAS",
+        "canton": "PEDRO CARBO",
+        "parish": "SABANILLA"
+    },
+    {
+        "sk": 27441,
+        "province": "GUAYAS",
+        "canton": "PEDRO CARBO",
+        "parish": "VALLE DE LA VIRGEN"
+    },
+    {
+        "sk": 27027,
+        "province": "GUAYAS",
+        "canton": "PLAYAS",
+        "parish": "GENERAL VILLAMIL (PLAYAS)"
+    },
+    {
+        "sk": 27180,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "BALLENITA"
+    },
+    {
+        "sk": 26598,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "BOCANA"
+    },
+    {
+        "sk": 27077,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "CANDILEJOS"
+    },
+    {
+        "sk": 26824,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "CENTRAL"
+    },
+    {
+        "sk": 26735,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "EL SALITRE (LAS RAMAS)"
+    },
+    {
+        "sk": 26670,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "GENERAL VERNAZA (DOS ESTEROS)"
+    },
+    {
+        "sk": 26972,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "JUNQUILLAL"
+    },
+    {
+        "sk": 26725,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "LA VICTORIA (ÑAUZA)"
+    },
+    {
+        "sk": 27034,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "SAN MATEO"
+    },
+    {
+        "sk": 27141,
+        "province": "GUAYAS",
+        "canton": "SALITRE",
+        "parish": "URBINA"
+    },
+    {
+        "sk": 26881,
+        "province": "GUAYAS",
+        "canton": "SAMBORONDÓN",
+        "parish": "LA PUNTILLA (SATÉLITE)"
+    },
+    {
+        "sk": 26584,
+        "province": "GUAYAS",
+        "canton": "SAMBORONDÓN",
+        "parish": "SAMBORONDÓN"
+    },
+    {
+        "sk": 27612,
+        "province": "GUAYAS",
+        "canton": "SAMBORONDÓN",
+        "parish": "TARIFA"
+    },
+    {
+        "sk": 26393,
+        "province": "GUAYAS",
+        "canton": "SAN JACINTO DE YAGUACHI",
+        "parish": "GENERAL PEDRO J. MONTERO (BOLICHE)"
+    },
+    {
+        "sk": 27078,
+        "province": "GUAYAS",
+        "canton": "SAN JACINTO DE YAGUACHI",
+        "parish": "SAN JACINTO DE YAGUACHI"
+    },
+    {
+        "sk": 27478,
+        "province": "GUAYAS",
+        "canton": "SAN JACINTO DE YAGUACHI",
+        "parish": "SANTA ELENA"
+    },
+    {
+        "sk": 26372,
+        "province": "GUAYAS",
+        "canton": "SAN JACINTO DE YAGUACHI",
+        "parish": "VIRGEN DE FATIMA"
+    },
+    {
+        "sk": 27035,
+        "province": "GUAYAS",
+        "canton": "SAN JACINTO DE YAGUACHI",
+        "parish": "YAGUACHI VIEJO (CONE)"
+    },
+    {
+        "sk": 26801,
+        "province": "GUAYAS",
+        "canton": "SANTA LUCIA",
+        "parish": "SANTA LUCIA"
+    },
+    {
+        "sk": 27362,
+        "province": "GUAYAS",
+        "canton": "SANTA LUCIA",
+        "parish": "SIMON BOLIVAR"
+    },
+    {
+        "sk": 26464,
+        "province": "GUAYAS",
+        "canton": "SIMON BOLIVAR",
+        "parish": "CORONEL LORENZO DE GARAYCOA (PEDREGAL)"
+    },
+    {
+        "sk": 27337,
+        "province": "GUAYAS",
+        "canton": "SIMON BOLIVAR",
+        "parish": "SIMON BOLIVAR"
+    },
+    {
+        "sk": 26859,
+        "province": "IMBABURA",
+        "canton": "ANTONIO ANTE",
+        "parish": "ANDRADE MARÍN  (LOURDES)"
+    },
+    {
+        "sk": 27227,
+        "province": "IMBABURA",
+        "canton": "ANTONIO ANTE",
+        "parish": "ATUNTAQUI"
+    },
+    {
+        "sk": 26891,
+        "province": "IMBABURA",
+        "canton": "ANTONIO ANTE",
+        "parish": "IMBAYA (SAN LUIS DE COBUENDO)"
+    },
+    {
+        "sk": 27299,
+        "province": "IMBABURA",
+        "canton": "ANTONIO ANTE",
+        "parish": "SAN FRANCISCO DE NATABUELA"
+    },
+    {
+        "sk": 26713,
+        "province": "IMBABURA",
+        "canton": "ANTONIO ANTE",
+        "parish": "SAN JOSE DE CHALTURA"
+    },
+    {
+        "sk": 26853,
+        "province": "IMBABURA",
+        "canton": "ANTONIO ANTE",
+        "parish": "SAN ROQUE"
+    },
+    {
+        "sk": 26978,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "6 DE JULIO DE CUELLAJE (CAB. EN CUELLAJE)"
+    },
+    {
+        "sk": 26641,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "APUELA"
+    },
+    {
+        "sk": 27454,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "COTACACHI"
+    },
+    {
+        "sk": 27683,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "GARCIA MORENO (LLURIMAGUA)"
+    },
+    {
+        "sk": 27235,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "IMANTAG"
+    },
+    {
+        "sk": 26761,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "PEÑAHERRERA"
+    },
+    {
+        "sk": 27046,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "PLAZA GUTIERREZ (CALVARIO)"
+    },
+    {
+        "sk": 27166,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "QUIROGA"
+    },
+    {
+        "sk": 27094,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "SAGRARIO"
+    },
+    {
+        "sk": 26795,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "SAN FRANCISCO"
+    },
+    {
+        "sk": 27233,
+        "province": "IMBABURA",
+        "canton": "COTACACHI",
+        "parish": "VACAS GALINDO (EL CHURO) (CAB. EN SAN MIGUEL ALTO)"
+    },
+    {
+        "sk": 26517,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "AMBUQUI"
+    },
+    {
+        "sk": 26386,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "ANGOCHAGUA"
+    },
+    {
+        "sk": 27470,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "CARANQUI"
+    },
+    {
+        "sk": 27432,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "CAROLINA"
+    },
+    {
+        "sk": 27026,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "GUAYAQUIL DE ALPACHACA"
+    },
+    {
+        "sk": 27024,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "LA DOLOROSA DEL PRIORATO"
+    },
+    {
+        "sk": 26494,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "LA ESPERANZA"
+    },
+    {
+        "sk": 26737,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "LITA"
+    },
+    {
+        "sk": 27322,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "SAGRARIO"
+    },
+    {
+        "sk": 26639,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "SALINAS"
+    },
+    {
+        "sk": 26782,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "SAN ANTONIO"
+    },
+    {
+        "sk": 26646,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "SAN FRANCISCO"
+    },
+    {
+        "sk": 27628,
+        "province": "IMBABURA",
+        "canton": "IBARRA",
+        "parish": "SAN MIGUEL DE IBARRA"
+    },
+    {
+        "sk": 27303,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "DOCTOR MIGUEL EGAS CABEZAS (PEGUCHE)"
+    },
+    {
+        "sk": 26729,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "EUGENIO ESPEJO (CALPAQUI)"
+    },
+    {
+        "sk": 27405,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "GONZALEZ SUAREZ"
+    },
+    {
+        "sk": 26537,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "JORDÁN"
+    },
+    {
+        "sk": 26806,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "OTAVALO"
+    },
+    {
+        "sk": 27568,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "PATAQUI"
+    },
+    {
+        "sk": 26327,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "SAN JOSE DE QUICHINCHE"
+    },
+    {
+        "sk": 27287,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "SAN JUAN DE ILUMAN"
+    },
+    {
+        "sk": 26424,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "SAN LUIS"
+    },
+    {
+        "sk": 26940,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "SAN PABLO"
+    },
+    {
+        "sk": 27050,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "SAN RAFAEL"
+    },
+    {
+        "sk": 27602,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "SELVA ALEGRE"
+    },
+    {
+        "sk": 27465,
+        "province": "IMBABURA",
+        "canton": "OTAVALO",
+        "parish": "SELVA ALEGRE (CAB. EN SAN MIGUEL DE PAMPLONA)"
+    },
+    {
+        "sk": 26996,
+        "province": "IMBABURA",
+        "canton": "PIMAMPIRO",
+        "parish": "CHUGA"
+    },
+    {
+        "sk": 26772,
+        "province": "IMBABURA",
+        "canton": "PIMAMPIRO",
+        "parish": "MARIANO ACOSTA"
+    },
+    {
+        "sk": 26669,
+        "province": "IMBABURA",
+        "canton": "PIMAMPIRO",
+        "parish": "PIMAMPIRO"
+    },
+    {
+        "sk": 26532,
+        "province": "IMBABURA",
+        "canton": "PIMAMPIRO",
+        "parish": "SAN FRANCISCO DE SIGSIPAMBA"
+    },
+    {
+        "sk": 26376,
+        "province": "IMBABURA",
+        "canton": "SAN MIGUEL DE URCUQUI",
+        "parish": "CAHUASQUI"
+    },
+    {
+        "sk": 26593,
+        "province": "IMBABURA",
+        "canton": "SAN MIGUEL DE URCUQUI",
+        "parish": "LA MERCED DE BUENOS AIRES"
+    },
+    {
+        "sk": 26966,
+        "province": "IMBABURA",
+        "canton": "SAN MIGUEL DE URCUQUI",
+        "parish": "PABLO ARENAS"
+    },
+    {
+        "sk": 27355,
+        "province": "IMBABURA",
+        "canton": "SAN MIGUEL DE URCUQUI",
+        "parish": "SAN BLAS"
+    },
+    {
+        "sk": 27407,
+        "province": "IMBABURA",
+        "canton": "SAN MIGUEL DE URCUQUI",
+        "parish": "TUMBABIRO"
+    },
+    {
+        "sk": 26370,
+        "province": "IMBABURA",
+        "canton": "SAN MIGUEL DE URCUQUI",
+        "parish": "URCUQUI"
+    },
+    {
+        "sk": 26745,
+        "province": "LOJA",
+        "canton": "CALVAS",
+        "parish": "CARIAMANGA"
+    },
+    {
+        "sk": 27003,
+        "province": "LOJA",
+        "canton": "CALVAS",
+        "parish": "CHILE"
+    },
+    {
+        "sk": 26850,
+        "province": "LOJA",
+        "canton": "CALVAS",
+        "parish": "COLAISACA"
+    },
+    {
+        "sk": 26671,
+        "province": "LOJA",
+        "canton": "CALVAS",
+        "parish": "EL LUCERO"
+    },
+    {
+        "sk": 26461,
+        "province": "LOJA",
+        "canton": "CALVAS",
+        "parish": "SAN VICENTE"
+    },
+    {
+        "sk": 26362,
+        "province": "LOJA",
+        "canton": "CALVAS",
+        "parish": "SANGUILLIN"
+    },
+    {
+        "sk": 26301,
+        "province": "LOJA",
+        "canton": "CALVAS",
+        "parish": "UTUANA"
+    },
+    {
+        "sk": 26855,
+        "province": "LOJA",
+        "canton": "CATAMAYO",
+        "parish": "CATAMAYO"
+    },
+    {
+        "sk": 26428,
+        "province": "LOJA",
+        "canton": "CATAMAYO",
+        "parish": "CATAMAYO (LA TOMA)"
+    },
+    {
+        "sk": 27234,
+        "province": "LOJA",
+        "canton": "CATAMAYO",
+        "parish": "EL TAMBO"
+    },
+    {
+        "sk": 27110,
+        "province": "LOJA",
+        "canton": "CATAMAYO",
+        "parish": "GUAYQUICHUMA"
+    },
+    {
+        "sk": 27414,
+        "province": "LOJA",
+        "canton": "CATAMAYO",
+        "parish": "SAN JOSE"
+    },
+    {
+        "sk": 26825,
+        "province": "LOJA",
+        "canton": "CATAMAYO",
+        "parish": "SAN JOSÉ"
+    },
+    {
+        "sk": 26954,
+        "province": "LOJA",
+        "canton": "CATAMAYO",
+        "parish": "SAN PEDRO DE LA BENDITA"
+    },
+    {
+        "sk": 26999,
+        "province": "LOJA",
+        "canton": "CATAMAYO",
+        "parish": "ZAMBI"
+    },
+    {
+        "sk": 26421,
+        "province": "LOJA",
+        "canton": "CELICA",
+        "parish": "CELICA"
+    },
+    {
+        "sk": 26858,
+        "province": "LOJA",
+        "canton": "CELICA",
+        "parish": "CRUZPAMBA (CAB EN CARLOS BUSTAMANTE)"
+    },
+    {
+        "sk": 27336,
+        "province": "LOJA",
+        "canton": "CELICA",
+        "parish": "POZUL (SAN JUAN DE POZUL)"
+    },
+    {
+        "sk": 27288,
+        "province": "LOJA",
+        "canton": "CELICA",
+        "parish": "SABANILLA"
+    },
+    {
+        "sk": 27076,
+        "province": "LOJA",
+        "canton": "CELICA",
+        "parish": "TENIENTE MAXIMILIANO RODRIGUEZ LOAIZA"
+    },
+    {
+        "sk": 27091,
+        "province": "LOJA",
+        "canton": "CHAGUARPAMBA",
+        "parish": "AMARILLOS"
+    },
+    {
+        "sk": 26679,
+        "province": "LOJA",
+        "canton": "CHAGUARPAMBA",
+        "parish": "BUENAVISTA"
+    },
+    {
+        "sk": 26321,
+        "province": "LOJA",
+        "canton": "CHAGUARPAMBA",
+        "parish": "CHAGUARPAMBA"
+    },
+    {
+        "sk": 27358,
+        "province": "LOJA",
+        "canton": "CHAGUARPAMBA",
+        "parish": "EL ROSARIO"
+    },
+    {
+        "sk": 27232,
+        "province": "LOJA",
+        "canton": "CHAGUARPAMBA",
+        "parish": "SANTA RUFINA"
+    },
+    {
+        "sk": 27569,
+        "province": "LOJA",
+        "canton": "ESPINDOLA",
+        "parish": "27 DE ABRIL (CAB. EN LA NARANJA)"
+    },
+    {
+        "sk": 26385,
+        "province": "LOJA",
+        "canton": "ESPINDOLA",
+        "parish": "AMALUZA"
+    },
+    {
+        "sk": 27599,
+        "province": "LOJA",
+        "canton": "ESPINDOLA",
+        "parish": "BELLAVISTA"
+    },
+    {
+        "sk": 27487,
+        "province": "LOJA",
+        "canton": "ESPINDOLA",
+        "parish": "EL AIRO"
+    },
+    {
+        "sk": 26689,
+        "province": "LOJA",
+        "canton": "ESPINDOLA",
+        "parish": "EL INGENIO"
+    },
+    {
+        "sk": 27190,
+        "province": "LOJA",
+        "canton": "ESPINDOLA",
+        "parish": "JIMBURA"
+    },
+    {
+        "sk": 26685,
+        "province": "LOJA",
+        "canton": "ESPINDOLA",
+        "parish": "SANTA TERESITA"
+    },
+    {
+        "sk": 26556,
+        "province": "LOJA",
+        "canton": "GONZANAMA",
+        "parish": "CHANGAIMINA (LA LIBERTAD)"
+    },
+    {
+        "sk": 27665,
+        "province": "LOJA",
+        "canton": "GONZANAMA",
+        "parish": "GONZANAMA"
+    },
+    {
+        "sk": 26465,
+        "province": "LOJA",
+        "canton": "GONZANAMA",
+        "parish": "NAMBACOLA"
+    },
+    {
+        "sk": 26909,
+        "province": "LOJA",
+        "canton": "GONZANAMA",
+        "parish": "PURUNUMA (EGUIGUREN)"
+    },
+    {
+        "sk": 26750,
+        "province": "LOJA",
+        "canton": "GONZANAMA",
+        "parish": "SACAPALCA"
+    },
+    {
+        "sk": 27634,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "CARIGÁN"
+    },
+    {
+        "sk": 26580,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "CHANTACO"
+    },
+    {
+        "sk": 26783,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "CHUQUIRIBAMBA"
+    },
+    {
+        "sk": 26594,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "EL CISNE"
+    },
+    {
+        "sk": 27661,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "EL SAGRARIO"
+    },
+    {
+        "sk": 26610,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "GUALEL"
+    },
+    {
+        "sk": 26734,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "JIMBILLA"
+    },
+    {
+        "sk": 26953,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "LOJA"
+    },
+    {
+        "sk": 27419,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "MALACATOS (VALLADOLID)"
+    },
+    {
+        "sk": 27073,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "PUNZARA"
+    },
+    {
+        "sk": 27203,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "QUINARA"
+    },
+    {
+        "sk": 27567,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "SAN LUCAS"
+    },
+    {
+        "sk": 27573,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "SAN PEDRO DE VILCABAMBA"
+    },
+    {
+        "sk": 27187,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "SAN SEBASTIAN"
+    },
+    {
+        "sk": 27009,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "SAN SEBASTIÁN"
+    },
+    {
+        "sk": 26913,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "SANTIAGO"
+    },
+    {
+        "sk": 27181,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "SUCRE"
+    },
+    {
+        "sk": 26615,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "TAQUIL (MIGUEL RIOFRIO)"
+    },
+    {
+        "sk": 27038,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "VALLE"
+    },
+    {
+        "sk": 27153,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "VILCABAMBA (VICTORIA)"
+    },
+    {
+        "sk": 26337,
+        "province": "LOJA",
+        "canton": "LOJA",
+        "parish": "YANGANA (ARSENIO CASTILLO)"
+    },
+    {
+        "sk": 26697,
+        "province": "LOJA",
+        "canton": "MACARA",
+        "parish": "GENERAL ELOY ALFARO"
+    },
+    {
+        "sk": 27484,
+        "province": "LOJA",
+        "canton": "MACARA",
+        "parish": "GENERAL ELOY ALFARO (SAN SEBASTIÁN)"
+    },
+    {
+        "sk": 27395,
+        "province": "LOJA",
+        "canton": "MACARA",
+        "parish": "LA RAMA"
+    },
+    {
+        "sk": 27308,
+        "province": "LOJA",
+        "canton": "MACARA",
+        "parish": "LA VICTORIA"
+    },
+    {
+        "sk": 26619,
+        "province": "LOJA",
+        "canton": "MACARA",
+        "parish": "MACARA"
+    },
+    {
+        "sk": 27585,
+        "province": "LOJA",
+        "canton": "MACARA",
+        "parish": "MACARÁ  (MANUEL ENRIQUE RENGEL SUQUILANDA)"
+    },
+    {
+        "sk": 27217,
+        "province": "LOJA",
+        "canton": "MACARA",
+        "parish": "SABIANGO (LA CAPILLA)"
+    },
+    {
+        "sk": 27245,
+        "province": "LOJA",
+        "canton": "OLMEDO",
+        "parish": "LA TINGUE"
+    },
+    {
+        "sk": 26458,
+        "province": "LOJA",
+        "canton": "OLMEDO",
+        "parish": "OLMEDO"
+    },
+    {
+        "sk": 26814,
+        "province": "LOJA",
+        "canton": "PALTAS",
+        "parish": "CANGONAMA"
+    },
+    {
+        "sk": 26868,
+        "province": "LOJA",
+        "canton": "PALTAS",
+        "parish": "CASANGA"
+    },
+    {
+        "sk": 27216,
+        "province": "LOJA",
+        "canton": "PALTAS",
+        "parish": "CATACOCHA"
+    },
+    {
+        "sk": 26762,
+        "province": "LOJA",
+        "canton": "PALTAS",
+        "parish": "GUACHANAMA"
+    },
+    {
+        "sk": 27677,
+        "province": "LOJA",
+        "canton": "PALTAS",
+        "parish": "LAURO GUERRERO"
+    },
+    {
+        "sk": 27392,
+        "province": "LOJA",
+        "canton": "PALTAS",
+        "parish": "LOURDES"
+    },
+    {
+        "sk": 27467,
+        "province": "LOJA",
+        "canton": "PALTAS",
+        "parish": "ORIANGA"
+    },
+    {
+        "sk": 27540,
+        "province": "LOJA",
+        "canton": "PALTAS",
+        "parish": "SAN ANTONIO"
+    },
+    {
+        "sk": 26625,
+        "province": "LOJA",
+        "canton": "PALTAS",
+        "parish": "YAMANA"
+    },
+    {
+        "sk": 26680,
+        "province": "LOJA",
+        "canton": "PINDAL",
+        "parish": "12 DE DICIEMBRE (CAB. EN ACHIOTES)"
+    },
+    {
+        "sk": 26688,
+        "province": "LOJA",
+        "canton": "PINDAL",
+        "parish": "CHAQUINAL"
+    },
+    {
+        "sk": 26414,
+        "province": "LOJA",
+        "canton": "PINDAL",
+        "parish": "MILAGROS"
+    },
+    {
+        "sk": 26384,
+        "province": "LOJA",
+        "canton": "PINDAL",
+        "parish": "PINDAL"
+    },
+    {
+        "sk": 26603,
+        "province": "LOJA",
+        "canton": "PINDAL",
+        "parish": "PINDAL / FEDERICO PAEZ"
+    },
+    {
+        "sk": 26691,
+        "province": "LOJA",
+        "canton": "PUYANGO",
+        "parish": "ALAMOR"
+    },
+    {
+        "sk": 26930,
+        "province": "LOJA",
+        "canton": "PUYANGO",
+        "parish": "CIANO"
+    },
+    {
+        "sk": 26681,
+        "province": "LOJA",
+        "canton": "PUYANGO",
+        "parish": "EL ARENAL"
+    },
+    {
+        "sk": 26970,
+        "province": "LOJA",
+        "canton": "PUYANGO",
+        "parish": "EL LIMO (MARIANA DE JESUS)"
+    },
+    {
+        "sk": 26683,
+        "province": "LOJA",
+        "canton": "PUYANGO",
+        "parish": "MERCADILLO"
+    },
+    {
+        "sk": 26319,
+        "province": "LOJA",
+        "canton": "PUYANGO",
+        "parish": "VICENTINO"
+    },
+    {
+        "sk": 27117,
+        "province": "LOJA",
+        "canton": "QUILANGA",
+        "parish": "FUNDOCHAMBA"
+    },
+    {
+        "sk": 27085,
+        "province": "LOJA",
+        "canton": "QUILANGA",
+        "parish": "QUILANGA"
+    },
+    {
+        "sk": 27341,
+        "province": "LOJA",
+        "canton": "QUILANGA",
+        "parish": "QUILANGA (LA PAZ)"
+    },
+    {
+        "sk": 26328,
+        "province": "LOJA",
+        "canton": "QUILANGA",
+        "parish": "SAN ANTONIO DE LAS ARADAS (CAB. EN LAS ARADAS)"
+    },
+    {
+        "sk": 26704,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "EL PARAISO DE CELEN"
+    },
+    {
+        "sk": 27272,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "EL TABLON"
+    },
+    {
+        "sk": 26682,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "LLUZHAPA"
+    },
+    {
+        "sk": 26521,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "MANU"
+    },
+    {
+        "sk": 26605,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "SAN ANTONIO DE QUMBE (CUMBE)"
+    },
+    {
+        "sk": 27637,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "SAN PABLO DE TENTA"
+    },
+    {
+        "sk": 26687,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "SAN SEBASTIAN DE YULUC"
+    },
+    {
+        "sk": 26773,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "SARAGURO"
+    },
+    {
+        "sk": 26748,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "SELVA ALEGRE"
+    },
+    {
+        "sk": 27138,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "SUMAYPAMBA"
+    },
+    {
+        "sk": 27114,
+        "province": "LOJA",
+        "canton": "SARAGURO",
+        "parish": "URDANETA (PAQUISHAPA)"
+    },
+    {
+        "sk": 26862,
+        "province": "LOJA",
+        "canton": "SOZORANGA",
+        "parish": "NUEVA FATIMA"
+    },
+    {
+        "sk": 26719,
+        "province": "LOJA",
+        "canton": "SOZORANGA",
+        "parish": "SOZORANGA"
+    },
+    {
+        "sk": 27578,
+        "province": "LOJA",
+        "canton": "SOZORANGA",
+        "parish": "TACAMOROS"
+    },
+    {
+        "sk": 27067,
+        "province": "LOJA",
+        "canton": "ZAPOTILLO",
+        "parish": "BOLASPAMBA"
+    },
+    {
+        "sk": 27140,
+        "province": "LOJA",
+        "canton": "ZAPOTILLO",
+        "parish": "CAZADEROS"
+    },
+    {
+        "sk": 26526,
+        "province": "LOJA",
+        "canton": "ZAPOTILLO",
+        "parish": "GARZAREAL"
+    },
+    {
+        "sk": 26939,
+        "province": "LOJA",
+        "canton": "ZAPOTILLO",
+        "parish": "LIMONES"
+    },
+    {
+        "sk": 27435,
+        "province": "LOJA",
+        "canton": "ZAPOTILLO",
+        "parish": "MANGAHURCO"
+    },
+    {
+        "sk": 26577,
+        "province": "LOJA",
+        "canton": "ZAPOTILLO",
+        "parish": "PALETILLAS"
+    },
+    {
+        "sk": 26519,
+        "province": "LOJA",
+        "canton": "ZAPOTILLO",
+        "parish": "ZAPOTILLO"
+    },
+    {
+        "sk": 27155,
+        "province": "LOS RÍOS",
+        "canton": "BABA",
+        "parish": "BABA"
+    },
+    {
+        "sk": 26609,
+        "province": "LOS RÍOS",
+        "canton": "BABA",
+        "parish": "GUARE"
+    },
+    {
+        "sk": 26992,
+        "province": "LOS RÍOS",
+        "canton": "BABA",
+        "parish": "ISLA DE BEJUCAL"
+    },
+    {
+        "sk": 26776,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "BABAHOYO, CABECERA CANTONAL Y CAPITAL PROVINCIAL"
+    },
+    {
+        "sk": 26962,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "BARREIRO"
+    },
+    {
+        "sk": 27625,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "BARREIRO (SANTA RITA)"
+    },
+    {
+        "sk": 26764,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "BARTOLOMÉ RUIZ (CÉSAR FRANCO CARRIÓN)"
+    },
+    {
+        "sk": 26664,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "CARACOL"
+    },
+    {
+        "sk": 27107,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "CLEMENTE BAQUERIZO"
+    },
+    {
+        "sk": 27162,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "DOCTOR CAMILO PONCE"
+    },
+    {
+        "sk": 26492,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "EL SALTO"
+    },
+    {
+        "sk": 26359,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "FEBRES CORDERO"
+    },
+    {
+        "sk": 26633,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "FEBRES CORDERO (LAS JUNTAS)"
+    },
+    {
+        "sk": 26742,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "LA UNION"
+    },
+    {
+        "sk": 26616,
+        "province": "LOS RÍOS",
+        "canton": "BABAHOYO",
+        "parish": "PIMOCHA"
+    },
+    {
+        "sk": 26418,
+        "province": "LOS RÍOS",
+        "canton": "BUENA FE",
+        "parish": "11 DE OCTUBRE"
+    },
+    {
+        "sk": 26300,
+        "province": "LOS RÍOS",
+        "canton": "BUENA FE",
+        "parish": "7 DE AGOSTO"
+    },
+    {
+        "sk": 26600,
+        "province": "LOS RÍOS",
+        "canton": "BUENA FE",
+        "parish": "PATRICIA PILAR"
+    },
+    {
+        "sk": 27664,
+        "province": "LOS RÍOS",
+        "canton": "BUENA FE",
+        "parish": "SAN JACINTO DE BUENA FE"
+    },
+    {
+        "sk": 26866,
+        "province": "LOS RÍOS",
+        "canton": "BUENA FE",
+        "parish": "SAN JACINTO DE BUENA FÉ"
+    },
+    {
+        "sk": 27083,
+        "province": "LOS RÍOS",
+        "canton": "MOCACHE",
+        "parish": "MOCACHE"
+    },
+    {
+        "sk": 27178,
+        "province": "LOS RÍOS",
+        "canton": "MONTALVO",
+        "parish": "LA ESMERALDA"
+    },
+    {
+        "sk": 26588,
+        "province": "LOS RÍOS",
+        "canton": "MONTALVO",
+        "parish": "MONTALVO"
+    },
+    {
+        "sk": 26348,
+        "province": "LOS RÍOS",
+        "canton": "PALENQUE",
+        "parish": "PALENQUE"
+    },
+    {
+        "sk": 27673,
+        "province": "LOS RÍOS",
+        "canton": "PUEBLO VIEJO",
+        "parish": "PUEBLO VIEJO"
+    },
+    {
+        "sk": 26765,
+        "province": "LOS RÍOS",
+        "canton": "PUEBLO VIEJO",
+        "parish": "PUERTO PECHICHE"
+    },
+    {
+        "sk": 26626,
+        "province": "LOS RÍOS",
+        "canton": "PUEBLO VIEJO",
+        "parish": "SAN JUAN"
+    },
+    {
+        "sk": 26637,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "24 DE MAYO"
+    },
+    {
+        "sk": 26654,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "GUAYACÁN"
+    },
+    {
+        "sk": 27286,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "LA ESPERANZA"
+    },
+    {
+        "sk": 26807,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "NICOLÁS INFANTE DÍAZ"
+    },
+    {
+        "sk": 26841,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "QUEVEDO"
+    },
+    {
+        "sk": 27014,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "QUEVEDO, CABECERA CANTONAL"
+    },
+    {
+        "sk": 26314,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "SAN CAMILO"
+    },
+    {
+        "sk": 26628,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "SAN CARLOS"
+    },
+    {
+        "sk": 26911,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "SAN CRISTÓBAL"
+    },
+    {
+        "sk": 27207,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "SAN CRISTOBAL (CARLOS ORDOÑEZ LAZO)"
+    },
+    {
+        "sk": 27333,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "SIETE DE OCTUBRE"
+    },
+    {
+        "sk": 26471,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "VENUS DEL RÍO QUEVEDO"
+    },
+    {
+        "sk": 26834,
+        "province": "LOS RÍOS",
+        "canton": "QUEVEDO",
+        "parish": "VIVA ALFARO"
+    },
+    {
+        "sk": 26951,
+        "province": "LOS RÍOS",
+        "canton": "QUINSALOMA",
+        "parish": "QUINSALOMA"
+    },
+    {
+        "sk": 26915,
+        "province": "LOS RÍOS",
+        "canton": "URDANETA",
+        "parish": "CATARAMA"
+    },
+    {
+        "sk": 26345,
+        "province": "LOS RÍOS",
+        "canton": "URDANETA",
+        "parish": "RICAURTE"
+    },
+    {
+        "sk": 26638,
+        "province": "LOS RÍOS",
+        "canton": "VALENCIA",
+        "parish": "LA NUEVA UNION"
+    },
+    {
+        "sk": 26900,
+        "province": "LOS RÍOS",
+        "canton": "VALENCIA",
+        "parish": "LA UNION"
+    },
+    {
+        "sk": 27161,
+        "province": "LOS RÍOS",
+        "canton": "VALENCIA",
+        "parish": "VALENCIA"
+    },
+    {
+        "sk": 27657,
+        "province": "LOS RÍOS",
+        "canton": "VENTANAS",
+        "parish": "10 DE NOVIEMBRE"
+    },
+    {
+        "sk": 26454,
+        "province": "LOS RÍOS",
+        "canton": "VENTANAS",
+        "parish": "CHACARITA"
+    },
+    {
+        "sk": 27305,
+        "province": "LOS RÍOS",
+        "canton": "VENTANAS",
+        "parish": "LOS ANGELES"
+    },
+    {
+        "sk": 27451,
+        "province": "LOS RÍOS",
+        "canton": "VENTANAS",
+        "parish": "VENTANAS"
+    },
+    {
+        "sk": 26334,
+        "province": "LOS RÍOS",
+        "canton": "VENTANAS",
+        "parish": "ZAPOTAL"
+    },
+    {
+        "sk": 26988,
+        "province": "LOS RÍOS",
+        "canton": "VINCES",
+        "parish": "ANTONIO SOTOMAYOR (CAB. EN PLAYAS DE VINCES)"
+    },
+    {
+        "sk": 26780,
+        "province": "LOS RÍOS",
+        "canton": "VINCES",
+        "parish": "BALZAR DE VINCES"
+    },
+    {
+        "sk": 27264,
+        "province": "LOS RÍOS",
+        "canton": "VINCES",
+        "parish": "PALENQUE"
+    },
+    {
+        "sk": 26595,
+        "province": "LOS RÍOS",
+        "canton": "VINCES",
+        "parish": "SAN LORENZO DE VINCES"
+    },
+    {
+        "sk": 27295,
+        "province": "LOS RÍOS",
+        "canton": "VINCES",
+        "parish": "VINCES"
+    },
+    {
+        "sk": 27292,
+        "province": "LOS RÍOS",
+        "canton": "VINCES",
+        "parish": "VINCES CENTRAL"
+    },
+    {
+        "sk": 27365,
+        "province": "MANABÍ",
+        "canton": "24 DE MAYO",
+        "parish": "ARQUITECTO SIXTO DURAN BALLEN"
+    },
+    {
+        "sk": 27265,
+        "province": "MANABÍ",
+        "canton": "24 DE MAYO",
+        "parish": "BELLAVISTA"
+    },
+    {
+        "sk": 26450,
+        "province": "MANABÍ",
+        "canton": "24 DE MAYO",
+        "parish": "NOBOA"
+    },
+    {
+        "sk": 26660,
+        "province": "MANABÍ",
+        "canton": "24 DE MAYO",
+        "parish": "SUCRE"
+    },
+    {
+        "sk": 27598,
+        "province": "MANABÍ",
+        "canton": "BOLIVAR",
+        "parish": "CALCETA"
+    },
+    {
+        "sk": 27064,
+        "province": "MANABÍ",
+        "canton": "BOLIVAR",
+        "parish": "MEMBRILLO"
+    },
+    {
+        "sk": 27123,
+        "province": "MANABÍ",
+        "canton": "BOLIVAR",
+        "parish": "QUIROGA"
+    },
+    {
+        "sk": 27186,
+        "province": "MANABÍ",
+        "canton": "CHONE",
+        "parish": "BOYACA"
+    },
+    {
+        "sk": 27310,
+        "province": "MANABÍ",
+        "canton": "CHONE",
+        "parish": "CANUTO"
+    },
+    {
+        "sk": 26692,
+        "province": "MANABÍ",
+        "canton": "CHONE",
+        "parish": "CHIBUNGA"
+    },
+    {
+        "sk": 27056,
+        "province": "MANABÍ",
+        "canton": "CHONE",
+        "parish": "CHONE"
+    },
+    {
+        "sk": 26882,
+        "province": "MANABÍ",
+        "canton": "CHONE",
+        "parish": "CONVENTO"
+    },
+    {
+        "sk": 27230,
+        "province": "MANABÍ",
+        "canton": "CHONE",
+        "parish": "ELOY ALFARO"
+    },
+    {
+        "sk": 26919,
+        "province": "MANABÍ",
+        "canton": "CHONE",
+        "parish": "RICAURTE"
+    },
+    {
+        "sk": 27070,
+        "province": "MANABÍ",
+        "canton": "CHONE",
+        "parish": "SAN ANTONIO"
+    },
+    {
+        "sk": 26739,
+        "province": "MANABÍ",
+        "canton": "CHONE",
+        "parish": "SANTA RITA"
+    },
+    {
+        "sk": 26480,
+        "province": "MANABÍ",
+        "canton": "EL CARMEN",
+        "parish": "4 DE DICIEMBRE"
+    },
+    {
+        "sk": 27550,
+        "province": "MANABÍ",
+        "canton": "EL CARMEN",
+        "parish": "EL CARMEN"
+    },
+    {
+        "sk": 26477,
+        "province": "MANABÍ",
+        "canton": "EL CARMEN",
+        "parish": "EL PARAISO LA 14 (CAB EN EL PARAISO)"
+    },
+    {
+        "sk": 27498,
+        "province": "MANABÍ",
+        "canton": "EL CARMEN",
+        "parish": "SAN PEDRO DE SUMA"
+    },
+    {
+        "sk": 26770,
+        "province": "MANABÍ",
+        "canton": "EL CARMEN",
+        "parish": "SANTA MARIA (CAB EN SANTA MARIA)"
+    },
+    {
+        "sk": 27002,
+        "province": "MANABÍ",
+        "canton": "EL CARMEN",
+        "parish": "WILFRIDO LOOR MOREIRA (MAICITO)"
+    },
+    {
+        "sk": 27268,
+        "province": "MANABÍ",
+        "canton": "FLAVIO ALFARO",
+        "parish": "FLAVIO ALFARO"
+    },
+    {
+        "sk": 26711,
+        "province": "MANABÍ",
+        "canton": "FLAVIO ALFARO",
+        "parish": "SAN FRANCISCO DE NOVILLO (CAB. EN NOVILLO)"
+    },
+    {
+        "sk": 27482,
+        "province": "MANABÍ",
+        "canton": "FLAVIO ALFARO",
+        "parish": "ZAPALLO"
+    },
+    {
+        "sk": 27105,
+        "province": "MANABÍ",
+        "canton": "JAMA",
+        "parish": "JAMA"
+    },
+    {
+        "sk": 26769,
+        "province": "MANABÍ",
+        "canton": "JARAMIJO",
+        "parish": "JARAMIJO"
+    },
+    {
+        "sk": 27492,
+        "province": "MANABÍ",
+        "canton": "JARAMIJÓ",
+        "parish": "JARAMIJÓ"
+    },
+    {
+        "sk": 27278,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "AMERICA"
+    },
+    {
+        "sk": 26912,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "DOCTOR MIGUEL MORÁN LUCIO"
+    },
+    {
+        "sk": 27384,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "EL ANEGADO (CAB. EN ELOY ALFARO)"
+    },
+    {
+        "sk": 27275,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "JIPIJAPA"
+    },
+    {
+        "sk": 27511,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "JULCUY"
+    },
+    {
+        "sk": 27028,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "LA UNION"
+    },
+    {
+        "sk": 26407,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "MANUEL INOCENCIO PARRALES Y GUALE"
+    },
+    {
+        "sk": 26596,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "MEMBRILLAL"
+    },
+    {
+        "sk": 26443,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "PEDRO PABLO GOMEZ"
+    },
+    {
+        "sk": 27043,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "PUERTO DE CAYO"
+    },
+    {
+        "sk": 26555,
+        "province": "MANABÍ",
+        "canton": "JIPIJAPA",
+        "parish": "SAN LORENZO DE JIPIJAPA"
+    },
+    {
+        "sk": 26822,
+        "province": "MANABÍ",
+        "canton": "JUNIN",
+        "parish": "JUNIN"
+    },
+    {
+        "sk": 26805,
+        "province": "MANABÍ",
+        "canton": "MANTA",
+        "parish": "ELOY ALFARO"
+    },
+    {
+        "sk": 27013,
+        "province": "MANABÍ",
+        "canton": "MANTA",
+        "parish": "LOS ESTEROS"
+    },
+    {
+        "sk": 27312,
+        "province": "MANABÍ",
+        "canton": "MANTA",
+        "parish": "MANTA"
+    },
+    {
+        "sk": 27401,
+        "province": "MANABÍ",
+        "canton": "MANTA",
+        "parish": "SAN LORENZO"
+    },
+    {
+        "sk": 27071,
+        "province": "MANABÍ",
+        "canton": "MANTA",
+        "parish": "SAN MATEO"
+    },
+    {
+        "sk": 26694,
+        "province": "MANABÍ",
+        "canton": "MANTA",
+        "parish": "SANTA MARIANITA (BOCA DE PACOCHE)"
+    },
+    {
+        "sk": 27032,
+        "province": "MANABÍ",
+        "canton": "MANTA",
+        "parish": "TARQUI"
+    },
+    {
+        "sk": 27011,
+        "province": "MANABÍ",
+        "canton": "MONTECRISTI",
+        "parish": "ANÍBAL SAN ANDRÉS"
+    },
+    {
+        "sk": 26833,
+        "province": "MANABÍ",
+        "canton": "MONTECRISTI",
+        "parish": "EL COLORADO"
+    },
+    {
+        "sk": 27289,
+        "province": "MANABÍ",
+        "canton": "MONTECRISTI",
+        "parish": "GENERAL ELOY ALFARO"
+    },
+    {
+        "sk": 26398,
+        "province": "MANABÍ",
+        "canton": "MONTECRISTI",
+        "parish": "JARAMIJÓ"
+    },
+    {
+        "sk": 26744,
+        "province": "MANABÍ",
+        "canton": "MONTECRISTI",
+        "parish": "LA PILA"
+    },
+    {
+        "sk": 27199,
+        "province": "MANABÍ",
+        "canton": "MONTECRISTI",
+        "parish": "LEONIDAS PROAÑO"
+    },
+    {
+        "sk": 26901,
+        "province": "MANABÍ",
+        "canton": "MONTECRISTI",
+        "parish": "MONTECRISTI"
+    },
+    {
+        "sk": 27219,
+        "province": "MANABÍ",
+        "canton": "OLMEDO",
+        "parish": "OLMEDO"
+    },
+    {
+        "sk": 27196,
+        "province": "MANABÍ",
+        "canton": "PAJAN",
+        "parish": "CAMPOZANO (LA PALMA DE PAJAN)"
+    },
+    {
+        "sk": 27250,
+        "province": "MANABÍ",
+        "canton": "PAJAN",
+        "parish": "CASCOL"
+    },
+    {
+        "sk": 26570,
+        "province": "MANABÍ",
+        "canton": "PAJAN",
+        "parish": "GUALE"
+    },
+    {
+        "sk": 26758,
+        "province": "MANABÍ",
+        "canton": "PAJAN",
+        "parish": "LASCANO"
+    },
+    {
+        "sk": 26351,
+        "province": "MANABÍ",
+        "canton": "PAJAN",
+        "parish": "PAJAN"
+    },
+    {
+        "sk": 26392,
+        "province": "MANABÍ",
+        "canton": "PEDERNALES",
+        "parish": "10 DE AGOSTO"
+    },
+    {
+        "sk": 26934,
+        "province": "MANABÍ",
+        "canton": "PEDERNALES",
+        "parish": "ATAHUALPA"
+    },
+    {
+        "sk": 27244,
+        "province": "MANABÍ",
+        "canton": "PEDERNALES",
+        "parish": "COJIMÍES"
+    },
+    {
+        "sk": 27000,
+        "province": "MANABÍ",
+        "canton": "PEDERNALES",
+        "parish": "PEDERNALES"
+    },
+    {
+        "sk": 27172,
+        "province": "MANABÍ",
+        "canton": "PICHINCHA",
+        "parish": "BARRAGANETE"
+    },
+    {
+        "sk": 26979,
+        "province": "MANABÍ",
+        "canton": "PICHINCHA",
+        "parish": "PICHINCHA"
+    },
+    {
+        "sk": 27049,
+        "province": "MANABÍ",
+        "canton": "PICHINCHA",
+        "parish": "SAN SEBASTIAN"
+    },
+    {
+        "sk": 26585,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "12 DE MARZO"
+    },
+    {
+        "sk": 26707,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "18 DE OCTUBRE"
+    },
+    {
+        "sk": 27369,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "ABDON CALDERÓN"
+    },
+    {
+        "sk": 26602,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "ABDON CALDERON (SAN FRANCISCO)"
+    },
+    {
+        "sk": 27416,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "ALHAJUELA (BAJO GRANDE)"
+    },
+    {
+        "sk": 26747,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "ANDRÉS DE VERA"
+    },
+    {
+        "sk": 26439,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "CHIRIJOS"
+    },
+    {
+        "sk": 26543,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "COLÓN"
+    },
+    {
+        "sk": 26620,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "CRUCITA"
+    },
+    {
+        "sk": 27128,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "FRANCISCO PACHECO"
+    },
+    {
+        "sk": 26971,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "PICOAZÁ"
+    },
+    {
+        "sk": 26590,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "PORTOVIEJO"
+    },
+    {
+        "sk": 26343,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "PUEBLO NUEVO"
+    },
+    {
+        "sk": 26514,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "RIOCHICO (RIO CHICO)"
+    },
+    {
+        "sk": 27587,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "SAN PABLO"
+    },
+    {
+        "sk": 27313,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "SAN PLACIDO"
+    },
+    {
+        "sk": 27558,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "SIMON BOLIVAR"
+    },
+    {
+        "sk": 26369,
+        "province": "MANABÍ",
+        "canton": "PORTOVIEJO",
+        "parish": "SIMÓN BOLÍVAR"
+    },
+    {
+        "sk": 27415,
+        "province": "MANABÍ",
+        "canton": "PUERTO LÓPEZ",
+        "parish": "MACHALILLA"
+    },
+    {
+        "sk": 27125,
+        "province": "MANABÍ",
+        "canton": "PUERTO LÓPEZ",
+        "parish": "PUERTO LOPEZ"
+    },
+    {
+        "sk": 26451,
+        "province": "MANABÍ",
+        "canton": "PUERTO LÓPEZ",
+        "parish": "SALANGO"
+    },
+    {
+        "sk": 27534,
+        "province": "MANABÍ",
+        "canton": "ROCAFUERTE",
+        "parish": "ROCAFUERTE"
+    },
+    {
+        "sk": 26931,
+        "province": "MANABÍ",
+        "canton": "ROCAFUERTE",
+        "parish": "SOSOTE"
+    },
+    {
+        "sk": 27645,
+        "province": "MANABÍ",
+        "canton": "SAN VICENTE",
+        "parish": "CANOA"
+    },
+    {
+        "sk": 27258,
+        "province": "MANABÍ",
+        "canton": "SAN VICENTE",
+        "parish": "SAN VICENTE"
+    },
+    {
+        "sk": 27259,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "AYACUCHO"
+    },
+    {
+        "sk": 26515,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "HONORATO VASQUEZ (CAB EN VASQUEZ)"
+    },
+    {
+        "sk": 26775,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "HONORATO VASQUEZ (TAMBO VIEJO)"
+    },
+    {
+        "sk": 26330,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "LA UNION"
+    },
+    {
+        "sk": 27343,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "LODANA"
+    },
+    {
+        "sk": 26493,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "OLMEDO"
+    },
+    {
+        "sk": 27360,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "SAN PABLO"
+    },
+    {
+        "sk": 27301,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "SAN PABLO (CAB EN PUEBLO NUEVO)"
+    },
+    {
+        "sk": 27241,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "SANTA ANA"
+    },
+    {
+        "sk": 27185,
+        "province": "MANABÍ",
+        "canton": "SANTA ANA",
+        "parish": "SANTA ANA DE VUELTA LARGA"
+    },
+    {
+        "sk": 27417,
+        "province": "MANABÍ",
+        "canton": "SUCRE",
+        "parish": "BAHIA DE CARAQUEZ"
+    },
+    {
+        "sk": 27643,
+        "province": "MANABÍ",
+        "canton": "SUCRE",
+        "parish": "CHARAPOTO"
+    },
+    {
+        "sk": 27202,
+        "province": "MANABÍ",
+        "canton": "SUCRE",
+        "parish": "LEONIDAS PLAZA GUTIÉRREZ"
+    },
+    {
+        "sk": 26326,
+        "province": "MANABÍ",
+        "canton": "SUCRE",
+        "parish": "SAN ISIDRO"
+    },
+    {
+        "sk": 26695,
+        "province": "MANABÍ",
+        "canton": "SUCRE",
+        "parish": "SAN VICENTE"
+    },
+    {
+        "sk": 27231,
+        "province": "MANABÍ",
+        "canton": "TOSAGUA",
+        "parish": "ANGEL PEDRO GILER (LA ESTANCILLA)"
+    },
+    {
+        "sk": 27379,
+        "province": "MANABÍ",
+        "canton": "TOSAGUA",
+        "parish": "BACHILLERO"
+    },
+    {
+        "sk": 27390,
+        "province": "MANABÍ",
+        "canton": "TOSAGUA",
+        "parish": "TOSAGUA"
+    },
+    {
+        "sk": 27629,
+        "province": "MAR TERRITORIAL",
+        "canton": "AGUAS INTERIORES",
+        "parish": "AGUA INTERIOR CONTINENTAL CENTRO"
+    },
+    {
+        "sk": 27320,
+        "province": "MAR TERRITORIAL",
+        "canton": "AGUAS INTERIORES",
+        "parish": "AGUA INTERIOR CONTINENTAL NORTE"
+    },
+    {
+        "sk": 27472,
+        "province": "MAR TERRITORIAL",
+        "canton": "AGUAS INTERIORES",
+        "parish": "AGUA INTERIOR CONTINENTAL SUR"
+    },
+    {
+        "sk": 26357,
+        "province": "MAR TERRITORIAL",
+        "canton": "AGUAS INTERIORES INSULAR",
+        "parish": "AGUA INTERIOR INSULAR"
+    },
+    {
+        "sk": 26922,
+        "province": "MAR TERRITORIAL",
+        "canton": "MAR TERRITORIAL",
+        "parish": "MAR TERRITORIAL INSULAR"
+    },
+    {
+        "sk": 26904,
+        "province": "MAR TERRITORIAL",
+        "canton": "MAR TERRITORIAL CONTINENTAL",
+        "parish": "MAR TERRITORIAL CONTINENTAL"
+    },
+    {
+        "sk": 27607,
+        "province": "MAR TERRITORIAL",
+        "canton": "MAR TERRITORIAL INSULAR",
+        "parish": "MAR TERRITORIAL INSULAR"
+    },
+    {
+        "sk": 26918,
+        "province": "MAR TERRITORIAL",
+        "canton": "ZONA CONTIGUA",
+        "parish": "ZONA CONTIGUA CONTINENTAL"
+    },
+    {
+        "sk": 27506,
+        "province": "MAR TERRITORIAL",
+        "canton": "ZONA CONTIGUA",
+        "parish": "ZONA CONTIGUA INSULAR"
+    },
+    {
+        "sk": 26381,
+        "province": "MAR TERRITORIAL",
+        "canton": "ZONA ECONOMICA EXCLUSIVA",
+        "parish": "ZONA ECONOMICA EXCLUSIVA CONTINENTAL"
+    },
+    {
+        "sk": 27201,
+        "province": "MAR TERRITORIAL",
+        "canton": "ZONA ECONOMICA EXCLUSIVA",
+        "parish": "ZONA ECONOMICA EXCLUSIVA INSULAR"
+    },
+    {
+        "sk": 27097,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "AMAZONAS (ROSARIO DE CUYES)"
+    },
+    {
+        "sk": 27053,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "BERMEJOS"
+    },
+    {
+        "sk": 27096,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "BOMBOIZA"
+    },
+    {
+        "sk": 26307,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "CHIGUINDA"
+    },
+    {
+        "sk": 27647,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "EL IDEAL"
+    },
+    {
+        "sk": 26469,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "EL ROSARIO"
+    },
+    {
+        "sk": 27409,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "GUALAQUIZA"
+    },
+    {
+        "sk": 27033,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "MERCEDES MOLINA"
+    },
+    {
+        "sk": 26727,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "NUEVA TARQUI"
+    },
+    {
+        "sk": 26408,
+        "province": "MORONA SANTIAGO",
+        "canton": "GUALAQUIZA",
+        "parish": "SAN MIGUEL DE CUYES"
+    },
+    {
+        "sk": 27610,
+        "province": "MORONA SANTIAGO",
+        "canton": "HUAMBOYA",
+        "parish": "CHIGUAZA"
+    },
+    {
+        "sk": 26830,
+        "province": "MORONA SANTIAGO",
+        "canton": "HUAMBOYA",
+        "parish": "HUAMBOYA"
+    },
+    {
+        "sk": 26965,
+        "province": "MORONA SANTIAGO",
+        "canton": "LIMON INDANZA",
+        "parish": "GENERAL LEONIDAS PLAZA GUTIERREZ"
+    },
+    {
+        "sk": 26808,
+        "province": "MORONA SANTIAGO",
+        "canton": "LIMON INDANZA",
+        "parish": "INDANZA"
+    },
+    {
+        "sk": 27672,
+        "province": "MORONA SANTIAGO",
+        "canton": "LIMON INDANZA",
+        "parish": "SAN ANTONIO"
+    },
+    {
+        "sk": 27223,
+        "province": "MORONA SANTIAGO",
+        "canton": "LIMON INDANZA",
+        "parish": "SAN ANTONIO (CAB EN SAN ANTONIO CENTRO)"
+    },
+    {
+        "sk": 27213,
+        "province": "MORONA SANTIAGO",
+        "canton": "LIMON INDANZA",
+        "parish": "SAN MIGUEL DE CONCHAY"
+    },
+    {
+        "sk": 27581,
+        "province": "MORONA SANTIAGO",
+        "canton": "LIMON INDANZA",
+        "parish": "SANTA SUSANA DE CHIVIAZA (CAB EN CHIVIAZA)"
+    },
+    {
+        "sk": 27351,
+        "province": "MORONA SANTIAGO",
+        "canton": "LIMON INDANZA",
+        "parish": "YUNGANZA (CAB EN EL ROSARIO)"
+    },
+    {
+        "sk": 26709,
+        "province": "MORONA SANTIAGO",
+        "canton": "LOGROÑO",
+        "parish": "LOGROÑO"
+    },
+    {
+        "sk": 27594,
+        "province": "MORONA SANTIAGO",
+        "canton": "LOGROÑO",
+        "parish": "SHIMPIS"
+    },
+    {
+        "sk": 26831,
+        "province": "MORONA SANTIAGO",
+        "canton": "LOGROÑO",
+        "parish": "YAUPI"
+    },
+    {
+        "sk": 27152,
+        "province": "MORONA SANTIAGO",
+        "canton": "MORONA",
+        "parish": "ALSHI (CAB EN 9 DE OCTUBRE)"
+    },
+    {
+        "sk": 27563,
+        "province": "MORONA SANTIAGO",
+        "canton": "MORONA",
+        "parish": "CUCHAENTZA"
+    },
+    {
+        "sk": 26457,
+        "province": "MORONA SANTIAGO",
+        "canton": "MORONA",
+        "parish": "GENERAL PROAÑO"
+    },
+    {
+        "sk": 27479,
+        "province": "MORONA SANTIAGO",
+        "canton": "MORONA",
+        "parish": "MACAS"
+    },
+    {
+        "sk": 27328,
+        "province": "MORONA SANTIAGO",
+        "canton": "MORONA",
+        "parish": "RIO BLANCO"
+    },
+    {
+        "sk": 26644,
+        "province": "MORONA SANTIAGO",
+        "canton": "MORONA",
+        "parish": "SAN ISIDRO"
+    },
+    {
+        "sk": 27450,
+        "province": "MORONA SANTIAGO",
+        "canton": "MORONA",
+        "parish": "SEVILLA DON BOSCO"
+    },
+    {
+        "sk": 27560,
+        "province": "MORONA SANTIAGO",
+        "canton": "MORONA",
+        "parish": "SINAI"
+    },
+    {
+        "sk": 27376,
+        "province": "MORONA SANTIAGO",
+        "canton": "MORONA",
+        "parish": "ZUÑA (ZUÑAC)"
+    },
+    {
+        "sk": 26914,
+        "province": "MORONA SANTIAGO",
+        "canton": "PABLO SEXTO",
+        "parish": "PABLO SEXTO"
+    },
+    {
+        "sk": 26568,
+        "province": "MORONA SANTIAGO",
+        "canton": "PALORA",
+        "parish": "16 DE AGOSTO"
+    },
+    {
+        "sk": 26339,
+        "province": "MORONA SANTIAGO",
+        "canton": "PALORA",
+        "parish": "ARAPICOS"
+    },
+    {
+        "sk": 26503,
+        "province": "MORONA SANTIAGO",
+        "canton": "PALORA",
+        "parish": "CUMANDA"
+    },
+    {
+        "sk": 26796,
+        "province": "MORONA SANTIAGO",
+        "canton": "PALORA",
+        "parish": "CUMANDA (CAB EN COLONIA AGRICOLA SEVILLA DEL ORO)"
+    },
+    {
+        "sk": 26967,
+        "province": "MORONA SANTIAGO",
+        "canton": "PALORA",
+        "parish": "PALORA (METZERA)"
+    },
+    {
+        "sk": 26338,
+        "province": "MORONA SANTIAGO",
+        "canton": "PALORA",
+        "parish": "SANGAY (CAB EN NAYAMANACA)"
+    },
+    {
+        "sk": 26846,
+        "province": "MORONA SANTIAGO",
+        "canton": "SAN JUAN BOSCO",
+        "parish": "PAN DE AZUCAR"
+    },
+    {
+        "sk": 27682,
+        "province": "MORONA SANTIAGO",
+        "canton": "SAN JUAN BOSCO",
+        "parish": "SAN CARLOS DE LIMON"
+    },
+    {
+        "sk": 27389,
+        "province": "MORONA SANTIAGO",
+        "canton": "SAN JUAN BOSCO",
+        "parish": "SAN JACINTO DE WAKAMBEIS"
+    },
+    {
+        "sk": 26581,
+        "province": "MORONA SANTIAGO",
+        "canton": "SAN JUAN BOSCO",
+        "parish": "SAN JUAN BOSCO"
+    },
+    {
+        "sk": 26811,
+        "province": "MORONA SANTIAGO",
+        "canton": "SAN JUAN BOSCO",
+        "parish": "SANTIAGO DE PANANZA"
+    },
+    {
+        "sk": 26952,
+        "province": "MORONA SANTIAGO",
+        "canton": "SANTIAGO",
+        "parish": "CHUPIANZA"
+    },
+    {
+        "sk": 26632,
+        "province": "MORONA SANTIAGO",
+        "canton": "SANTIAGO",
+        "parish": "COPAL"
+    },
+    {
+        "sk": 27342,
+        "province": "MORONA SANTIAGO",
+        "canton": "SANTIAGO",
+        "parish": "PATUCA"
+    },
+    {
+        "sk": 27576,
+        "province": "MORONA SANTIAGO",
+        "canton": "SANTIAGO",
+        "parish": "SAN FRANCISCO DE CHINIMBIMI"
+    },
+    {
+        "sk": 26313,
+        "province": "MORONA SANTIAGO",
+        "canton": "SANTIAGO",
+        "parish": "SAN LUIS DE EL ACHO (CAB EN EL ACHO)"
+    },
+    {
+        "sk": 26797,
+        "province": "MORONA SANTIAGO",
+        "canton": "SANTIAGO",
+        "parish": "SANTIAGO DE MENDEZ"
+    },
+    {
+        "sk": 27411,
+        "province": "MORONA SANTIAGO",
+        "canton": "SANTIAGO",
+        "parish": "TAYUZA"
+    },
+    {
+        "sk": 27627,
+        "province": "MORONA SANTIAGO",
+        "canton": "SEVILLA DON BOSCO",
+        "parish": "SEVILLA DON BOSCO"
+    },
+    {
+        "sk": 27204,
+        "province": "MORONA SANTIAGO",
+        "canton": "SUCUA",
+        "parish": "ASUNCION"
+    },
+    {
+        "sk": 26969,
+        "province": "MORONA SANTIAGO",
+        "canton": "SUCUA",
+        "parish": "HUAMBI"
+    },
+    {
+        "sk": 26445,
+        "province": "MORONA SANTIAGO",
+        "canton": "SUCUA",
+        "parish": "SANTA MARIANITA DE JESUS"
+    },
+    {
+        "sk": 27408,
+        "province": "MORONA SANTIAGO",
+        "canton": "SUCUA",
+        "parish": "SUCUA"
+    },
+    {
+        "sk": 26462,
+        "province": "MORONA SANTIAGO",
+        "canton": "TAISHA",
+        "parish": "HUASAGA (CAB EN WAMPUIK)"
+    },
+    {
+        "sk": 27674,
+        "province": "MORONA SANTIAGO",
+        "canton": "TAISHA",
+        "parish": "MACUMA"
+    },
+    {
+        "sk": 26353,
+        "province": "MORONA SANTIAGO",
+        "canton": "TAISHA",
+        "parish": "PUMPUENTSA"
+    },
+    {
+        "sk": 26696,
+        "province": "MORONA SANTIAGO",
+        "canton": "TAISHA",
+        "parish": "TAISHA"
+    },
+    {
+        "sk": 27399,
+        "province": "MORONA SANTIAGO",
+        "canton": "TAISHA",
+        "parish": "TUUTINENTZA"
+    },
+    {
+        "sk": 26607,
+        "province": "MORONA SANTIAGO",
+        "canton": "TIWINTZA",
+        "parish": "SAN JOSE DE MORONA"
+    },
+    {
+        "sk": 27653,
+        "province": "MORONA SANTIAGO",
+        "canton": "TIWINTZA",
+        "parish": "SANTIAGO"
+    },
+    {
+        "sk": 27604,
+        "province": "NAPO",
+        "canton": "ARCHIDONA",
+        "parish": "ARCHIDONA"
+    },
+    {
+        "sk": 27183,
+        "province": "NAPO",
+        "canton": "ARCHIDONA",
+        "parish": "COTUNDO"
+    },
+    {
+        "sk": 26790,
+        "province": "NAPO",
+        "canton": "ARCHIDONA",
+        "parish": "HATUN SUMAKU"
+    },
+    {
+        "sk": 27611,
+        "province": "NAPO",
+        "canton": "ARCHIDONA",
+        "parish": "SAN PABLO DE USHPAYACU"
+    },
+    {
+        "sk": 26658,
+        "province": "NAPO",
+        "canton": "CARLOS JULIO AROSEMENA TOLA",
+        "parish": "CARLOS JULIO AROSEMENA TOLA"
+    },
+    {
+        "sk": 27418,
+        "province": "NAPO",
+        "canton": "EL CHACO",
+        "parish": "EL CHACO"
+    },
+    {
+        "sk": 27193,
+        "province": "NAPO",
+        "canton": "EL CHACO",
+        "parish": "GONZALO DIAZ DE PINEDA (EL BOMBON)"
+    },
+    {
+        "sk": 27605,
+        "province": "NAPO",
+        "canton": "EL CHACO",
+        "parish": "LINARES"
+    },
+    {
+        "sk": 27334,
+        "province": "NAPO",
+        "canton": "EL CHACO",
+        "parish": "OYACACHI"
+    },
+    {
+        "sk": 26718,
+        "province": "NAPO",
+        "canton": "EL CHACO",
+        "parish": "SANTA ROSA DE QUIJOS"
+    },
+    {
+        "sk": 27588,
+        "province": "NAPO",
+        "canton": "EL CHACO",
+        "parish": "SARDINAS"
+    },
+    {
+        "sk": 27614,
+        "province": "NAPO",
+        "canton": "QUIJOS",
+        "parish": "BAEZA"
+    },
+    {
+        "sk": 27079,
+        "province": "NAPO",
+        "canton": "QUIJOS",
+        "parish": "COSANGA"
+    },
+    {
+        "sk": 27136,
+        "province": "NAPO",
+        "canton": "QUIJOS",
+        "parish": "CUYUJA"
+    },
+    {
+        "sk": 27296,
+        "province": "NAPO",
+        "canton": "QUIJOS",
+        "parish": "PAPALLACTA"
+    },
+    {
+        "sk": 27549,
+        "province": "NAPO",
+        "canton": "QUIJOS",
+        "parish": "SAN FRANCISCO DE BORJA (VIRGILIO DAVILA)"
+    },
+    {
+        "sk": 26530,
+        "province": "NAPO",
+        "canton": "QUIJOS",
+        "parish": "SUMACO"
+    },
+    {
+        "sk": 26425,
+        "province": "NAPO",
+        "canton": "TENA",
+        "parish": "AHUANO"
+    },
+    {
+        "sk": 27554,
+        "province": "NAPO",
+        "canton": "TENA",
+        "parish": "CHONTAPUNTA"
+    },
+    {
+        "sk": 27171,
+        "province": "NAPO",
+        "canton": "TENA",
+        "parish": "PANO"
+    },
+    {
+        "sk": 27191,
+        "province": "NAPO",
+        "canton": "TENA",
+        "parish": "PUERTO MISAHUALLI"
+    },
+    {
+        "sk": 27469,
+        "province": "NAPO",
+        "canton": "TENA",
+        "parish": "PUERTO NAPO"
+    },
+    {
+        "sk": 27118,
+        "province": "NAPO",
+        "canton": "TENA",
+        "parish": "SAN JUAN DE MUYUNA"
+    },
+    {
+        "sk": 26472,
+        "province": "NAPO",
+        "canton": "TENA",
+        "parish": "TALAG"
+    },
+    {
+        "sk": 26990,
+        "province": "NAPO",
+        "canton": "TENA",
+        "parish": "TENA"
+    },
+    {
+        "sk": 26968,
+        "province": "ORELLANA",
+        "canton": "AGUARICO",
+        "parish": "CAPITAN AUGUSTO RIVADENEYRA"
+    },
+    {
+        "sk": 26897,
+        "province": "ORELLANA",
+        "canton": "AGUARICO",
+        "parish": "CONONACO"
+    },
+    {
+        "sk": 26794,
+        "province": "ORELLANA",
+        "canton": "AGUARICO",
+        "parish": "NUEVO ROCAFUERTE"
+    },
+    {
+        "sk": 27135,
+        "province": "ORELLANA",
+        "canton": "AGUARICO",
+        "parish": "SANTA MARIA DE HUIRIRIMA"
+    },
+    {
+        "sk": 27163,
+        "province": "ORELLANA",
+        "canton": "AGUARICO",
+        "parish": "TIPUTINI"
+    },
+    {
+        "sk": 26573,
+        "province": "ORELLANA",
+        "canton": "AGUARICO",
+        "parish": "YASUNI"
+    },
+    {
+        "sk": 27179,
+        "province": "ORELLANA",
+        "canton": "LA JOYA DE LOS SACHAS",
+        "parish": "ENOKANQUI"
+    },
+    {
+        "sk": 26648,
+        "province": "ORELLANA",
+        "canton": "LA JOYA DE LOS SACHAS",
+        "parish": "LA JOYA DE LOS SACHAS"
+    },
+    {
+        "sk": 26645,
+        "province": "ORELLANA",
+        "canton": "LA JOYA DE LOS SACHAS",
+        "parish": "LAGO SAN PEDRO"
+    },
+    {
+        "sk": 26793,
+        "province": "ORELLANA",
+        "canton": "LA JOYA DE LOS SACHAS",
+        "parish": "POMPEYA"
+    },
+    {
+        "sk": 27119,
+        "province": "ORELLANA",
+        "canton": "LA JOYA DE LOS SACHAS",
+        "parish": "RUMIPAMBA"
+    },
+    {
+        "sk": 26535,
+        "province": "ORELLANA",
+        "canton": "LA JOYA DE LOS SACHAS",
+        "parish": "SAN CARLOS"
+    },
+    {
+        "sk": 26433,
+        "province": "ORELLANA",
+        "canton": "LA JOYA DE LOS SACHAS",
+        "parish": "SAN SEBASTIAN DEL COCA"
+    },
+    {
+        "sk": 26474,
+        "province": "ORELLANA",
+        "canton": "LA JOYA DE LOS SACHAS",
+        "parish": "TRES DE NOVIEMBRE"
+    },
+    {
+        "sk": 27167,
+        "province": "ORELLANA",
+        "canton": "LA JOYA DE LOS SACHAS",
+        "parish": "UNION MILAGREÑA"
+    },
+    {
+        "sk": 27404,
+        "province": "ORELLANA",
+        "canton": "LORETO",
+        "parish": "AVILA (CAB. EN HUIRUNO)"
+    },
+    {
+        "sk": 27439,
+        "province": "ORELLANA",
+        "canton": "LORETO",
+        "parish": "LORETO"
+    },
+    {
+        "sk": 27535,
+        "province": "ORELLANA",
+        "canton": "LORETO",
+        "parish": "PUERTO MURIALDO"
+    },
+    {
+        "sk": 26631,
+        "province": "ORELLANA",
+        "canton": "LORETO",
+        "parish": "SAN JOSE DE DAHUANO"
+    },
+    {
+        "sk": 26452,
+        "province": "ORELLANA",
+        "canton": "LORETO",
+        "parish": "SAN JOSE DE PAYAMINO"
+    },
+    {
+        "sk": 26367,
+        "province": "ORELLANA",
+        "canton": "LORETO",
+        "parish": "SAN VICENTE DE HUATICOCHA"
+    },
+    {
+        "sk": 26569,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "ALEJANDRO LABAKA"
+    },
+    {
+        "sk": 27092,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "DAYUMA"
+    },
+    {
+        "sk": 26511,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "EL DORADO"
+    },
+    {
+        "sk": 26993,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "EL EDEN"
+    },
+    {
+        "sk": 27209,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "GARCIA MORENO"
+    },
+    {
+        "sk": 27684,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "INES ARANGO (CAB. EN WESTERN)"
+    },
+    {
+        "sk": 27255,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "LA BELLEZA"
+    },
+    {
+        "sk": 26879,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "NUEVO PARAISO"
+    },
+    {
+        "sk": 27431,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "NUEVO PARAISO (CAB. EN UNION )"
+    },
+    {
+        "sk": 27579,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "PUERTO FRANCISCO DE ORELLANA (EL COCA)"
+    },
+    {
+        "sk": 27656,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "SAN JOSE DE GUAYUSA"
+    },
+    {
+        "sk": 26789,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "SAN LUIS DE ARMENIA"
+    },
+    {
+        "sk": 27584,
+        "province": "ORELLANA",
+        "canton": "ORELLANA",
+        "parish": "TARACOA (NUEVA ESPERANZA: YUCA)"
+    },
+    {
+        "sk": 26640,
+        "province": "PASTAZA",
+        "canton": "ARAJUNO",
+        "parish": "ARAJUNO"
+    },
+    {
+        "sk": 27504,
+        "province": "PASTAZA",
+        "canton": "ARAJUNO",
+        "parish": "CURARAY"
+    },
+    {
+        "sk": 26520,
+        "province": "PASTAZA",
+        "canton": "MERA",
+        "parish": "MADRE TIERRA"
+    },
+    {
+        "sk": 27238,
+        "province": "PASTAZA",
+        "canton": "MERA",
+        "parish": "MERA"
+    },
+    {
+        "sk": 26702,
+        "province": "PASTAZA",
+        "canton": "MERA",
+        "parish": "SHELL"
+    },
+    {
+        "sk": 26792,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "10 DE AGOSTO"
+    },
+    {
+        "sk": 26355,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "ARAJUNO"
+    },
+    {
+        "sk": 26552,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "CANELOS"
+    },
+    {
+        "sk": 26599,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "CURARAY"
+    },
+    {
+        "sk": 27006,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "DIEZ DE AGOSTO"
+    },
+    {
+        "sk": 26840,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "EL TRIUNFO"
+    },
+    {
+        "sk": 26604,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "FATIMA"
+    },
+    {
+        "sk": 26887,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "MONTALVO (ANDOAS)"
+    },
+    {
+        "sk": 27565,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "POMONA"
+    },
+    {
+        "sk": 26705,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "PUYO"
+    },
+    {
+        "sk": 27460,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "RIO CORRIENTES"
+    },
+    {
+        "sk": 27571,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "RIO TIGRE"
+    },
+    {
+        "sk": 27331,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "SARAYACU"
+    },
+    {
+        "sk": 26788,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "SIMON BOLIVAR"
+    },
+    {
+        "sk": 26500,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "SIMON BOLIVAR (CAB. EN MUSHULLACTA)"
+    },
+    {
+        "sk": 27251,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "TARQUI"
+    },
+    {
+        "sk": 27413,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "TENIENTE HUGO ORTIZ"
+    },
+    {
+        "sk": 27326,
+        "province": "PASTAZA",
+        "canton": "PASTAZA",
+        "parish": "VERACRUZ (INDILLAMA) (CAB. EN INDILLAMA)"
+    },
+    {
+        "sk": 27555,
+        "province": "PASTAZA",
+        "canton": "SANTA CLARA",
+        "parish": "SAN JOSE"
+    },
+    {
+        "sk": 26444,
+        "province": "PASTAZA",
+        "canton": "SANTA CLARA",
+        "parish": "SANTA CLARA"
+    },
+    {
+        "sk": 27388,
+        "province": "PICHINCHA",
+        "canton": "CAYAMBE",
+        "parish": "ASCAZUBI"
+    },
+    {
+        "sk": 26538,
+        "province": "PICHINCHA",
+        "canton": "CAYAMBE",
+        "parish": "AYORA"
+    },
+    {
+        "sk": 27633,
+        "province": "PICHINCHA",
+        "canton": "CAYAMBE",
+        "parish": "CANGAHUA"
+    },
+    {
+        "sk": 27340,
+        "province": "PICHINCHA",
+        "canton": "CAYAMBE",
+        "parish": "CAYAMBE"
+    },
+    {
+        "sk": 27325,
+        "province": "PICHINCHA",
+        "canton": "CAYAMBE",
+        "parish": "JUAN MONTALVO"
+    },
+    {
+        "sk": 26710,
+        "province": "PICHINCHA",
+        "canton": "CAYAMBE",
+        "parish": "OLMEDO (PESILLO)"
+    },
+    {
+        "sk": 26716,
+        "province": "PICHINCHA",
+        "canton": "CAYAMBE",
+        "parish": "OTON"
+    },
+    {
+        "sk": 27283,
+        "province": "PICHINCHA",
+        "canton": "CAYAMBE",
+        "parish": "SAN JOSE DE AYORA"
+    },
+    {
+        "sk": 26944,
+        "province": "PICHINCHA",
+        "canton": "CAYAMBE",
+        "parish": "SANTA ROSA DE CUZUBAMBA"
+    },
+    {
+        "sk": 26636,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "ALANGASI"
+    },
+    {
+        "sk": 27503,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "AMAGUAÑA"
+    },
+    {
+        "sk": 26435,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "ATAHUALPA (HABASPAMBA)"
+    },
+    {
+        "sk": 27121,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "BELISARIO QUEVEDO"
+    },
+    {
+        "sk": 26612,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CALACALI"
+    },
+    {
+        "sk": 27005,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CALDERON"
+    },
+    {
+        "sk": 27057,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CALDERON (CARAPUNGO)"
+    },
+    {
+        "sk": 26832,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CARCELÉN"
+    },
+    {
+        "sk": 26371,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CENTRO HISTÓRICO"
+    },
+    {
+        "sk": 27151,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CHAVEZPAMBA"
+    },
+    {
+        "sk": 27047,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CHECA (CHILPA)"
+    },
+    {
+        "sk": 27143,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CHILIBULO"
+    },
+    {
+        "sk": 27321,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CHILLOGALLO"
+    },
+    {
+        "sk": 26890,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CHIMBACALLE"
+    },
+    {
+        "sk": 27618,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "COCHAPAMBA"
+    },
+    {
+        "sk": 26550,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "COMITÉ DEL PUEBLO"
+    },
+    {
+        "sk": 27127,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CONOCOTO"
+    },
+    {
+        "sk": 27359,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "COTOCOLLAO"
+    },
+    {
+        "sk": 27165,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "CUMBAYA"
+    },
+    {
+        "sk": 26746,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "EL CONDADO"
+    },
+    {
+        "sk": 26490,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "EL QUINCHE"
+    },
+    {
+        "sk": 26481,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "GONZALEZ SUAREZ"
+    },
+    {
+        "sk": 26849,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "GUALEA"
+    },
+    {
+        "sk": 27667,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "GUAMANI"
+    },
+    {
+        "sk": 27276,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "GUANGOPOLO"
+    },
+    {
+        "sk": 27675,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "GUAYLLABAMBA"
+    },
+    {
+        "sk": 26541,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "IÑAQUITO"
+    },
+    {
+        "sk": 26368,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "ITCHIMBIA"
+    },
+    {
+        "sk": 26565,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "JIPIJAPA"
+    },
+    {
+        "sk": 26907,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "KENNEDY"
+    },
+    {
+        "sk": 26508,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LA ARGELIA"
+    },
+    {
+        "sk": 26365,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LA CONCEPCIÓN"
+    },
+    {
+        "sk": 26754,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LA ECUATORIANA"
+    },
+    {
+        "sk": 26402,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LA FERROVIARIA"
+    },
+    {
+        "sk": 27428,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LA LIBERTAD"
+    },
+    {
+        "sk": 26726,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LA MAGDALENA"
+    },
+    {
+        "sk": 26903,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LA MENA"
+    },
+    {
+        "sk": 26743,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LA MERCED"
+    },
+    {
+        "sk": 27346,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LLANO CHICO"
+    },
+    {
+        "sk": 27332,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "LLOA"
+    },
+    {
+        "sk": 27344,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "MARISCAL SUCRE"
+    },
+    {
+        "sk": 26899,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "NANEGAL"
+    },
+    {
+        "sk": 27632,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "NANEGALITO"
+    },
+    {
+        "sk": 27307,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "NAYON"
+    },
+    {
+        "sk": 27156,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "NONO"
+    },
+    {
+        "sk": 27197,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "PACTO"
+    },
+    {
+        "sk": 27548,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "PERUCHO"
+    },
+    {
+        "sk": 27444,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "PIFO"
+    },
+    {
+        "sk": 26411,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "PINTAG"
+    },
+    {
+        "sk": 26591,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "POMASQUI"
+    },
+    {
+        "sk": 27102,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "PONCEANO"
+    },
+    {
+        "sk": 26910,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "PUELLARO"
+    },
+    {
+        "sk": 27023,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "PUEMBO"
+    },
+    {
+        "sk": 26553,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "PUENGASÍ"
+    },
+    {
+        "sk": 26436,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "QUITO"
+    },
+    {
+        "sk": 27269,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "QUITUMBE"
+    },
+    {
+        "sk": 26945,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "RUMIPAMBA"
+    },
+    {
+        "sk": 26571,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SAN ANTONIO"
+    },
+    {
+        "sk": 26663,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SAN BARTOLO"
+    },
+    {
+        "sk": 26851,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SAN BLAS"
+    },
+    {
+        "sk": 26652,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SAN ISIDRO DEL INCA"
+    },
+    {
+        "sk": 26529,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SAN JOSE DE MINAS"
+    },
+    {
+        "sk": 27095,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SAN JUAN"
+    },
+    {
+        "sk": 26819,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SAN ROQUE"
+    },
+    {
+        "sk": 27149,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SAN SEBASTIAN"
+    },
+    {
+        "sk": 27315,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SANTA BARBARA"
+    },
+    {
+        "sk": 27058,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "SOLANDA"
+    },
+    {
+        "sk": 27666,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "TABABELA"
+    },
+    {
+        "sk": 27600,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "TUMBACO"
+    },
+    {
+        "sk": 27559,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "TURUBAMBA"
+    },
+    {
+        "sk": 27010,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "YARUQUI"
+    },
+    {
+        "sk": 26352,
+        "province": "PICHINCHA",
+        "canton": "DISTRITO METROPOLITANO DE QUITO",
+        "parish": "ZAMBIZA"
+    },
+    {
+        "sk": 26985,
+        "province": "PICHINCHA",
+        "canton": "MEJIA",
+        "parish": "ALOAG"
+    },
+    {
+        "sk": 27347,
+        "province": "PICHINCHA",
+        "canton": "MEJIA",
+        "parish": "ALOASI"
+    },
+    {
+        "sk": 27122,
+        "province": "PICHINCHA",
+        "canton": "MEJIA",
+        "parish": "CUTUGLAHUA"
+    },
+    {
+        "sk": 26889,
+        "province": "PICHINCHA",
+        "canton": "MEJIA",
+        "parish": "EL CHAUPI"
+    },
+    {
+        "sk": 26995,
+        "province": "PICHINCHA",
+        "canton": "MEJIA",
+        "parish": "MACHACHI"
+    },
+    {
+        "sk": 27111,
+        "province": "PICHINCHA",
+        "canton": "MEJIA",
+        "parish": "MANUEL CORNEJO ASTORGA (TANDAPI)"
+    },
+    {
+        "sk": 26976,
+        "province": "PICHINCHA",
+        "canton": "MEJIA",
+        "parish": "TAMBILLO"
+    },
+    {
+        "sk": 26509,
+        "province": "PICHINCHA",
+        "canton": "MEJIA",
+        "parish": "UYUMBICHO"
+    },
+    {
+        "sk": 27499,
+        "province": "PICHINCHA",
+        "canton": "PEDRO MONCAYO",
+        "parish": "LA ESPERANZA"
+    },
+    {
+        "sk": 27391,
+        "province": "PICHINCHA",
+        "canton": "PEDRO MONCAYO",
+        "parish": "MALCHINGUI"
+    },
+    {
+        "sk": 26582,
+        "province": "PICHINCHA",
+        "canton": "PEDRO MONCAYO",
+        "parish": "TABACUNDO"
+    },
+    {
+        "sk": 26741,
+        "province": "PICHINCHA",
+        "canton": "PEDRO MONCAYO",
+        "parish": "TOCACHI"
+    },
+    {
+        "sk": 27385,
+        "province": "PICHINCHA",
+        "canton": "PEDRO MONCAYO",
+        "parish": "TUPIGACHI"
+    },
+    {
+        "sk": 27060,
+        "province": "PICHINCHA",
+        "canton": "PEDRO VICENTE MALDONADO",
+        "parish": "PEDRO VICENTE MALDONADO"
+    },
+    {
+        "sk": 26699,
+        "province": "PICHINCHA",
+        "canton": "PUERTO QUITO",
+        "parish": "PUERTO QUITO"
+    },
+    {
+        "sk": 27615,
+        "province": "PICHINCHA",
+        "canton": "RUMIÑAHUI",
+        "parish": "COTOGCHOA"
+    },
+    {
+        "sk": 27493,
+        "province": "PICHINCHA",
+        "canton": "RUMIÑAHUI",
+        "parish": "RUMIPAMBA"
+    },
+    {
+        "sk": 26482,
+        "province": "PICHINCHA",
+        "canton": "RUMIÑAHUI",
+        "parish": "SAN PEDRO DE TABOADA"
+    },
+    {
+        "sk": 27124,
+        "province": "PICHINCHA",
+        "canton": "RUMIÑAHUI",
+        "parish": "SAN RAFAEL"
+    },
+    {
+        "sk": 27517,
+        "province": "PICHINCHA",
+        "canton": "RUMIÑAHUI",
+        "parish": "SANGOLQUI"
+    },
+    {
+        "sk": 26896,
+        "province": "PICHINCHA",
+        "canton": "RUMIÑAHUI",
+        "parish": "SANGOLQUÍ"
+    },
+    {
+        "sk": 26886,
+        "province": "PICHINCHA",
+        "canton": "SAN MIGUEL DE LOS BANCOS",
+        "parish": "MINDO"
+    },
+    {
+        "sk": 27211,
+        "province": "PICHINCHA",
+        "canton": "SAN MIGUEL DE LOS BANCOS",
+        "parish": "SAN MIGUEL DE LOS BANCOS"
+    },
+    {
+        "sk": 26686,
+        "province": "SANTA ELENA",
+        "canton": "LA LIBERTAD",
+        "parish": "LA LIBERTAD"
+    },
+    {
+        "sk": 26774,
+        "province": "SANTA ELENA",
+        "canton": "SALINAS",
+        "parish": "ANCONCITO"
+    },
+    {
+        "sk": 27530,
+        "province": "SANTA ELENA",
+        "canton": "SALINAS",
+        "parish": "CARLOS ESPINOZA LARREA"
+    },
+    {
+        "sk": 27654,
+        "province": "SANTA ELENA",
+        "canton": "SALINAS",
+        "parish": "GENERAL ALBERTO ENRÍQUEZ GALLO"
+    },
+    {
+        "sk": 27366,
+        "province": "SANTA ELENA",
+        "canton": "SALINAS",
+        "parish": "JOSE LUIS TAMAYO (MUEY)"
+    },
+    {
+        "sk": 27080,
+        "province": "SANTA ELENA",
+        "canton": "SALINAS",
+        "parish": "SALINAS"
+    },
+    {
+        "sk": 27521,
+        "province": "SANTA ELENA",
+        "canton": "SALINAS",
+        "parish": "SANTA ROSA"
+    },
+    {
+        "sk": 26740,
+        "province": "SANTA ELENA",
+        "canton": "SALINAS",
+        "parish": "VICENTE ROCAFUERTE"
+    },
+    {
+        "sk": 26349,
+        "province": "SANTA ELENA",
+        "canton": "SANTA ELENA",
+        "parish": "ATAHUALPA"
+    },
+    {
+        "sk": 27284,
+        "province": "SANTA ELENA",
+        "canton": "SANTA ELENA",
+        "parish": "BALLENITA"
+    },
+    {
+        "sk": 26836,
+        "province": "SANTA ELENA",
+        "canton": "SANTA ELENA",
+        "parish": "CHANDUY"
+    },
+    {
+        "sk": 27641,
+        "province": "SANTA ELENA",
+        "canton": "SANTA ELENA",
+        "parish": "COLONCHE"
+    },
+    {
+        "sk": 26333,
+        "province": "SANTA ELENA",
+        "canton": "SANTA ELENA",
+        "parish": "JULIO E. MORENO (CATANAHUAN GRANDE)"
+    },
+    {
+        "sk": 26936,
+        "province": "SANTA ELENA",
+        "canton": "SANTA ELENA",
+        "parish": "MANGLAR ALTO"
+    },
+    {
+        "sk": 26706,
+        "province": "SANTA ELENA",
+        "canton": "SANTA ELENA",
+        "parish": "SAN JOSE DE ANCON"
+    },
+    {
+        "sk": 26410,
+        "province": "SANTA ELENA",
+        "canton": "SANTA ELENA",
+        "parish": "SANTA ELENA"
+    },
+    {
+        "sk": 27436,
+        "province": "SANTA ELENA",
+        "canton": "SANTA ELENA",
+        "parish": "SIMÓN BOLÍVAR (JULIO MORENO)"
+    },
+    {
+        "sk": 26325,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "LA CONCORDIA",
+        "parish": "LA CONCORDIA"
+    },
+    {
+        "sk": 26708,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "LA CONCORDIA",
+        "parish": "LA VILLEGAS"
+    },
+    {
+        "sk": 26731,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "LA CONCORDIA",
+        "parish": "LAS VILLEGAS"
+    },
+    {
+        "sk": 27285,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "LA CONCORDIA",
+        "parish": "MONTERREY"
+    },
+    {
+        "sk": 26817,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "LA CONCORDIA",
+        "parish": "PLAN PILOTO"
+    },
+    {
+        "sk": 27477,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "ABRAHAM CALAZACÓN"
+    },
+    {
+        "sk": 27200,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "ALLURIQUIN"
+    },
+    {
+        "sk": 26665,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "BOMBOLÍ"
+    },
+    {
+        "sk": 27582,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "CHIGUILPE"
+    },
+    {
+        "sk": 27194,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "EL ESFUERZO"
+    },
+    {
+        "sk": 27580,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "LUZ DE AMERICA"
+    },
+    {
+        "sk": 27383,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "PUERTO LIMON"
+    },
+    {
+        "sk": 26657,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "RÍO TOACHI"
+    },
+    {
+        "sk": 27566,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "RIO VERDE"
+    },
+    {
+        "sk": 27036,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "RÍO VERDE"
+    },
+    {
+        "sk": 27074,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "SAN JACINTO DEL BUA"
+    },
+    {
+        "sk": 27596,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "SANTA MARIA DEL TOACHI"
+    },
+    {
+        "sk": 27495,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "SANTO DOMINGO DE LOS COLORADOS"
+    },
+    {
+        "sk": 26527,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "VALLE HERMOSO"
+    },
+    {
+        "sk": 26525,
+        "province": "SANTO DOMINGO DE LOS TSACHILAS",
+        "canton": "SANTO DOMINGO",
+        "parish": "ZARACAY"
+    },
+    {
+        "sk": 27210,
+        "province": "SUCUMBIOS",
+        "canton": "CASCALES",
+        "parish": "EL DORADO DE CASCALES"
+    },
+    {
+        "sk": 27184,
+        "province": "SUCUMBIOS",
+        "canton": "CASCALES",
+        "parish": "NUEVA TRONCAL (CAB EN NUEVA TRONCAL)"
+    },
+    {
+        "sk": 26516,
+        "province": "SUCUMBIOS",
+        "canton": "CASCALES",
+        "parish": "SANTA ROSA DE SUCUMBIOS"
+    },
+    {
+        "sk": 26938,
+        "province": "SUCUMBIOS",
+        "canton": "CASCALES",
+        "parish": "SEVILLA"
+    },
+    {
+        "sk": 26786,
+        "province": "SUCUMBIOS",
+        "canton": "CUYABENO",
+        "parish": "AGUAS NEGRAS"
+    },
+    {
+        "sk": 27116,
+        "province": "SUCUMBIOS",
+        "canton": "CUYABENO",
+        "parish": "CUYABENO"
+    },
+    {
+        "sk": 26621,
+        "province": "SUCUMBIOS",
+        "canton": "CUYABENO",
+        "parish": "TARAPOA"
+    },
+    {
+        "sk": 26578,
+        "province": "SUCUMBIOS",
+        "canton": "GONZALO PIZARRO",
+        "parish": "EL REVENTADOR"
+    },
+    {
+        "sk": 27420,
+        "province": "SUCUMBIOS",
+        "canton": "GONZALO PIZARRO",
+        "parish": "GONZALO PIZARRO"
+    },
+    {
+        "sk": 26429,
+        "province": "SUCUMBIOS",
+        "canton": "GONZALO PIZARRO",
+        "parish": "LUMBAQUI"
+    },
+    {
+        "sk": 26672,
+        "province": "SUCUMBIOS",
+        "canton": "GONZALO PIZARRO",
+        "parish": "PUERTO LIBRE"
+    },
+    {
+        "sk": 27189,
+        "province": "SUCUMBIOS",
+        "canton": "LAGO AGRIO",
+        "parish": "10 DE AGOSTO"
+    },
+    {
+        "sk": 27681,
+        "province": "SUCUMBIOS",
+        "canton": "LAGO AGRIO",
+        "parish": "DURENO"
+    },
+    {
+        "sk": 26960,
+        "province": "SUCUMBIOS",
+        "canton": "LAGO AGRIO",
+        "parish": "EL ENO"
+    },
+    {
+        "sk": 26642,
+        "province": "SUCUMBIOS",
+        "canton": "LAGO AGRIO",
+        "parish": "GENERAL FARFAN"
+    },
+    {
+        "sk": 27528,
+        "province": "SUCUMBIOS",
+        "canton": "LAGO AGRIO",
+        "parish": "JAMBELI"
+    },
+    {
+        "sk": 26779,
+        "province": "SUCUMBIOS",
+        "canton": "LAGO AGRIO",
+        "parish": "NUEVA LOJA"
+    },
+    {
+        "sk": 27440,
+        "province": "SUCUMBIOS",
+        "canton": "LAGO AGRIO",
+        "parish": "PACAYACU"
+    },
+    {
+        "sk": 27101,
+        "province": "SUCUMBIOS",
+        "canton": "LAGO AGRIO",
+        "parish": "SANTA CECILIA"
+    },
+    {
+        "sk": 26852,
+        "province": "SUCUMBIOS",
+        "canton": "PUTUMAYO",
+        "parish": "PALMA ROJA"
+    },
+    {
+        "sk": 27642,
+        "province": "SUCUMBIOS",
+        "canton": "PUTUMAYO",
+        "parish": "PUERTO BOLIVAR (PUERTO MONTUFAR)"
+    },
+    {
+        "sk": 27018,
+        "province": "SUCUMBIOS",
+        "canton": "PUTUMAYO",
+        "parish": "PUERTO EL CARMEN DEL PUTUMAYO"
+    },
+    {
+        "sk": 26592,
+        "province": "SUCUMBIOS",
+        "canton": "PUTUMAYO",
+        "parish": "PUERTO RODRIGUEZ"
+    },
+    {
+        "sk": 26304,
+        "province": "SUCUMBIOS",
+        "canton": "PUTUMAYO",
+        "parish": "SANSAHUARI"
+    },
+    {
+        "sk": 26864,
+        "province": "SUCUMBIOS",
+        "canton": "PUTUMAYO",
+        "parish": "SANTA ELENA"
+    },
+    {
+        "sk": 26926,
+        "province": "SUCUMBIOS",
+        "canton": "SHUSHUFINDI",
+        "parish": "LA MAGDALENA"
+    },
+    {
+        "sk": 27437,
+        "province": "SUCUMBIOS",
+        "canton": "SHUSHUFINDI",
+        "parish": "LA PRIMAVERA"
+    },
+    {
+        "sk": 27323,
+        "province": "SUCUMBIOS",
+        "canton": "SHUSHUFINDI",
+        "parish": "LIMONCOCHA"
+    },
+    {
+        "sk": 27421,
+        "province": "SUCUMBIOS",
+        "canton": "SHUSHUFINDI",
+        "parish": "PAÑACOCHA"
+    },
+    {
+        "sk": 26751,
+        "province": "SUCUMBIOS",
+        "canton": "SHUSHUFINDI",
+        "parish": "SAN PEDRO DE LOS COFANES"
+    },
+    {
+        "sk": 26803,
+        "province": "SUCUMBIOS",
+        "canton": "SHUSHUFINDI",
+        "parish": "SAN ROQUE"
+    },
+    {
+        "sk": 27545,
+        "province": "SUCUMBIOS",
+        "canton": "SHUSHUFINDI",
+        "parish": "SAN ROQUE (CAB. EN SAN VICENTE)"
+    },
+    {
+        "sk": 26935,
+        "province": "SUCUMBIOS",
+        "canton": "SHUSHUFINDI",
+        "parish": "SHUSHUFINDI CENTRAL"
+    },
+    {
+        "sk": 26923,
+        "province": "SUCUMBIOS",
+        "canton": "SHUSHUFINDI",
+        "parish": "SIETE DE JULIO"
+    },
+    {
+        "sk": 27093,
+        "province": "SUCUMBIOS",
+        "canton": "SUCUMBIOS",
+        "parish": "EL PLAYON DE SAN FRANCISCO"
+    },
+    {
+        "sk": 26406,
+        "province": "SUCUMBIOS",
+        "canton": "SUCUMBIOS",
+        "parish": "LA BONITA"
+    },
+    {
+        "sk": 27221,
+        "province": "SUCUMBIOS",
+        "canton": "SUCUMBIOS",
+        "parish": "LA SOFIA"
+    },
+    {
+        "sk": 27526,
+        "province": "SUCUMBIOS",
+        "canton": "SUCUMBIOS",
+        "parish": "ROSA FLORIDA"
+    },
+    {
+        "sk": 27132,
+        "province": "SUCUMBIOS",
+        "canton": "SUCUMBIOS",
+        "parish": "SANTA BARBARA"
+    },
+    {
+        "sk": 27022,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "AMBATILLO"
+    },
+    {
+        "sk": 26733,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "AMBATO"
+    },
+    {
+        "sk": 27164,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "ATAHUALPA (CHISALATA)"
+    },
+    {
+        "sk": 26757,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "ATOCHA – FICOA"
+    },
+    {
+        "sk": 26955,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "AUGUSTO N. MARTINEZ (MUNDUGLEO)"
+    },
+    {
+        "sk": 26542,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "CELIANO MONGE"
+    },
+    {
+        "sk": 27352,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "CONSTANTINO FERNANDEZ (CAB. EN CULLITAHUA)"
+    },
+    {
+        "sk": 27370,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "CUNCHIBAMBA"
+    },
+    {
+        "sk": 26363,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "HUACHI CHICO"
+    },
+    {
+        "sk": 26395,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "HUACHI GRANDE"
+    },
+    {
+        "sk": 27575,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "HUACHI LORETO"
+    },
+    {
+        "sk": 26781,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "IZAMBA"
+    },
+    {
+        "sk": 26442,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "JUAN BENIGNO VELA"
+    },
+    {
+        "sk": 27668,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "LA MATRIZ"
+    },
+    {
+        "sk": 26405,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "LA MERCED"
+    },
+    {
+        "sk": 26467,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "LA PENÍNSULA"
+    },
+    {
+        "sk": 27570,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "MONTALVO"
+    },
+    {
+        "sk": 26417,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "PASA"
+    },
+    {
+        "sk": 26756,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "PICAIGUA"
+    },
+    {
+        "sk": 27175,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "PILAGUIN (PILAHUIN)"
+    },
+    {
+        "sk": 27537,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "PISHILATA"
+    },
+    {
+        "sk": 26341,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "QUISAPINCHA (QUIZAPINCHA)"
+    },
+    {
+        "sk": 26531,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "SAN BARTOLOME"
+    },
+    {
+        "sk": 26810,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "SAN BARTOLOME DE PINLLO"
+    },
+    {
+        "sk": 27453,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "SAN FERNANDO"
+    },
+    {
+        "sk": 27031,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "SAN FERNANDO (PASA SAN FERNANDO)"
+    },
+    {
+        "sk": 27316,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "SAN FRANCISCO"
+    },
+    {
+        "sk": 27052,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "SANTA ROSA"
+    },
+    {
+        "sk": 27449,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "TOTORAS"
+    },
+    {
+        "sk": 26885,
+        "province": "TUNGURAHUA",
+        "canton": "AMBATO",
+        "parish": "UNAMUNCHO"
+    },
+    {
+        "sk": 26974,
+        "province": "TUNGURAHUA",
+        "canton": "BAÑOS DE AGUA SANTA",
+        "parish": "BAÑOS"
+    },
+    {
+        "sk": 26755,
+        "province": "TUNGURAHUA",
+        "canton": "BAÑOS DE AGUA SANTA",
+        "parish": "BAÑOS DE AGUA SANTA"
+    },
+    {
+        "sk": 27648,
+        "province": "TUNGURAHUA",
+        "canton": "BAÑOS DE AGUA SANTA",
+        "parish": "LLIGUA"
+    },
+    {
+        "sk": 26360,
+        "province": "TUNGURAHUA",
+        "canton": "BAÑOS DE AGUA SANTA",
+        "parish": "RIO NEGRO"
+    },
+    {
+        "sk": 26777,
+        "province": "TUNGURAHUA",
+        "canton": "BAÑOS DE AGUA SANTA",
+        "parish": "RIO VERDE"
+    },
+    {
+        "sk": 26872,
+        "province": "TUNGURAHUA",
+        "canton": "BAÑOS DE AGUA SANTA",
+        "parish": "ULBA"
+    },
+    {
+        "sk": 27051,
+        "province": "TUNGURAHUA",
+        "canton": "CEVALLOS",
+        "parish": "CEVALLOS"
+    },
+    {
+        "sk": 26427,
+        "province": "TUNGURAHUA",
+        "canton": "MOCHA",
+        "parish": "MOCHA"
+    },
+    {
+        "sk": 27616,
+        "province": "TUNGURAHUA",
+        "canton": "MOCHA",
+        "parish": "PINGUILI"
+    },
+    {
+        "sk": 27446,
+        "province": "TUNGURAHUA",
+        "canton": "PATATE",
+        "parish": "EL TRIUNFO"
+    },
+    {
+        "sk": 26791,
+        "province": "TUNGURAHUA",
+        "canton": "PATATE",
+        "parish": "LOS ANDES"
+    },
+    {
+        "sk": 27195,
+        "province": "TUNGURAHUA",
+        "canton": "PATATE",
+        "parish": "LOS ANDES (CAB. EN POATUG)"
+    },
+    {
+        "sk": 27262,
+        "province": "TUNGURAHUA",
+        "canton": "PATATE",
+        "parish": "PATATE"
+    },
+    {
+        "sk": 26518,
+        "province": "TUNGURAHUA",
+        "canton": "PATATE",
+        "parish": "SUCRE"
+    },
+    {
+        "sk": 27330,
+        "province": "TUNGURAHUA",
+        "canton": "PATATE",
+        "parish": "SUCRE (CAB. EN SUCRE-PATATE URCU)"
+    },
+    {
+        "sk": 26404,
+        "province": "TUNGURAHUA",
+        "canton": "QUERO",
+        "parish": "QUERO"
+    },
+    {
+        "sk": 27368,
+        "province": "TUNGURAHUA",
+        "canton": "QUERO",
+        "parish": "RUMIPAMBA"
+    },
+    {
+        "sk": 26611,
+        "province": "TUNGURAHUA",
+        "canton": "QUERO",
+        "parish": "YANAYACU - MOCHAPATA (CAB. EN YANAYACU)"
+    },
+    {
+        "sk": 27016,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "BENITEZ (PACHANLICA)"
+    },
+    {
+        "sk": 27476,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "BOLIVAR"
+    },
+    {
+        "sk": 27564,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "CHIQUICHA (CAB. EN CHIQUICHA GRANDE)"
+    },
+    {
+        "sk": 26982,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "COTALO"
+    },
+    {
+        "sk": 27274,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "EL ROSARIO (RUMICHACA)"
+    },
+    {
+        "sk": 27572,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "GARCIA MORENO"
+    },
+    {
+        "sk": 26649,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "GARCIA MORENO (CHUMAQUI)"
+    },
+    {
+        "sk": 26883,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "GUAMBALO (HUAMBALO)"
+    },
+    {
+        "sk": 27129,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "PELILEO"
+    },
+    {
+        "sk": 27015,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "PELILEO GRANDE"
+    },
+    {
+        "sk": 27622,
+        "province": "TUNGURAHUA",
+        "canton": "SAN PEDRO DE PELILEO",
+        "parish": "SALASACA"
+    },
+    {
+        "sk": 26545,
+        "province": "TUNGURAHUA",
+        "canton": "SANTIAGO DE PILLARO",
+        "parish": "BAQUERIZO MORENO"
+    },
+    {
+        "sk": 27512,
+        "province": "TUNGURAHUA",
+        "canton": "SANTIAGO DE PILLARO",
+        "parish": "CIUDAD NUEVA"
+    },
+    {
+        "sk": 27516,
+        "province": "TUNGURAHUA",
+        "canton": "SANTIAGO DE PILLARO",
+        "parish": "EMILIO MARIA TERAN (RUMIPAMBA)"
+    },
+    {
+        "sk": 27574,
+        "province": "TUNGURAHUA",
+        "canton": "SANTIAGO DE PILLARO",
+        "parish": "MARCOS ESPINEL (CHACATA)"
+    },
+    {
+        "sk": 27452,
+        "province": "TUNGURAHUA",
+        "canton": "SANTIAGO DE PILLARO",
+        "parish": "PRESIDENTE URBINA (CHAGRAPAMBA - PATZUCUL)"
+    },
+    {
+        "sk": 27538,
+        "province": "TUNGURAHUA",
+        "canton": "SANTIAGO DE PILLARO",
+        "parish": "SAN ANDRES"
+    },
+    {
+        "sk": 26869,
+        "province": "TUNGURAHUA",
+        "canton": "SANTIAGO DE PILLARO",
+        "parish": "SAN JOSE DE POALO"
+    },
+    {
+        "sk": 26948,
+        "province": "TUNGURAHUA",
+        "canton": "SANTIAGO DE PILLARO",
+        "parish": "SAN MIGUELITO"
+    },
+    {
+        "sk": 27142,
+        "province": "TUNGURAHUA",
+        "canton": "SANTIAGO DE PILLARO",
+        "parish": "SANTIAGO DE PILLARO"
+    },
+    {
+        "sk": 27606,
+        "province": "TUNGURAHUA",
+        "canton": "TISALEO",
+        "parish": "QUINCHICOTO"
+    },
+    {
+        "sk": 27291,
+        "province": "TUNGURAHUA",
+        "canton": "TISALEO",
+        "parish": "TISALEO"
+    },
+    {
+        "sk": 27491,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CENTINELA DEL CONDOR",
+        "parish": "PANGUINTZA"
+    },
+    {
+        "sk": 26980,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CENTINELA DEL CONDOR",
+        "parish": "TRIUNFO-DORADO"
+    },
+    {
+        "sk": 26495,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CENTINELA DEL CONDOR",
+        "parish": "ZUMBI"
+    },
+    {
+        "sk": 27008,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CHINCHIPE",
+        "parish": "CHITO"
+    },
+    {
+        "sk": 26499,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CHINCHIPE",
+        "parish": "EL CHORRO"
+    },
+    {
+        "sk": 26507,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CHINCHIPE",
+        "parish": "LA CHONTA"
+    },
+    {
+        "sk": 27464,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CHINCHIPE",
+        "parish": "PALANDA"
+    },
+    {
+        "sk": 26730,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CHINCHIPE",
+        "parish": "PUCAPAMBA"
+    },
+    {
+        "sk": 27443,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CHINCHIPE",
+        "parish": "SAN ANDRES"
+    },
+    {
+        "sk": 27157,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "CHINCHIPE",
+        "parish": "ZUMBA"
+    },
+    {
+        "sk": 27679,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "EL PANGUI",
+        "parish": "EL GUISME"
+    },
+    {
+        "sk": 27273,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "EL PANGUI",
+        "parish": "EL PANGUI"
+    },
+    {
+        "sk": 27624,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "EL PANGUI",
+        "parish": "PACHICUTZA"
+    },
+    {
+        "sk": 27106,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "EL PANGUI",
+        "parish": "TUNDAYME"
+    },
+    {
+        "sk": 26318,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "NANGARITZA",
+        "parish": "GUAYZIMI"
+    },
+    {
+        "sk": 27298,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "NANGARITZA",
+        "parish": "NANKAIS (CAB EN SANTA ELENA)"
+    },
+    {
+        "sk": 26513,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "NANGARITZA",
+        "parish": "NUEVO PARAISO"
+    },
+    {
+        "sk": 26674,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "NANGARITZA",
+        "parish": "ZURMI"
+    },
+    {
+        "sk": 27271,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "PALANDA",
+        "parish": "EL PORVENIR DEL CARMEN"
+    },
+    {
+        "sk": 27468,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "PALANDA",
+        "parish": "LA CANELA"
+    },
+    {
+        "sk": 26484,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "PALANDA",
+        "parish": "PALANDA"
+    },
+    {
+        "sk": 26977,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "PALANDA",
+        "parish": "SAN FRANCISCO DEL VERGEL"
+    },
+    {
+        "sk": 26722,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "PALANDA",
+        "parish": "VALLADOLID"
+    },
+    {
+        "sk": 26618,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "PAQUISHA",
+        "parish": "BELLAVISTA"
+    },
+    {
+        "sk": 26929,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "PAQUISHA",
+        "parish": "NUEVO QUITO"
+    },
+    {
+        "sk": 26856,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "PAQUISHA",
+        "parish": "PAQUISHA"
+    },
+    {
+        "sk": 26848,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "YACUAMBI",
+        "parish": "28 DE MAYO (SAN JOSE DE YACUAMBI)"
+    },
+    {
+        "sk": 26575,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "YACUAMBI",
+        "parish": "LA PAZ"
+    },
+    {
+        "sk": 27226,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "YACUAMBI",
+        "parish": "TUTUPALI"
+    },
+    {
+        "sk": 26466,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "YANTZAZA",
+        "parish": "CHICAÑA"
+    },
+    {
+        "sk": 27339,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "YANTZAZA",
+        "parish": "LOS ENCUENTROS"
+    },
+    {
+        "sk": 27456,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "YANTZAZA",
+        "parish": "YANTZAZA (YANZATZA)"
+    },
+    {
+        "sk": 26998,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "ZAMORA",
+        "parish": "CUMBARATZA"
+    },
+    {
+        "sk": 27082,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "ZAMORA",
+        "parish": "EL LIMÓN"
+    },
+    {
+        "sk": 27678,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "ZAMORA",
+        "parish": "GUADALUPE"
+    },
+    {
+        "sk": 27282,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "ZAMORA",
+        "parish": "IMBANA (LA VICTORIA DE IMBANA)"
+    },
+    {
+        "sk": 26928,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "ZAMORA",
+        "parish": "SABANILLA"
+    },
+    {
+        "sk": 27626,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "ZAMORA",
+        "parish": "SAN CARLOS DE LAS MINAS"
+    },
+    {
+        "sk": 27457,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "ZAMORA",
+        "parish": "TIMBARA"
+    },
+    {
+        "sk": 27386,
+        "province": "ZAMORA CHINCHIPE",
+        "canton": "ZAMORA",
+        "parish": "ZAMORA"
+    },
+    {
+        "sk": 27502,
+        "province": "ZONA CONTIGUA",
+        "canton": "ZONA CONTIGUA CONTINENTAL",
+        "parish": "ZONA CONTIGUA CONTINENTAL"
+    },
+    {
+        "sk": 27466,
+        "province": "ZONA CONTIGUA",
+        "canton": "ZONA CONTIGUA INSULAR",
+        "parish": "ZONA CONTIGUA INSULAR"
+    },
+    {
+        "sk": 27608,
+        "province": "ZONA ECONOMICA EXCLUSIVA",
+        "canton": "ZONA ECONOMICA EXCLUSIVA CONTINENTAL",
+        "parish": "ZONA ECONOMICA EXCLUSIVA CONTINENTAL"
+    },
+    {
+        "sk": 27513,
+        "province": "ZONAS NO DELIMITADAS",
+        "canton": "EL PIEDRERO",
+        "parish": "EL PIEDRERO"
+    },
+    {
+        "sk": 27236,
+        "province": "ZONAS NO DELIMITADAS",
+        "canton": "JUVAL",
+        "parish": "JUVAL"
+    },
+    {
+        "sk": 26413,
+        "province": "ZONAS NO DELIMITADAS",
+        "canton": "LAS GOLONDRINAS",
+        "parish": "LAS GOLONDRINAS"
+    },
+    {
+        "sk": 26501,
+        "province": "ZONAS NO DELIMITADAS",
+        "canton": "MANGA DEL CURA",
+        "parish": "MANGA DEL CURA"
+    }
+]

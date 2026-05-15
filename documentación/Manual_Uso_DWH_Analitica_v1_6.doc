@@ -1,0 +1,110 @@
+
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+                h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+                h2 { color: #2980b9; margin-top: 30px; border-bottom: 1px solid #ddd; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+                th { background-color: #f2f2f2; font-weight: bold; }
+                code { background-color: #f8f9fa; color: #e83e8c; padding: 2px 4px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; }
+                pre { background-color: #f8f9fa; padding: 15px; border-left: 5px solid #2980b9; border-radius: 4px; overflow-x: auto; }
+                blockquote { border-left: 5px solid #ccc; margin: 20px 0; padding: 10px 20px; color: #666; font-style: italic; background: #f9f9f9; }
+            </style>
+        </head>
+        <body>
+            <h1 id="guia-de-uso-del-data-warehouse-para-bi-y-analitica-v16">📊 Guía de Uso del Data Warehouse para BI y Analítica (v1.6)</h1>
+<p>Esta documentación describe cómo explotar la estructura del Data Warehouse (<code>dw_reg_v1</code>) para generar reportes, dashboards y análisis de datos avanzados, incluyendo las nuevas capacidades de trazabilidad financiera y gestión de residuos, operando desde la nueva infraestructura en el disco <code>D:</code>.</p>
+<hr />
+<h2 id="1-fundamentos-del-modelo-estrella-expert-view">1. Fundamentos del Modelo Estrella (Expert View)</h2>
+<p>El DWH está diseñado bajo un esquema de <strong>Hechos (Facts)</strong> y <strong>Dimensiones (Dimensions)</strong> optimizado para consultas de agregación masiva.</p>
+<ul>
+<li><strong>Tablas de Hechos:</strong> Contienen métricas cuantitativas (montos, superficies, conteos, deltas financieros). Son tablas de alta cardinalidad.</li>
+<li><strong>Tablas Dimensionales:</strong> Contienen atributos descriptivos (nombres, categorías, RUCs, estados) que actúan como "Ejes" de análisis.</li>
+</ul>
+<hr />
+<h2 id="2-areas-de-analisis-critico-v16">2. Áreas de Análisis Crítico v1.6</h2>
+<h3 id="21-gestion-de-residuos-coargd">2.1 Gestión de Residuos (COA/RGD)</h3>
+<p><strong>Tablas Principales:</strong> <code>dw.fact_waste_generation</code>
+<strong>Dimensión Clave:</strong> <code>dw.dim_waste_generator</code> (Enriquecida con <strong>RUC</strong> desde SUIA Master).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Atributo Clave</th>
+<th style="text-align: left;">Valor de Negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ruc_generator</code></td>
+<td style="text-align: left;">Permite consolidar la huella ambiental de un grupo económico a pesar de tener múltiples establecimientos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>quantity_generated</code></td>
+<td style="text-align: left;">Métricas de peso para cumplimiento de metas de sostenibilidad.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-trazabilidad-financiera-jbpm">2.2 Trazabilidad Financiera JBPM</h3>
+<p><strong>Tabla Principal:</strong> <code>dw.fact_payment_traceability</code> (Motor Forense)
+<strong>Fuentes:</strong> Ingesta directa de JBPM .226 Historical.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Atributo Clave</th>
+<th style="text-align: left;">Valor de Negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>delta_value</code></td>
+<td style="text-align: left;"><strong>Indicador de Alerta:</strong> Muestra la diferencia entre débito y saldo. Un delta != 0 indica una inconsistencia financiera.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>retired_value</code></td>
+<td style="text-align: left;">Seguimiento de la liquidación de trámites en tiempo real.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-ejemplos-de-consultas-analiticas-senior-level">3. Ejemplos de Consultas Analíticas (Senior Level)</h2>
+<h3 id="a-auditoria-de-trazabilidad-financiera">A. Auditoría de Trazabilidad Financiera</h3>
+<pre><code class="language-sql">-- Identificación de inconsistencias en la billetera virtual
+SELECT 
+    p.codigo_proyecto,
+    t.update_date,
+    t.retired_value,
+    t.value_updated,
+    t.delta_value,
+    t.description
+FROM dw.fact_payment_traceability t
+JOIN dw.dim_proyecto p ON t.sk_proyecto = p.sk_proyecto
+WHERE ABS(t.delta_value) &gt; 0.01 -- Filtro para evitar ruido de punto flotante
+ORDER BY t.update_date DESC;
+</code></pre>
+<h3 id="b-analisis-de-proponentes-con-mayor-huella-de-residuos">B. Análisis de Proponentes con Mayor Huella de Residuos</h3>
+<pre><code class="language-sql">SELECT 
+    g.ruc_generator,
+    g.generator_name,
+    SUM(f.quantity_generated) as total_kg
+FROM dw.fact_waste_generation f
+JOIN dw.dim_waste_generator g ON f.waste_generator_key = g.waste_generator_key
+GROUP BY 1, 2
+ORDER BY 3 DESC;
+</code></pre>
+<hr />
+<h2 id="4-gobernanza-y-calidad-de-datos">4. Gobernanza y Calidad de Datos</h2>
+<ol>
+<li><strong>Ubicación Técnica:</strong> El DWH reside ahora en <code>D:\Datawrehouse_RA</code> para máxima eficiencia de I/O.</li>
+<li><strong>Referencia Geográfica:</strong> Toda la analítica espacial se basa en la <strong>Codificación INEC Oficial</strong> integrada en v1.4 y mantenida en v1.6.</li>
+<li><strong>Integridad Referencial:</strong> Siempre verifique el <code>SK=0</code> (N/A) para incluir trámites con información incompleta en los totales generales.</li>
+</ol>
+<hr />
+<p><strong>Arquitecto de Software &amp; Datos:</strong> Antigravity AI<br />
+<strong>Versión:</strong> 1.6 (Doc Refactoring)<br />
+<strong>Estado:</strong> ✅ DOCUMENTACIÓN ACTIVA Y REVISADA</p>
+        </body>
+        </html>
+        

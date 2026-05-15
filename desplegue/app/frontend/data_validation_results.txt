@@ -1,0 +1,20 @@
+=== CONTEO DE REGISTROS EN TABLAS DE DESECHOS Y QUÍMICOS ===
+dw.fact_waste_generation                 : 0 registros
+dw.dim_waste_generator                   : 15,839 registros
+dw.dim_waste_type                        : 1,425 registros
+dw.dim_dangerous_waste                   : 1 registros
+dw.dim_dangerous_classification          : 69 registros
+dw.fact_chemical_application             : 0 registros
+dw.dim_chemical_substance                : 2,466 registros
+dw.dim_chemical_storage                  : 20 registros
+dw.fact_project_environmental_impact     : 0 registros
+dw.dim_geografia                         : 1,392 registros
+
+=== VERIFICACIÓN DE JOINS (FACT_WASTE_GENERATION) ===
+Registros en fact_waste_generation sin match en dim_geografia: 0
+Registros en fact_waste_generation sin match en dim_waste_type: 0
+
+=== VERIFICACIÓN DE JOINS (FACT_CHEMICAL_APPLICATION) ===
+Registros en fact_chemical_application sin match en dim_chemical_substance: 0
+
+=== MUESTRA DE DATOS (fact_waste_generation) ===

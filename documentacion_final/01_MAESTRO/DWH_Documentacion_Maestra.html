@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Documento Maestro DWH RA - v2.1</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; }
+        h1, h2, h3 { color: #2c3e50; }
+        .toc-box { background: #f4f6f7; padding: 20px; border-radius: 8px; border-left: 5px solid #2c3e50; margin-bottom: 30px; }
+        .toc-box a { text-decoration: none; color: #2980b9; font-weight: bold; display: block; margin: 5px 0; }
+        .toc-box a:hover { color: #e74c3c; }
+        .glossary-term { font-weight: bold; color: #16a085; }
+        .faq-q { font-weight: bold; color: #c0392b; margin-top: 15px; }
+        .faq-a { margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #ecf0f1; }
+    </style>
+</head>
+<body>
+    <h1>Data Warehouse RA - Documentación Maestra (v2.1)</h1>
+    <p><strong>Fecha de Consolidación:</strong> 13 de Mayo de 2026</p>
+    <p>Este documento es el índice central y técnico que rige toda la documentación del Data Warehouse de Regularización Ambiental (Módulo RGD). A continuación, encontrará el índice técnico estructurado.</p>
+
+    <div class="toc-box">
+        <h2>Índice Técnico (Navegación)</h2>
+        <p>Haga clic en los enlaces para abrir los documentos específicos de cada fase del proyecto:</p>
+        
+        <h3>Módulo I: Fundamentos y Diseño</h3>
+        <a href="../02_DOCUMENTOS/DWH_Arquitectura_Integral_v2.html">Sección 1-3: Arquitectura, Dominios y Linaje de Datos</a>
+        <a href="../02_DOCUMENTOS/DWH_Modelo_Dimensional_v2.html">Sección 4: Modelo Dimensional y ER Diagram</a>
+        
+        <h3>Módulo II: Ingeniería de Datos</h3>
+        <a href="../02_DOCUMENTOS/ETL_Arquitectura_Detallada_v2.html">Sección 5-7: Procesos ETL, Reglas de Negocio y Auditoría</a>
+        
+        <h3>Módulo III: Operaciones y Consumo</h3>
+        <a href="../02_DOCUMENTOS/Manual_Uso_DWH_Analitica_v2.html">Sección 8-10: Seguridad, Runbooks (Mantenimiento) y Dashboarding</a>
+    </div>
+
+    <h2>Sección 11: Glosario de Términos de Negocio</h2>
+    <p>Este glosario alinea el lenguaje técnico del DWH con el Dashboard analítico utilizado por los usuarios de negocio.</p>
+    <ul>
+        <li><span class="glossary-term">RGD (Registro Generador de Desechos):</span> Identificador legal de la matriz. Corresponde al campo <code>codigo</code> en la <code>dim_waste_generator</code>.</li>
+        <li><span class="glossary-term">Punto de Generación:</span> Unidad mínima de emisión. Una sucursal o planta física. Representado por <code>dim_punto_generacion</code>.</li>
+        <li><span class="glossary-term">Desecho Peligroso / Especial:</span> Clasificación técnica basada en la clave <code>waste_type_key</code> cruzada con el catálogo normativo del COA.</li>
+        <li><span class="glossary-term">Upsert:</span> Proceso técnico de "Actualizar o Insertar" utilizado durante el ETL para no duplicar datos si se re-ejecuta un día específico.</li>
+    </ul>
+
+    <h2>Sección 12: FAQ del Procesamiento RGD</h2>
+    
+    <div class="faq-q">P: ¿Por qué algunos puntos no tienen Provincia/Cantón a pesar de usar el geo_resolver?</div>
+    <div class="faq-a">R: El <code>geo_resolver.py</code> utiliza coordenadas para cruzar con polígonos GeoJSON. Si las coordenadas extraídas de la fuente original (SUIA) están en 0,0, fuera del territorio ecuatoriano o mal formateadas, el punto quedará como "N/A" (key = 0). Esto requiere corrección manual en el sistema origen.</div>
+
+    <div class="faq-q">P: ¿Qué significa el error de "llave duplicada" (UniqueViolation) durante la ingesta?</div>
+    <div class="faq-a">R: Indica que una restricción física antigua (previa a la v2.1) está activa en la base de datos bloqueando el nuevo nivel de granularidad. Solución: Ejecute el script <code>force_cleanup.py</code>.</div>
+
+    <div class="faq-q">P: ¿Con qué frecuencia se debe correr el orquestador principal?</div>
+    <div class="faq-a">R: El orquestador <code>run_full_rgd_etl.py</code> está diseñado para ejecutarse de forma idempotente (segura) en una ventana de mantenimiento diaria (ej. 01:00 AM) sin riesgo de duplicar datos.</div>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+(venv) PS D:\dashboard_otrsV1>
+(venv) PS D:\dashboard_otrsV1>
+(venv) PS D:\dashboard_otrsV1> # 1. Resetear contraseña (script corregido)
+(venv) PS D:\dashboard_otrsV1> d:\dashboard_otrsV1\venv\Scripts\python.exe d:\dashboard_otrsV1\reset_admin_password.py
+2026-05-04 08:16:57.281 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+[OK] Hash bcrypt generado: $2b$12$/cW14.SWiPSPtH0IJLMD1e4...
+[OK] Contraseña del usuario 'admin' actualizada.
+
+==================================================
+  Usuario:    admin
+  Contraseña: Admin2024!
+==================================================
+  Reinicie la app y vuelva a intentar el login.
+(venv) PS D:\dashboard_otrsV1>
+(venv) PS D:\dashboard_otrsV1> # 2. Reiniciar la app (Ctrl+C si está corriendo, luego:)
+(venv) PS D:\dashboard_otrsV1> d:\dashboard_otrsV1\venv\Scripts\streamlit.exe run d:\dashboard_otrsV1\app.py
+2026-05-04 08:17:00.672 Port 8503 is not available
+(venv) PS D:\dashboard_otrsV1>
+
+10527269
+10537873
+10540488
+10546904
+
+
+
+
+regularizacion
+
+
+Usuario	Nombre Completo	Rol	Contraseña inicial
+admin.sieaa	Administrador Maestro SIEAA	ADMIN	EcoSieaa2026*
+gerencia.mae	Directivo de Gestión Ambiental	GERENCIA	EcoSieaa2026*
+soporte.sieaa	Analista de Mesa de Ayuda	MESA_AYUDA	EcoSieaa2026*
+dev.javier	Desarrollador Senior	DESARROLLADOR	EcoSieaa2026*
+test.qa	Analista de Calidad	QA	EcoSieaa2026*
+
+
+
+cat_area_ti
+dim_agente_ti
+
+
+Ejecución de ETL
+
+Instrucciones de uso:
+
+ETL completo (31 pasos):
+
+
+cmd /c D:\Datawrehouse_RA\run_etl_completo.bat
+Desde un paso específico hasta el final:
+
+
+cmd /c D:\Datawrehouse_RA\run_etl_completo.bat --desde 10
+Rango específico:
+
+
+cmd /c D:\Datawrehouse_RA\run_etl_completo.bat --desde 1 --hasta 16
+Qué hace el script:
+
+Fase	Pasos	Descripción
+Ingesta	1–12	SUIA / JBPM / SNAP / Áreas / Geografía
+Transformación	13–22	Dims / Facts / dim_area + jerarquía recursiva
+Pagos v3	23–26	Históricos / Montos / Puente Ambiental
+Residuos	27–28	Desechos / Químicos
+Intersecciones	29–31	Intersecciones Ambientales
+El log se guarda automáticamente en D:\Datawrehouse_RA\logs\etl_completo_YYYY-MM-DD_HH-MM-SS.log. Al finalizar ejecuta una validación de conteos sobre las tablas principales del DWH.
+
+
+No puedo **ejecutar** comandos en tu máquina desde aquí, pero sí puedo indicarte **exactamente** cómo leer ese log desde **PowerShell** en tu equipo.
+
+### 1. Leer el contenido completo del log
+
+```powershell
+Get-Content "D:\Datawrehouse_RA\logs\etl_completo_YYYY-MM-DD_HH-MM-SS.log"
+```
+
+### 2. Leer el log en tiempo real (tipo `tail -f`)
+
+Útil si el ETL todavía está corriendo:
+
+```powershell
+Get-Content "D:\Datawrehouse_RA\logs\etl_completo_YYYY-MM-DD_HH-MM-SS.log" -Wait
+```
+
+### 3. Ver solo las últimas 50 líneas
+
+```powershell
+Get-Content "D:\Datawrehouse_RA\logs\etl_completo_YYYY-MM-DD_HH-MM-SS.log" -Tail 50
+```
+
+### 4. Buscar errores o advertencias dentro del log
+
+```powershell
+Select-String -Path "D:\Datawrehouse_RA\logs\etl_completo_YYYY-MM-DD_HH-MM-SS.log" -Pattern "ERROR","WARN"
+```
+
+### 5. Abrir el log en una ventana interactiva
+
+Muy práctico para revisar:
+
+```powershell
+Get-Content "D:\Datawrehouse_RA\logs\etl_completo_YYYY-MM-DD_HH-MM-SS.log" | Out-GridView
+```
+
+### 6. Si quieres leer **el log más reciente** automáticamente
+
+```powershell
+Get-ChildItem "D:\Datawrehouse_RA\logs\etl_completo_*.log" |
+Sort-Object LastWriteTime -Descending |
+Select-Object -First 1 |
+Get-Content -Wait
+```
+
+Si quieres, dime:
+
+*   si el log es **muy grande**
+*   si buscas **errores específicos del ETL**
+*   o si lo necesitas **exportar filtrado** (por ejemplo solo ERROR)
+
+y te dejo el comando exacto para eso.

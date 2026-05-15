@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>TRX_03_INGESTA_JBPM_SECTOR</name>
+    <description>Extrae de jbpmdb_prod_old/vm_sector_subsector_bi y carga en stg.jbpm_sector_bi</description>
+    <extended_description>Origen: 172.16.0.226:5432/jbpmdb_prod_old - Vista: vm_sector_subsector_bi
+Destino: localhost:5432/dw_reg_v1 - stg.jbpm_sector_bi</extended_description>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+  </info>
+  <notepads>
+    <notepad>
+      <note>TRANSFORMACION 3: Ingesta JBPM Sector (vm_sector_subsector_bi)
+Origen: jbpmdb_prod_old @ 172.16.0.226:5432
+Destino: dw_reg_v1 @ localhost / stg.jbpm_sector_bi</note>
+      <xloc>50</xloc><yloc>20</yloc><width>450</width><heigth>60</heigth>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>CONN_JBPM_PROD_OLD</name>
+    <server>172.16.0.226</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>jbpmdb_prod_old</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>CONN_DWH_LOCAL</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>dw_reg_v1</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop><from>Input JBPM Sector</from><to>Output STG Sector</to><enabled>Y</enabled></hop>
+  </order>
+  <step>
+    <name>Input JBPM Sector</name>
+    <type>TableInput</type>
+    <description>Lee vm_sector_subsector_bi</description>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_JBPM_PROD_OLD</connection>
+    <sql>SELECT
+  "CÓDIGO PROYECTO"           AS codigo_proyecto,
+  "NOMBRE PROYECTO"           AS nombre_proyecto,
+  "RESUMEN PROYECTO"          AS resumen_proyecto,
+  "DIRECCIÓN PROYECTO"        AS direccion_proyecto,
+  "FECHA REGISTRO"            AS fecha_registro,
+  "CÓDIGO ACTIVIDAD"          AS codigo_actividad,
+  "ACTIVIDAD ECONÓMICA"       AS actividad_economica,
+  "CED/RUC PROPONENTE"        AS ced_ruc_proponente,
+  "NOMBRE PROPONENTE"         AS nombre_proponente,
+  "ÁREA RESPONSABLE PROYECTO" AS area_responsable_proyecto,
+  "TIPO SECTOR"               AS tipo_sector,
+  "TIPO PERMISO AMBIENTAL"    AS tipo_permiso_ambiental,
+  "TIPO ENTE"                 AS tipo_ente,
+  "PROVINCIA"                 AS provincia,
+  "CANTON"                    AS canton,
+  "PARROQUIA"                 AS parroquia,
+  "PROCESO"                   AS proceso,
+  "ESTADO PROCESO"            AS estado_proceso,
+  "FECHA INICIO PROCESO"::timestamp AS fecha_inicio_proceso,
+  "FECHA FIN PROCESO"::timestamp    AS fecha_fin_proceso,
+  "TAREA"                     AS tarea,
+  "ESTADO TAREA"              AS estado_tarea,
+  "FECHA INICIO TAREA"        AS fecha_inicio_tarea,
+  "FECHA FIN TAREA"           AS fecha_fin_tarea,
+  "USUARIO TAREA"             AS usuario_tarea,
+  "ESTADO PROYECTO"           AS estado_proyecto,
+  "INTERSECTA CON"            AS intersecta_con,
+  "AREAS PROTEGIDAS"::text    AS areas_protegidas,
+  "SISTEMA"                   AS sistema,
+  "ENTE ACREDITADO"           AS ente_acreditado,
+  "ESTADO TRÁMITE"            AS estado_tramite,
+  "ESTRATÉGICO"               AS estrategico
+FROM public.vm_sector_subsector_bi</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <GUI><xloc>150</xloc><yloc>200</yloc><draw>Y</draw></GUI>
+  </step>
+  <step>
+    <name>Output STG Sector</name>
+    <type>TableOutput</type>
+    <description>Escribe en stg.jbpm_sector_bi</description>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_DWH_LOCAL</connection>
+    <schema>stg</schema>
+    <table>jbpm_sector_bi</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <GUI><xloc>500</xloc><yloc>200</yloc><draw>Y</draw></GUI>
+  </step>
+</transformation>

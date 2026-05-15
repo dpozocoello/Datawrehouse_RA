@@ -1,0 +1,28 @@
+# Plan de Corrección - Numeric Overflow en TRX_08
+
+Se corregirá el error de "desbordamiento de campo numeric" en la transformación [TRX_08_INGESTA_PAGOS_SUIA.ktr](file:///f:/Datawrehouse_RA/transformations/TRX_08_INGESTA_PAGOS_SUIA.ktr) mediante la ampliación de la precisión en las columnas de montos en el Data Warehouse.
+
+## Problema
+
+La columna `fitr_transaction_amount` en `stg.financial_transaction_bi` (y sus equivalentes en las tablas de hechos) tiene una precisión de `NUMERIC(12, 2)`, lo que permite un máximo de 9,999,999,999.99 (aprox. 10 mil millones). 
+El origen de datos SUIA está enviando un valor de `34,567,883,954.00` (3.45E10), lo que supera el límite definido.
+
+## Cambios Propuestos
+
+### [Componente: Base de Datos (DDL)]
+
+#### [MODIFY] [ddl_modulo_pagos.sql](file:///f:/Datawrehouse_RA/ddl_modulo_pagos.sql) e Impacto en DB
+
+Se ampliará la precisión de `12,2` a `20,2` en las siguientes columnas:
+
+1.  **stg.online_payments_bi**: `payment_value`
+2.  **stg.financial_transaction_bi**: `fitr_transaction_amount`, `fitr_paid_value`
+3.  **dw.fact_pago**: `monto_transaccion`, `monto_pagado`
+
+Se deben ejecutar sentencias `ALTER TABLE` para modificar las columnas existentes sin perder datos.
+
+## Plan de Verificación
+
+1.  **Ejecución de ALTER TABLE:** Aplicar los cambios en la base de datos `dw_reg_v1`.
+2.  **Re-ejecución de TRX_08:** Solicitar al usuario ejecutar la transformación/job nuevamente.
+3.  **Validación de Datos:** Confirmar que el registro con el valor elevado se cargó correctamente.

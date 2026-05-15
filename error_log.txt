@@ -1,0 +1,129 @@
+ERROR:  el valor es demasiado largo para el tipo character varying(2)
+CONTEXT:  sentencia SQL: ½INSERT INTO dw.fact_regularizacion (
+
+        sk_proyecto,
+
+        sk_proponente,
+
+        sk_actividad,
+
+        sk_geografia,
+
+        sk_usuario,
+
+        sk_estado,
+
+        sk_fecha_registro,
+
+        interseccion_snap,
+
+        areas_protegidas,
+
+        superficie_proyecto,
+
+        id_area,
+
+        fecha_inicio_proceso,
+
+        fecha_fin_proceso,
+
+        fecha_inicio_tarea,
+
+        fecha_fin_tarea,
+
+        proceso,
+
+        tarea,
+
+        nombre_zona,
+
+        finalizado_con_resolucion,
+
+        numero_resolucion,
+
+        fecha_resolucion,
+
+        ente_acreditado,
+
+        origen
+
+    )
+
+SELECT dp.sk_proyecto,
+
+    dpp.sk_proponente,
+
+    da.sk_actividad,
+
+    dg.sk_geografia,
+
+    du.sk_usuario,
+
+    de.sk_estado,
+
+    dt.sk_tiempo,
+
+    CASE
+
+        WHEN snap.codigo_proyecto IS NOT NULL THEN 'SI'
+
+        ELSE COALESCE(c.intersecta_con, 'NO')
+
+    END,
+
+    c.areas_protegidas,
+
+    COALESCE(c.superficie_proyecto, 0),
+
+    COALESCE(c.id_area, 0),
+
+    c.fecha_inicio_proceso,
+
+    c.fecha_fin_proceso,
+
+    c.fecha_inicio_tarea,
+
+    c.fecha_fin_tarea,
+
+    c.proceso,
+
+    c.tarea,
+
+    c.nombre_zona,
+
+    c.finalizado_con_resolucion,
+
+    c.numero_resolucion,
+
+    c.fecha_resolucion,
+
+    c.ente_acreditado,
+
+    c.origen
+
+FROM stg.consolidado_proyectos c
+
+    LEFT JOIN dw.dim_proyecto dp ON dp.codigo_proyecto = c.codigo_proyecto
+
+    LEFT JOIN dw.dim_proponente dpp ON dpp.ced_ruc_proponente = c.ced_ruc_proponente
+
+    LEFT JOIN dw.dim_actividad da ON da.codigo_actividad = c.codigo_actividad
+
+    LEFT JOIN dw.dim_geografia dg ON dg.provincia = COALESCE(c.provincia, 'N/A')
+
+    AND dg.canton = COALESCE(c.canton, 'N/A')
+
+    AND dg.parroquia = COALESCE(c.parroquia, 'N/A')
+
+    LEFT JOIN dw.dim_usuario du ON du.usuario_tarea = c.usuario_tarea
+
+    LEFT JOIN dw.dim_estado de ON de.estado_proceso = COALESCE(c.estado_proceso, 'N/A')
+
+    AND de.estado_proyecto = COALESCE(c.estado_proyecto, 'N/A')
+
+    AND de.estado_tramite = COALESCE(c.estado_tramite, 'N/A')
+
+    LEFT JOIN dw.dim_tiempo dt ON dt.fecha = c.fecha_registro
+
+    LEFT JOIN stg.jbpm_snap_variables snap ON snap.codigo_proyecto = c.codigo_proyecto╗
+funci¾n PL/pgSQL dw.sp_carga_hechos() en la lÝnea 2 en sentencia SQL

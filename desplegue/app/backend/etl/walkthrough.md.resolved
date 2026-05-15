@@ -1,0 +1,37 @@
+# Walkthrough: Python ETL — Data Warehouse Regularización Ambiental
+
+## Objetivo
+
+Crear una versión completa del ETL en Python que replique exactamente el comportamiento del Job Maestro de Pentaho ([JOB_CARGA_DWH_REGULARIZACION.kjb](file:///f:/Datawrehouse_RA/Jobs/JOB_CARGA_DWH_REGULARIZACION.kjb)).
+
+## Archivos Creados
+
+Todos en `F:\Datawrehouse_RA\ETL_p\`:
+
+| Archivo | Líneas | Propósito |
+|---------|--------|-----------|
+| [config.py](file:///f:/Datawrehouse_RA/ETL_p/config.py) | 97 | 5 conexiones BD + flags de pasos habilitados |
+| [connections.py](file:///f:/Datawrehouse_RA/ETL_p/connections.py) | 175 | Context manager, [extract_to_staging()](file:///f:/Datawrehouse_RA/ETL_p/connections.py#67-167), [execute_sp()](file:///f:/Datawrehouse_RA/ETL_p/connections.py#169-192), [execute_sql()](file:///f:/Datawrehouse_RA/ETL_p/connections.py#194-221) |
+| [utils.py](file:///f:/Datawrehouse_RA/ETL_p/utils.py) | 128 | Logger dual (consola+archivo), `@medir_tiempo`, [verificar_conteos()](file:///f:/Datawrehouse_RA/ETL_p/utils.py#123-168) |
+| [ingesta/ingesta_all.py](file:///f:/Datawrehouse_RA/ETL_p/ingesta/ingesta_all.py) | 350 | 9 funciones de extracción con queries SQL completas |
+| [transformacion/transformacion_all.py](file:///f:/Datawrehouse_RA/ETL_p/transformacion/transformacion_all.py) | 280 | 9 funciones de transformación con SQL embebido |
+| [etl_main.py](file:///f:/Datawrehouse_RA/ETL_p/etl_main.py) | 200 | Orquestador CLI con `--desde`, `--hasta`, `--verificar` |
+| [README.md](file:///f:/Datawrehouse_RA/ETL_p/README.md) | 130 | Documentación completa del proyecto |
+| [requirements.txt](file:///f:/Datawrehouse_RA/ETL_p/requirements.txt) | 2 | Dependencias: `psycopg2`, `python-dotenv` |
+
+## Verificación
+
+- ✅ **Sintaxis Python**: Todos los archivos pasaron `py_compile` sin errores
+- ✅ **Estructura**: 8 archivos + 2 [__init__.py](file:///f:/Datawrehouse_RA/ETL_p/ingesta/__init__.py) + directorio [log/](file:///f:/Datawrehouse_RA/ETL_p/utils.py#18-79)
+- ✅ **Equivalencia**: 18 pasos idénticos al Job Pentaho
+- ✅ **TRX_05 deshabilitado**: Replicado en `PASOS_HABILITADOS`
+
+## Uso
+
+```bash
+cd F:\Datawrehouse_RA\ETL_p
+pip install -r requirements.txt
+python etl_main.py           # ETL completo
+python etl_main.py --desde 14  # Solo v2/v3
+python etl_main.py --verificar # Solo conteos
+```

@@ -1,0 +1,10 @@
+--- Checking stg_fact_waste_generation for RGD 10578 ---
+Stg Columns: ['project_code', 'project_id', 'waste_generator_id']
+('SN-PROY', 220472, 10578)
+('SN-PROY', 220472, 10578)
+('SN-PROY', 220472, 10578)
+('SN-PROY', 220472, 10578)
+('SN-PROY', 220472, 10578)
+
+--- Checking dim_proyecto for sk_proyecto 57982 ---
+Dim Result: [(57982, 'MAE-RA-2015-220472')]

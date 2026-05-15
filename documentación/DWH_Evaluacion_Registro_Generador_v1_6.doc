@@ -1,0 +1,80 @@
+
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+                h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+                h2 { color: #2980b9; margin-top: 30px; border-bottom: 1px solid #ddd; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+                th { background-color: #f2f2f2; font-weight: bold; }
+                code { background-color: #f8f9fa; color: #e83e8c; padding: 2px 4px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; }
+                pre { background-color: #f8f9fa; padding: 15px; border-left: 5px solid #2980b9; border-radius: 4px; overflow-x: auto; }
+                blockquote { border-left: 5px solid #ccc; margin: 20px 0; padding: 10px 20px; color: #666; font-style: italic; background: #f9f9f9; }
+            </style>
+        </head>
+        <body>
+            <h1 id="informe-de-evaluacion-arquitectonica-registro-generador-de-desechos-v16">📑 Informe de Evaluación Arquitectónica: Registro Generador de Desechos (v1.6)</h1>
+<p><strong>Arquitectura de Datos, Integración Multifuente y Propuesta Dimensional</strong></p>
+<hr />
+<h2 id="1-analisis-de-fuentes-transaccionales-lineage">1. Análisis de Fuentes Transaccionales (Lineage)</h2>
+<p>La integración del <strong>Registro Generador de Desechos</strong> requiere la orquestación de datos provenientes de tres nodos críticos del ecosistema ministerial:</p>
+<h3 id="11-esquema-coa_waste_generator_record-servidor-suia-179">1.1 Esquema <code>coa_waste_generator_record</code> (Servidor SUIA 179)</h3>
+<ul>
+<li><strong>Propósito:</strong> Registro legal de los establecimientos generadores.</li>
+<li><strong>Entidades Clave:</strong> <code>waste_generator_record_coa</code> (Cabecera), <code>waste_generator_record_project_licencing_coa</code> (Vinculación a Regularización), <code>waste_waste_generation_points</code> (Detalle de generación).</li>
+<li><strong>Información Obtenible:</strong> Ubicación física (Provincia/Cantón), Fecha de Registro, Puntos de Generación y Cantidades estimadas.</li>
+</ul>
+<h3 id="12-esquemas-de-sustancias-waste_dangerous-coa_chemical_sustances">1.2 Esquemas de Sustancias (<code>waste_dangerous</code> / <code>coa_chemical_sustances</code>)</h3>
+<ul>
+<li><strong>Propósito:</strong> Catálogos de peligrosidad y declaraciones de uso.</li>
+<li><strong>Entidades Clave:</strong> <code>catalogs_waste</code> (NCI), <code>chemical_sustances_records</code> (Sustancias), <code>products_pqa</code> (Plaguicidas).</li>
+<li><strong>Información Obtenible:</strong> Gravedad del residuo, clasificación toxicológica y métodos de aplicación.</li>
+</ul>
+<h3 id="13-esquema-online_payment-servidor-jbpm-226">1.3 Esquema <code>online_payment</code> (Servidor JBPM 226)</h3>
+<ul>
+<li><strong>Propósito:</strong> Gestión financiera de los trámites.</li>
+<li><strong>Entidades Clave:</strong> <code>online_payments</code> (Cabecera), <code>online_payments_historical</code> (Trazabilidad de saldos).</li>
+<li><strong>Información Obtenible:</strong> Montos pagados por concepto de Registro Generador, saldos remanentes y vinculación a procesos administrativos.</li>
+</ul>
+<hr />
+<h2 id="2-modelado-dimensional-propuesto">2. Modelado Dimensional Propuesto</h2>
+<p>Para soportar el análisis solicitado, se proponen las siguientes dimensiones y ajustes estructurales:</p>
+<h3 id="21-nuevas-dimensiones-conceptuales">2.1 Nuevas Dimensiones (Conceptuales)</h3>
+<ol>
+<li><strong><code>dw.dim_waste_generator</code> (ESTABLECIMIENTO):</strong></li>
+<li>Atributos: RUC, Nombre del Establecimiento, Tipo de actividad generadora, Ubicación Geográfica.</li>
+<li><strong><code>dw.dim_waste_type</code> (RESIDUO):</strong></li>
+<li>Atributos: Código NCI, Nombre del residuo, Nivel de peligrosidad, Reglamento asociado.</li>
+<li><strong><code>dw.dim_process_flow</code> (BPM):</strong></li>
+<li>Atributos: Tipo de trámite (Registro Generador vs Declaración), Estado del flujo, Usuario responsable del proceso.</li>
+</ol>
+<h3 id="22-dimensiones-afectadas-ajustes">2.2 Dimensiones Afectadas (Ajustes)</h3>
+<ol>
+<li><strong><code>dw.dim_proyecto</code> (VINCULACIÓN):</strong></li>
+<li><strong>Cambio:</strong> No afecta el concepto, pero requiere un puente (Bridge) para proyectos que tienen múltiples registros generadores asociados (Relación M:N).</li>
+<li><strong><code>dw.dim_tiempo</code>:</strong></li>
+<li><strong>Cambio:</strong> Sin afectación conceptual. Se inyectan hechos en fechas de "Emisión de Registro" y "Declaración Anual".</li>
+</ol>
+<hr />
+<h2 id="3-integracion-de-hechos-fact-tables">3. Integración de Hechos (Fact Tables)</h2>
+<p>Se define la evolución hacia dos métricas principales:</p>
+<ul>
+<li><strong><code>dw.fact_waste_generation</code>:</strong> Registro puntual de cantidades por residuo, proyecto y tiempo.</li>
+<li><strong><code>dw.fact_payment_traceability</code> (NUEVA):</strong> Basada en <code>online_payments_historical</code>. Permite ver la evolución del pago de un trámite de registro generador desde la orden inicial hasta la liquidación final.</li>
+</ul>
+<hr />
+<h2 id="4-conclusiones-tecnicas-para-arquitecto-e-ingeniero">4. Conclusiones Técnicas para Arquitecto e Ingeniero</h2>
+<ol>
+<li><strong>Unificación de IDs:</strong> Es crítico utilizar el <code>internal_id</code> (numérico) para cruzar los datos del JBPM (pagos) con el SUIA (registros legales), ya que el código de proyecto (MAATE-...) tiene variaciones de formato entre bases.</li>
+<li><strong>Gestión de Saldos:</strong> El uso de <code>online_payments_historical</code> permitirá por primera vez realizar auditorías sobre pagos parciales o trámites fallidos de registros generadores.</li>
+<li><strong>Optimización:</strong> Se recomienda mantener la tabla <code>stg.tmp_dim_proyecto_optimized</code> (v1.5.1) para asegurar que el cruce entre los tres servidores (Pentaho-Python-Postgres) sea de alto rendimiento.</li>
+</ol>
+<hr />
+<p><strong>Arquitecto e Ingeniero de Datos:</strong> Antigravity AI<br />
+<strong>Versión:</strong> 1.6<br />
+<strong>Estado:</strong> Propuesta Técnica de Integración Finalizada</p>
+        </body>
+        </html>
+        

@@ -1,0 +1,192 @@
+# Plan de Implementación: DWH v2 — Validación Integral y Correcciones
+
+## Pasos a Seguir
+1. Ejecutar las modificaciones DDL
+2. Modificar y probar el script ETL
+3. Ejecutar los reportes finales de validación
+
+## Siguiente Fase (DWH v3): Conciliación de Pagos Múltiples
+Tras validar en la base origen `jbpmdb` que los trámites (ej: `9259253`) manejan **depósitos globales** en `online_payments` y **descuentos individuales por proyecto** en `online_payments_historical`, se planea la siguiente iteración:
+
+### 1. Modificación de Staging y ETL Base
+- Incorporar la extracción remota (vía `dblink`) de la tabla `online_payment.online_payments_historical` hacia una nueva tabla `stg.online_payments_historical_bi`.
+
+### 2. Actualización de fact_pago
+- Rediseñar `sp_carga_fact_pago` para cruzar los depósitos de `stg.online_payments_bi` (cabecera) con los consumos de `stg.online_payments_historical_bi` (detalle).
+- El campo `monto_transaccion` se actualizará dinámicamente:
+  - Para el registro "Padre" (Depósito inicial): Será el valor total del depósito.
+  - Para los registros "Hijo" (Proyectos): Se calculará usando la diferencia del `value_updated` anterior o usando el `retired_value` histórico.
+- Esto resolverá la diferencia reportada en producción (donde PROD muestra valor nulo para el depósito y nosotros mostramos erróneamente el valor global de $1600.00 como si fuera cobrado íntegro a ese único proyecto).
+
+### 3. Pipeline de Ejecución (Jobs)
+- Se ha creado el script [f:\Datawrehouse_RA\jobs\job_diario_dwh.bat](file:///f:/Datawrehouse_RA/jobs/job_diario_dwh.bat).
+- Este Job en lote (Batch) está diseñado para usarse conjuntamente con el Programador de Tareas de Windows.
+- Se encarga de levantar ordenadamente: 
+  1. La carga base (v1).
+  2. Las transformaciones de dimensionalidad (v2).
+  3. El cálculo masivo del costo transaccional histórico (v3) sobre **todos los proyectos de la bodega**.
+
+## Contexto
+
+Tras la verificación de integridad (167→15 diferencias), se requiere una validación profunda en 4 ejes y la creación de una nueva versión del proyecto si se necesitan cambios estructurales.
+
+---
+
+## Eje 1: Validación Geográfica — Relación Recursiva
+
+### Problema Actual
+
+`dim_geografia` es **plana** (4 columnas: `sk_geografia`, `provincia`, `canton`, `parroquia`) sin jerarquía padre-hijo. Los 9 proyectos con diferencias geográficas se deben a que:
+
+- Un proyecto tiene **múltiples ubicaciones** (hasta 22 parroquias)
+- `fact_regularizacion` almacena **una geografía por fila de tarea** (task-level)
+- La consulta DWH usa `DISTINCT ON (codigo_proyecto)` que elige una ubicación **arbitraria**
+- Producción usa un criterio de selección **diferente** (probablemente la primera tarea registrada)
+
+### Propuesta v2
+
+#### [NEW] `dw.fact_proyecto_geografia` (Bridge Table M:N)
+```sql
+CREATE TABLE dw.fact_proyecto_geografia (
+    sk_proyecto INT REFERENCES dw.dim_proyecto(sk_proyecto),
+    sk_geografia INT REFERENCES dw.dim_geografia(sk_geografia),
+    es_principal BOOLEAN DEFAULT false,  -- Marca la ubicación principal
+    PRIMARY KEY (sk_proyecto, sk_geografia)
+);
+```
+
+#### [MODIFY] `dw.dim_geografia` — Agregar jerarquía recursiva
+```sql
+ALTER TABLE dw.dim_geografia
+    ADD COLUMN sk_padre INT REFERENCES dw.dim_geografia(sk_geografia),
+    ADD COLUMN nivel VARCHAR(20); -- 'PROVINCIA', 'CANTON', 'PARROQUIA'
+```
+
+> [!IMPORTANT]
+> `dim_geografia` actual tiene `UNIQUE(provincia, canton, parroquia)`. La jerarquía recursiva permite:
+> - Drill-down: Provincia → Cantón → Parroquia
+> - Consultas agregadas por nivel jerárquico
+> - Una sola dimensión para reportes y filtros
+
+---
+
+## Eje 2: Validación de Pagos — Depósito Inicial y Orden Ordinal
+
+### Problema Actual
+
+- `fact_pago` no tiene campo de **secuencia/ordinal** para ordenar pagos dentro de un trámite
+- Un `tramit_number` cubre **múltiples proyectos** (pago compartido)
+- No hay distinción entre **depósito inicial** y **pagos subsecuentes**
+- El valor de cada transacción debe calcularse como la **diferencia** entre el depósito y el siguiente pago respetando el orden
+
+### Datos en Staging
+
+| tramit_number | project_id fuente | payment_value | # proyectos asociados |
+|---|---|---|---|
+| 1472163211 | MAE-RA-2016-279314 | $800 | 6 |
+| 1794630554 | MAE-RA-2017-304882 | $800 | 4 |
+| 1831863402 | MAE-RA-2017-311771 | $160 | 2 |
+| 1891165388 | MAE-RA-2017-318409 | $1,600 | 20 |
+| 71957464 | MAE-RA-2017-331670 | $320 | 4 |
+
+### Propuesta v2
+
+#### [MODIFY] `dw.fact_pago` — Agregar campos de ordenamiento
+```sql
+ALTER TABLE dw.fact_pago
+    ADD COLUMN secuencia_pago INT,            -- Ordinal dentro del trámite
+    ADD COLUMN es_deposito_inicial BOOLEAN,   -- true = primer pago del trámite
+    ADD COLUMN monto_acumulado NUMERIC(12,2); -- Suma acumulada para el trámite
+```
+
+#### [NEW] `dw.sp_calcular_secuencia_pagos()` — SP para calcular orden
+```sql
+-- Calcula la secuencia de pagos por tramit_number ordenados por fecha
+-- y marca el depósito inicial
+UPDATE dw.fact_pago fp SET
+    secuencia_pago = sub.rn,
+    es_deposito_inicial = (sub.rn = 1),
+    monto_acumulado = sub.acum
+FROM (
+    SELECT id_fact_pago,
+           ROW_NUMBER() OVER (PARTITION BY numero_tramite ORDER BY sk_fecha_pago, id_fact_pago) AS rn,
+           SUM(monto_transaccion) OVER (PARTITION BY numero_tramite ORDER BY sk_fecha_pago, id_fact_pago) AS acum
+    FROM dw.fact_pago
+    WHERE origen = 'JBPM'
+) sub
+WHERE fp.id_fact_pago = sub.id_fact_pago;
+```
+
+---
+
+## Eje 3: Análisis Estructural DWH vs Producción
+
+### Campos en Producción NO presentes en DWH
+
+| Campo PROD | Tabla origen | Estado en DWH |
+|---|---|---|
+| `ÁREA RESPONSABLE PROYECTO` | `consolidado_proyectos.area_responsable_proyecto` | ❌ Existe en STG pero NO se carga a ninguna dimensión |
+| `VALOR PAGO` (nombre) | `online_payment.payment_value` | ✅ Existe como `VALOR TRANSACCION` |
+
+### Campos en DWH NO presentes en Producción (extras válidos)
+
+| Campo DWH | Justificación |
+|---|---|
+| `TIPO PAGO` | Clasificación del método de pago → valor agregado |
+| `SISTEMA ORIGEN PAGO` | Trazabilidad del origen (JBPM/SUIA) → valor agregado |
+| `TAREA BPM`, `PROCESO BPM` | Detalle del workflow BPM → valor agregado |
+| `VALOR PAGADO` | Separación monto transacción vs pagado → valor agregado |
+
+### Problemas en el ETL
+
+| Problema | Detalle | Impacto |
+|---|---|---|
+| Pagos solo por `project_id` | `sp_carga_fact_pago` PARTE A usa `project_id` directo | 31 pagos faltaban |
+| Sin lógica `tramit_number` M:N | PARTE B (proponente) demasiado compleja, falló | Pagos no asociados |
+| `dim_geografia` sin selección determinista | `DISTINCT ON` sin ORDER BY claro | 9 diferencias geográficas |
+| `area_responsable_proyecto` descartada | STG la tiene pero no se carga | Campo faltante en reportes |
+
+---
+
+## Eje 4: Propuesta de Versión v2
+
+### Estructura de Carpetas
+
+```
+f:\Datawrehouse_RA\v2\
+├── ddl_dwh_v2.sql              -- DDL con cambios estructurales
+├── etl_carga_datos_v2.sql      -- ETL con correcciones
+├── sp_carga_fact_pago_v2.sql   -- SP de pagos corregida
+├── consulta_pagos_dw_v2.sql    -- Consulta de verificación actualizada
+└── README.md                   -- Documentación de cambios
+```
+
+### Cambios DDL Propuestos
+
+1. **`dim_geografia`** — Agregar `sk_padre` y `nivel` para jerarquía recursiva
+2. **`fact_proyecto_geografia`** — Bridge table M:N (proyecto ↔ geografía)
+3. **`fact_pago`** — Agregar `secuencia_pago`, `es_deposito_inicial`, `monto_acumulado`
+4. **`dim_proyecto`** — Agregar `area_responsable` (campo faltante de producción)
+
+### Cambios ETL Propuestos
+
+1. **`sp_carga_fact_pago`** — Usar DISTINCT ON + asociación por `tramit_number` (ya corregido)
+2. **`sp_carga_hechos`** — Poblar `fact_proyecto_geografia` con todas las ubicaciones
+3. **`sp_carga_dimensiones`** — Cargar jerarquía en `dim_geografia`
+4. **`sp_calcular_secuencia_pagos`** — Calcular orden de pagos post-carga
+
+---
+
+## Verificación
+
+### Automatizada
+```bash
+# Re-exportar CSV y comparar
+python comparar_csv.py
+```
+
+### Manual (DBeaver)
+- V1: Verificar `fact_proyecto_geografia` tiene todas las ubicaciones por proyecto
+- V2: Verificar `fact_pago.secuencia_pago` ordenado correctamente por trámite
+- V3: Verificar `dim_geografia` tiene jerarquía recursiva consistente
+- V4: Comparar reporte con producción (diferencias esperadas: ~1, solo `MAE-RA-2018-337274`)

@@ -1,0 +1,9 @@
+postgres
+restaurant
+postgres_monitor
+iso27001_certification
+sgsi_auditor_db
+otrs
+otrsBI
+scrum_evaluation
+dw_reg_v1

@@ -1,0 +1,6804 @@
+{
+  "coa_waste_generator_record": {
+    "tables": [
+      "coordinates_coa",
+      "documents_coa_waste_generator_record",
+      "generation_points_coa",
+      "generation_points_waste",
+      "recovery_points_coa",
+      "recovery_point_shapes_coa",
+      "waste_ciuu",
+      "waste_generator_catalog",
+      "waste_generator_record_coa",
+      "waste_generator_record_document",
+      "waste_generator_record_office_pronouncement",
+      "waste_generator_record_project_licencing_coa",
+      "waste_policies_coa",
+      "waste_policies_coa_waste_dangerous",
+      "waste_waste_generation_points"
+    ],
+    "columns": {
+      "coordinates_coa": [
+        [
+          "coor_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "coor_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "coor_description",
+          "character varying",
+          "YES"
+        ],
+        [
+          "coor_order",
+          "integer",
+          "YES"
+        ],
+        [
+          "coor_x",
+          "double precision",
+          "YES"
+        ],
+        [
+          "coor_y",
+          "double precision",
+          "YES"
+        ],
+        [
+          "rpsh_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "coor_zone",
+          "character varying",
+          "YES"
+        ],
+        [
+          "coor_update_number",
+          "integer",
+          "YES"
+        ],
+        [
+          "coor_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "coor_creator_user",
+          "character varying",
+          "NO"
+        ],
+        [
+          "coor_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "coor_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "coor_observation_bd",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "documents_coa_waste_generator_record": [
+        [
+          "dowa_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "dowa_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "dowa_mime",
+          "character varying",
+          "YES"
+        ],
+        [
+          "doty_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "dowa_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "dowa_alfresco_id",
+          "character varying",
+          "YES"
+        ],
+        [
+          "dowa_extesion",
+          "character varying",
+          "YES"
+        ],
+        [
+          "dowa_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "dowa_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "dowa_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "dowa_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "dowa_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "ware_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "dowa_type_user",
+          "integer",
+          "YES"
+        ],
+        [
+          "dowa_table_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "dowa_description",
+          "character varying",
+          "YES"
+        ],
+        [
+          "dowa_table_class",
+          "character varying",
+          "YES"
+        ],
+        [
+          "dowa_code_public",
+          "character varying",
+          "YES"
+        ],
+        [
+          "dowa_process_instance_id",
+          "integer",
+          "YES"
+        ]
+      ],
+      "generation_points_coa": [
+        [
+          "gepo_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "gepo_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "gepo_key",
+          "character varying",
+          "YES"
+        ],
+        [
+          "gepo_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "gepo_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "gepo_creator_user",
+          "character varying",
+          "NO"
+        ],
+        [
+          "gepo_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "gepo_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "gepo_observation_bd",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "generation_points_waste": [
+        [
+          "gewa_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "gepo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wwgp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "gewa_status",
+          "boolean",
+          "YES"
+        ],
+        [
+          "gewa_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "gewa_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "gewa_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "gewa_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "gewa_observation_bd",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "recovery_points_coa": [
+        [
+          "repo_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "repo_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "repo_name",
+          "character varying",
+          "NO"
+        ],
+        [
+          "repo_phone",
+          "character varying",
+          "YES"
+        ],
+        [
+          "repo_email",
+          "character varying",
+          "YES"
+        ],
+        [
+          "repo_address",
+          "character varying",
+          "YES"
+        ],
+        [
+          "gelo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "ware_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "repo_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "repo_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "repo_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "repo_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "repo_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "gepo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "repo_generation_points_other",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "recovery_point_shapes_coa": [
+        [
+          "rpsh_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "rpsh_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "repo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "shty_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "rpsh_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "rpsh_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "rpsh_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "rpsh_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "rpsh_observation_bd",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "waste_ciuu": [
+        [
+          "waci_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "caci_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wada_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "waci_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "waci_four_digit_code",
+          "text",
+          "YES"
+        ],
+        [
+          "waci_economic_activity_four_digit",
+          "text",
+          "YES"
+        ],
+        [
+          "waci_five_digit_code",
+          "text",
+          "YES"
+        ],
+        [
+          "waci_economic_activity_five_digit",
+          "text",
+          "YES"
+        ],
+        [
+          "waci_six_digit_code",
+          "text",
+          "YES"
+        ],
+        [
+          "waci_economic_activity_six_digit",
+          "text",
+          "YES"
+        ],
+        [
+          "waci_scrap_code",
+          "text",
+          "YES"
+        ],
+        [
+          "waci_scrap_description",
+          "text",
+          "YES"
+        ],
+        [
+          "waci_crtib",
+          "text",
+          "YES"
+        ],
+        [
+          "waci_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "waci_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "waci_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "waci_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "waci_observation_bd",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "waste_generator_catalog": [
+        [
+          "waca_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "waca_code",
+          "character varying",
+          "YES"
+        ],
+        [
+          "waca_description",
+          "character varying",
+          "YES"
+        ],
+        [
+          "waca_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "waca_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "waca_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "waca_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "waca_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "waca_observation_bd",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "waste_generator_record_coa": [
+        [
+          "ware_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "ware_code",
+          "character varying",
+          "NO"
+        ],
+        [
+          "ware_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "user_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "ware_delete_reason",
+          "character varying",
+          "YES"
+        ],
+        [
+          "ware_deactivation_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wapo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "ware_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "ware_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "ware_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "ware_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "ware_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "ware_responsibility_held",
+          "boolean",
+          "YES"
+        ],
+        [
+          "ware_finalized",
+          "boolean",
+          "NO"
+        ],
+        [
+          "ware_send_date_information",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "waste_generator_record_document": [
+        [
+          "wgrd_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "ware_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wgrd_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "wgrd_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wgrd_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wgrd_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wgrd_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wgrd_document_number",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wgrd_date_docuement_number",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wgrd_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "wgrd_is_final",
+          "boolean",
+          "YES"
+        ]
+      ],
+      "waste_generator_record_office_pronouncement": [
+        [
+          "wgro_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "ware_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wgro_document_number",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wgro_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "wgro_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wgro_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wgro_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wgro_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wgro_date_document_number",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wgro_status",
+          "boolean",
+          "NO"
+        ]
+      ],
+      "waste_generator_record_project_licencing_coa": [
+        [
+          "wapr_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "ware_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "prco_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wapr_status",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wapr_come_from",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wapr_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "wapr_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wapr_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wapr_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wapr_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "id_proyect",
+          "integer",
+          "YES"
+        ],
+        [
+          "wapr_description_system",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wapr_4cat_sect",
+          "character varying",
+          "YES"
+        ],
+        [
+          "enaa_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wapr_id_history",
+          "integer",
+          "YES"
+        ],
+        [
+          "wapr_date_unbind",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "waste_policies_coa": [
+        [
+          "wapo_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "wapo_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "wapo_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "area_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wapo_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "wapo_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wapo_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wapo_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wapr_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wapo_order",
+          "integer",
+          "YES"
+        ]
+      ],
+      "waste_policies_coa_waste_dangerous": [
+        [
+          "wawa_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "wada_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wapo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wawa_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "wawa_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "wawa_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wawa_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wawa_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wawa_observation_bd",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "waste_waste_generation_points": [
+        [
+          "wwgp_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "wwgp_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "wada_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "wwgp_generate_waste",
+          "boolean",
+          "NO"
+        ],
+        [
+          "wwgp_quantity_tons",
+          "numeric",
+          "YES"
+        ],
+        [
+          "wwgp_quantity_kilograms",
+          "numeric",
+          "YES"
+        ],
+        [
+          "wwgp_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "wwgp_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wwgp_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wwgp_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wwgp_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wwgp_internal_management",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wwgp_other",
+          "character varying",
+          "YES"
+        ],
+        [
+          "ware_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wwgp_search_added",
+          "boolean",
+          "NO"
+        ],
+        [
+          "wwgp_waste_description",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wwgp_quantity_unit",
+          "numeric",
+          "YES"
+        ],
+        [
+          "wwgp_management_individual",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wwgp_management_system_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wwgp_management_system_date",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ]
+    }
+  },
+  "chemical_pesticides": {
+    "tables": [
+      "aquatic_organic_effects",
+      "compliance_report_pma",
+      "compliance_report_pma_extension",
+      "corrective_preventive_actions",
+      "crop_family_pma",
+      "crop_pesticide",
+      "crops",
+      "culture_dose",
+      "detail_pesticide_project",
+      "documents_chemicals_pesticides",
+      "emergency_care_program",
+      "environmental_monitoring",
+      "expired_product_ic",
+      "expired_products",
+      "form_comments_pesticides",
+      "form_comments_pesticides_cr",
+      "incident_log",
+      "integrated_management_plan",
+      "measures_polluting_agents",
+      "objective_group",
+      "official_pronouncement",
+      "official_pronouncement_cr",
+      "pesticide_project",
+      "pests",
+      "planning_training_insecticide_crop",
+      "possible_impacts",
+      "product_information_pma",
+      "product_registration",
+      "products_pqa",
+      "program_information",
+      "species_catalog_pqua",
+      "species_risk_assessment",
+      "technical_report",
+      "technical_report_cr",
+      "training_pma",
+      "training_preventive_corrective_action",
+      "training_topics",
+      "type_observations",
+      "type_observations_ic",
+      "types_aquatic_organisms",
+      "waste_management_packaging",
+      "waste_reduction_program"
+    ],
+    "columns": {
+      "aquatic_organic_effects": [
+        [
+          "aqor_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "aqor_ingredient_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "aqor_ecotoxicological_value",
+          "numeric",
+          "YES"
+        ],
+        [
+          "aqor_unit_measurement",
+          "character varying",
+          "YES"
+        ],
+        [
+          "aqor_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "tyaq_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "aqor_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "aqor_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "aqor_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "aqor_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "aqor_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "aqor_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "chpe_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "aqor_pictogram",
+          "boolean",
+          "YES"
+        ],
+        [
+          "aqor_word_warning",
+          "character varying",
+          "YES"
+        ],
+        [
+          "aqor_danger_statements",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "compliance_report_pma": [
+        [
+          "corp_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pinp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "prod_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "corp_parent_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "corp_procedure_code",
+          "character varying",
+          "YES"
+        ],
+        [
+          "corp_period",
+          "integer",
+          "YES"
+        ],
+        [
+          "corp_approved",
+          "boolean",
+          "YES"
+        ],
+        [
+          "corp_extension",
+          "boolean",
+          "YES"
+        ],
+        [
+          "corp_marketed_product",
+          "boolean",
+          "YES"
+        ],
+        [
+          "corp_union_training",
+          "boolean",
+          "YES"
+        ],
+        [
+          "corp_date_submission",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "corp_year_report",
+          "integer",
+          "YES"
+        ],
+        [
+          "corp_month_report",
+          "integer",
+          "YES"
+        ],
+        [
+          "corp_annual_record",
+          "character varying",
+          "YES"
+        ],
+        [
+          "corp_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "corp_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "corp_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "corp_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "corp_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "corp_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "corp_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "compliance_report_pma_extension": [
+        [
+          "crpe_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "corp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "crpe_number_review",
+          "integer",
+          "YES"
+        ],
+        [
+          "crpe_number_days_review",
+          "integer",
+          "YES"
+        ],
+        [
+          "crpe_date_start_correct",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crpe_date_end_correct",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crpe_date_request_extension",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crpe_number_days_extension",
+          "integer",
+          "YES"
+        ],
+        [
+          "crpe_date_start_extension",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crpe_date_end_extension",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crpe_request_extension",
+          "boolean",
+          "YES"
+        ],
+        [
+          "crpe_extension_accepted",
+          "boolean",
+          "YES"
+        ],
+        [
+          "crpe_extension_reason",
+          "character varying",
+          "YES"
+        ],
+        [
+          "crpe_request_code",
+          "character varying",
+          "YES"
+        ],
+        [
+          "crpe_signature_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "crpe_sequential_code",
+          "character varying",
+          "YES"
+        ],
+        [
+          "crpe_extension_type",
+          "integer",
+          "YES"
+        ],
+        [
+          "crpe_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "crpe_creation_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crpe_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "crpe_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crpe_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "crpe_observation_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "crpe_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "corrective_preventive_actions": [
+        [
+          "cpac_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "ecpr_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "cpac_detail",
+          "text",
+          "YES"
+        ],
+        [
+          "trto_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "cpac_typy",
+          "integer",
+          "YES"
+        ],
+        [
+          "cpac_predefined",
+          "boolean",
+          "YES"
+        ],
+        [
+          "cpac_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "cpac_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "cpac_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "cpac_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "cpac_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "cpac_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "cpac_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "crop_family_pma": [
+        [
+          "crfp_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "geca_id_family",
+          "integer",
+          "YES"
+        ],
+        [
+          "corp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "crfp_approved_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "crfp_save_value",
+          "integer",
+          "YES"
+        ],
+        [
+          "crfp_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "crfp_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "crfp_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "crfp_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "crfp_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crfp_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "crfp_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "crop_pesticide": [
+        [
+          "crpe_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pest_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "depe_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "crpe_status",
+          "boolean",
+          "YES"
+        ],
+        [
+          "crpe_common_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "crpe_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "crpe_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "crpe_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "crpe_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crpe_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crpe_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "crpe_is_physical",
+          "boolean",
+          "YES"
+        ]
+      ],
+      "crops": [
+        [
+          "crop_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "crop_common_name",
+          "text",
+          "YES"
+        ],
+        [
+          "crop_scientific_name",
+          "text",
+          "YES"
+        ],
+        [
+          "crop_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "crop_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "crop_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "crop_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "crop_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "crop_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "crop_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "geca_id_crop_type",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_family_type",
+          "integer",
+          "YES"
+        ]
+      ],
+      "culture_dose": [
+        [
+          "cudo_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "depe_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "cudo_dose_value",
+          "double precision",
+          "YES"
+        ],
+        [
+          "cudo_unit_dose",
+          "character varying",
+          "YES"
+        ],
+        [
+          "cudo_status",
+          "boolean",
+          "YES"
+        ],
+        [
+          "cudo_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "cudo_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "cudo_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "cudo_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "cudo_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "cudo_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "cudo_is_physical",
+          "boolean",
+          "YES"
+        ]
+      ],
+      "detail_pesticide_project": [
+        [
+          "depe_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "chpe_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "crop_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "depe_status",
+          "boolean",
+          "YES"
+        ],
+        [
+          "depe_scientific_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "depe_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "depe_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "depe_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "depe_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "depe_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "depe_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "depe_is_physical",
+          "boolean",
+          "YES"
+        ]
+      ],
+      "documents_chemicals_pesticides": [
+        [
+          "doch_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "doch_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "doch_mime",
+          "character varying",
+          "YES"
+        ],
+        [
+          "doty_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "doch_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "doch_alfresco_id",
+          "character varying",
+          "YES"
+        ],
+        [
+          "doch_extesion",
+          "character varying",
+          "YES"
+        ],
+        [
+          "doch_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "doch_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "doch_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "doch_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "doch_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "doch_date_observation_bd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "doch_table_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "doch_table_class",
+          "character varying",
+          "YES"
+        ],
+        [
+          "doch_process_instance_id",
+          "integer",
+          "YES"
+        ]
+      ],
+      "emergency_care_program": [
+        [
+          "ecpr_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pinp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "ecpr_objective",
+          "text",
+          "YES"
+        ],
+        [
+          "ecpr_responsible",
+          "text",
+          "YES"
+        ],
+        [
+          "ecpr_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "ecpr_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "ecpr_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "ecpr_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "ecpr_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "ecpr_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "ecpr_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "environmental_monitoring": [
+        [
+          "enmo_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pinp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "enmo_soil_monitoring",
+          "boolean",
+          "YES"
+        ],
+        [
+          "enmo_soil_monitoring_detail",
+          "text",
+          "YES"
+        ],
+        [
+          "enmo_water_monitoring",
+          "boolean",
+          "YES"
+        ],
+        [
+          "enmo_water_monitoring_detail",
+          "text",
+          "YES"
+        ],
+        [
+          "enmo_biotic_monitoring",
+          "boolean",
+          "YES"
+        ],
+        [
+          "enmo_biotic_monitoring_detail",
+          "text",
+          "YES"
+        ],
+        [
+          "enmo_product_custody_plan",
+          "text",
+          "YES"
+        ],
+        [
+          "enmo_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "enmo_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "enmo_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "enmo_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "enmo_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "enmo_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "enmo_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "expired_product_ic": [
+        [
+          "expi_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "corp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "expi_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wada_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "expi_amount",
+          "numeric",
+          "YES"
+        ],
+        [
+          "expi_biannual_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "expi_approved_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "expi_save_value",
+          "integer",
+          "YES"
+        ],
+        [
+          "expi_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "expi_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "expi_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "expi_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "expi_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "expi_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "expi_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "expired_products": [
+        [
+          "expr_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pinp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "expr_detail",
+          "text",
+          "YES"
+        ],
+        [
+          "expr_type",
+          "integer",
+          "YES"
+        ],
+        [
+          "trto_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "expr_predefined",
+          "boolean",
+          "YES"
+        ],
+        [
+          "expr_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "expr_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "expr_creation_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "expr_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "expr_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "expr_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "expr_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "form_comments_pesticides": [
+        [
+          "fope_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "fope_field",
+          "character varying",
+          "NO"
+        ],
+        [
+          "fope_description",
+          "character varying",
+          "NO"
+        ],
+        [
+          "fope_class_name",
+          "character varying",
+          "NO"
+        ],
+        [
+          "fope_id_class",
+          "integer",
+          "NO"
+        ],
+        [
+          "fope_section_form",
+          "character varying",
+          "NO"
+        ],
+        [
+          "user_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "fope_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "fope_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "fope_observation_corrected",
+          "boolean",
+          "YES"
+        ],
+        [
+          "taskid",
+          "bigint",
+          "YES"
+        ],
+        [
+          "fope_answer",
+          "character varying",
+          "YES"
+        ],
+        [
+          "fope_observations",
+          "character varying",
+          "YES"
+        ],
+        [
+          "fope_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "fope_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "fope_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "fope_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "fope_observation_bd",
+          "character varying",
+          "YES"
+        ],
+        [
+          "tyob_id",
+          "integer",
+          "YES"
+        ]
+      ],
+      "form_comments_pesticides_cr": [
+        [
+          "fopc_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "fopc_field",
+          "character varying",
+          "NO"
+        ],
+        [
+          "fopc_description",
+          "character varying",
+          "NO"
+        ],
+        [
+          "fopc_class_name",
+          "character varying",
+          "NO"
+        ],
+        [
+          "fopc_id_class",
+          "integer",
+          "NO"
+        ],
+        [
+          "fopc_section_form",
+          "character varying",
+          "NO"
+        ],
+        [
+          "user_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "fopc_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "tyoi_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "fopc_observation_corrected",
+          "boolean",
+          "YES"
+        ],
+        [
+          "taskid",
+          "bigint",
+          "YES"
+        ],
+        [
+          "fopc_answer",
+          "character varying",
+          "YES"
+        ],
+        [
+          "fopc_observations",
+          "character varying",
+          "YES"
+        ],
+        [
+          "fopc_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "fopc_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "fopc_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "fopc_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "fopc_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "fopc_observation_bd",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "incident_log": [
+        [
+          "inlo_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "corp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_incident_type",
+          "integer",
+          "YES"
+        ],
+        [
+          "gelo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "inlo_address",
+          "text",
+          "YES"
+        ],
+        [
+          "inlo_activity_carried_out",
+          "text",
+          "YES"
+        ],
+        [
+          "inlo_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "inlo_biannual_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "inlo_approved_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "inlo_save_value",
+          "integer",
+          "YES"
+        ],
+        [
+          "inlo_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "inlo_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "inlo_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "inlo_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "inlo_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "inlo_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "inlo_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "integrated_management_plan": [
+        [
+          "inmp_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "user_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "geca_id_guild",
+          "integer",
+          "YES"
+        ],
+        [
+          "inmp_number_plan",
+          "character varying",
+          "YES"
+        ],
+        [
+          "inmp_user_sga",
+          "boolean",
+          "YES"
+        ],
+        [
+          "inmp_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "inmp_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "inmp_creation_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "inmp_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "inmp_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "inmp_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "inmp_observations_bdd",
+          "text",
+          "YES"
+        ]
+      ],
+      "measures_polluting_agents": [
+        [
+          "mpag_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pinp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_actions_implemented",
+          "integer",
+          "YES"
+        ],
+        [
+          "mpag_type",
+          "integer",
+          "YES"
+        ],
+        [
+          "mpag_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "mpag_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "mpag_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "mpag_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "mpag_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "mpag_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "mpag_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "objective_group": [
+        [
+          "obgr_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "obgr_description",
+          "text",
+          "YES"
+        ],
+        [
+          "obgr_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "obgr_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "obgr_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "obgr_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "obgr_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "obgr_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "obgr_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "official_pronouncement": [
+        [
+          "ofpr_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "ofpr_date_official_pronouncement",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "id_task",
+          "integer",
+          "YES"
+        ],
+        [
+          "ofpr_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "ofpr_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "ofpr_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "ofpr_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "ofpr_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "ofpr_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "ofpr_pronouncement_type",
+          "boolean",
+          "YES"
+        ],
+        [
+          "ofpr_official_pronouncement",
+          "text",
+          "YES"
+        ],
+        [
+          "chpe_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "ofpr_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "ofpr_revision_number",
+          "integer",
+          "YES"
+        ],
+        [
+          "ofpr_signature_date",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "official_pronouncement_cr": [
+        [
+          "ofpc_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "ofpc_date_official_pronouncement",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "id_task",
+          "integer",
+          "YES"
+        ],
+        [
+          "doty_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "ofpc_pronouncement_type",
+          "boolean",
+          "YES"
+        ],
+        [
+          "ofpc_official_pronouncement",
+          "text",
+          "YES"
+        ],
+        [
+          "corp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "ofpc_revision_number",
+          "integer",
+          "YES"
+        ],
+        [
+          "ofpc_signature_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "ofpc_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "ofpc_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "ofpc_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "ofpc_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "ofpc_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "ofpc_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "ofpc_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "ofpc_content",
+          "text",
+          "YES"
+        ]
+      ],
+      "pesticide_project": [
+        [
+          "chpe_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "geca_id_product_type",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_container_type",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_toxicological_category",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_stripe_color",
+          "integer",
+          "YES"
+        ],
+        [
+          "prod_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "chpe_proyect_code",
+          "character varying",
+          "YES"
+        ],
+        [
+          "chpe_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "chpe_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "chpe_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "chpe_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "chpe_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "chpe_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "chpe_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "chpe_project_send_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "chpe_final_result",
+          "integer",
+          "YES"
+        ],
+        [
+          "chpe_final_result_date",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "pests": [
+        [
+          "pest_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pest_scientific_name",
+          "text",
+          "YES"
+        ],
+        [
+          "pest_common_name",
+          "text",
+          "YES"
+        ],
+        [
+          "pest_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "pest_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "pest_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "pest_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "pest_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "pest_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "pest_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "planning_training_insecticide_crop": [
+        [
+          "ptic_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "corp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "crop_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "trto_id",
+          "character varying",
+          "YES"
+        ],
+        [
+          "cpac_id",
+          "character varying",
+          "YES"
+        ],
+        [
+          "gelo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "crfp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "ptic_address",
+          "text",
+          "YES"
+        ],
+        [
+          "ptic_cellular",
+          "character varying",
+          "YES"
+        ],
+        [
+          "ptic_phone",
+          "character varying",
+          "YES"
+        ],
+        [
+          "ptic_contact_person",
+          "text",
+          "YES"
+        ],
+        [
+          "ptic_execution_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "geca_id_guild",
+          "integer",
+          "YES"
+        ],
+        [
+          "inmp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "ptic_justification",
+          "text",
+          "YES"
+        ],
+        [
+          "obgr_id",
+          "character varying",
+          "YES"
+        ],
+        [
+          "ptic_type_save",
+          "integer",
+          "YES"
+        ],
+        [
+          "ptic_biannual_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "ptic_approved_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "ptic_save_value",
+          "integer",
+          "YES"
+        ],
+        [
+          "ptic_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "ptic_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "ptic_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "ptic_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "ptic_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "ptic_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "ptic_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "possible_impacts": [
+        [
+          "poim_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pinp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_solubility",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_leaching_potencial",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_dt50_soil",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_dt50_water",
+          "integer",
+          "YES"
+        ],
+        [
+          "poim_active_ingredient",
+          "text",
+          "YES"
+        ],
+        [
+          "poim_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "poim_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "poim_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "poim_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "poim_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "poim_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "poim_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "product_information_pma": [
+        [
+          "pinp_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "prod_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "pinp_procedure_code",
+          "character varying",
+          "YES"
+        ],
+        [
+          "geca_id_application_condition",
+          "text",
+          "YES"
+        ],
+        [
+          "pinp_other_application_condition",
+          "character varying",
+          "YES"
+        ],
+        [
+          "pinp_extension_use",
+          "boolean",
+          "YES"
+        ],
+        [
+          "pinp_annual_budget",
+          "numeric",
+          "YES"
+        ],
+        [
+          "pinp_finalized_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "user_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "pinp_finalized_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "pinp_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "pinp_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "pinp_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "pinp_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "pinp_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "pinp_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "pinp_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "pinp_filed",
+          "boolean",
+          "YES"
+        ]
+      ],
+      "product_registration": [
+        [
+          "prre_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "prre_number_trade_agrocalidad",
+          "text",
+          "YES"
+        ],
+        [
+          "prre_date_agrocalidad_trade",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prre_start_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prre_end_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prre_income_month",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prre_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "prre_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "prre_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "prre_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "prre_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prre_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "prre_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "products_pqa": [
+        [
+          "prod_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "prod_ruc",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_operator_name",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_legal_representative",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_register_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prod_trade_name_product",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_product_composition",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_value",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_unit_measurement",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_formulation",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_formulation_abbreviation",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_toxicological_category",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "prod_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "prod_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prod_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "prod_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prod_extension",
+          "boolean",
+          "YES"
+        ],
+        [
+          "prod_register_number",
+          "text",
+          "YES"
+        ],
+        [
+          "prre_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "prod_status_updated",
+          "boolean",
+          "NO"
+        ],
+        [
+          "geca_id_product_type_final",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_container_type_final",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_toxicological_category_final",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_stripe_color_final",
+          "integer",
+          "YES"
+        ],
+        [
+          "prod_other_product_type",
+          "character varying",
+          "YES"
+        ],
+        [
+          "prod_is_physical",
+          "boolean",
+          "YES"
+        ],
+        [
+          "prod_is_registered_pma",
+          "boolean",
+          "YES"
+        ],
+        [
+          "prod_pma_completed",
+          "boolean",
+          "YES"
+        ]
+      ],
+      "program_information": [
+        [
+          "prin_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "prin_parend_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "prin_program",
+          "character varying",
+          "YES"
+        ],
+        [
+          "prin_period",
+          "character varying",
+          "YES"
+        ],
+        [
+          "prin_order",
+          "integer",
+          "YES"
+        ],
+        [
+          "prin_status",
+          "boolean",
+          "YES"
+        ],
+        [
+          "prin_creator_user",
+          "character varying",
+          "YES"
+        ],
+        [
+          "prin_creation_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prin_user_update",
+          "character varying",
+          "YES"
+        ],
+        [
+          "prin_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "prin_code",
+          "character varying",
+          "YES"
+        ]
+      ],
+      "species_catalog_pqua": [
+        [
+          "spcp_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "spcp_name",
+          "text",
+          "YES"
+        ],
+        [
+          "spcp_order",
+          "integer",
+          "YES"
+        ],
+        [
+          "spcp_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "spcp_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "spcp_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "spcp_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "spcp_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "spcp_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "spcp_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "species_risk_assessment": [
+        [
+          "spra_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "poim_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "spcp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "spra_first_level_risk",
+          "integer",
+          "YES"
+        ],
+        [
+          "spra_second_level_risk",
+          "integer",
+          "YES"
+        ],
+        [
+          "spra_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "spra_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "spra_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "spra_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "spra_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "spra_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "spra_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "technical_report": [
+        [
+          "tere_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "tere_date_report_name",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "id_task",
+          "integer",
+          "YES"
+        ],
+        [
+          "tere_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "tere_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "tere_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "tere_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tere_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tere_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "tere_report_number",
+          "text",
+          "YES"
+        ],
+        [
+          "tere_pronouncement_type",
+          "boolean",
+          "YES"
+        ],
+        [
+          "chpe_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "tere_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "tere_revision_number",
+          "integer",
+          "YES"
+        ]
+      ],
+      "technical_report_cr": [
+        [
+          "terc_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "terc_date_report_name",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "id_task",
+          "integer",
+          "YES"
+        ],
+        [
+          "terc_report_number",
+          "text",
+          "YES"
+        ],
+        [
+          "terc_pronouncement_type",
+          "boolean",
+          "YES"
+        ],
+        [
+          "corp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "terc_revision_number",
+          "integer",
+          "YES"
+        ],
+        [
+          "terc_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "terc_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "terc_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "terc_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "terc_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "terc_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "terc_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "terc_content",
+          "text",
+          "YES"
+        ]
+      ],
+      "training_pma": [
+        [
+          "trpm_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pinp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "obgr_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "trto_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "trpm_other_training",
+          "text",
+          "YES"
+        ],
+        [
+          "mpag_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_complementary_actions",
+          "integer",
+          "YES"
+        ],
+        [
+          "trpm_type",
+          "integer",
+          "YES"
+        ],
+        [
+          "trpm_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "trpm_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "trpm_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "trpm_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "trpm_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "trpm_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "trpm_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "training_preventive_corrective_action": [
+        [
+          "tpca_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "corp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "gelo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "enmo_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "trto_id",
+          "character varying",
+          "YES"
+        ],
+        [
+          "cpac_id",
+          "character varying",
+          "YES"
+        ],
+        [
+          "tpca_type",
+          "integer",
+          "YES"
+        ],
+        [
+          "tpca_address",
+          "text",
+          "YES"
+        ],
+        [
+          "tpca_cellular",
+          "bigint",
+          "YES"
+        ],
+        [
+          "tpca_phone",
+          "bigint",
+          "YES"
+        ],
+        [
+          "tpca_contact_person",
+          "text",
+          "YES"
+        ],
+        [
+          "tpca_execution_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tpca_justification",
+          "text",
+          "YES"
+        ],
+        [
+          "tpca_approved_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "obgr_id",
+          "character varying",
+          "YES"
+        ],
+        [
+          "tpca_biannual_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "tpca_save_value",
+          "integer",
+          "YES"
+        ],
+        [
+          "tpca_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "tpca_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "tpca_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "tpca_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "tpca_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tpca_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "tpca_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "training_topics": [
+        [
+          "trto_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "trto_parent_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "trto_description",
+          "text",
+          "YES"
+        ],
+        [
+          "trto_final_node",
+          "boolean",
+          "YES"
+        ],
+        [
+          "trto_unique_code",
+          "character varying",
+          "YES"
+        ],
+        [
+          "trto_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "trto_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "trto_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "trto_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "trto_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "trto_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "trto_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "type_observations": [
+        [
+          "tyob_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "tyob_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "tyob_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "tyob_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "tyob_creation_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tyob_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "tyob_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tyob_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tyob_observations_bdd",
+          "text",
+          "YES"
+        ]
+      ],
+      "type_observations_ic": [
+        [
+          "tyoi_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "tyoi_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "tyoi_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "tyoi_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "tyoi_creation_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tyoi_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "tyoi_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tyoi_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tyoi_observations_bdd",
+          "text",
+          "YES"
+        ]
+      ],
+      "types_aquatic_organisms": [
+        [
+          "tyaq_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "tyaq_name",
+          "character varying",
+          "YES"
+        ],
+        [
+          "tyaq_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "tyaq_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "tyaq_creation_date",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tyaq_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "tyaq_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tyaq_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "tyaq_observations_bdd",
+          "text",
+          "YES"
+        ]
+      ],
+      "waste_management_packaging": [
+        [
+          "wamp_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "pinp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "ware_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "hwge_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wamp_justification_message",
+          "text",
+          "YES"
+        ],
+        [
+          "inmp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "wamp_presentation_greater_100",
+          "boolean",
+          "YES"
+        ],
+        [
+          "geca_id_type_presentation",
+          "character varying",
+          "YES"
+        ],
+        [
+          "wamp_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "wamp_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "wamp_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "wamp_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "wamp_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wamp_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "wamp_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ],
+      "waste_reduction_program": [
+        [
+          "wrpr_id",
+          "integer",
+          "NO"
+        ],
+        [
+          "corp_id",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_unit",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_unit_sheath",
+          "integer",
+          "YES"
+        ],
+        [
+          "geca_id_unit_empty_containers",
+          "integer",
+          "YES"
+        ],
+        [
+          "wrpr_rigid_packaging",
+          "numeric",
+          "YES"
+        ],
+        [
+          "wrpr_sheath",
+          "numeric",
+          "YES"
+        ],
+        [
+          "wrpr_empty_containers",
+          "numeric",
+          "YES"
+        ],
+        [
+          "wrpr_expired_product",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_emergency_incident",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_improvement_activity",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_record",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_training_provided",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_quantity_expired_product",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_training_improvement_activity",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_handling_expired_products",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_custody_plan",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_avoid_emergency",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_polluting_agents",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_avoid_damage",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_approved_safety_data_sheet",
+          "boolean",
+          "YES"
+        ],
+        [
+          "wrpr_status",
+          "boolean",
+          "NO"
+        ],
+        [
+          "wrpr_creator_user",
+          "text",
+          "YES"
+        ],
+        [
+          "wrpr_creation_date",
+          "timestamp without time zone",
+          "NO"
+        ],
+        [
+          "wrpr_user_update",
+          "text",
+          "YES"
+        ],
+        [
+          "wrpr_date_update",
+          "timestamp without time zone",
+          "YES"
+        ],
+        [
+          "wrpr_observations_bdd",
+          "text",
+          "YES"
+        ],
+        [
+          "wrpr_date_observations_bdd",
+          "timestamp without time zone",
+          "YES"
+        ]
+      ]
+    }
+  },
+  "cross_schema_fks": [
+    {
+      "src": "chemical_pesticides.aquatic_organic_effects.tyaq_id",
+      "ref": "chemical_pesticides.types_aquatic_organisms.tyaq_id"
+    },
+    {
+      "src": "chemical_pesticides.aquatic_organic_effects.tyaq_id",
+      "ref": "chemical_pesticides.types_aquatic_organisms.tyaq_id"
+    },
+    {
+      "src": "chemical_pesticides.aquatic_organic_effects.tyaq_id",
+      "ref": "chemical_pesticides.types_aquatic_organisms.tyaq_id"
+    },
+    {
+      "src": "chemical_pesticides.aquatic_organic_effects.tyaq_id",
+      "ref": "chemical_pesticides.types_aquatic_organisms.tyaq_id"
+    },
+    {
+      "src": "chemical_pesticides.aquatic_organic_effects.chpe_id",
+      "ref": "chemical_pesticides.pesticide_project.chpe_id"
+    },
+    {
+      "src": "chemical_pesticides.aquatic_organic_effects.geca_id",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.compliance_report_pma_extension.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.ecpr_id",
+      "ref": "chemical_pesticides.emergency_care_program.ecpr_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.corrective_preventive_actions.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_family_pma.geca_id_family",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_pesticide.depe_id",
+      "ref": "chemical_pesticides.detail_pesticide_project.depe_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_pesticide.pest_id",
+      "ref": "chemical_pesticides.pests.pest_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_pesticide.pest_id",
+      "ref": "chemical_pesticides.pests.pest_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_pesticide.depe_id",
+      "ref": "chemical_pesticides.detail_pesticide_project.depe_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_pesticide.depe_id",
+      "ref": "chemical_pesticides.detail_pesticide_project.depe_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_pesticide.pest_id",
+      "ref": "chemical_pesticides.pests.pest_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_pesticide.depe_id",
+      "ref": "chemical_pesticides.detail_pesticide_project.depe_id"
+    },
+    {
+      "src": "chemical_pesticides.crop_pesticide.pest_id",
+      "ref": "chemical_pesticides.pests.pest_id"
+    },
+    {
+      "src": "chemical_pesticides.crops.geca_id_family_type",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.crops.geca_id_crop_type",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.culture_dose.depe_id",
+      "ref": "chemical_pesticides.detail_pesticide_project.depe_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.crop_id",
+      "ref": "chemical_pesticides.crops.crop_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.crop_id",
+      "ref": "chemical_pesticides.crops.crop_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.chpe_id",
+      "ref": "chemical_pesticides.pesticide_project.chpe_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.chpe_id",
+      "ref": "chemical_pesticides.pesticide_project.chpe_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.crop_id",
+      "ref": "chemical_pesticides.crops.crop_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.crop_id",
+      "ref": "chemical_pesticides.crops.crop_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.chpe_id",
+      "ref": "chemical_pesticides.pesticide_project.chpe_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.chpe_id",
+      "ref": "chemical_pesticides.pesticide_project.chpe_id"
+    },
+    {
+      "src": "chemical_pesticides.detail_pesticide_project.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.emergency_care_program.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.environmental_monitoring.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.expired_products.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.tyob_id",
+      "ref": "chemical_pesticides.type_observations.tyob_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.tyob_id",
+      "ref": "chemical_pesticides.type_observations.tyob_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.tyob_id",
+      "ref": "chemical_pesticides.type_observations.tyob_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.tyob_id",
+      "ref": "chemical_pesticides.type_observations.tyob_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.tyoi_id",
+      "ref": "chemical_pesticides.type_observations_ic.tyoi_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.form_comments_pesticides_cr.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.integrated_management_plan.geca_id_guild",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.integrated_management_plan.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.measures_polluting_agents.geca_id_actions_implemented",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.measures_polluting_agents.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.measures_polluting_agents.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.measures_polluting_agents.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.measures_polluting_agents.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.official_pronouncement.chpe_id",
+      "ref": "chemical_pesticides.pesticide_project.chpe_id"
+    },
+    {
+      "src": "chemical_pesticides.official_pronouncement_cr.doty_id",
+      "ref": "suia_iii.document_types.doty_id"
+    },
+    {
+      "src": "chemical_pesticides.official_pronouncement_cr.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.official_pronouncement_cr.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.official_pronouncement_cr.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.official_pronouncement_cr.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.pesticide_project.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.pesticide_project.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.pesticide_project.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.pesticide_project.geca_id_product_type",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.pesticide_project.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.pesticide_project.geca_id_container_type",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.pesticide_project.geca_id_stripe_color",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.pesticide_project.geca_id_toxicological_category",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.inmp_id",
+      "ref": "chemical_pesticides.integrated_management_plan.inmp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.inmp_id",
+      "ref": "chemical_pesticides.integrated_management_plan.inmp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.inmp_id",
+      "ref": "chemical_pesticides.integrated_management_plan.inmp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.crfp_id",
+      "ref": "chemical_pesticides.crop_family_pma.crfp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.crop_id",
+      "ref": "chemical_pesticides.crops.crop_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.geca_id_guild",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.inmp_id",
+      "ref": "chemical_pesticides.integrated_management_plan.inmp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.planning_training_insecticide_crop.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.possible_impacts.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.possible_impacts.geca_id_dt50_soil",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.possible_impacts.geca_id_dt50_water",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.possible_impacts.geca_id_solubility",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.possible_impacts.geca_id_leaching_potencial",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.product_information_pma.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.product_information_pma.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.product_information_pma.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.product_information_pma.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "chemical_pesticides.product_information_pma.prod_id",
+      "ref": "chemical_pesticides.products_pqa.prod_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.prre_id",
+      "ref": "chemical_pesticides.product_registration.prre_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.prre_id",
+      "ref": "chemical_pesticides.product_registration.prre_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.geca_id",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.geca_id_product_type_final",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.prre_id",
+      "ref": "chemical_pesticides.product_registration.prre_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.geca_id_container_type_final",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.prre_id",
+      "ref": "chemical_pesticides.product_registration.prre_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.geca_id_toxicological_category_final",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.geca_id_stripe_color_final",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.products_pqa.geca_id",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.species_risk_assessment.poim_id",
+      "ref": "chemical_pesticides.possible_impacts.poim_id"
+    },
+    {
+      "src": "chemical_pesticides.species_risk_assessment.spcp_id",
+      "ref": "chemical_pesticides.species_catalog_pqua.spcp_id"
+    },
+    {
+      "src": "chemical_pesticides.technical_report.chpe_id",
+      "ref": "chemical_pesticides.pesticide_project.chpe_id"
+    },
+    {
+      "src": "chemical_pesticides.technical_report_cr.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.technical_report_cr.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.technical_report_cr.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.technical_report_cr.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.obgr_id",
+      "ref": "chemical_pesticides.objective_group.obgr_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.geca_id_complementary_actions",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.mpag_id",
+      "ref": "chemical_pesticides.measures_polluting_agents.mpag_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_pma.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "chemical_pesticides.training_preventive_corrective_action.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_parent_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.training_topics.trto_id",
+      "ref": "chemical_pesticides.training_topics.trto_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.inmp_id",
+      "ref": "chemical_pesticides.integrated_management_plan.inmp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.inmp_id",
+      "ref": "chemical_pesticides.integrated_management_plan.inmp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.inmp_id",
+      "ref": "chemical_pesticides.integrated_management_plan.inmp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.inmp_id",
+      "ref": "chemical_pesticides.integrated_management_plan.inmp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.hwge_id",
+      "ref": "suia_iii.hazardous_wastes_generators.hwge_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.hwge_id",
+      "ref": "suia_iii.hazardous_wastes_generators.hwge_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_management_packaging.pinp_id",
+      "ref": "chemical_pesticides.product_information_pma.pinp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.geca_id_unit_sheath",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.geca_id_unit",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.geca_id_unit_empty_containers",
+      "ref": "coa_mae.general_catalogs_coa.geca_id"
+    },
+    {
+      "src": "chemical_pesticides.waste_reduction_program.corp_id",
+      "ref": "chemical_pesticides.compliance_report_pma.corp_id"
+    },
+    {
+      "src": "coa_waste_generator_record.coordinates_coa.rpsh_id",
+      "ref": "coa_waste_generator_record.recovery_point_shapes_coa.rpsh_id"
+    },
+    {
+      "src": "coa_waste_generator_record.coordinates_coa.rpsh_id",
+      "ref": "coa_waste_generator_record.recovery_point_shapes_coa.rpsh_id"
+    },
+    {
+      "src": "coa_waste_generator_record.coordinates_coa.rpsh_id",
+      "ref": "coa_waste_generator_record.recovery_point_shapes_coa.rpsh_id"
+    },
+    {
+      "src": "coa_waste_generator_record.coordinates_coa.rpsh_id",
+      "ref": "coa_waste_generator_record.recovery_point_shapes_coa.rpsh_id"
+    },
+    {
+      "src": "coa_waste_generator_record.documents_coa_waste_generator_record.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "coa_waste_generator_record.generation_points_waste.wwgp_id",
+      "ref": "coa_waste_generator_record.waste_waste_generation_points.wwgp_id"
+    },
+    {
+      "src": "coa_waste_generator_record.generation_points_waste.wwgp_id",
+      "ref": "coa_waste_generator_record.waste_waste_generation_points.wwgp_id"
+    },
+    {
+      "src": "coa_waste_generator_record.generation_points_waste.wwgp_id",
+      "ref": "coa_waste_generator_record.waste_waste_generation_points.wwgp_id"
+    },
+    {
+      "src": "coa_waste_generator_record.generation_points_waste.gepo_id",
+      "ref": "coa_waste_generator_record.generation_points_coa.gepo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.generation_points_waste.wwgp_id",
+      "ref": "coa_waste_generator_record.waste_waste_generation_points.wwgp_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.gepo_id",
+      "ref": "coa_waste_generator_record.generation_points_coa.gepo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_points_coa.gelo_id",
+      "ref": "public.geographical_locations.gelo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_point_shapes_coa.repo_id",
+      "ref": "coa_waste_generator_record.recovery_points_coa.repo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.recovery_point_shapes_coa.shty_id",
+      "ref": "suia_iii.shape_types.shty_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_ciuu.caci_id",
+      "ref": "coa_mae.catalog_ciuu.caci_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_ciuu.wada_id",
+      "ref": "suia_iii.waste_dangerous.wada_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_ciuu.caci_id",
+      "ref": "coa_mae.catalog_ciuu.caci_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_coa.wapo_id",
+      "ref": "coa_waste_generator_record.waste_policies_coa.wapo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_coa.wapo_id",
+      "ref": "coa_waste_generator_record.waste_policies_coa.wapo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_coa.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_coa.wapo_id",
+      "ref": "coa_waste_generator_record.waste_policies_coa.wapo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_coa.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_coa.wapo_id",
+      "ref": "coa_waste_generator_record.waste_policies_coa.wapo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_coa.user_id",
+      "ref": "public.users.user_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_document.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_office_pronouncement.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_project_licencing_coa.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_project_licencing_coa.prco_id",
+      "ref": "coa_mae.project_licencing_coa.prco_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_project_licencing_coa.prco_id",
+      "ref": "coa_mae.project_licencing_coa.prco_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_project_licencing_coa.prco_id",
+      "ref": "coa_mae.project_licencing_coa.prco_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_project_licencing_coa.prco_id",
+      "ref": "coa_mae.project_licencing_coa.prco_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_project_licencing_coa.prco_id",
+      "ref": "coa_mae.project_licencing_coa.prco_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_generator_record_project_licencing_coa.prco_id",
+      "ref": "coa_mae.project_licencing_coa.prco_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_policies_coa.area_id",
+      "ref": "public.areas.area_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_policies_coa.area_id",
+      "ref": "public.areas.area_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_policies_coa.area_id",
+      "ref": "public.areas.area_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_policies_coa.area_id",
+      "ref": "public.areas.area_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_policies_coa.area_id",
+      "ref": "public.areas.area_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_policies_coa_waste_dangerous.wada_id",
+      "ref": "suia_iii.waste_dangerous.wada_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_policies_coa_waste_dangerous.wapo_id",
+      "ref": "coa_waste_generator_record.waste_policies_coa.wapo_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_waste_generation_points.wada_id",
+      "ref": "suia_iii.waste_dangerous.wada_id"
+    },
+    {
+      "src": "coa_waste_generator_record.waste_waste_generation_points.ware_id",
+      "ref": "coa_waste_generator_record.waste_generator_record_coa.ware_id"
+    }
+  ]
+}

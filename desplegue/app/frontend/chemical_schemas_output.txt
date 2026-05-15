@@ -1,0 +1,89 @@
+--- Schema for dw.dim_chemical_importer ---
+         column_name                    data_type is_nullable
+0       importer_key                      integer          NO
+1        importer_id                       bigint          NO
+2      importer_name            character varying         YES
+3     identification            character varying         YES
+4  registration_code            character varying         YES
+5         is_current                      boolean         YES
+6           date_add  timestamp without time zone         YES
+7        date_update  timestamp without time zone         YES
+
+
+--- Schema for dw.dim_chemical_storage ---
+            column_name          data_type is_nullable
+0           storage_key             bigint          NO
+1            storage_id             bigint          NO
+2          storage_type  character varying         YES
+3              capacity            numeric         YES
+4                  unit  character varying         YES
+5  location_description  character varying         YES
+
+
+--- Schema for dw.dim_chemical_substance ---
+      column_name                    data_type is_nullable
+0    chemical_key                       bigint          NO
+1     chemical_id                       bigint          NO
+2  substance_name            character varying         YES
+3      cas_number            character varying         YES
+4  classification            character varying         YES
+5   chemical_type            character varying         YES
+6  effective_from  timestamp without time zone         YES
+7    effective_to  timestamp without time zone         YES
+8      is_current                      boolean         YES
+
+
+--- Schema for dw.fact_chemical_application ---
+          column_name          data_type is_nullable
+0         sk_proyecto             bigint          NO
+1        chemical_key             bigint          NO
+2           sk_tiempo             bigint          NO
+3         storage_key             bigint         YES
+4    geo_location_key             bigint         YES
+5                dose            numeric         YES
+6           dose_unit  character varying         YES
+7  application_method  character varying         YES
+8        area_covered            numeric         YES
+9          usage_year            integer         YES
+
+
+--- Schema for dw.fact_chemical_declaration ---
+         column_name data_type is_nullable
+0        sk_proyecto    bigint          NO
+1       importer_key    bigint          NO
+2          sk_tiempo    bigint          NO
+3   initial_quantity   numeric         YES
+4     final_quantity   numeric         YES
+5         is_on_time   boolean         YES
+6   declaration_year   integer         YES
+7  declaration_month   integer         YES
+
+
+--- Schema for dw.fact_chemical_import ---
+            column_name          data_type is_nullable
+0           sk_proyecto             bigint          NO
+1          chemical_key             bigint          NO
+2          importer_key             bigint          NO
+3             sk_tiempo             bigint          NO
+4      geo_location_key             bigint         YES
+5   quantity_authorized            numeric         YES
+6            net_weight            numeric         YES
+7          gross_weight            numeric         YES
+8         import_status  character varying         YES
+9       processing_code  character varying         YES
+10      document_number  character varying         YES
+11        source_system  character varying         YES
+
+
+--- Schema for dw.fact_chemical_movement ---
+      column_name          data_type is_nullable
+0     sk_proyecto             bigint          NO
+1    chemical_key             bigint          NO
+2    importer_key             bigint          NO
+3       sk_tiempo             bigint          NO
+4  quantity_entry            numeric         YES
+5   quantity_exit            numeric         YES
+6  invoice_number  character varying         YES
+7   operator_name  character varying         YES
+
+

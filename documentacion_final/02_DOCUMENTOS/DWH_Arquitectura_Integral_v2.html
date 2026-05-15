@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquitectura Integral DWH RA - v2.1</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; }
+        h1, h2, h3 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+        th, td { border: 1px solid #bdc3c7; padding: 10px; text-align: left; }
+        th { background-color: #ecf0f1; }
+        .change-control { background-color: #f9f9f9; padding: 10px; border-left: 5px solid #3498db; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Arquitectura Integral del Data Warehouse RA</h1>
+    
+    <div class="change-control">
+        <h3>Control de Cambios</h3>
+        <table>
+            <tr><th>Fecha</th><th>Versión</th><th>Autor</th><th>Resumen de Cambios</th></tr>
+            <tr><td>13/05/2026</td><td>2.1.0</td><td>Antigravity (Equipo DWH)</td><td>Inclusión de Puntos de Generación y Geoposicionamiento Híbrido (Python/Pentaho).</td></tr>
+        </table>
+    </div>
+
+    <h2>1. Visión y Alcance del DWH</h2>
+    <p>El Data Warehouse de Regularización Ambiental (RA) resuelve la necesidad de consolidar y analizar los volúmenes de generación de desechos (peligrosos y especiales) a nivel nacional. La versión 2.1 introduce una mejora arquitectónica crítica: <strong>la trazabilidad geográfica a nivel de Punto de Generación</strong>, superando la limitación anterior que solo permitía analizar a nivel de establecimiento (RGD).</p>
+
+    <h2>2. Arquitectura de Capas</h2>
+    <p>El sistema se compone de un ecosistema híbrido que aprovecha lo mejor de dos mundos: la orquestación visual de Pentaho y la potencia algorítmica de Python.</p>
+    <ul>
+        <li><strong>Capa de Ingesta (Source to Staging):</strong> Scripts de Python extraen datos desde SUIA III (Servidor 179) y COA, inyectándolos en el esquema <code>stg</code>.</li>
+        <li><strong>Capa de Enriquecimiento (Geo-Resolution):</strong> Un motor algorítmico en Python valida coordenadas X/Y contra polígonos GeoJSON para inferir provincias y cantones faltantes.</li>
+        <li><strong>Capa Core (Staging to DW):</strong> Procedimientos almacenados en PostgreSQL aplican lógicas de <em>Upsert</em> mediante la directiva <code>ON CONFLICT</code> para poblar el modelo de estrella en el esquema <code>dw</code>.</li>
+        <li><strong>Capa de Consumo:</strong> Vistas materializadas que alimentan el Dashboard ECO-SIEAA.</li>
+    </ul>
+
+    <h2>3. Diagrama de Linaje de Datos (Data Lineage)</h2>
+    <p><em>(Renderizar en un visor Markdown/Mermaid o adjuntar como imagen)</em></p>
+    <pre>
+graph TD
+    A[SUIA III - Servidor 179] -->|Extracción Python| B(stg_waste_generator)
+    A -->|Extracción Python| C(stg_generation_points)
+    C --> D{geo_resolver.py}
+    D -->|Match GeoJSON| E[stg.tmp_final_waste_batch]
+    B --> E
+    E -->|sp_etl_waste_chemical| F((dw.fact_waste_generation))
+    E -->|Upsert| G((dw.dim_punto_generacion))
+    F --> H[Dashboard ECO-SIEAA]
+    G --> H
+    </pre>
+
+    <h2>4. Fuentes y Dominios de Datos</h2>
+    <table>
+        <tr>
+            <th>Sistema Origen</th>
+            <th>Dominio</th>
+            <th>Frecuencia de Carga</th>
+            <th>Propietario</th>
+        </tr>
+        <tr>
+            <td>SUIA III</td>
+            <td>Desechos Peligrosos, Puntos de Generación, Catálogos</td>
+            <td>Diaria (Nocturna)</td>
+            <td>Ministerio de Ambiente</td>
+        </tr>
+        <tr>
+            <td>COA</td>
+            <td>Registros Históricos (Fallback)</td>
+            <td>Semanal</td>
+            <td>Operaciones DWH</td>
+        </tr>
+    </table>
+</body>
+</html>

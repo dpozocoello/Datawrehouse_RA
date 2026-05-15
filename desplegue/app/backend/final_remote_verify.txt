@@ -1,0 +1,6 @@
+Schema: suia_iii | Func: sp_coa_bi
+Schema: suia_iii | Func: sp_coa_bi_inactivos
+Schema: suia_iii | Func: sp_coa_bi_v1_4_1
+Schema: coa_mae | Func: sp_rcoa_bi
+Schema: coa_mae | Func: sp_rcoa_bi_inactivos
+Schema: coa_mae | Func: sp_rcoa_bi_v1_4_1

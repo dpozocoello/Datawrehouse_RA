@@ -1,0 +1,80 @@
+# Walkthrough: Integración de Pagos al Data Warehouse
+
+## Resumen
+
+Se incorporaron datos de pagos desde **dos servidores remotos** al modelo estrella del DW `dw_reg_v1`, eliminando la dependencia de `dblink` en consultas de consumo (Power BI).
+
+## Archivos Modificados/Creados
+
+| Archivo | Acción | Descripción |
+|---------|--------|-------------|
+| [ddl_dwh_completo.sql](file:///f:/Datawrehouse_RA/ddl_dwh_completo.sql) | **MODIFICADO** | +190 líneas: staging, dimensión, fact y SPs de pagos |
+| [TRX_07_INGESTA_PAGOS_JBPM.ktr](file:///f:/Datawrehouse_RA/transformations/TRX_07_INGESTA_PAGOS_JBPM.ktr) | **NUEVO** | Extracción de pagos desde JBPM (172.16.0.226) |
+| [TRX_08_INGESTA_PAGOS_SUIA.ktr](file:///f:/Datawrehouse_RA/transformations/TRX_08_INGESTA_PAGOS_SUIA.ktr) | **NUEVO** | Extracción de pagos desde SUIA (172.16.0.179) |
+| [JOB_CARGA_DWH_REGULARIZACION.kjb](file:///f:/Datawrehouse_RA/Jobs/JOB_CARGA_DWH_REGULARIZACION.kjb) | **MODIFICADO** | +4 pasos: TRX_07, TRX_08, SP Dim Pago, SP Fact Pago |
+| [consulta_pagos_dw.sql](file:///f:/Datawrehouse_RA/consulta_pagos_dw.sql) | **MODIFICADO** | Eliminado dblink, ahora usa `dw.fact_pago` local |
+
+---
+
+## Arquitectura de Deduplicación
+
+Se implementaron **3 capas de protección** contra duplicados:
+
+### Capa 1: Extracción (KTR)
+- **TRX_07**: Filtra `transaction_state = true` en origen
+- **TRX_08**: Usa `SELECT DISTINCT` + filtra `fitr_status = true`
+
+### Capa 2: Staging (Truncate)
+- Ambas transformaciones hacen `TRUNCATE` antes de insertar → limpieza completa cada ejecución
+
+### Capa 3: Fact Table (ON CONFLICT)
+- `dw.fact_pago` tiene `UNIQUE(id_transaccion_origen, origen)`:
+  - JBPM: `id_transaccion_origen = 'JBPM_' + online_payment_id`
+  - SUIA: `id_transaccion_origen = 'SUIA_' + fitr_id`
+- Los SPs usan `ON CONFLICT ... DO UPDATE` → si existe, actualiza montos y `fecha_carga`
+
+---
+
+## Flujo ETL Actualizado (13 pasos)
+
+```mermaid
+graph LR
+    START --> T1["TRX_01<br/>RCOA"]
+    T1 --> T2["TRX_02<br/>COA"]
+    T2 --> T3["TRX_03<br/>Sector"]
+    T3 --> T4["TRX_04<br/>4Cat"]
+    T4 --> T5["TRX_05<br/>Hidro"]
+    T5 --> T6["TRX_06<br/>SNAP"]
+    T6 --> T7["TRX_07<br/>Pagos JBPM"]
+    T7 --> T8["TRX_08<br/>Pagos SUIA"]
+    T8 --> SP1["SP Consolidar"]
+    SP1 --> SP2["SP Dimensiones"]
+    SP2 --> SP3["SP Fact Reg"]
+    SP3 --> SP4["SP Dim Pago"]
+    SP4 --> SP5["SP Fact Pago"]
+    SP5 --> OK["Éxito"]
+
+    style T7 fill:#4CAF50,color:#fff
+    style T8 fill:#4CAF50,color:#fff
+    style SP4 fill:#2196F3,color:#fff
+    style SP5 fill:#2196F3,color:#fff
+```
+
+## Verificación Pendiente
+
+Para validar en producción, ejecutar:
+```sql
+-- 1. Verificar tablas creadas
+SELECT table_schema, table_name FROM information_schema.tables 
+WHERE table_name IN ('online_payments_bi','financial_transaction_bi','dim_pago','fact_pago');
+
+-- 2. Tras ejecutar ETL, verificar conteos
+SELECT origen, COUNT(*) FROM stg.online_payments_bi GROUP BY origen;
+SELECT origen, COUNT(*) FROM stg.financial_transaction_bi GROUP BY origen;
+SELECT origen, COUNT(*) FROM dw.fact_pago GROUP BY origen;
+
+-- 3. Verificar sin duplicados
+SELECT id_transaccion_origen, origen, COUNT(*) 
+FROM dw.fact_pago GROUP BY 1,2 HAVING COUNT(*) > 1;
+-- Debe retornar 0 filas
+```

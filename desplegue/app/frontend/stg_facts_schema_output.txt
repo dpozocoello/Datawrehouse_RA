@@ -1,0 +1,56 @@
+--- Schema for stg.stg_chemical_substances_declaration ---
+                        column_name                    data_type
+0                           chsd_id                       bigint
+1                           chsr_id                       bigint
+2                           dach_id             double precision
+3                     chsd_operator                         text
+4                         chsd_year                       bigint
+5                         chsd_unit                         text
+6              chsd_starting_amount             double precision
+7                 chsd_end_quantity             double precision
+8          chsd_declaration_on_time                         text
+9               chsd_fine_statement             double precision
+10             geca_id_parameter_ci                         text
+11                      chsd_status                      boolean
+12                 chsd_status_date  timestamp without time zone
+13               chsd_creation_date  timestamp without time zone
+14                chsd_creator_user                         text
+15                 chsd_date_update  timestamp without time zone
+16                 chsd_user_update                         text
+17              chsd_observation_bd                         text
+18                       chsd_month                       bigint
+19  chsd_declaration_status_geca_id             double precision
+20             chsd_pending_payment                      boolean
+21              chsd_procedure_code                         text
+22         chsd_date_observation_bd  timestamp without time zone
+
+
+--- Schema for stg.stg_chemical_substances_movements ---
+                     column_name                    data_type
+0                        chsm_id                       bigint
+1                        chsd_id                       bigint
+2                        geca_id                       bigint
+3                   chsm_invoice                         text
+4                  chsm_operator             double precision
+5                     chsm_entry             double precision
+6                      chsm_exit             double precision
+7           geca_id_presentation             double precision
+8       chsm_presentation_option                         text
+9          chsm_finished_product                         text
+10       chsm_packaging_quantity             double precision
+11  chsm_packaging_serial_number                         text
+12                   chsm_status                      boolean
+13       chsm_observation_status                         text
+14                   chsm_review                         text
+15              chsm_review_date                         text
+16            chsm_creation_date  timestamp without time zone
+17             chsm_creator_user                         text
+18              chsm_date_update  timestamp without time zone
+19              chsm_user_update                         text
+20           chsm_observation_bd                         text
+21                    chsm_right                         text
+22              chsm_description                         text
+23                       chsr_id             double precision
+24                       inre_id             double precision
+
+

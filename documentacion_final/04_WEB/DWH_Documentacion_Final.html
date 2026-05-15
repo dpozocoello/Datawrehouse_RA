@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWH RA - Guía Técnica Interactiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --sidebar-bg: #f8f9fa;
+            --text-color: #333333;
+            --primary-color: #2980b9;
+            --border-color: #e0e0e0;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1e1e1e;
+                --sidebar-bg: #252526;
+                --text-color: #d4d4d4;
+                --primary-color: #4daaf1;
+                --border-color: #333333;
+            }
+        }
+        body { font-family: 'Inter', sans-serif; margin: 0; display: flex; height: 100vh; background-color: var(--bg-color); color: var(--text-color); }
+        #sidebar { width: 300px; background-color: var(--sidebar-bg); border-right: 1px solid var(--border-color); padding: 20px; overflow-y: auto; }
+        #content { flex-grow: 1; padding: 40px; overflow-y: auto; max-width: 900px; margin: 0 auto; }
+        h1, h2 { color: var(--primary-color); }
+        .nav-link { display: block; padding: 10px; margin-bottom: 5px; color: var(--text-color); text-decoration: none; border-radius: 5px; cursor: pointer; }
+        .nav-link:hover { background-color: var(--border-color); }
+        .search-box { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid var(--border-color); border-radius: 5px; background: var(--bg-color); color: var(--text-color); }
+        iframe { width: 100%; height: 80vh; border: none; background: #fff; border-radius: 8px; }
+        @media print {
+            #sidebar { display: none; }
+            #content { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h2>DWH RA v2.1</h2>
+        <input type="text" class="search-box" placeholder="Buscar en la documentación..." onkeyup="filterMenu(this.value)">
+        <div id="menu">
+            <a class="nav-link" onclick="loadContent('../01_MAESTRO/DWH_Documentacion_Maestra.html')">🏠 Inicio (Documento Maestro)</a>
+            <a class="nav-link" onclick="loadContent('../00_INVENTARIO/Inventario_Documentacion_DWH.html')">📦 Inventario de Archivos</a>
+            <a class="nav-link" onclick="loadContent('../00_INVENTARIO/Log_Brechas_y_Validaciones.html')">⚠️ Log de Brechas</a>
+            <hr style="border-color: var(--border-color);">
+            <a class="nav-link" onclick="loadContent('../02_DOCUMENTOS/DWH_Arquitectura_Integral_v2.html')">1. Arquitectura y Linaje</a>
+            <a class="nav-link" onclick="loadContent('../02_DOCUMENTOS/DWH_Modelo_Dimensional_v2.html')">2. Modelo Dimensional</a>
+            <a class="nav-link" onclick="loadContent('../02_DOCUMENTOS/ETL_Arquitectura_Detallada_v2.html')">3. Procesos ETL y Reglas</a>
+            <a class="nav-link" onclick="loadContent('../02_DOCUMENTOS/Manual_Uso_DWH_Analitica_v2.html')">4. Operación y Soporte</a>
+        </div>
+    </div>
+    
+    <div id="content">
+        <h1>Bienvenido al Centro de Documentación</h1>
+        <p>Seleccione un módulo en el panel izquierdo para visualizar su contenido.</p>
+        <iframe id="doc-viewer" src="../01_MAESTRO/DWH_Documentacion_Maestra.html"></iframe>
+    </div>
+
+    <script>
+        function loadContent(url) {
+            document.getElementById('doc-viewer').src = url;
+        }
+        function filterMenu(query) {
+            let links = document.querySelectorAll('.nav-link');
+            links.forEach(link => {
+                if(link.innerText.toLowerCase().includes(query.toLowerCase())) {
+                    link.style.display = "block";
+                } else {
+                    link.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

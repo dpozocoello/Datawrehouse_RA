@@ -1,0 +1,60 @@
+# Walkthrough: DWH v2 — Validación Integral y Correcciones
+
+## Resumen de Mejoras
+
+### v1 Fix (integridad de pagos)
+| Métrica | Antes | Después |
+|---|---|---|
+| Diferencias totales | 167 | 15 (↓91%) |
+| Proyectos sin pago | 31 | 0 ✅ |
+
+### v2 Cambios Estructurales
+| Componente | Cambio | Resultado |
+|---|---|---|
+| `dim_geografia` | Jerarquía recursiva (`sk_padre`, `nivel`) | 31 provincias + 244 cantones + 1,390 parroquias |
+| `fact_proyecto_geografia` | Bridge table M:N | 337,986 registros, 328,197 proyectos |
+| `dim_proyecto` | `area_responsable` agregado | 328,196 registros actualizados |
+| `fact_pago` | `secuencia_pago`, `es_deposito_inicial`, `monto_acumulado` | 73,968 pagos con secuencia |
+| `uk_fact_pago_dedup` | 3 columnas [(sk_proyecto, id_transaccion_origen, origen)](file:///f:/Datawrehouse_RA/verificacion/comparar_csv.py#123-125) | Multi-proyecto soportado |
+
+## Verificación de Bridge Table (9 proyectos con diferencias geográficas)
+
+| Proyecto | # Ubicaciones | Principal (v2) | Antes (DWH v1) | Producción |
+|---|---|---|---|---|
+| MAE-RA-2016-280474 | 4 | VALLE | VALLE | TARQUI |
+| MAE-RA-2016-283136 | 3 | JADAN | PAUTE/SAN CRISTOBAL | CUENCA/NULTI |
+| MAE-RA-2017-300126 | 2 | MACHÁNGARA | NULTI | MACHÁNGARA ✅ |
+| MAE-RA-2017-311785 | 2 | TURI | TARQUI | TURI ✅ |
+| MAE-RA-2018-338151 | 2 | EL BATÁN | SAN JOAQUIN | EL BATÁN ✅ |
+
+> [!NOTE]
+> Bridge table con `es_principal` (basado en última tarea) mejoró la selección geográfica para 3 de los 9 proyectos. Los restantes requieren investigar el criterio exacto de producción.
+
+## Archivos Creados
+
+````carousel
+### DDL v2
+[ddl_dwh_v2.sql](file:///f:/Datawrehouse_RA/v2/ddl_dwh_v2.sql)
+- Jerarquía recursiva en `dim_geografia`
+- Bridge table `fact_proyecto_geografia`
+- Campos `area_responsable` y secuencia de pagos
+<!-- slide -->
+### ETL v2
+[etl_carga_datos_v2.sql](file:///f:/Datawrehouse_RA/v2/etl_carga_datos_v2.sql)
+- 3 SPs: `sp_carga_proyecto_geografia`, `sp_carga_fact_pago`, `sp_calcular_secuencia_pagos`
+- Carga de `area_responsable` desde staging
+<!-- slide -->
+### Consulta v2
+[consulta_pagos_dw_v2.sql](file:///f:/Datawrehouse_RA/v2/consulta_pagos_dw_v2.sql)
+- Usa bridge table para geografía principal
+- Incluye campos de secuencia de pagos
+````
+
+## Ejecución Completada
+
+```
+DDL v2:  ALTER TABLE × 4, CREATE TABLE × 1, CREATE INDEX × 4
+ETL v2:  CREATE FUNCTION × 3, UPDATE 328,196 (area_responsable)
+Bridge:  337,986 registros (328,197 proyectos)
+Pagos:   73,968 con secuencia calculada
+```

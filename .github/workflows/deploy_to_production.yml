@@ -1,0 +1,39 @@
+name: Despliegue DWH ETL a Produccion
+
+on:
+  push:
+    branches:
+      - main # Cambia esto si tu rama principal tiene otro nombre (ej. master)
+  workflow_dispatch: # Permite ejecutar el pipeline manualmente desde la interfaz de GitHub
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Descargar código del repositorio
+      uses: actions/checkout@v4
+
+    - name: 🚀 Sincronizar archivos ETL al Servidor Ubuntu
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        password: ${{ secrets.SERVER_PASSWORD }}
+        port: 22
+        source: "." # Copia todo el repositorio
+        target: "/opt/dwh_project/"
+        strip_components: 0 # Mantiene la estructura de carpetas
+        rm: false # Si es true, borrará los archivos en destino que no estén en origen
+
+    - name: 🔧 Ejecutar comandos post-despliegue (Opcional)
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        password: ${{ secrets.SERVER_PASSWORD }}
+        port: 22
+        script: |
+          echo "Despliegue completado en /opt/dwh_project/"
+          # Si tienes un archivo principal de prueba, puedes invocarlo aquí, ejemplo:
+          # /opt/pentaho/data-integration/kitchen.sh -file="/opt/dwh_project/main_job.kjb" -level=Basic

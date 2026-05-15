@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>TRX_11_INGESTA_GEOGRAFIA</name>
+    <description>Extrae datos de public.geographical_locations (suia_enlisy) y los carga en stg.geographical_locations_bi (dw_reg_v1)</description>
+    <extended_description>Origen: 172.16.0.179:5632/suia_enlisy - Esquema: public - Tabla: geographical_locations
+Destino: localhost:5432/dw_reg_v1 - Esquema: stg - Tabla: geographical_locations_bi
+Estrategia: TRUNCATE + INSERT (carga completa diaria)</extended_description>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+  </info>
+  <notepads>
+    <notepad>
+      <note>TRANSFORMACION 11: Ingesta Geografía (public.geographical_locations)
+Origen: suia_enlisy @ 172.16.0.179:5632
+Destino: dw_reg_v1 @ localhost:5432 / stg.geographical_locations_bi</note>
+      <xloc>50</xloc>
+      <yloc>20</yloc>
+      <width>450</width>
+      <heigth>60</heigth>
+    </notepad>
+    <notepad>
+      <note>ROL EN v1.4 (Normalizaci&#243;n Experta):
+Esta tabla es fundamental para reconstruir la jerarqu&#237;a (Provincia-Cant&#243;n)
+utilizada por el motor de inferencia en dw.sp_carga_dim_area.
+Permite validar nombres y acr&#243;nimos contra la geograf&#237;a política oficial.</note>
+      <xloc>50</xloc>
+      <yloc>100</yloc>
+      <width>450</width>
+      <heigth>100</heigth>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>CONN_SUIA_ENLISY</name>
+    <server>172.16.0.179</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>suia_enlisy</database>
+    <port>5632</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5632</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>CONN_DWH_LOCAL</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>dw_reg_v1</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Input SUIA Geo</from>
+      <to>Output STG Geo</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Input SUIA Geo</name>
+    <type>TableInput</type>
+    <description>Lee datos de public.geographical_locations</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_SUIA_ENLISY</connection>
+    <sql>SELECT
+    gelo_id,
+    gelo_name,
+    gelo_parent_id,
+    gelo_codification_inec,
+    current_timestamp AS fecha_carga
+FROM public.geographical_locations</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <GUI>
+      <xloc>150</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Output STG Geo</name>
+    <type>TableOutput</type>
+    <description>Escribe en stg.geographical_locations_bi</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_DWH_LOCAL</connection>
+    <schema>stg</schema>
+    <table>geographical_locations_bi</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <GUI>
+      <xloc>500</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+</transformation>

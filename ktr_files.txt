@@ -1,0 +1,13 @@
+D:\Datawrehouse_RA\transformations\JBPM_Local.ktr
+D:\Datawrehouse_RA\transformations\suia_local.ktr
+D:\Datawrehouse_RA\transformations\TRX_01_INGESTA_SUIA_RCOA.ktr
+D:\Datawrehouse_RA\transformations\TRX_02_INGESTA_SUIA_COA.ktr
+D:\Datawrehouse_RA\transformations\TRX_03_INGESTA_JBPM_SECTOR.ktr
+D:\Datawrehouse_RA\transformations\TRX_04_INGESTA_JBPM_4CAT.ktr
+D:\Datawrehouse_RA\transformations\TRX_05_INGESTA_JBPM_HIDRO.ktr
+D:\Datawrehouse_RA\transformations\TRX_06_INGESTA_SNAP.ktr
+D:\Datawrehouse_RA\transformations\TRX_07_INGESTA_PAGOS_JBPM.ktr
+D:\Datawrehouse_RA\transformations\TRX_08_INGESTA_PAGOS_SUIA.ktr
+D:\Datawrehouse_RA\transformations\TRX_09_INGESTA_PAGOS_HIST.ktr
+D:\Datawrehouse_RA\transformations\TRX_10_INGESTA_AREAS_SUIA.ktr
+D:\Datawrehouse_RA\transformations\TRX_11_INGESTA_GEOGRAFIA.ktr

@@ -1,0 +1,1647 @@
+{
+  "timestamp": "20260513_154422",
+  "servers": {
+    "179_suia_enlisy": {
+      "status": "OK",
+      "results": {
+        "Columnas tmp_rcoa_bi": [
+          [
+            "CÓDIGO PROYECTO",
+            "character varying"
+          ],
+          [
+            "NOMBRE PROYECTO",
+            "character varying"
+          ],
+          [
+            "RESUMEN PROYECTO",
+            "text"
+          ],
+          [
+            "DIRECCIÓN PROYECTO",
+            "text"
+          ],
+          [
+            "FECHA REGISTRO",
+            "date"
+          ],
+          [
+            "CÓDIGO ACTIVIDAD",
+            "text"
+          ],
+          [
+            "ACTIVIDAD ECONÓMICA",
+            "text"
+          ],
+          [
+            "CED/RUC PROPONENTE",
+            "character varying"
+          ],
+          [
+            "NOMBRE PROPONENTE",
+            "character varying"
+          ],
+          [
+            "ÁREA RESPONSABLE PROYECTO",
+            "character varying"
+          ],
+          [
+            "TIPO SECTOR",
+            "character varying"
+          ],
+          [
+            "TIPO PERMISO AMBIENTAL",
+            "character varying"
+          ],
+          [
+            "TIPO ENTE",
+            "character varying"
+          ],
+          [
+            "PROVINCIA",
+            "character varying"
+          ],
+          [
+            "CANTON",
+            "character varying"
+          ],
+          [
+            "PARROQUIA",
+            "character varying"
+          ],
+          [
+            "PROCESO",
+            "character varying"
+          ],
+          [
+            "ESTADO PROCESO",
+            "character varying"
+          ],
+          [
+            "FECHA INICIO PROCESO",
+            "date"
+          ],
+          [
+            "FECHA FIN PROCESO",
+            "date"
+          ],
+          [
+            "TAREA",
+            "character varying"
+          ],
+          [
+            "ESTADO TAREA",
+            "character varying"
+          ],
+          [
+            "FECHA INICIO TAREA",
+            "timestamp without time zone"
+          ],
+          [
+            "FECHA FIN TAREA",
+            "timestamp without time zone"
+          ],
+          [
+            "USUARIO TAREA",
+            "character varying"
+          ],
+          [
+            "ESTADO PROYECTO",
+            "character varying"
+          ],
+          [
+            "INTERSECTA CON",
+            "text"
+          ],
+          [
+            "AREAS PROTEGIDAS",
+            "text"
+          ],
+          [
+            "SISTEMA",
+            "character varying"
+          ],
+          [
+            "NOMBRE ZONA",
+            "character varying"
+          ],
+          [
+            "FINALIZADO CON RESOLUCION",
+            "character varying"
+          ],
+          [
+            "NUMERO RESOLUCION",
+            "character varying"
+          ],
+          [
+            "FECHA RESOLUCION",
+            "timestamp without time zone"
+          ],
+          [
+            "ID AREA",
+            "integer"
+          ],
+          [
+            "ESTADO TRÁMITE",
+            "character varying"
+          ],
+          [
+            "SUPERFICIE PROYECTO",
+            "double precision"
+          ],
+          [
+            "FECHA_CARGA",
+            "timestamp without time zone"
+          ],
+          [
+            "GENERA RESIDUOS",
+            "text"
+          ],
+          [
+            "GESTION RESIDUOS",
+            "text"
+          ],
+          [
+            "REMOCION",
+            "text"
+          ],
+          [
+            "TRANSPORTE",
+            "text"
+          ],
+          [
+            "PROYECTO DECLARADO",
+            "text"
+          ],
+          [
+            "USA SUSTANCIAS",
+            "text"
+          ],
+          [
+            "INTERSECTA",
+            "text"
+          ]
+        ],
+        "Columnas tmp_coa_bi": [
+          [
+            "CÓDIGO PROYECTO",
+            "character varying"
+          ],
+          [
+            "NOMBRE PROYECTO",
+            "character varying"
+          ],
+          [
+            "RESUMEN PROYECTO",
+            "text"
+          ],
+          [
+            "DIRECCIÓN PROYECTO",
+            "text"
+          ],
+          [
+            "FECHA REGISTRO",
+            "date"
+          ],
+          [
+            "CÓDIGO ACTIVIDAD",
+            "text"
+          ],
+          [
+            "ACTIVIDAD ECONÓMICA",
+            "text"
+          ],
+          [
+            "CED/RUC PROPONENTE",
+            "character varying"
+          ],
+          [
+            "NOMBRE PROPONENTE",
+            "character varying"
+          ],
+          [
+            "ÁREA RESPONSABLE PROYECTO",
+            "character varying"
+          ],
+          [
+            "TIPO SECTOR",
+            "character varying"
+          ],
+          [
+            "TIPO PERMISO AMBIENTAL",
+            "character varying"
+          ],
+          [
+            "TIPO ENTE",
+            "character varying"
+          ],
+          [
+            "PROVINCIA",
+            "character varying"
+          ],
+          [
+            "CANTON",
+            "character varying"
+          ],
+          [
+            "PARROQUIA",
+            "character varying"
+          ],
+          [
+            "PROCESO",
+            "character varying"
+          ],
+          [
+            "ESTADO PROCESO",
+            "character varying"
+          ],
+          [
+            "FECHA INICIO PROCESO",
+            "date"
+          ],
+          [
+            "FECHA FIN PROCESO",
+            "date"
+          ],
+          [
+            "TAREA",
+            "character varying"
+          ],
+          [
+            "ESTADO TAREA",
+            "character varying"
+          ],
+          [
+            "FECHA INICIO TAREA",
+            "timestamp without time zone"
+          ],
+          [
+            "FECHA FIN TAREA",
+            "timestamp without time zone"
+          ],
+          [
+            "USUARIO TAREA",
+            "character varying"
+          ],
+          [
+            "ESTADO PROYECTO",
+            "character varying"
+          ],
+          [
+            "INTERSECTA CON",
+            "text"
+          ],
+          [
+            "AREAS PROTEGIDAS",
+            "text"
+          ],
+          [
+            "SISTEMA",
+            "character varying"
+          ],
+          [
+            "NOMBRE ZONA",
+            "character varying"
+          ],
+          [
+            "FINALIZADO CON RESOLUCION",
+            "character varying"
+          ],
+          [
+            "NUMERO RESOLUCION",
+            "character varying"
+          ],
+          [
+            "FECHA RESOLUCION",
+            "timestamp without time zone"
+          ],
+          [
+            "OBSERVADO",
+            "character varying"
+          ],
+          [
+            "SUPERFICIE PROYECTO",
+            "double precision"
+          ],
+          [
+            "ID AREA",
+            "integer"
+          ],
+          [
+            "ESTADO TRÁMITE",
+            "character varying"
+          ],
+          [
+            "FECHA_CARGA",
+            "timestamp without time zone"
+          ],
+          [
+            "CODIGO CATEGORIA",
+            "text"
+          ],
+          [
+            "GENERA RESIDUOS",
+            "text"
+          ],
+          [
+            "RESIDUOS PELIGROSOS",
+            "text"
+          ],
+          [
+            "SUSTANCIAS QUIMICA",
+            "text"
+          ],
+          [
+            "TRANSPORTE PRODUCTOS QUIMICOS",
+            "text"
+          ]
+        ],
+        "Tablas con email/telefono": [
+          [
+            "accounts_surrender",
+            "accounts_surrender_users",
+            "acsu_email",
+            "character varying"
+          ],
+          [
+            "alert_notification",
+            "notifications",
+            "noti_email",
+            "character varying"
+          ],
+          [
+            "app_complaints",
+            "complaint",
+            "com_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "contracts",
+            "cotr_applicant_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "contracts",
+            "cotr_responsable_unit_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "contracts",
+            "cotr_copy_correspondence_unit_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "contrato_marco",
+            "Correo electrónico",
+            "text"
+          ],
+          [
+            "biodiversity",
+            "contrato_marco",
+            "Correo electrónico_",
+            "text"
+          ],
+          [
+            "biodiversity",
+            "export_authorization",
+            "exau_carrier_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization",
+            "exau_carrier_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_importer",
+            "exai_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_importer",
+            "exai_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_vue",
+            "eavu_exporter_cell_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_vue",
+            "eavu_importer_cell_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_vue",
+            "eavu_exporter_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_vue",
+            "eavu_applicant_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_vue",
+            "eavu_importer_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_vue",
+            "eavu_applicant_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_vue",
+            "eavu_importer_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_vue",
+            "eavu_applicant_cell_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "export_authorization_vue",
+            "eavu_exporter_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "general_data",
+            "geda_informer_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "general_data",
+            "geda_informer_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "people_wildlife_events",
+            "pewi_interviewed_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "people_wildlife_events",
+            "pewi_interviewed_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "rescue_events",
+            "rese_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "rescue_events",
+            "rese_dest_phone",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "research_applications",
+            "reap_additional_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "research_units",
+            "reun_email",
+            "character varying"
+          ],
+          [
+            "biodiversity",
+            "specialist_applications",
+            "spap_institution_phone",
+            "character varying"
+          ]
+        ],
+        "Tablas con coordenadas": [
+          [
+            "biodiversity",
+            "species_collection",
+            "spco_latitude",
+            "numeric"
+          ],
+          [
+            "biodiversity",
+            "species_collection",
+            "spco_longitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_request",
+            "coll_decimal_longitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_request",
+            "coll_verbatim_latitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_request",
+            "coll_verbatim_longitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_request",
+            "coll_decimal_latitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_tmp",
+            "coll_decimal_longitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_tmp",
+            "coll_verbatim_latitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_tmp",
+            "coll_verbatim_longitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_tmp",
+            "coll_tmp_decimal_latitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_tmp",
+            "coll_tmp_decimal_longitude",
+            "numeric"
+          ],
+          [
+            "biodiversity_mcm",
+            "collections_tmp",
+            "coll_decimal_latitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_tmp",
+            "coll_tmp_decimal_longitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_tmp",
+            "coll_decimal_latitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_tmp",
+            "coll_decimal_longitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_tmp",
+            "coll_verbatim_latitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_tmp",
+            "coll_verbatim_longitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_tmp",
+            "coll_tmp_decimal_latitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_wmc",
+            "coll_verbatim_latitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_wmc",
+            "coll_decimal_latitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_wmc",
+            "coll_decimal_longitude",
+            "numeric"
+          ],
+          [
+            "cetas",
+            "collections_wmc",
+            "coll_verbatim_longitude",
+            "numeric"
+          ],
+          [
+            "retce",
+            "vw_emisiones_rpt_3",
+            "COORDENADA Y",
+            "numeric"
+          ],
+          [
+            "retce",
+            "vw_emisiones_rpt_3",
+            "COORDENADA X",
+            "numeric"
+          ],
+          [
+            "retce",
+            "vw_emisiones_rpt_4",
+            "COORDENADA X",
+            "numeric"
+          ],
+          [
+            "retce",
+            "vw_emisiones_rpt_4",
+            "COORDENADA Y",
+            "numeric"
+          ],
+          [
+            "singei",
+            "mae_uscuss_dimension_coordenadas",
+            "id_coordenadas",
+            "bigint"
+          ],
+          [
+            "singei",
+            "mae_uscuss_dimension_coordenadas",
+            "coordenadax",
+            "numeric"
+          ],
+          [
+            "singei",
+            "mae_uscuss_dimension_coordenadas",
+            "coordenaday",
+            "numeric"
+          ],
+          [
+            "singei",
+            "mae_uscuss_hechos_uscuss_consolidacion",
+            "pk_id_coordenadas",
+            "bigint"
+          ]
+        ],
+        "Tablas ubicacion/projects": [
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "ID PROYECTO",
+            "integer"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "COD PROYECTO",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "COD RETCE",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "NOMBRE PROYECTO",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "CODIGO PROYECTO SUIA",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "FECHA DE OPERACIONES",
+            "date"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "PROCESO",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "NUMERO DE RESOLUCION",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "FECHA DE ESMISION",
+            "date"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "USUARIO CREA",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "STATUS",
+            "boolean"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "CATALOGO ACTIVIDAD SUIA",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "CODIGO AREA RESPONSABLE",
+            "integer"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "ENTE RESPONSABLE",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "CODIGO TIPO AREA",
+            "integer"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "CODIGO ACTIVIDAD",
+            "integer"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "ACTIVIDAD",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "CODIGO SUB ACTIVIDAD",
+            "integer"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "SUB ACTIVIDAD",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "GELO_ID",
+            "integer"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "INEC PROVINCIA",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "PROVINCIA",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "PROVINCIA (ECU)",
+            "text"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "INEC CANTON",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "CANTON",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "INEC PARROQUIA",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "PARROQUIA",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "FECHA ENVIO TRAMITE",
+            "timestamp without time zone"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "FECHA INICIO MEDICION",
+            "character varying"
+          ],
+          [
+            "retce",
+            "vw_descargas_por_ubicacion_dps_entes_acreditados",
+            "FECHA FIN MEDICION",
+            "character varying"
+          ]
+        ]
+      }
+    },
+    "226_jbpmdb": {
+      "status": "OK",
+      "results": {
+        "Columnas vm_cuatro_categorias_bi": [
+          [
+            "CÓDIGO PROYECTO",
+            "character varying",
+            1
+          ],
+          [
+            "NOMBRE PROYECTO",
+            "text",
+            2
+          ],
+          [
+            "RESUMEN PROYECTO",
+            "text",
+            3
+          ],
+          [
+            "DIRECCIÓN PROYECTO",
+            "character varying",
+            4
+          ],
+          [
+            "FECHA REGISTRO",
+            "date",
+            5
+          ],
+          [
+            "CÓDIGO ACTIVIDAD",
+            "character varying",
+            6
+          ],
+          [
+            "ACTIVIDAD ECONÓMICA",
+            "character varying",
+            7
+          ],
+          [
+            "CED/RUC PROPONENTE",
+            "character varying",
+            8
+          ],
+          [
+            "NOMBRE PROPONENTE",
+            "text",
+            9
+          ],
+          [
+            "ÁREA RESPONSABLE PROYECTO",
+            "text",
+            10
+          ],
+          [
+            "TIPO SECTOR",
+            "character varying",
+            11
+          ],
+          [
+            "TIPO PERMISO AMBIENTAL",
+            "character varying",
+            12
+          ],
+          [
+            "TIPO ENTE",
+            "text",
+            13
+          ],
+          [
+            "PROVINCIA",
+            "text",
+            14
+          ],
+          [
+            "CANTON",
+            "character varying",
+            15
+          ],
+          [
+            "PARROQUIA",
+            "character varying",
+            16
+          ],
+          [
+            "PROCESO",
+            "character varying",
+            17
+          ],
+          [
+            "ESTADO PROCESO",
+            "text",
+            18
+          ],
+          [
+            "FECHA INICIO PROCESO",
+            "timestamp without time zone",
+            19
+          ],
+          [
+            "FECHA FIN PROCESO",
+            "timestamp without time zone",
+            20
+          ],
+          [
+            "TAREA",
+            "character varying",
+            21
+          ],
+          [
+            "ESTADO TAREA",
+            "text",
+            22
+          ],
+          [
+            "FECHA INICIO TAREA",
+            "timestamp without time zone",
+            23
+          ],
+          [
+            "FECHA FIN TAREA",
+            "timestamp without time zone",
+            24
+          ],
+          [
+            "USUARIO TAREA",
+            "character varying",
+            25
+          ],
+          [
+            "ENTE ACREDITADO",
+            "text",
+            26
+          ],
+          [
+            "ESTRATÉGICO",
+            "character varying",
+            27
+          ],
+          [
+            "INTERSECTA CON",
+            "text",
+            28
+          ],
+          [
+            "AREAS PROTEGIDAS",
+            "text",
+            29
+          ],
+          [
+            "SISTEMA",
+            "text",
+            30
+          ],
+          [
+            "max",
+            "bigint",
+            31
+          ],
+          [
+            "key",
+            "character varying",
+            32
+          ],
+          [
+            "CATEGORIA",
+            "character varying",
+            33
+          ],
+          [
+            "ESTADO PROYECTO",
+            "text",
+            34
+          ],
+          [
+            "ESTADO TRÁMITE",
+            "character varying",
+            35
+          ]
+        ],
+        "Columnas ubicacion": [
+          [
+            "id",
+            "bigint",
+            1
+          ],
+          [
+            "referencia",
+            "character varying",
+            2
+          ],
+          [
+            "coordenadas",
+            "character varying",
+            3
+          ],
+          [
+            "coordenadax",
+            "bigint",
+            4
+          ],
+          [
+            "coordenaday",
+            "bigint",
+            5
+          ],
+          [
+            "zona",
+            "character varying",
+            6
+          ],
+          [
+            "modeloelipsoide",
+            "character varying",
+            7
+          ],
+          [
+            "comunidades",
+            "character varying",
+            8
+          ],
+          [
+            "parroquia",
+            "bigint",
+            9
+          ],
+          [
+            "mapa_id",
+            "bigint",
+            10
+          ],
+          [
+            "proyecto_id",
+            "character varying",
+            11
+          ],
+          [
+            "ubicacioncmo",
+            "integer",
+            12
+          ]
+        ],
+        "Columnas proyectolicenciasambiental": [],
+        "Muestra ubicacion": [
+          [
+            1736505,
+            null,
+            null,
+            null
+          ],
+          [
+            1736512,
+            null,
+            null,
+            null
+          ],
+          [
+            1736527,
+            null,
+            null,
+            null
+          ],
+          [
+            1736561,
+            null,
+            null,
+            null
+          ],
+          [
+            1736582,
+            null,
+            null,
+            null
+          ]
+        ],
+        "FK proyecto-ubicacion": [],
+        "Columnas vm_4cat_pro_can_parr": [],
+        "Muestra email/tel vm_4cat": "ERROR: no existe la relación «public.vm_4cat_pro_can_parr»\nLINE 2:         SELECT email, telefono, celular FROM public.vm_4cat_...\n                                                     ^\n",
+        "Columnas vwt_hidrocarbonos_bi": [
+          [
+            "CÓDIGO PROYECTO",
+            "character varying"
+          ],
+          [
+            "NOMBRE PROYECTO",
+            "text"
+          ],
+          [
+            "RESUMEN",
+            "text"
+          ],
+          [
+            "DIRECCIÓN PROYECTO",
+            "character varying"
+          ],
+          [
+            "FECHA REGISTRO",
+            "date"
+          ],
+          [
+            "TIPO SECTOR",
+            "character varying"
+          ],
+          [
+            "TIPO PERMISO AMBIENTAL",
+            "character varying"
+          ],
+          [
+            "CÓDIGO ACTIVIDAD",
+            "character varying"
+          ],
+          [
+            "ACTIVIDAD ECONÓMICA",
+            "character varying"
+          ],
+          [
+            "ÁREA RESPONSABLE PROYECTO",
+            "character varying"
+          ],
+          [
+            "TIPO ENTE",
+            "character varying"
+          ],
+          [
+            "CATEGORÍA",
+            "character varying"
+          ],
+          [
+            "PROVINCIA",
+            "character varying"
+          ],
+          [
+            "CANTÓN",
+            "character varying"
+          ],
+          [
+            "PARROQUIA",
+            "character varying"
+          ],
+          [
+            "CED/RUC EMPRESA",
+            "character varying"
+          ],
+          [
+            "NOMBRE EMPRESA",
+            "character varying"
+          ],
+          [
+            "DIRECCIÓN",
+            "character varying"
+          ],
+          [
+            "PROCESO",
+            "character varying"
+          ],
+          [
+            "ESTADO PROCESO",
+            "text"
+          ],
+          [
+            "FECHA INICIO PROCESO",
+            "timestamp without time zone"
+          ],
+          [
+            "FECHA FIN PROCESO",
+            "timestamp without time zone"
+          ],
+          [
+            "TAREA",
+            "character varying"
+          ],
+          [
+            "ESTADO TAREA",
+            "text"
+          ],
+          [
+            "FECHA INICIO TAREA",
+            "timestamp without time zone"
+          ],
+          [
+            "FECHA FIN TAREA",
+            "timestamp without time zone"
+          ],
+          [
+            "USUARIO TAREA",
+            "text"
+          ],
+          [
+            "NOMBRE USUARIO TAREA",
+            "character varying"
+          ],
+          [
+            "ROL",
+            "text"
+          ],
+          [
+            "ESTADO PROYECTO",
+            "text"
+          ],
+          [
+            "ENTE ACREDITADO",
+            "text"
+          ],
+          [
+            "ESTADO TRÁMITE",
+            "character varying"
+          ],
+          [
+            "INTERSECTA CON",
+            "text"
+          ],
+          [
+            "ID AREA",
+            "integer"
+          ],
+          [
+            "ca_categoria",
+            "character varying"
+          ]
+        ],
+        "Columnas vm_sector_subsector_bi (prod_old check)": []
+      }
+    },
+    "226_jbpmdb_prod_old": {
+      "status": "OK",
+      "results": {
+        "Columnas vm_sector_subsector_bi": [
+          [
+            "CÓDIGO PROYECTO",
+            "character varying",
+            1
+          ],
+          [
+            "NOMBRE PROYECTO",
+            "text",
+            2
+          ],
+          [
+            "RESUMEN PROYECTO",
+            "text",
+            3
+          ],
+          [
+            "DIRECCIÓN PROYECTO",
+            "character varying",
+            4
+          ],
+          [
+            "FECHA REGISTRO",
+            "date",
+            5
+          ],
+          [
+            "CÓDIGO ACTIVIDAD",
+            "character varying",
+            6
+          ],
+          [
+            "ACTIVIDAD ECONÓMICA",
+            "character varying",
+            7
+          ],
+          [
+            "CED/RUC PROPONENTE",
+            "character varying",
+            8
+          ],
+          [
+            "NOMBRE PROPONENTE",
+            "text",
+            9
+          ],
+          [
+            "ÁREA RESPONSABLE PROYECTO",
+            "text",
+            10
+          ],
+          [
+            "TIPO SECTOR",
+            "character varying",
+            11
+          ],
+          [
+            "TIPO PERMISO AMBIENTAL",
+            "text",
+            12
+          ],
+          [
+            "tipo_permiso",
+            "character varying",
+            13
+          ],
+          [
+            "TIPO ENTE",
+            "text",
+            14
+          ],
+          [
+            "PROVINCIA",
+            "text",
+            15
+          ],
+          [
+            "CANTON",
+            "character varying",
+            16
+          ],
+          [
+            "PARROQUIA",
+            "character varying",
+            17
+          ],
+          [
+            "PROCESO",
+            "text",
+            18
+          ],
+          [
+            "ESTADO PROCESO",
+            "text",
+            19
+          ],
+          [
+            "FECHA INICIO PROCESO",
+            "date",
+            20
+          ],
+          [
+            "FECHA FIN PROCESO",
+            "date",
+            21
+          ],
+          [
+            "TAREA",
+            "character varying",
+            22
+          ],
+          [
+            "ESTADO TAREA",
+            "text",
+            23
+          ],
+          [
+            "FECHA INICIO TAREA",
+            "timestamp without time zone",
+            24
+          ],
+          [
+            "FECHA FIN TAREA",
+            "timestamp without time zone",
+            25
+          ],
+          [
+            "USUARIO TAREA",
+            "character varying",
+            26
+          ],
+          [
+            "ESTADO PROYECTO",
+            "character varying",
+            27
+          ],
+          [
+            "ESTADO TRÁMITE",
+            "text",
+            28
+          ],
+          [
+            "INTERSECTA CON",
+            "text",
+            29
+          ],
+          [
+            "AREAS PROTEGIDAS",
+            "unknown",
+            30
+          ],
+          [
+            "SISTEMA",
+            "text",
+            31
+          ],
+          [
+            "ENTE ACREDITADO",
+            "text",
+            32
+          ],
+          [
+            "max",
+            "bigint",
+            33
+          ],
+          [
+            "ESTRATÉGICO",
+            "text",
+            34
+          ]
+        ],
+        "Tablas con email/telefono": [
+          [
+            "area",
+            "email",
+            "character varying"
+          ],
+          [
+            "consultores",
+            "email",
+            "character varying"
+          ],
+          [
+            "consultores",
+            "telefono",
+            "character varying"
+          ],
+          [
+            "direccion",
+            "telefono",
+            "character varying"
+          ],
+          [
+            "jbpm4_id_user",
+            "businessemail_",
+            "character varying"
+          ],
+          [
+            "listado",
+            "li_telefono",
+            "integer"
+          ],
+          [
+            "subarea",
+            "email",
+            "character varying"
+          ],
+          [
+            "vw_subsect_pro_can_parr",
+            "EMAIL",
+            "text"
+          ],
+          [
+            "vw_subsect_pro_can_parr",
+            "TELEFONO",
+            "text"
+          ],
+          [
+            "vw_subsect_pro_can_parr_cubo",
+            "EMAIL",
+            "text"
+          ],
+          [
+            "vw_subsect_pro_can_parr_cubo",
+            "TELEFONO",
+            "text"
+          ],
+          [
+            "vw_suia_categorias_at",
+            "email",
+            "text"
+          ],
+          [
+            "vw_suia_categorias_at",
+            "telefono",
+            "text"
+          ],
+          [
+            "vw_suia_categorias_at_inactivo",
+            "email",
+            "text"
+          ],
+          [
+            "vw_suia_categorias_at_inactivo",
+            "telefono",
+            "text"
+          ]
+        ],
+        "Tablas con coordenadas": [
+          [
+            "coordenada",
+            "coordenadax",
+            "double precision"
+          ],
+          [
+            "coordenada",
+            "coordenaday",
+            "double precision"
+          ],
+          [
+            "coordenadaisla",
+            "coordenadaislax",
+            "double precision"
+          ],
+          [
+            "coordenadaisla",
+            "coordenadaislay",
+            "double precision"
+          ],
+          [
+            "proyectoadaptacion",
+            "sistemacoordenadas",
+            "bigint"
+          ],
+          [
+            "proyectolicenciaambiental",
+            "sistemacoordenadas",
+            "bigint"
+          ],
+          [
+            "proyectomdl",
+            "sistemacoordenadas",
+            "bigint"
+          ],
+          [
+            "proyectonamas",
+            "sistemacoordenadas",
+            "bigint"
+          ],
+          [
+            "proyectoredd",
+            "sistemacoordenadas",
+            "bigint"
+          ],
+          [
+            "ubicacion",
+            "coordenadas",
+            "character varying"
+          ],
+          [
+            "ubicacion",
+            "coordenadax",
+            "bigint"
+          ],
+          [
+            "ubicacion",
+            "coordenaday",
+            "bigint"
+          ]
+        ]
+      }
+    }
+  }
+}

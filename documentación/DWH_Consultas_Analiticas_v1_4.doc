@@ -1,0 +1,96 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+    <meta charset="utf-8">
+    <title>Consultas Analíticas DWH RA v1.4</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>100</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+        @page { size: 8.5in 11in; margin: 1.0in 1.0in 1.0in 1.0in; }
+        body { font-family: 'Calibri', 'Arial', sans-serif; font-size: 11pt; line-height: 1.5; color: #333; }
+        h1 { color: #2e75b5; font-size: 24pt; border-bottom: 2pt solid #2e75b5; margin-bottom: 15pt; text-align: center; }
+        h2 { color: #2e75b5; font-size: 18pt; border-bottom: 1pt solid #dee2e6; margin-top: 25pt; margin-bottom: 15pt; }
+        h3 { color: #2e75b5; font-size: 14pt; margin-top: 15pt; font-weight: bold; }
+        p, li { margin-bottom: 8pt; text-align: justify; }
+        code { background-color: #f8f9fa; border: 0.5pt solid #c0c0c0; color: #a31515; font-family: 'Consolas', monospace; padding: 10pt; display: block; margin: 10pt 0; font-size: 9pt; }
+        .footer { margin-top: 40pt; font-size: 9pt; color: #7f8c8d; text-align: right; border-top: 0.5pt solid #bdc3c7; padding-top: 10pt; }
+    </style>
+</head>
+<body>
+
+    <h1>Librería de Consultas Analíticas: DWH v1.4</h1>
+    <p style="text-align: center;"><b>Extracción e Inteligencia de Negocio para Regularización Ambiental</b></p>
+
+    <br>
+
+    <h2>1. Consultas de Regularización Ambiental (Hechos)</h2>
+    
+    <h3>1.1. Vista General de Proyectos (Matriz Maestra)</h3>
+    <p>Consulta principal para obtener el inventario de proyectos con todas sus dimensiones normalizadas.</p>
+    <code>
+    SELECT <br>
+    &nbsp;&nbsp;dp.codigo_proyecto AS "Código Proyecto",<br>
+    &nbsp;&nbsp;dp.nombre_proyecto AS "Nombre Proyecto",<br>
+    &nbsp;&nbsp;dprop.nombre_proponente AS "Proponente",<br>
+    &nbsp;&nbsp;da.actividad_economica AS "Actividad",<br>
+    &nbsp;&nbsp;dg.provincia AS "Provincia",<br>
+    &nbsp;&nbsp;fr.interseccion_snap AS "Cruza SNAP",<br>
+    &nbsp;&nbsp;de.estado_proceso AS "Estado Proceso"<br>
+    FROM dw.fact_regularizacion fr<br>
+    JOIN dw.dim_proyecto dp ON fr.sk_proyecto = dp.sk_proyecto<br>
+    JOIN dw.dim_proponente dprop ON fr.sk_proponente = dprop.sk_proponente<br>
+    JOIN dw.dim_actividad da ON fr.sk_actividad = da.sk_actividad<br>
+    JOIN dw.dim_geografia dg ON fr.sk_geografia = dg.sk_geografia<br>
+    JOIN dw.dim_estado de ON fr.sk_estado = de.sk_estado<br>
+    JOIN dw.dim_tiempo dt ON fr.sk_fecha_registro = dt.sk_tiempo<br>
+    ORDER BY dt.fecha DESC;
+    </code>
+
+    <br>
+
+    <h2>2. Consultas Financieras y Recaudación</h2>
+
+    <h3>2.1. Resumen de Ingresos por Proponente</h3>
+    <p>Consolidado de pagos monetarios asociados a cada entidad tramitadora.</p>
+    <code>
+    SELECT <br>
+    &nbsp;&nbsp;dprop.nombre_proponente AS "Proponente",<br>
+    &nbsp;&nbsp;COUNT(fp.id_fact_pago) AS "Número de Pagos",<br>
+    &nbsp;&nbsp;SUM(fp.monto_pagado) AS "Total Recaudado"<br>
+    FROM dw.fact_pago fp<br>
+    JOIN dw.dim_proyecto dp ON fp.sk_proyecto = dp.sk_proyecto<br>
+    JOIN dw.dim_proponente dprop ON dp.sk_proponente = dprop.sk_proponente<br>
+    GROUP BY dprop.nombre_proponente<br>
+    HAVING SUM(fp.monto_pagado) > 0;
+    </code>
+
+    <br>
+
+    <h2>3. Consultas Geográficas y Estadísticas</h2>
+
+    <h3>3.1. Densidad por Provincia</h3>
+    <p>Distribución porcentual de los trámites terminados por cada provincia del Ecuador.</p>
+    <code>
+    SELECT <br>
+    &nbsp;&nbsp;dg.provincia,<br>
+    &nbsp;&nbsp;COUNT(fr.id_fact) AS "Total Proyectos",<br>
+    &nbsp;&nbsp;ROUND(CAST(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM dw.fact_regularizacion) AS NUMERIC), 2) AS "%"<br>
+    FROM dw.fact_regularizacion fr<br>
+    JOIN dw.dim_geografia dg ON fr.sk_geografia = dg.sk_geografia<br>
+    GROUP BY dg.provincia<br>
+    ORDER BY "Total Proyectos" DESC;
+    </code>
+
+    <div class="footer">
+        <p><b>Ingeniería de Datos:</b> Antigravity AI Data Solutions</p>
+        <p><b>Versión:</b> 1.4 | <b>Fecha:</b> 2026-03-10</p>
+    </div>
+
+</body>
+</html>

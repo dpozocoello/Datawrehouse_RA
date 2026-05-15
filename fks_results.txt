@@ -1,0 +1,23 @@
+Foreign Keys for coa_chemical_sustances.chemical_sustances_records:
+Empty DataFrame
+Columns: [table_schema, table_name, column_name, foreign_table_schema, foreign_table_name, foreign_column_name]
+Index: []
+
+Project-related tables in coa_mae:
+                                       table_name
+0                  project_licencing_coa_ciuu_trd
+1        project_licencing_coa_ciuu_subcategories
+2               project_licencing_coa_action_plan
+3               coordinates_project_licencing_coa
+4      details_intersection_project_licencing_coa
+5             intersections_project_licencing_coa
+6          manage_chemicals_project_licencing_coa
+7                      project_licencing_coa_ciuu
+8                           project_licencing_coa
+9               project_licencing_coa_ciuu_blocks
+10  project_licencing_coa_ciuu_mining_concessions
+11                   project_licencing_coa_shapes
+12                 project_licencing_coa_location
+13                                  project_names
+14                              project_names_msp
+15              project_prohibition_pronouncement

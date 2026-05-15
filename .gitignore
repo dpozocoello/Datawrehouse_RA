@@ -1,0 +1,26 @@
+# Ignorar archivos de datos pesados
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.zip
+*.rar
+*.tar
+*.gz
+*.bak
+*.db
+*.sqlite
+
+# Ignorar archivos temporales y logs
+*.log
+*.tmp
+*.temp
+scratch/
+verificacion/
+__pycache__/
+*.pyc
+
+# (Opcional) Puedes comentar la siguiente línea si quieres subir imágenes
+*.png
+*.jpg
+*.jpeg

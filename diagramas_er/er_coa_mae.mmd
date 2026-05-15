@@ -1,0 +1,253 @@
+erDiagram
+    action_plan_finding {
+        string PK "apfi_id"
+        int columns "16"
+    }
+    action_plan_finding_description {
+        string PK "apfd_id"
+        int columns "10"
+    }
+    approval_observation_filing_office {
+        string PK "aofo_id"
+        int columns "16"
+    }
+    approval_observation_reports {
+        string PK "aore_id"
+        int columns "17"
+    }
+    approved_titles {
+        string PK "apti_id"
+        int columns "12"
+    }
+    bonding_coa_rgd {
+        string PK "bocr_id"
+        int columns "10"
+    }
+    calculation_values {
+        string PK "cava_id"
+        int columns "27"
+    }
+    catalog_ciuu {
+        string PK "caci_id"
+        int columns "48"
+    }
+    catalog_ciuu_concurrent {
+        string PK "caco_id"
+        int columns "10"
+    }
+    catalog_combined_subcategories {
+        string PK "ccsu_id"
+        int columns "17"
+    }
+    catalog_subcategories {
+        string PK "cosu_id, cosu_id"
+        int columns "35"
+    }
+    catalog_subcategories_resp {
+        string PK "cosu_id"
+        int columns "35"
+    }
+    catalog_types_coa {
+        string PK "caty_id"
+        int columns "10"
+    }
+    certificate_intersection_coa {
+        string PK "cein_id"
+        int columns "21"
+    }
+    codes_resolutions {
+        string PK "core_id"
+        int columns "11"
+    }
+    coordinates_project_licencing_coa {
+        string PK "coor_id"
+        int columns "16"
+    }
+    criterion_variable {
+        string PK "crva_id, crva_id"
+        int columns "12"
+    }
+    details_intersection_project_licencing_coa {
+        string PK "dein_id"
+        int columns "19"
+    }
+    documents_coa {
+        string PK "docu_id"
+        int columns "20"
+    }
+    document_type_flow_not_visible {
+        string PK "dofl_id"
+        int columns "9"
+    }
+    environmental_specialist {
+        string PK "ensp_id"
+        int columns "23"
+    }
+    form_comments_coa {
+        string PK "foco_id"
+        int columns "18"
+    }
+    general_catalogs_coa {
+        string PK "geca_id"
+        int columns "14"
+    }
+    general_catalogs_coa_20250119 {
+        string PK "N/A"
+        int columns "14"
+    }
+    intersections_project_licencing_coa {
+        string PK "inpr_id"
+        int columns "13"
+    }
+    layers {
+        string PK "laye_id"
+        int columns "20"
+    }
+    layers_ciuu {
+        string PK "laci_id"
+        int columns "11"
+    }
+    level_criteria {
+        string PK "lecr_id, lecr_id"
+        int columns "9"
+    }
+    magnitude_criterion {
+        string PK "macr_id"
+        int columns "15"
+    }
+    manage_chemicals_project_licencing_coa {
+        string PK "mach_id"
+        int columns "13"
+    }
+    map_layers {
+        string PK "mala_id"
+        int columns "12"
+    }
+    msp_ruc {
+        string PK "msru_id"
+        int columns "12"
+    }
+    payment {
+        string PK "paym_id"
+        int columns "18"
+    }
+    payment_commission {
+        string PK "paco_id"
+        int columns "14"
+    }
+    payment_json {
+        string PK "pajs_id"
+        int columns "68"
+    }
+    permission_type_catalog_layers {
+        string PK "pety_id"
+        int columns "13"
+    }
+    phases {
+        string PK "phas_id"
+        int columns "9"
+    }
+    process_archived {
+        string PK "prar_id"
+        int columns "10"
+    }
+    project_licencing_coa {
+        string PK "prco_id"
+        int columns "62"
+    }
+    project_licencing_coa_action_plan {
+        string PK "prap_id"
+        int columns "13"
+    }
+    project_licencing_coa_ciuu {
+        string PK "prli_id"
+        int columns "31"
+    }
+    project_licencing_coa_ciuu_blocks {
+        string PK "prbl_id"
+        int columns "9"
+    }
+    project_licencing_coa_ciuu_mining_concessions {
+        string PK "prmi_id"
+        int columns "16"
+    }
+    project_licencing_coa_ciuu_subcategories {
+        string PK "prls_id"
+        int columns "10"
+    }
+    project_licencing_coa_ciuu_trd {
+        string PK "plct_id"
+        int columns "13"
+    }
+    project_licencing_coa_location {
+        string PK "prlo_id"
+        int columns "12"
+    }
+    project_licencing_coa_shapes {
+        string PK "prsh_id"
+        int columns "12"
+    }
+    project_names {
+        string PK "prna_id"
+        int columns "11"
+    }
+    project_names_msp {
+        string PK "prms_id"
+        int columns "11"
+    }
+    project_prohibition_pronouncement {
+        string PK "prpp_id"
+        int columns "10"
+    }
+    project_licencing_coa_action_plan ||--o{ action_plan_finding : "prap_id"
+    action_plan_finding ||--o{ action_plan_finding_description : "apfi_id"
+    project_licencing_coa ||--o{ approval_observation_filing_office : "prco_id"
+    project_licencing_coa ||--o{ approval_observation_reports : "prco_id"
+    project_licencing_coa ||--o{ bonding_coa_rgd : "prco_id"
+    project_licencing_coa ||--o{ calculation_values : "prco_id"
+    catalog_ciuu ||--o{ calculation_values : "caci_id"
+    magnitude_criterion ||--o{ calculation_values : "macr_id"
+    catalog_ciuu ||--o{ catalog_ciuu_concurrent : "caci_id"
+    catalog_ciuu ||--o{ catalog_combined_subcategories : "caci_id"
+    catalog_ciuu ||--o{ catalog_subcategories : "caci_id"
+    catalog_subcategories ||--o{ catalog_subcategories : "cosu_parent_id"
+    project_licencing_coa ||--o{ certificate_intersection_coa : "prco_id"
+    type_resolutions ||--o{ codes_resolutions : "tyre_id"
+    project_licencing_coa ||--o{ coordinates_project_licencing_coa : "prco_id"
+    project_licencing_coa_shapes ||--o{ coordinates_project_licencing_coa : "prsh_id"
+    level_criteria ||--o{ criterion_variable : "lecr_id"
+    intersections_project_licencing_coa ||--o{ details_intersection_project_licencing_coa : "inpr_id"
+    project_licencing_coa ||--o{ documents_coa : "prco_id"
+    general_catalogs_coa ||--o{ general_catalogs_coa : "geca_parent_id"
+    catalog_types_coa ||--o{ general_catalogs_coa : "caty_id"
+    project_licencing_coa ||--o{ intersections_project_licencing_coa : "prco_id"
+    layers ||--o{ intersections_project_licencing_coa : "laye_id"
+    catalog_ciuu ||--o{ layers_ciuu : "caci_id"
+    layers ||--o{ layers_ciuu : "laye_id"
+    project_licencing_coa ||--o{ magnitude_criterion : "prco_id"
+    variable_value ||--o{ magnitude_criterion : "vava_id"
+    project_licencing_coa ||--o{ manage_chemicals_project_licencing_coa : "prco_id"
+    layers ||--o{ map_layers : "laye_id"
+    project_licencing_coa ||--o{ payment : "prco_id"
+    payment_commission ||--o{ payment : "paco_id"
+    payment ||--o{ payment_json : "paym_id"
+    catalog_ciuu ||--o{ permission_type_catalog_layers : "caci_id"
+    layers ||--o{ permission_type_catalog_layers : "laye_id"
+    project_licencing_coa ||--o{ project_licencing_coa_action_plan : "prco_id"
+    project_licencing_coa ||--o{ project_licencing_coa_ciuu : "prco_id"
+    general_catalogs_coa ||--o{ project_licencing_coa_ciuu : "geca_parent_id"
+    catalog_ciuu ||--o{ project_licencing_coa_ciuu : "caci_id"
+    catalog_combined_subcategories ||--o{ project_licencing_coa_ciuu : "ccsu_id"
+    catalog_subcategories ||--o{ project_licencing_coa_ciuu : "cosu_id"
+    project_licencing_coa_ciuu ||--o{ project_licencing_coa_ciuu_blocks : "prli_id"
+    project_licencing_coa_ciuu ||--o{ project_licencing_coa_ciuu_mining_concessions : "prli_id"
+    catalog_subcategories ||--o{ project_licencing_coa_ciuu_subcategories : "cosu_id"
+    project_licencing_coa_ciuu ||--o{ project_licencing_coa_ciuu_subcategories : "prli_id"
+    project_licencing_coa_ciuu ||--o{ project_licencing_coa_ciuu_trd : "prli_id"
+    project_licencing_coa ||--o{ project_licencing_coa_location : "prco_id"
+    project_licencing_coa ||--o{ project_licencing_coa_shapes : "prco_id"
+    general_catalogs_coa ||--o{ project_names : "geca_id"
+    project_licencing_coa ||--o{ project_names_msp : "prco_id"
+    project_names ||--o{ project_names_msp : "prna_id"
+    msp_ruc ||--o{ project_names_msp : "msru_id"
+    project_licencing_coa ||--o{ project_prohibition_pronouncement : "prco_id"

@@ -1,0 +1,54 @@
+# Validación y Ejecución Manual en Pentaho PDI (Spoon)
+
+Una vez que has configurado tus Transformaciones (`.ktr`) o tu Job maestro (`.kjb`) con el paso a paso explicado anteriormente, es fundamental probar que el flujo mueve la data desde los orígenes hasta el Postgres local de manera correcta.
+
+Sigue estos pasos dentro de la interfaz gráfica de **Spoon**:
+
+## 1. Validar la Extracción de Datos (Preview)
+Antes de ejecutar el proceso compelto para insertar datos, verifica que la conexión de extracción funciona:
+1. Abre tu Transformación de Ingesta (ej. `TRX_INGESTA_SUIA.ktr`).
+2. Dale **click derecho** al componente `Table input` (donde pusiste el script SQL de `suia_enlisy`).
+3. Selecciona la opción **Preview** (*Vista previa*).
+4. El sistema te pedirá el número de filas a verificar (puedes dejar el por defecto de 1000).
+5. Se abrirá una ventana tipo cuadrícula (grid). Si ves la información del SUIA con las columnas mapeadas en *snake_case*, significa que tu JDBC lee la fuente correctamente.
+
+## 2. Ejecutar la Transformación / Job de forma Manual
+Para enviar el chorro de datos hacia tu tabla `stg`:
+1. En la parte superior izquierda de tu espacio de trabajo (dentro de la Transformación o el Job) hay un botón con el icono de un **Play verde** (`Run` o tecla rápida `F8`).
+2. Haz clic en él. Aparecerá una ventana de confirmación titulada *Execute a transformation* / *Execute a job*.
+3. Asegúrate de que el log level esté en **Basic** o **Detailed** (para ver errores si existen).
+4. Presiona el botón **Launch** (o Run).
+
+## 3. Monitorear el Progreso en Tiempo Real
+Inmediatamente la pantalla de abajo (Panel de ejecución) se iluminará y deberás enfocarte en las siguientes tres pestañas para validar la sanidad del proceso:
+
+### Pestaña "Execution Results" / "Step Metrics"
+Aquí verás cada componente (Input / Output) y cómo fluyen los números en tiempo real:
+- **Read:** Cuántos registros ya leyó del servidor remoto (Ej. 50,000 líneas).
+- **Written:** Cuántos registros ya guardó en tu BD local `stg.suia_rcoa_bi`.
+- **Speed (r/s):** La velocidad de escritura en el destino (generalmente miles de filas por segundo).
+- **Errors:** **¡ESTO DEBE ESTAR EN 0!** Si aparece número $>0$, algo falló (por ejemplo, truncamiento o tipo de dato no entra en la columna).
+
+### Pestaña "Logging"
+Muestra el "Log Text" crudo. Si el paso de arriba marcó Error = 1, ven aquí. En rojo te marcará el error exacto de SQL o de conexión de base de datos. Si todo termina con éxito dirá: `Transformation finished` o `Job finished`.
+
+## 4. Validación Final en la Base de Datos (`dwh_reg_v1`)
+Una vez que ha finalizado el Start en Pentaho, siempre compruébalo empíricamente lanzando consultas exploratorias en tu base de datos local:
+
+### 4.1. Verifica que la tabla en RAM (Staging) llegó:
+Abre un cliente de BD como pgAdmin o DBeaver con la conexión a `dw_reg_v1` o ejecuta por línea de códigos:
+```sql
+SELECT COUNT(1) FROM stg.suia_rcoa_bi;
+```
+*(Debe coincidir cercanamente con las métricas de "Written" que te mostró Pentaho).*
+
+### 4.2. Verifica que las Funciones del Job llenaron el Data Warehouse (Dimensional):
+Recuerda que si corriste el Job Maestro, este llamó a las funciones mediante scripts SQL al final. Comprueba tu Hecho (Fact):
+```sql
+SELECT 
+  interseccion_snap, 
+  COUNT(1) as total_proyectos 
+FROM dw.fact_regularizacion 
+GROUP BY interseccion_snap;
+```
+Esto te mostrará de un vistazo cuántos expedientes pasaron por SNAP y cuántos no, demostrando que tu proceso ETL está al 100%.

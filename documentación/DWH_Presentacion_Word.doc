@@ -1,0 +1,173 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+    <meta charset="utf-8">
+    <title>Documentación DWH RA v1.4</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>100</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+        @page {
+            size: 8.5in 11in;
+            margin: 1.0in 1.0in 1.0in 1.0in;
+        }
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+        }
+        h1 {
+            color: #1a73e8;
+            font-size: 24pt;
+            border-bottom: 2px solid #1a73e8;
+            margin-bottom: 20pt;
+        }
+        h2 {
+            color: #2e75b5;
+            font-size: 18pt;
+            border-bottom: 1px solid #dee2e6;
+            margin-top: 25pt;
+            margin-bottom: 15pt;
+        }
+        h3 {
+            color: #44546a;
+            font-size: 14pt;
+            margin-top: 15pt;
+        }
+        p, li {
+            margin-bottom: 10pt;
+        }
+        .highlight {
+            color: #1a73e8;
+            font-weight: bold;
+        }
+        blockquote {
+            background-color: #f3f4f6;
+            border-left: 5px solid #1a73e8;
+            padding: 10pt 20pt;
+            margin: 15pt 0;
+            font-style: italic;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 15pt;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 8pt;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f3f4;
+            color: #202124;
+        }
+        .footer {
+            margin-top: 40pt;
+            font-size: 9pt;
+            color: #7f8c8d;
+            text-align: right;
+            border-top: 0.5pt solid #bdc3c7;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Presentación Técnica: DWH Regularización Ambiental (v1.4)</h1>
+    <p><strong>Arquitectura de Datos y Normalización Geográfica Experta</strong></p>
+
+    <br>
+
+    <h2>1. Visión General del Proyecto</h2>
+    <h3>Objetivo Estratégico</h3>
+    <p>Consolidar la información de regularización ambiental dispersa en múltiples fuentes (SUIA, RCOA, JBPM) en una única "Versión de la Verdad" (SSOT) para la toma de decisiones basada en datos.</p>
+
+    <h3>KPI de Madurez v1.4</h3>
+    <ul>
+        <li><span class="highlight">Paridad Geográfica</span>: 100% resolviendo 111 brechas críticas.</li>
+        <li><span class="highlight">Integridad Referencial</span>: Blindaje mediante SK=0 forzado.</li>
+        <li><span class="highlight">Consolidación</span>: Unificación transaccional SUIA-JBPM.</li>
+    </ul>
+
+    <br>
+
+    <h2>2. Arquitectura de Datos (E-T-L)</h2>
+    <h3>Capa 1: Staging (stg)</h3>
+    <p>La zona de aterrizaje cruda (Pass-through) donde se capturan las fuentes principales. Utiliza el protocolo <b>Truncate-and-Load</b> para garantizar datos frescos y evitar duplicidad en la ingesta inicial.</p>
+
+    <h3>Capa 2: Data Warehouse (dw)</h3>
+    <p>Modelo estrella con integridad física. Incluye las tablas de hechos <i>fact_regularizacion</i> y <i>fact_pago</i>, soportadas por dimensiones normalizadas que permiten el análisis multidimensional.</p>
+
+    <h3>Capa 3: Referencia (ref)</h3>
+    <p>Contiene catálogos maestros y diccionarios expertos (INEC DPA 2024) para la traducción de nombres de oficinas técnicas a códigos geográficos oficiales.</p>
+
+    <br>
+
+    <h3>Matriz Técnica de Origen y Destino de Información</h3>
+    <table border="1" cellpadding="5" cellspacing="0" style="width:100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #f1f3f4;">
+                <th>N°</th>
+                <th>Fuente de Información (Origen)</th>
+                <th>Staging Area (Destino Temporal)</th>
+                <th>Data Warehouse (Destino Final)</th>
+                <th>Proceso / Referencia Técnica</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>coa_mae.tmp_rcoa_bi</td><td>stg.suia_rcoa_bi</td><td>dw.fact_regularizacion</td><td>TRX_01: Ingesta SUIA RCOA</td></tr>
+            <tr><td>2</td><td>suia_iii.tmp_coa_bi</td><td>stg.suia_coa_bi</td><td>dw.fact_regularizacion</td><td>TRX_02: Ingesta SUIA COA</td></tr>
+            <tr><td>3</td><td>vm_sector_subsector_bi</td><td>stg.jbpm_sector_bi</td><td>dw.dim_actividad</td><td>TRX_03: Ingesta JBPM Sector</td></tr>
+            <tr><td>4</td><td>vm_cuatro_categorias_bi</td><td>stg.jbpm_categorias_bi</td><td>dw.dim_actividad</td><td>TRX_04: Ingesta JBPM Categorías</td></tr>
+            <tr><td>5</td><td>vwt_hidrocarbonos_bi</td><td>stg.jbpm_hidrocarburos_bi</td><td>dw.fact_regularizacion</td><td>TRX_05: Ingesta JBPM Hidrocarburos</td></tr>
+            <tr><td>6</td><td>variableinstancelog (SNAP)</td><td>stg.suia_snap_bi</td><td>dw.fact_regularizacion</td><td>TRX_10: Ingesta SNAP (HTML Metadata)</td></tr>
+            <tr><td>7</td><td>online_payments</td><td>stg.jbpm_pagos_bi</td><td>dw.fact_pago</td><td>TRX_07: Ingesta Pagos JBPM</td></tr>
+            <tr><td>8</td><td>financial_transaction</td><td>stg.suia_pagos_bi</td><td>dw.fact_pago</td><td>TRX_08: Ingesta Pagos SUIA</td></tr>
+            <tr><td>9</td><td>public.areas</td><td>stg.suia_areas_bi</td><td>dw.dim_area</td><td>TRX_10: Areas (Inferencia Experta)</td></tr>
+            <tr><td>10</td><td>geographical_locations</td><td>stg.geographical_locations_bi</td><td>dw.dim_geografia</td><td>TRX_11: Geografía (DPA INEC)</td></tr>
+            <tr><td>11</td><td>ref.inec_dpa_2024</td><td>N/A</td><td>dw.dim_geografia</td><td>Capa ref: Catálogo Maestro</td></tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h2>3. El Motor de Inferencia Experta (v1.4)</h2>
+    <h3>Resolución de Ambigüedad</h3>
+    <p>El sistema v1.4 procesa áreas que originalmente no tenían ubicación definida. Utiliza una técnica de 3 etapas:</p>
+    <ol>
+        <li><strong>Identidad</strong>: Mapeo exacto por ID.</li>
+        <li><strong>Semántica</strong>: Análisis de texto (Zonales, Oficinas Técnicas).</li>
+        <li><strong>Jerarquía</strong>: Reconstrucción administrativa basada en el estatuto MAATE.</li>
+    </ol>
+    <blockquote>
+        <strong>Logro Técnico</strong>: Se alcanzó un 0% de registros huérfanos geográficos en la dimensión final.
+    </blockquote>
+
+    <br>
+
+    <h2>4. Orquestación Pentaho</h2>
+    <p>El Job Maestro <i>JOB_CARGA_DWH_REGULARIZACION</i> asegura que todo falle o triunfe en conjunto. El paso clave es el <b>Setup Reference Data</b>, que garantiza que incluso tras una limpieza absoluta, los registros de control (SK=0) se restauren automáticamente.</p>
+
+    <br>
+
+    <h2>5. Saneamiento y Validación</h2>
+    <p>Se han integrado scripts de validación forense que comparan línea a línea el origen contra el destino, detectando truncamientos en campos de texto largo (SNAP) y asegurando que la longitud de los registros sea consistente con la auditoría de procesos.</p>
+
+    <br>
+
+    <h2>6. Conclusión</h2>
+    <p>La infraestructura entregada en la versión 1.4 es estable, resiliente a errores de integridad y altamente escalable para futuras fuentes de datos ambientales.</p>
+
+    <div class="footer">
+        <p>Documentado por: Arquitectura de Datos / Antigravity AI</p>
+        <p>Fecha de emisión: 2026-03-10</p>
+        <p>Referencia: DWH_RA_V1_4_FINAL</p>
+    </div>
+
+</body>
+</html>

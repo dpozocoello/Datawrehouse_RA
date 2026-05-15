@@ -1,0 +1,33 @@
+Executing: -- ==============================================================================
+-- ETL QUIMICOS v1...
+Executing: -- 2. Cargar Dimensi¾n Importadores (dim_chemical_importer)
+-- -------------------------------------...
+Executing: INSERT INTO dw.dim_chemical_importer (
+    importer_id, 
+    importer_name, 
+    identification, 
+  ...
+Executing: -- 3. Cargar Hechos: Importaciones (fact_chemical_import)
+-- ---------------------------------------...
+Executing: INSERT INTO dw.fact_chemical_import (
+    sk_proyecto, 
+    chemical_key, 
+    importer_key, 
+    sk...
+Executing: -- 4. Cargar Hechos: Movimientos (fact_chemical_movement)
+-- ---------------------------------------...
+Executing: INSERT INTO dw.fact_chemical_movement (
+    sk_proyecto, 
+    chemical_key, 
+    importer_key, 
+    ...
+Executing: -- 5. Cargar Hechos: Declaraciones (fact_chemical_declaration)
+-- ----------------------------------...
+Executing: INSERT INTO dw.fact_chemical_declaration (
+    sk_proyecto, 
+    importer_key, 
+    sk_tiempo, 
+    ...
+Executing: -- 6. Verificaci¾n Final
+-- ------------------------------------------------------------------------...
+ETL script executed successfully.

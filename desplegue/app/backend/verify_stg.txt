@@ -1,0 +1,8 @@
+--- Case 1: MAE-RA-2015-220472 (ware_id 10578) in STG ---
+Result: [(10578, 220472.0, None), (10578, 220472.0, None), (10578, 220472.0, None), (10578, 220472.0, None), (10578, 220472.0, None)]
+
+--- Case 2: MAATE-RA-2024-519793 (ware_id 10568) in STG ---
+Result: [(10568, None, 449186.0), (10568, None, 449186.0), (10568, None, 449186.0), (10568, None, 449186.0), (10568, None, 449186.0)]
+
+--- stg_rgd_project_mapping Check ---
+Mapping: [(10568, 449186.0, None, None), (10578, None, 220472.0, 'digitalizacion')]

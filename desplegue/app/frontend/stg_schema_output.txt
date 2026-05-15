@@ -1,0 +1,11 @@
+--- Schema for stg.stg_chemical_sustances_records ---
+                     column_name                    data_type
+0                        chsr_id                       bigint
+1                        prco_id             double precision
+2  chsr_identification_rep_legal                         text
+3            chsr_name_rep_legal                         text
+4    chsr_substance_registration                         text
+5                      chsr_code                         text
+6               chsr_valid_since  timestamp without time zone
+7               chsr_valid_until  timestamp without time zone
+8                    chsr_status                      boolean

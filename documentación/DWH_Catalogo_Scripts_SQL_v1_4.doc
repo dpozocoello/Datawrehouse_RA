@@ -1,0 +1,108 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+    <meta charset="utf-8">
+    <title>Catálogo Maestro de Scripts SQL v1.4</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>100</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+        @page { size: 8.5in 11in; margin: 1.0in 1.0in 1.0in 1.0in; }
+        body { font-family: 'Calibri', 'Arial', sans-serif; font-size: 11pt; line-height: 1.5; color: #333; }
+        h1 { color: #2e75b5; font-size: 26pt; border-bottom: 2pt solid #2e75b5; margin-bottom: 20pt; text-align: center; }
+        h2 { color: #2e75b5; font-size: 18pt; border-bottom: 1pt solid #dee2e6; margin-top: 30pt; margin-bottom: 15pt; }
+        h3 { color: #2e75b5; font-size: 14pt; margin-top: 20pt; font-weight: bold; }
+        p, li { margin-bottom: 10pt; text-align: justify; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20pt; font-size: 10pt; }
+        th, td { border: 1pt solid #dee2e6; padding: 8pt; text-align: left; }
+        th { background-color: #f1f3f4; font-weight: bold; color: #2e75b5; }
+        code { background-color: #f8f9fa; border: 0.5pt solid #c0c0c0; color: #a31515; font-family: 'Consolas', monospace; padding: 5pt; display: block; margin: 10pt 0; }
+        .footer { margin-top: 50pt; font-size: 9pt; color: #7f8c8d; text-align: right; border-top: 0.5pt solid #bdc3c7; padding-top: 10pt; }
+    </style>
+</head>
+<body>
+
+    <h1>Catálogo Maestro de Scripts SQL: DWH RA (v1.4)</h1>
+    <p style="text-align: center;"><b>Referencia Maestra de Trazabilidad: Sistemas Origen, Lógica y Almacenamiento</b></p>
+
+    <br>
+
+    <h2>1. Resumen de Gobernanza de los Procesos SQL</h2>
+    <p>Este catálogo detalla la lógica técnica de cada componente SQL del ecosistema. Todos los procesos están diseñados para ejecutarse en el motor <b>PostgreSQL 16+</b> mediante la orquestación de Pentaho.</p>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Componente SQL</th>
+                <th>Función Operativa</th>
+                <th>Tabla de Destino</th>
+                <th>Origen Primario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>setup_reference_data_v1_4.sql</td><td>Integridad Geográfica (SK=0)</td><td>ref.inec_dpa_2024</td><td>Local (Inyectado)</td></tr>
+            <tr><td>dw.sp_consolidar_staging()</td><td>Unificación de fuentes</td><td>stg.consolidado_proyectos</td><td>Multiorigen (9 fuentes)</td></tr>
+            <tr><td>dw.sp_carga_dim_area()</td><td>Normalización Experta v1.4</td><td>dw.dim_area</td><td>SUIA Areas / INEC</td></tr>
+            <tr><td>dw.sp_carga_hechos()</td><td>Consolidación Regularización</td><td>dw.fact_regularizacion</td><td>Consolidado Staging</td></tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h2>2. Detalle de los Procesos de Extracción (ETL)</h2>
+
+    <h3>2.1. Procedimiento dw.sp_consolidar_staging()</h3>
+    <p><b>Descripción:</b> Unifica el esquema dispar de múltiples orígenes remotos en una tabla plana centralizada de staging para el Data Warehouse.</p>
+    <ul>
+        <li><b>Orígenes Transaccionales:</b> coa_mae.tmp_rcoa_bi, suia_iii.tmp_coa_bi, public.vm_sector_subsector_bi, etc.</li>
+        <li><b>Destino Local:</b> stg.consolidado_proyectos</li>
+        <li><b>Procedimiento Técnico:</b> Ejecuta el mapeo de campos heterogéneos y asigna un "origen" constante para permitir la trazabilidad forense de cada fila procesada.</li>
+    </ul>
+
+    <br>
+
+    <h2>3. Procedimientos de Integridad y Normalización</h2>
+
+    <h3>3.1. sp_carga_dim_area() - Motor Experto</h3>
+    <p><b>Descripción:</b> Este procedimiento es el corazón de la inteligencia de ubicación política. Aplica un motor de inferencia de 75 reglas manuales para registros sin geografía.</p>
+    <code>
+        -- Ejemplo de inferencia v1.4<br>
+        WHEN area_id = 1120 THEN 'NAPO' -- OFICINA T&Eacute;CNICA TENA<br>
+        WHEN area_id = 1081 THEN 'ESMERALDAS' -- DIRECCI&Oacute;N ZONAL 2
+    </code>
+
+    <h3>3.2. setup_reference_data_v1_4.sql - El Protector de SK=0</h3>
+    <p><b>Descripción:</b> Garantiza que no existan huérfanos en las llaves foráneas. Inserta por defecto el registro maestro "No Definido" en todas las dimensiones antes de iniciar la carga de los hechos.</p>
+
+    <br>
+
+    <h2>4. Directorio de Fuentes de Datos (Metadata)</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sistema</th>
+                <th>IP Servidor Origen</th>
+                <th>Base de Datos</th>
+                <th>Objeto / Schema</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>SUIA Core</td><td>172.16.0.179</td><td>suia_enlisy</td><td>coa_mae / suia_iii</td></tr>
+            <tr><td>JBPM DB</td><td>172.16.0.226</td><td>jbpmdb</td><td>online_payment</td></tr>
+            <tr><td>JBPM Antiguo</td><td>172.16.0.226</td><td>jbpmdb_prod_old</td><td>public</td></tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p><b>Ingeniería de Datos & Auditoría:</b> Antigravity AI Engineering</p>
+        <p><b>Fecha:</b> 2026-03-10</p>
+        <p><b>Versión:</b> 1.4 (Final Catalogue SQL Documentation)</p>
+    </div>
+
+</body>
+</html>

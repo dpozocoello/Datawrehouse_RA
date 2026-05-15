@@ -1,0 +1,259 @@
+erDiagram
+    accounts_mae {
+        string PK "acma_id"
+        int columns "3"
+    }
+    activities {
+        string PK "acti_id"
+        int columns "5"
+    }
+    activities_licensing {
+        string PK "acli_id"
+        int columns "9"
+    }
+    activity_mining {
+        string PK "acmi_id"
+        int columns "8"
+    }
+    activity_type_catalog {
+        string PK "actc_id"
+        int columns "4"
+    }
+    affected_infrastructures {
+        string PK "afin_id"
+        int columns "11"
+    }
+    air_qualities {
+        string PK "aiqu_id"
+        int columns "14"
+    }
+    alternatives {
+        string PK "alte_id"
+        int columns "12"
+    }
+    analysis_results {
+        string PK "anre_id"
+        int columns "7"
+    }
+    annexes_catalog {
+        string PK "anca_id"
+        int columns "5"
+    }
+    approval_status_tdr_catalog {
+        string PK "astc_id"
+        int columns "6"
+    }
+    approval_technical_requirements {
+        string PK "apte_id"
+        int columns "26"
+    }
+    approval_technical_requirements_modality {
+        string PK "atrm_id"
+        int columns "4"
+    }
+    artisanals_miner {
+        string PK "armi_id"
+        int columns "7"
+    }
+    authorized_areas_catalog {
+        string PK "arca_id"
+        int columns "11"
+    }
+    biota_formulas_eia {
+        string PK "bifo_id"
+        int columns "10"
+    }
+    biota_justification_eia {
+        string PK "biju_id"
+        int columns "5"
+    }
+    biotic_environment {
+        string PK "bien_id"
+        int columns "9"
+    }
+    biotic_environments {
+        string PK "bien_id"
+        int columns "10"
+    }
+    blocks {
+        string PK "bloc_id"
+        int columns "4"
+    }
+    book_red_catalog {
+        string PK "borc_id"
+        int columns "4"
+    }
+    building_material_types {
+        string PK "bmty_id"
+        int columns "4"
+    }
+    categories {
+        string PK "cate_id"
+        int columns "5"
+    }
+    categories_catalog {
+        string PK "caca_id"
+        int columns "14"
+    }
+    categories_catalog_agreements {
+        string PK "ccag_id"
+        int columns "5"
+    }
+    categories_catalog_phases {
+        string PK "cacp_id"
+        int columns "4"
+    }
+    categories_catalog_public {
+        string PK "cacp_id"
+        int columns "7"
+    }
+    categories_catalogs_facilitators_rules {
+        string PK "ccfr_id"
+        int columns "10"
+    }
+    categories_catalog_system {
+        string PK "cacs_id"
+        int columns "29"
+    }
+    categories_flows {
+        string PK "cafl_id"
+        int columns "5"
+    }
+    categories_layers {
+        string PK "cala_id"
+        int columns "3"
+    }
+    categories_projects_licensing_enviroment {
+        string PK "cate_proy_lice_amb_id"
+        int columns "7"
+    }
+    catii_activities {
+        string PK "caac_id"
+        int columns "10"
+    }
+    catii_activities_schedule {
+        string PK "caas_id"
+        int columns "9"
+    }
+    catii_fapma {
+        string PK "cafa_id"
+        int columns "50"
+    }
+    catii_general_catalog {
+        string PK "cigc_id"
+        int columns "9"
+    }
+    catii_general_catalogs_biotic {
+        string PK "cgcb_id"
+        int columns "12"
+    }
+    catii_general_catalogs_physical {
+        string PK "cgcp_id"
+        int columns "12"
+    }
+    catii_general_catalogs_social {
+        string PK "cgcs_id"
+        int columns "12"
+    }
+    cat_ii_license {
+        string PK "ciil_id"
+        int columns "9"
+    }
+    catii_valued_schedule {
+        string PK "cava_id"
+        int columns "23"
+    }
+    certificados_inmediatos_bpm {
+        string PK "N/A"
+        int columns "20"
+    }
+    certificate_intersection {
+        string PK "cein_id"
+        int columns "14"
+    }
+    certificate_update_history {
+        string PK "ceuh_id"
+        int columns "9"
+    }
+    chemical_sustances {
+        string PK "chsu_id"
+        int columns "4"
+    }
+    clousure_plans {
+        string PK "clpl_id"
+        int columns "14"
+    }
+    clousure_plans_documents {
+        string PK "clpd_id"
+        int columns "5"
+    }
+    commercial_activity_catalog {
+        string PK "coac_id"
+        int columns "5"
+    }
+    comparation_sampling_points_eia {
+        string PK "copo_id"
+        int columns "6"
+    }
+    complainants {
+        string PK "comp_id"
+        int columns "10"
+    }
+    sectors_classifications_phases ||--o{ activities_licensing : "secp_id"
+    environmental_impact_studies ||--o{ activities_licensing : "eist_id"
+    commercial_activity_catalog ||--o{ activity_mining : "coac_id"
+    mining_enviromental_record ||--o{ activity_mining : "mien_id"
+    environmental_impact_studies ||--o{ affected_infrastructures : "eist_id"
+    socioeconomic_types ||--o{ alternatives : "soty_id"
+    implantation_activities ||--o{ alternatives : "imac_id"
+    ecological_system_types ||--o{ alternatives : "esty_id"
+    technical_criteria_types ||--o{ alternatives : "tcty_id"
+    samples ||--o{ analysis_results : "samp_id"
+    parameter_qualities ||--o{ analysis_results : "paqu_id"
+    annexes_catalog ||--o{ annexes_catalog : "anca_parent_id"
+    documents ||--o{ approval_technical_requirements : "docu_id"
+    waste_management_mode ||--o{ approval_technical_requirements_modality : "wmmo_id"
+    approval_technical_requirements ||--o{ approval_technical_requirements_modality : "apte_id"
+    documents ||--o{ artisanals_miner : "docu_rma_id"
+    categories_catalog_system ||--o{ authorized_areas_catalog : "cacs_id"
+    environmental_impact_studies ||--o{ biota_formulas_eia : "eist_id"
+    environmental_impact_studies ||--o{ biota_justification_eia : "eist_id"
+    environmental_impact_studies ||--o{ biotic_environment : "eist_id"
+    tdr_eia_license ||--o{ biotic_environments : "tdel_id"
+    projects_environmental_licensing ||--o{ biotic_environments : "pren_id"
+    phases ||--o{ categories_catalog : "phas_id"
+    categories ||--o{ categories_catalog : "cate_id"
+    phases ||--o{ categories_catalog_phases : "phas_id"
+    categories_catalog_system ||--o{ categories_catalog_phases : "cacs_id"
+    sector_types ||--o{ categories_catalog_public : "sety_id"
+    categories_catalog_public ||--o{ categories_catalog_public : "cacp_parent_id"
+    categories ||--o{ categories_catalog_system : "cate_id"
+    categories_catalog_system ||--o{ categories_catalog_system : "cacs_parent_id"
+    ranks ||--o{ categories_catalog_system : "rank_id"
+    categories_catalog_public ||--o{ categories_catalog_system : "cacp_id"
+    phases ||--o{ categories_catalog_system : "phas_id"
+    categories ||--o{ categories_flows : "cate_id"
+    categories_catalog ||--o{ categories_flows : "cate_id"
+    flows ||--o{ categories_flows : "flow_id"
+    projects_environmental_licensing ||--o{ categories_projects_licensing_enviroment : "pren_id"
+    categories_catalog ||--o{ categories_projects_licensing_enviroment : "caca_id"
+    catii_activities_schedule ||--o{ catii_activities : "caas_id"
+    catii_fapma ||--o{ catii_activities_schedule : "cafa_id"
+    sectors_classifications_phases ||--o{ catii_activities_schedule : "secp_id"
+    projects_environmental_licensing ||--o{ catii_fapma : "pren_id"
+    catii_fapma ||--o{ catii_general_catalog : "cafa_id"
+    catii_fapma ||--o{ catii_general_catalogs_biotic : "cafa_id"
+    catii_fapma ||--o{ catii_general_catalogs_physical : "cafa_id"
+    catii_fapma ||--o{ catii_general_catalogs_social : "cafa_id"
+    projects_environmental_licensing ||--o{ cat_ii_license : "pren_id"
+    catii_fapma ||--o{ catii_valued_schedule : "cafa_id"
+    plan_record_details ||--o{ catii_valued_schedule : "prde_id"
+    mining_enviromental_record ||--o{ catii_valued_schedule : "mien_id"
+    environmental_management_plan_types ||--o{ catii_valued_schedule : "empt_id"
+    projects_environmental_licensing ||--o{ certificate_intersection : "pren_id"
+    projects_environmental_licensing ||--o{ clousure_plans : "pren_id"
+    clousure_plans ||--o{ clousure_plans : "pren_id"
+    documents ||--o{ clousure_plans_documents : "docu_id"
+    clousure_plans ||--o{ clousure_plans_documents : "clpl_id"
+    sectors_classifications_phases ||--o{ commercial_activity_catalog : "secp_id"
+    sampling_points_eia ||--o{ comparation_sampling_points_eia : "copo_sample_b_id"

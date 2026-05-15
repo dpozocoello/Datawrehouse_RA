@@ -1,0 +1,23 @@
+
+### COLUMNS IN suia_iii.hazardous_wastes_waste_dangerous ###
+  hwwd_id (integer)
+  hwwd_status (boolean)
+  wada_id (integer)
+  hwwg_id (integer)
+  hwwl_id (integer)
+  hwge_id (integer)
+
+### COLUMNS IN suia_iii.hazardous_wastes_waste_dangerous_general_data ###
+  hwwg_id (integer)
+  hwwg_status (boolean)
+  hwwg_quantity_tons (double precision)
+  hwwg_quantity_units (double precision)
+  wdca_id (integer)
+  psty_id (integer)
+  hwwg_waste_category_other (character varying)
+
+### COLUMNS IN suia_iii.hazardous_wastes_waste_dangerous_generation_points ###
+  hwwp_id (integer)
+  hwwp_status (boolean)
+  hwwd_id (integer)
+  gepo_id (integer)

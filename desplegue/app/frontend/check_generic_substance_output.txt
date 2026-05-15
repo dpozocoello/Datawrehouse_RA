@@ -1,0 +1,4 @@
+--- Checking for Generic Substance ---
+Empty DataFrame
+Columns: [chemical_key, chemical_id, substance_name, cas_number, classification, chemical_type, effective_from, effective_to, is_current]
+Index: []

@@ -1,0 +1,92 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+    <meta charset="utf-8">
+    <title>Informe de Ejecución DWH v1.4.1</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>101</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+        @page { size: 8.5in 11in; margin: 1.0in 1.0in 1.0in 1.0in; }
+        body { font-family: 'Calibri', font-size: 11pt; line-height: 1.5; color: #333; }
+        h1 { color: #2e75b5; font-size: 26pt; margin-bottom: 20pt; text-align: center; border-bottom: 2pt solid #2e75b5; padding-bottom: 10pt; }
+        h2 { color: #2e75b5; font-size: 18pt; margin-top: 25pt; margin-bottom: 10pt; border-bottom: 1pt solid #bdc3c7; }
+        h3 { color: #2e75b5; font-size: 14pt; margin-top: 15pt; border-left: 5pt solid #2e75b5; padding-left: 10pt; background-color: #f8f9fa; }
+        table { width: 100%; border-collapse: collapse; margin: 15pt 0; }
+        th, td { border: 1pt solid #dee2e6; padding: 10pt; text-align: left; }
+        th { background-color: #f2f2f2; font-weight: bold; color: #2e75b5; }
+        p, li { text-align: justify; margin-bottom: 10pt; }
+        .footer { margin-top: 60pt; font-size: 9pt; color: #7f8c8d; text-align: right; border-top: 1pt solid #bdc3c7; padding-top: 15pt; }
+        .highlight-box { background-color: #e8f0fe; border: 1pt solid #2e75b5; padding: 15pt; margin: 15pt 0; }
+    </style>
+</head>
+<body>
+
+    <h1>Informe de Ejecución de Arquitectura: v1.4.1</h1>
+    <p style="text-align: center;"><b>Módulo de Biodiversidad e Intersecciones Ambientales</b></p>
+
+    <div class="highlight-box">
+        <b>RESUMEN DEL DESPLIEGUE:</b> Se ha ejecutado la reingeniería estructural del Data Warehouse para la captura integral de intersecciones de biodiversidad. Se solventó la omisión histórica de ~113,000 registros de patrimonio forestal y zonas intangibles.
+    </div>
+
+    <h2>1. Servidor de Ejecución y Destino</h2>
+    <p>La implementación se realizó íntegramente en el ecosistema del Data Warehouse local para asegurar la soberanía de los datos maestros.</p>
+    <table border="1">
+        <tr><th width="30%">Servidor</th><td><b>Servidor Local (DWH Central)</b></td></tr>
+        <tr><th>Motor Database</th><td>PostgreSQL 16+</td></tr>
+        <tr><th>Base de Datos Aplicada</th><td><code>Datawarehouse_RA</code></td></tr>
+        <tr><th>Fecha de Aplicación</th><td>2026-03-10 | 16:36 COT</td></tr>
+    </table>
+
+    <br>
+
+    <h2>2. Detalle Técnico de la Ejecución</h2>
+    <p>Se aplicaron los siguientes componentes estructurales y de lógica de negocio:</p>
+
+    <h3>2.1. Objetos de Base de Datos (DDL)</h3>
+    <ul>
+        <li><b>dw.dim_capa_ambiental:</b> Nueva dimensión normalizada para tipos de capas.</li>
+        <li><b>dw.bridge_interseccion_ambiental:</b> Tabla puente habilitada para representar relaciones multimodales por proyecto.</li>
+    </ul>
+
+    <h3>2.2. Componentes de Lógica (Stored Procedures)</h3>
+    <p>Se recompilaron los procedimientos que interactúan con los servidores de origen (RCOA, SUIA) para ampliar la captura de datos:</p>
+    <ul>
+        <li><b>suia_iii.sp_coa_bi():</b> Actualizado para incluir capas 2, 4 y 11.</li>
+        <li><b>coa_mae.sp_rcoa_bi():</b> Actualizado para incluir capas 2, 4 y 11.</li>
+        <li><b>dw.sp_carga_puente_ambiental():</b> Procedimiento de transformación analítica del puente de biodegradación.</li>
+    </ul>
+
+    <br>
+
+    <h2>3. Estado del Ecosistema de Datos</h2>
+    <table border="1">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th>Capa Ambiental Atendida</th>
+                <th>Estado v1.4.0 (Anterior)</th>
+                <th>Estado v1.4.1 (Actual)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><b>SNAP (Áreas Protegidas)</b></td><td>Soportado</td><td><b>Soportado</b></td></tr>
+            <tr><td><b>Zonas Intangibles</b></td><td>Omitido</td><td><b>Soportado e Implementado</b></td></tr>
+            <tr><td><b>Patrimonio Forestal</b></td><td>Omitido</td><td><b>Soportado e Implementado</b></td></tr>
+            <tr><td><b>Bosques Protectores</b></td><td>Omitido</td><td><b>Soportado e Implementado</b></td></tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <div class="footer">
+        <p><b>Ingeniería y Arquitectura:</b> Antigravity AI Data Solutions</p>
+        <p><b>Fecha del Informe:</b> 10 de Marzo de 2026</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+### TABLES IN coa_waste_generator_record ###
+coordinates_coa
+documents_coa_waste_generator_record
+generation_points_coa
+generation_points_waste
+recovery_point_shapes_coa
+recovery_points_coa
+waste_ciuu
+waste_generator_catalog
+waste_generator_record_coa
+waste_generator_record_document
+waste_generator_record_office_pronouncement
+waste_generator_record_project_licencing_coa
+waste_policies_coa
+waste_policies_coa_waste_dangerous
+waste_waste_generation_points
+
+Table other_pronouncement not found or error.

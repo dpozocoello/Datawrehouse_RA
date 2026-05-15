@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ':*)",
+      "Bash(python etl_main.py --verificar)",
+      "Bash(python etl_main.py --desde 1 --hasta 11)",
+      "Bash(python fix_sp_waste_chemical_v2.py)",
+      "Bash(python etl_main.py --desde 26)",
+      "Bash('C:\\\\Program Files\\\\PostgreSQL\\\\17\\\\bin\\\\psql.exe' -h localhost -U postgres -d dw_reg_v1 -c ' *)",
+      "Bash('C:\\\\Program Files\\\\PostgreSQL\\\\17\\\\bin\\\\psql.exe' -h 172.16.0.179 -p 5632 -U postgres -d suia_enlisy -c ' *)",
+      "Bash(\"C:/Python314/python.exe\" -c \"from transformacion.transformacion_all import sp_carga_jerarquia_area; print\\('OK — importación correcta'\\)\")",
+      "Bash(PGPASSWORD=postgres \"C:\\\\Program Files\\\\PostgreSQL\\\\17\\\\bin\\\\psql.exe\" -h localhost -U postgres -d dw_reg_v1 -v ON_ERROR_STOP=1 -f \"D:\\\\Datawrehouse_RA\\\\migrations\\\\script_04_ddl_jerarquia_area.sql\")",
+      "Bash(PGPASSWORD=postgres \"C:\\\\Program Files\\\\PostgreSQL\\\\17\\\\bin\\\\psql.exe\" -h localhost -U postgres -d dw_reg_v1 -v ON_ERROR_STOP=1 -f \"D:\\\\Datawrehouse_RA\\\\migrations\\\\script_05_sp_jerarquia_area.sql\")",
+      "Bash(C:/Python314/python.exe -c ' *)",
+      "Bash(grep -v \"^<name></name>$\")"
+    ]
+  }
+}

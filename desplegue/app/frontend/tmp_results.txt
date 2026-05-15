@@ -1,0 +1,17 @@
+=== RESUMEN POR ORIGEN ===
+  COA             | proy_unicos= 159128 | registros= 390733 | con_fecha= 325753 | sin_fecha=64980 | [2015-05-27 00:00:00 to 2026-03-09 00:00:00]
+  RCOA            | proy_unicos= 135191 | registros= 422841 | con_fecha= 422841 | sin_fecha=    0 | [2020-08-18 00:00:00 to 2026-03-10 00:00:00]
+  JBPM_4CAT       | proy_unicos=  29422 | registros= 220774 | con_fecha= 212431 | sin_fecha= 8343 | [2013-08-18 13:26:20.243 to 2025-10-13 14:50:38.867]
+  JBPM_SECTOR     | proy_unicos=   5437 | registros=  79302 | con_fecha=  79302 | sin_fecha=    0 | [2012-03-09 00:00:00 to 2025-07-01 00:00:00]
+  RECUPERADO      | proy_unicos=    215 | registros=    215 | con_fecha=      0 | sin_fecha=  215 | [None to None]
+  JBPM_HIDRO      | proy_unicos=     51 | registros=   6787 | con_fecha=   6773 | sin_fecha=   14 | [2015-01-13 08:30:12.869 to 2025-06-26 13:47:30.906]
+
+=== MUESTRA RECUPERADO ===
+  MAATE-RA-2024-532154                | proceso=None | tarea=None | fi=None | ff=None
+  MAATE-RA-2025-559691                | proceso=None | tarea=None | fi=None | ff=None
+  MAATE-RA-2024-499891                | proceso=None | tarea=None | fi=None | ff=None
+  MAATE-RA-2025-565356                | proceso=None | tarea=None | fi=None | ff=None
+  MAATE-RA-2024-501591                | proceso=None | tarea=None | fi=None | ff=None
+
+=== Proyectos 'Recuperado (JBPM)' en dim_proyecto (EXCLUIDOS del dashboard): 14215 ===
+=== RECUPERADO con nombre 'Proyecto Recuperado (JBPM)' (ya excluidos): 14215 ===

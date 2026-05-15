@@ -1,0 +1,33 @@
+1. Conectando a la base remota (suia_bpms_enlisy) para obtener proyectos SNAP...
+   -> Encontrados 175158 proyectos ·nicos que intersecan con SNAP.
+
+2. Conectando a la base local (area_stage_saf_suia) para obtener proyectos completados...
+   -> Encontrados 1059639 proyectos en estado 'Completado'.
+
+3. Calculando la intersecci¾n boolean...
+
+4. Exportando matriz a matriz_regularizacion_ambiental_completados_snap.xlsx...
+Traceback (most recent call last):
+  File "D:\Users\javier.pozo\Documents\Ducumentos_PostgreSQL\scripts\otrs_preguntas\generate_snap_boolean_matrix.py", line 100, in <module>
+    generate_matrix()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Users\javier.pozo\Documents\Ducumentos_PostgreSQL\scripts\otrs_preguntas\generate_snap_boolean_matrix.py", line 92, in generate_matrix
+    df_final.to_excel(output_file, index=False, engine='openpyxl')
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\javier.pozo\AppData\Roaming\Python\Python314\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\javier.pozo\AppData\Roaming\Python\Python314\site-packages\pandas\core\generic.py", line 2439, in to_excel
+    formatter.write(
+    ~~~~~~~~~~~~~~~^
+        excel_writer,
+        ^^^^^^^^^^^^^
+    ...<6 lines>...
+        engine_kwargs=engine_kwargs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\javier.pozo\AppData\Roaming\Python\Python314\site-packages\pandas\io\formats\excel.py", line 931, in write
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: This sheet is too large! Your sheet size is: 1059639, 11 Max sheet size is: 1048576, 16384

@@ -1,0 +1,4053 @@
+
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+                h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+                h2 { color: #2980b9; margin-top: 30px; border-bottom: 1px solid #ddd; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+                th { background-color: #f2f2f2; font-weight: bold; }
+                code { background-color: #f8f9fa; color: #e83e8c; padding: 2px 4px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; }
+                pre { background-color: #f8f9fa; padding: 15px; border-left: 5px solid #2980b9; border-radius: 4px; overflow-x: auto; }
+                blockquote { border-left: 5px solid #ccc; margin: 20px 0; padding: 10px 20px; color: #666; font-style: italic; background: #f9f9f9; }
+            </style>
+        </head>
+        <body>
+            <h1 id="diccionario-tecnico-de-datos-dre-regularizacion-ambiental-v16">📖 Diccionario Técnico de Datos: DRE Regularización Ambiental (v1.6)</h1>
+<p>Este documento detalla la estructura técnica exhaustiva de los esquemas <code>dw</code> y <code>stg</code> del Data Warehouse, bajo una arquitectura <strong>Senior</strong> diseñada para integridad forense y escalabilidad multi-nodo.</p>
+<h2 id="1-relacion-de-capas-y-gobernanza">1. Relación de Capas y Gobernanza</h2>
+<ul>
+<li><strong>Esquema <code>stg</code> (Staging/Bronze)</strong>: Capa de aterrizaje volátil. Los datos se limpian y tipifican antes de su promoción.</li>
+<li><strong>Esquema <code>dw</code> (Warehouse/Gold)</strong>: Capa dimensional inmutable (Modelo Estrella). Implementa <strong>Slowly Changing Dimensions (SCD Type 2)</strong> conceptualmente para trazas críticas.</li>
+<li><strong>Estrategia de Nulos</strong>: Se utiliza la técnica de <strong>Surrogate Key Zero (SK=0)</strong> para evitar el filtrado accidental de hechos por falta de dimensiones (Inner Join protection).</li>
+</ul>
+<h3 id="tabla-stgconsolidado_proyectos">Tabla: <code>stg.consolidado_proyectos</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">resumen_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">direccion_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_registro</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_actividad</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">actividad_economica</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ced_ruc_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proponente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_responsable_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_sector</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_permiso_ambiental</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_ente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">provincia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">parroquia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tarea</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tarea</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usuario_tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">intersecta_con</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">areas_protegidas</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sistema</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_zona</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">finalizado_con_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">numero_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_resolucion</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ente_acreditado</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tramite</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_area</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">superficie_proyecto</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estrategico</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgfinancial_transaction_bi">Tabla: <code>stg.financial_transaction_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">fitr_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fitr_transaction_amount</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fitr_paid_value</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fitr_transaction_number</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fitr_payment_type</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">payment_type_desc</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fitr_creation_date</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fitr_status</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">task_name</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">processname</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">processinstanceid</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stggeographical_locations_bi">Tabla: <code>stg.geographical_locations_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">gelo_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">gelo_name</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">gelo_parent_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">gelo_codification_inec</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgjbpm_4cat_bi">Tabla: <code>stg.jbpm_4cat_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">resumen_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">direccion_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_registro</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_actividad</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">actividad_economica</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ced_ruc_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proponente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_responsable_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_sector</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_permiso_ambiental</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_ente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">provincia</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">parroquia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">proceso</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tarea</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usuario_tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">intersecta_con</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">areas_protegidas</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sistema</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ente_acreditado</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tramite</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estrategico</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgjbpm_hidro_bi">Tabla: <code>stg.jbpm_hidro_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">resumen_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">direccion_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_registro</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_actividad</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">actividad_economica</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ced_ruc_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_responsable_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_sector</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_permiso_ambiental</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_ente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">provincia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">parroquia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">proceso</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tarea</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usuario_tarea</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">intersecta_con</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_area</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ente_acreditado</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tramite</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estrategico</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgjbpm_sector_bi">Tabla: <code>stg.jbpm_sector_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">resumen_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">direccion_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_registro</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_actividad</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">actividad_economica</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ced_ruc_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proponente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_responsable_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_sector</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_permiso_ambiental</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_ente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">provincia</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">parroquia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tarea</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usuario_tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">intersecta_con</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">areas_protegidas</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sistema</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ente_acreditado</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tramite</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estrategico</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgjbpm_snap_variables">Tabla: <code>stg.jbpm_snap_variables</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">processinstanceid</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proceso</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgonline_payments_bi">Tabla: <code>stg.online_payments_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">online_payment_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">project_id</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tramit_number</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">convenience_number</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">bank_code</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">payment_value</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_hour_transaction</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">transaction_type</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">transaction_state</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgonline_payments_historical_bi">Tabla: <code>stg.online_payments_historical_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id_online_payment_historical</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">description</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">project_id</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">retired_value</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sender_ip</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tramit_number</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">update_date</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">value_updated</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">online_payment_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">enabled</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_create</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_modification</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_create</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_modification</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">reactivate</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">observations</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">retired_value_1</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgstg_chemical_storage">Tabla: <code>stg.stg_chemical_storage</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">storage_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">storage_type</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">capacity</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">unit</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">location_description</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgstg_chemical_substance">Tabla: <code>stg.stg_chemical_substance</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">chemical_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">substance_name</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">cas_number</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">classification</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">chemical_type</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgstg_dangerous_classification">Tabla: <code>stg.stg_dangerous_classification</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">class_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">danger_level</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">description</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgstg_dangerous_waste">Tabla: <code>stg.stg_dangerous_waste</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">dw_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dangerous_code</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">description</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">regulation_reference</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgstg_fact_chemical_application">Tabla: <code>stg.stg_fact_chemical_application</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">project_id</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">chemical_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_applied</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">storage_id</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">location_id</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dose</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dose_unit</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">application_method</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_covered</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usage_year</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgstg_fact_waste_generation">Tabla: <code>stg.stg_fact_waste_generation</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">project_id</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_generator_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_generated</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_type_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dangerous_waste_id</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">danger_class_id</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">location_id</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">quantity_generated</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">quantity_delivered</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">quantity_stored</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">unit</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">record_year</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgstg_waste_generator">Tabla: <code>stg.stg_waste_generator</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">waste_generator_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">generator_name</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">generator_type</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">province</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_add</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_update</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgstg_waste_type">Tabla: <code>stg.stg_waste_type</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">cawa_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_key_code</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_name</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_status</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgsuia_areas_bi">Tabla: <code>stg.suia_areas_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">area_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_name</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_abbreviation</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_parent_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">zone_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_status</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_campus</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">arty_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">gelo_id</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgsuia_coa_bi">Tabla: <code>stg.suia_coa_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">resumen_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">direccion_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_registro</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_actividad</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">actividad_economica</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ced_ruc_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_responsable_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_sector</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_permiso_ambiental</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_ente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">provincia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">parroquia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">proceso</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proceso</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usuario_tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">intersecta_con</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">areas_protegidas</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sistema</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_zona</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">finalizado_con_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">numero_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_resolucion</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_area</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tramite</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">superficie_proyecto</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-stgsuia_rcoa_bi">Tabla: <code>stg.suia_rcoa_bi</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">resumen_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">direccion_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_registro</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_actividad</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">actividad_economica</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ced_ruc_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_responsable_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_sector</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_permiso_ambiental</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_ente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">provincia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">parroquia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">proceso</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proceso</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usuario_tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">intersecta_con</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">areas_protegidas</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sistema</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_zona</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">finalizado_con_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">numero_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_resolucion</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_area</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tramite</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">superficie_proyecto</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwbridge_interseccion_ambiental">Tabla: <code>dw.bridge_interseccion_ambiental</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_proyecto</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_capa</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">detalle_interseccion</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_actividad">Tabla: <code>dw.dim_actividad</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_actividad</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_actividad</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">actividad_economica</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_area">Tabla: <code>dw.dim_area</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_area</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_area</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_area</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">abreviatura_area</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_area_padre</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">zona</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">campus</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_area</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">provincia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">parroquia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_capa_ambiental">Tabla: <code>dw.dim_capa_ambiental</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_capa</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_layer_origen</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_capa</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">descripcion_capa</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">categoria</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_chemical_storage">Tabla: <code>dw.dim_chemical_storage</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">storage_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">storage_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">storage_type</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">capacity</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">unit</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">location_description</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_chemical_substance">Tabla: <code>dw.dim_chemical_substance</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">chemical_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">chemical_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">substance_name</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">cas_number</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">classification</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">chemical_type</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">effective_from</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">effective_to</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">is_current</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_dangerous_classification">Tabla: <code>dw.dim_dangerous_classification</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">danger_class_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">class_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">danger_level</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">description</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_dangerous_waste">Tabla: <code>dw.dim_dangerous_waste</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">dangerous_waste_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dw_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dangerous_code</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">description</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">regulation_reference</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">is_current</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_estado">Tabla: <code>dw.dim_estado</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_estado</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tramite</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_geografia">Tabla: <code>dw.dim_geografia</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_geografia</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">provincia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">parroquia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_padre</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nivel</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_pago">Tabla: <code>dw.dim_pago</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_pago</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_pago</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">bank_code</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">transaction_type</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sistema_origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_process_flow-v16">Tabla: <code>dw.dim_process_flow</code> (v1.6)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_proceso</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">process_name</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">process_type</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">process_status</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_proponente">Tabla: <code>dw.dim_proponente</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_proponente</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ced_ruc_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proponente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_proyecto">Tabla: <code>dw.dim_proyecto</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_proyecto</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">resumen_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">direccion_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_permiso_ambiental</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_sector</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_ente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sistema</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estrategico</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_responsable</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_tiempo">Tabla: <code>dw.dim_tiempo</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_tiempo</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">anio</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">mes</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dia</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">trimestre</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_mes</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dia_semana</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_usuario">Tabla: <code>dw.dim_usuario</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_usuario</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usuario_tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_waste_generator">Tabla: <code>dw.dim_waste_generator</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">waste_generator_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_generator_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">generator_name</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">generator_type</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ruc_generator</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">[v1.6] RUC del proponente</td>
+</tr>
+<tr>
+<td style="text-align: left;">province</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">effective_from</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">effective_to</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">is_current</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_add</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">date_update</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwdim_waste_type">Tabla: <code>dw.dim_waste_type</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">waste_type_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">cawa_id</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_key_code</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_name</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_status</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwfact_chemical_application">Tabla: <code>dw.fact_chemical_application</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_proyecto</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">chemical_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_tiempo</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">storage_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">geo_location_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dose</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dose_unit</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">application_method</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_covered</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usage_year</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwfact_pago">Tabla: <code>dw.fact_pago</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id_fact_pago</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_proyecto</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_pago</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_fecha_pago</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">monto_transaccion</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">monto_pagado</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">numero_transaccion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">numero_tramite</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tarea_bpm</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">proceso_bpm</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_transaccion_origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">secuencia_pago</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">es_deposito_inicial</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">monto_acumulado</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwfact_payment_traceability-v16">Tabla: <code>dw.fact_payment_traceability</code> (v1.6)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id_trace</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">PK Autoincremental</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_proyecto</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">FK a dim_proyecto</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_pago</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">FK a dim_pago (SK=0 si no existe)</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_tiempo</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">FK a dim_tiempo</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_online_payment_historical</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">ID origen JBPM</td>
+</tr>
+<tr>
+<td style="text-align: left;">retired_value</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">Monto debitado/retirado</td>
+</tr>
+<tr>
+<td style="text-align: left;">value_updated</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">Saldo actualizado</td>
+</tr>
+<tr>
+<td style="text-align: left;">delta_value</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">Variación (retired - updating)</td>
+</tr>
+<tr>
+<td style="text-align: left;">update_date</td>
+<td style="text-align: left;">timestamp</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">Fecha de la trazabilidad</td>
+</tr>
+<tr>
+<td style="text-align: left;">description</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">Observaciones del sistema</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwfact_project_environmental_impact">Tabla: <code>dw.fact_project_environmental_impact</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_proyecto</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_tiempo</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">total_waste_volume</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">total_dangerous_waste_volume</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">total_chemical_dose</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">environmental_risk_score</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwfact_proyecto_geografia">Tabla: <code>dw.fact_proyecto_geografia</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_proyecto</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_geografia</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">es_principal</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwfact_regularizacion">Tabla: <code>dw.fact_regularizacion</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id_fact</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_proyecto</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_proponente</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_actividad</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_geografia</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_usuario</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_estado</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_fecha_registro</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">interseccion_snap</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">areas_protegidas</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">superficie_proyecto</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_area</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tarea</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_zona</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">finalizado_con_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">numero_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_resolucion</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ente_acreditado</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_carga</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_area</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwfact_waste_generation">Tabla: <code>dw.fact_waste_generation</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sk_proyecto</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_generator_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sk_tiempo</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">waste_type_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">dangerous_waste_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">danger_class_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">geo_location_key</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">quantity_generated</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">quantity_delivered</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">quantity_stored</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">unit</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">record_year</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwv_dashboard_regularizacion">Tabla: <code>dw.v_dashboard_regularizacion</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id_fact</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_proyecto</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_permiso_ambiental</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_sector</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo_ente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sistema</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estrategico</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">ced_ruc_proponente</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">nombre_proponente</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">codigo_actividad</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">actividad_economica</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">provincia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">canton</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">parroquia</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">oficina_tecnica</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">zona_administrativa</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">sede_campus</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">usuario_tarea</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proceso</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_proyecto</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">estado_tramite</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_registro</td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">anio_registro</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">mes_registro</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">trimestre_registro</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">interseccion_snap</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">areas_protegidas</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">superficie_proyecto</td>
+<td style="text-align: left;">double precision</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">id_area</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_proceso</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">duracion_proceso_dias</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_inicio_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_fin_tarea</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">duracion_tarea_horas</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">finalizado_con_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">numero_resolucion</td>
+<td style="text-align: left;">character varying</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">fecha_resolucion</td>
+<td style="text-align: left;">timestamp without time zone</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">es_resolucion</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabla-dwv_integridad_dashboard">Tabla: <code>dw.v_integridad_dashboard</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Tipo de Dato</th>
+<th style="text-align: left;">Nulable</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">origen</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">total_produccion</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">total_dwh</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">diferencia</td>
+<td style="text-align: left;">bigint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;">porcentaje_integridad</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+        </body>
+        </html>
+        

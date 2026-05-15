@@ -1,0 +1,6 @@
+ extname 
+---------
+ plpgsql
+ dblink
+(2 rows)
+

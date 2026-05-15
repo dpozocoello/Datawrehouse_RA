@@ -1,0 +1,4 @@
+--- Mapping Statistics for Declarations & Movements ---
+           type  total  with_prco_id
+0  Declarations   2161             1
+1     Movements  14002             1

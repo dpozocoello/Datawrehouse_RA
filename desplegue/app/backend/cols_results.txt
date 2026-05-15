@@ -1,0 +1,5 @@
+Columns in chemical_sustances_records:
+['chsr_id', 'prco_id', 'chsr_identification_rep_legal', 'chsr_name_rep_legal', 'chsr_address_rep_legal', 'chsr_phone_rep_legal', 'chsr_email_rep_legal', 'chsr_technological_change', 'chsr_reduction_substance', 'chsr_application_number', 'chsr_substance_registration', 'chsr_creation_date', 'chsr_creator_user', 'chsr_date_update', 'chsr_user_update', 'chsr_observation_bd', 'geca_id', 'chsr_status', 'chsr_rep_estudent', 'chsr_valid_since', 'chsr_valid_until', 'geca_id_pronouncement', 'chsr_additional_responses', 'chsr_additional_justifications', 'area_id', 'chsr_craft_operator', 'chsr_observation_status', 'chsr_status_date', 'user_id', 'chsr_consumption', 'chsr_status_import_declaration', 'chsr_code']
+
+Potential ID columns:
+['chsr_identification_rep_legal', 'chsr_code']

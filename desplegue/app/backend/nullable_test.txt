@@ -1,0 +1,29 @@
+        column_name        | is_nullable 
+---------------------------+-------------
+ id_fact                   | NO
+ sk_proyecto               | YES
+ sk_proponente             | YES
+ sk_actividad              | YES
+ sk_geografia              | YES
+ sk_usuario                | YES
+ sk_estado                 | YES
+ sk_fecha_registro         | YES
+ interseccion_snap         | YES
+ areas_protegidas          | YES
+ superficie_proyecto       | YES
+ id_area                   | YES
+ fecha_inicio_proceso      | YES
+ fecha_fin_proceso         | YES
+ fecha_inicio_tarea        | YES
+ fecha_fin_tarea           | YES
+ proceso                   | YES
+ tarea                     | YES
+ nombre_zona               | YES
+ finalizado_con_resolucion | YES
+ numero_resolucion         | YES
+ fecha_resolucion          | YES
+ ente_acreditado           | YES
+ origen                    | YES
+ fecha_carga               | YES
+(25 rows)
+

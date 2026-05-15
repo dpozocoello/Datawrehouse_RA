@@ -1,0 +1,14 @@
+====================================================
+COHETRENCIA DE DATOS: COA VS RCOA (DWH Audit)
+====================================================
+Sistema: RCOA (NUEVO)
+  Total Hechos: 571,527
+  Sin Geografía: 20,222 (3.5%)
+  Sin Tipo Desecho: 0
+  Sin Clase Peligrosa: 571,527 (100.0%)
+Sistema: COA (LEGADO)
+  Total Hechos: 356,904
+  Sin Geografía: 5,328 (1.5%)
+  Sin Tipo Desecho: 0
+  Sin Clase Peligrosa: 356,904 (100.0%)
+====================================================

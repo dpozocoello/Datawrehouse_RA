@@ -1,0 +1,145 @@
+{
+    "branding": {
+        "org_name": "Ministerio de Ambiente y Energ\u00eda",
+        "sub_name": "Inteligencia de Regularizaci\u00f3n Ambiental",
+        "version": "v1.01 LTS",
+        "support_email": "javier.pozo@ambienteyenergia.gob.ec",
+        "logo_main": "assets/eco_sieaa/logo_main_trans.png",
+        "logo_gov": "assets/branding/ministerio.png"
+    },
+    "business_rules": {
+        "exclude_recuperado": true,
+        "kpi_target_pct": 90.0,
+        "default_days_back": 365
+    },
+    "tabs": {
+        "tab1": {
+            "label": "Integridad - DWH",
+            "visible": true,
+            "group": "Operaci\u00f3n y Gesti\u00f3n"
+        },
+        "tab2": {
+            "label": "Proyectos seg\u00fan Normativa",
+            "visible": true,
+            "group": "Operaci\u00f3n y Gesti\u00f3n"
+        },
+        "tab3": {
+            "label": "Validador de Proyectos",
+            "visible": true,
+            "group": "Validaciones de Proyectos"
+        },
+        "tab4": {
+            "label": "Proyectos por ubicaci\u00f3n geogr\u00e1fica",
+            "visible": true,
+            "group": "Operaci\u00f3n y Gesti\u00f3n"
+        },
+        "tab5": {
+            "label": "Control de pagos",
+            "visible": true,
+            "group": "Validaciones de Proyectos"
+        },
+        "tab6": {
+            "label": "Gesti\u00f3n realizada por el proyecto",
+            "visible": true,
+            "group": "Validaciones de Proyectos"
+        },
+        "tab7": {
+            "label": "Superposici\u00f3n / Intersecci\u00f3n ambiental",
+            "visible": true,
+            "group": "Superposici\u00f3n Geogr\u00e1fica"
+        },
+        "tab7_1": {
+            "label": "Mapa Interactivo de Intersecci\u00f3n",
+            "visible": true,
+            "group": "Superposici\u00f3n Geogr\u00e1fica"
+        },
+        "tab8": {
+            "label": "Geopol\u00edtica mapas de intersecci\u00f3n",
+            "visible": true,
+            "group": "Superposici\u00f3n Geogr\u00e1fica"
+        },
+        "tab9": {
+            "label": "Registro Gestor de Desechos",
+            "visible": false,
+            "group": "Operaci\u00f3n y Gesti\u00f3n"
+        },
+        "tab10": {
+            "label": "Registro de Sustancias Qu\u00edmicas",
+            "visible": false,
+            "group": "Operaci\u00f3n y Gesti\u00f3n"
+        },
+        "tab11": {
+            "label": "Reportes Regularizaci\u00f3n",
+            "visible": true,
+            "group": "Operaci\u00f3n y Gesti\u00f3n"
+        }
+    },
+    "role_permissions": {
+        "ADMIN": [
+            "tab1",
+            "tab2",
+            "tab3",
+            "tab4",
+            "tab5",
+            "tab6",
+            "tab7",
+            "tab7_1",
+            "tab8",
+            "tab9",
+            "tab10",
+            "tab11",
+            "admin"
+        ],
+        "GERENCIA": [
+            "tab2",
+            "tab4",
+            "tab3",
+            "tab5",
+            "tab6",
+            "tab7",
+            "tab7_1",
+            "tab8",
+            "tab11"
+        ],
+        "MESA_AYUDA": [
+            "tab3",
+            "tab5",
+            "tab6",
+            "tab7",
+            "tab7_1",
+            "tab8",
+            "tab11"
+        ],
+        "DESARROLLADOR": [
+            "tab2",
+            "tab3",
+            "tab4",
+            "tab5",
+            "tab6",
+            "tab7",
+            "tab7_1",
+            "tab8",
+            "tab9",
+            "tab10",
+            "tab11",
+            "admin"
+        ],
+        "QA": [
+            "tab2",
+            "tab4",
+            "tab3",
+            "tab5",
+            "tab6",
+            "tab7",
+            "tab7_1",
+            "tab8",
+            "tab11"
+        ]
+    },
+    "field_labels": {
+        "total_generado": "Total Generado (kg)",
+        "total_entregado": "Total Entregado (kg)",
+        "codigo_proyecto": "C\u00f3digo del Proyecto",
+        "nombre_proyecto": "Nombre del Proyecto"
+    }
+}

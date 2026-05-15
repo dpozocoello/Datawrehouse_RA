@@ -1,0 +1,24 @@
+--- Sampling chsr_code from chemical_sustances_records ---
+             chsr_code  prco_id
+0  MAATE-RSQ-2023-0006   111220
+1  MAATE-RSQ-2024-0002   468702
+2  MAATE-RSQ-2025-0001   496474
+3  MAATE-RSQ-2024-0001   462055
+4  MAATE-RSQ-2023-0005   407453
+5   MAAE-RSQ-2022-0001    67988
+6    MAE-RSQ-2026-0001   139788
+
+Matching chsr_code to coa_mae.project_licencing_coa (prco_cua):
+Empty DataFrame
+Columns: [prco_id, prco_cua]
+Index: []
+
+--- Sampling coa_chemical_sustances.technical_analysis ---
+   tean_id  retr_id  losu_id  ...  caty_id tean_enabled tean_observation
+0        2       24       10  ...        7         True             None
+1        4       24       10  ...        7         True             None
+2        5       24       10  ...        7         True             None
+3        6       24       10  ...        7         True             None
+4        7       24       10  ...        7         True             None
+
+[5 rows x 16 columns]

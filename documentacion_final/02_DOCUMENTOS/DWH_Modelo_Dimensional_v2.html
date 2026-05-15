@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modelo Dimensional DWH RA - v2.1</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; }
+        h1, h2, h3 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+        th, td { border: 1px solid #bdc3c7; padding: 10px; text-align: left; }
+        th { background-color: #ecf0f1; }
+        .change-control { background-color: #f9f9f9; padding: 10px; border-left: 5px solid #27ae60; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Modelo Dimensional y Diccionario de Datos DWH RA</h1>
+    
+    <div class="change-control">
+        <h3>Control de Cambios</h3>
+        <table>
+            <tr><th>Fecha</th><th>Versión</th><th>Autor</th><th>Resumen de Cambios</th></tr>
+            <tr><td>13/05/2026</td><td>2.1.0</td><td>Antigravity (Equipo DWH)</td><td>Inclusión de <code>dim_punto_generacion</code> y modificación de PK compuesta en <code>fact_waste_generation</code>.</td></tr>
+        </table>
+    </div>
+
+    <h2>1. Modelo de Datos (Diagrama Entidad-Relación)</h2>
+    <p>La estructura analítica del RGD sigue un modelo de estrella clásico, pero con una restricción de unicidad estricta para evitar la duplicación de hechos por punto de generación y tipo de desecho.</p>
+    
+    <p><em>(Diagrama Mermaid)</em></p>
+    <pre>
+erDiagram
+    fact_waste_generation {
+        int sk_proyecto FK
+        bigint waste_generator_key FK
+        bigint punto_generacion_key FK
+        int sk_tiempo FK
+        int waste_type_key FK
+        numeric quantity_generated
+    }
+    dim_waste_generator {
+        bigint waste_generator_key PK
+        string generator_name
+        string ruc_generator
+        string codigo
+    }
+    dim_punto_generacion {
+        bigint punto_generacion_key PK
+        string point_name
+        numeric x_coordinate
+        numeric y_coordinate
+        string province
+        string canton
+    }
+    dim_waste_type {
+        int waste_type_key PK
+        string waste_name
+    }
+    
+    dim_waste_generator ||--o{ fact_waste_generation : "Genera"
+    dim_punto_generacion ||--o{ fact_waste_generation : "Ubicado en"
+    dim_waste_type ||--o{ fact_waste_generation : "Tipo"
+    </pre>
+
+    <h2>2. Diccionario de Datos: fact_waste_generation</h2>
+    <table>
+        <tr><th>Campo Físico</th><th>Tipo de Dato</th><th>Regla de Negocio / Transformación</th></tr>
+        <tr><td><code>sk_proyecto</code></td><td>INT</td><td>Llave técnica del dominio (SUIA=1, COA=2).</td></tr>
+        <tr><td><code>waste_generator_key</code></td><td>BIGINT</td><td>Establecimiento matriz. Se asegura compatibilidad de tipo mediante <code>::bigint</code>.</td></tr>
+        <tr><td><code>punto_generacion_key</code></td><td>BIGINT</td><td>(Nuevo v2.1) Punto geográfico. Si no existe en la fuente, se asume 0 (N/A).</td></tr>
+        <tr><td><code>quantity_generated</code></td><td>NUMERIC(18,4)</td><td>Métrica base. Cast forzado <code>::numeric</code> para evitar DatatypeMismatch.</td></tr>
+    </table>
+
+    <h2>3. Llave Compuesta y Unicidad (SCD)</h2>
+    <p>En la versión 2.1, se eliminó la restricción <code>unique_waste_generation</code> obsoleta y se implementó una nueva llave única compuesta por:</p>
+    <ul>
+        <li><code>sk_proyecto</code></li>
+        <li><code>waste_generator_key</code></li>
+        <li><code>sk_tiempo</code></li>
+        <li><code>waste_type_key</code></li>
+        <li><strong><code>punto_generacion_key</code></strong> (El factor diferenciador para múltiples puntos en un solo cantón).</li>
+    </ul>
+    <p>La inserción utiliza <code>ON CONFLICT (...) DO UPDATE</code> (Type 1 SCD) para asegurar que una re-ejecución del ETL actualice las métricas en lugar de duplicarlas.</p>
+
+</body>
+</html>

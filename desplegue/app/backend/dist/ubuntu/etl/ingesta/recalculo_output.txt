@@ -1,0 +1,2 @@
+Recalculo exitoso: UPDATE 66879
+Pagos JBPM con monto validado: 66561

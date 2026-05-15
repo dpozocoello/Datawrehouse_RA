@@ -1,0 +1,189 @@
+# Data Warehouse Architecture Assessment & Proposed Dimensional Model
+
+## 1. Resumen Ejecutivo
+El presente documento contiene el análisis arquitectónico, estructural y funcional de la vista SQL [vista_regularizacion.sql](file:///F:/Datawrehouse_RA/vista_regularizacion.sql) (`bi_dashboard.vm_unificado_sistemas_bi`). Actualmente, la estrategia de consolidación de datos se sustenta en una **Arquitectura Híbrida/ODS (Operational Data Store)**, la cual consolida información transaccional proveniente de cuatro fuentes distintas en tiempo de ejecución o refresco mediante el uso de `dblink`.
+
+El nivel de madurez actual del Data Warehouse se clasifica como **Inicial/Repetible**, debido a la fuerte dependencia operativa, acoplamiento inter-servidor mediante dblinks, la ausencia de claves sustitutas (surrogate keys), carencia de historificación estructurada (SCD) y la falta de un modelo dimensional robusto. 
+
+La meta de este documento es trazar la ruta hacia un **Data Mart Dimensional Corporativo (Enfoque Ralph Kimball)**, garantizando un esquema escalable, optimizado para consultas analíticas y desacoplado del entorno operacional OLTP.
+
+---
+
+## 2. Análisis Técnico Detallado (Arquitectura As-Is)
+
+### 2.1 Conexiones a Servidores y Bases de Datos
+Se han detectado las siguientes conexiones cruzadas entre bases de datos:
+1. **Servidor A (Host: 172.16.0.179, Puerto: 5632)**
+   - Base de Datos: `suia_enlisy`
+   - Esquemas: `suia_iii`, `coa_mae`
+2. **Servidor B (Host: 172.16.0.226, Puerto: 5432)**
+   - Base de Datos: `jbpmdb_prod_old`
+   - Esquema: `public`
+3. **Servidor C (Host: 172.16.0.226, Puerto: 5432)**
+   - Base de Datos: `jbpmdb`
+   - Esquema: `public`
+4. **Local (Target)**
+   - Esquema: `bi_dashboard`
+
+### 2.2 Inventario de Objetos y Dependencias
+| Origen / Local | Objeto | Tipo | Uso en la Vista |
+| --- | --- | --- | --- |
+| Local | `r_perorga` | Tabla | JOIN para traer datos descriptivos del Usuario y Proponente por Cédula/RUC. |
+| 172.16.0.179 | `suia_iii.tmp_coa_bi` | Tabla/Vista (Temp) | Extracción de proyectos de Sistema COA. |
+| 172.16.0.179 | `coa_mae.tmp_rcoa_bi` | Tabla/Vista (Temp) | Extracción de proyectos + lógica agregada (joins internos) para estudios/registros. |
+| 172.16.0.226 (`jbpmdb_prod_old`) | `public.vm_sector_subsector_bi` | Vista | Datos históricos JBPM. |
+| 172.16.0.226 (`jbpmdb`) | `public.vm_cuatro_categorias_bi` | Vista | Datos de categorías JBPM. |
+| 172.16.0.226 (`jbpmdb`) | `public.vwt_hidrocarbonos_bi` | Vista | Datos de Licencias de Hidrocarburos. |
+
+### 2.3 Reglas de Negocio Implícitas Detectadas
+- Se calculan el tiempo de los trámites: `dias_laborable("FECHA INICIO PROCESO", "FECHA FIN PROCESO")`.
+- **Clasificación del Estado del Trámite**: Múltiples lógicas basadas en `ESTADO PROYECTO`, tipo de permiso (Licencia vs Registro), año de registro (ej. >= 2021-10-12) y sector económico (Minería, Hidrocarburos) derivan en "FINALIZADO NO FAVORABLE", "FINALIZADO EXITO", "PROCESO FISICO", o "EN TRÁMITE HASTA LLEGAR A PROCESO FÍSICO".
+- Limpieza/Homologación "Dummy": Algunos orígenes no tienen todas las columnas, por lo que se inyectan strings vacíos `''`, `0`, o `'NA'` para garantizar la compatibilidad del `UNION ALL`.
+
+### 2.4 Naturaleza de la Vista Actual
+La vista [vista_regularizacion.sql](file:///F:/Datawrehouse_RA/vista_regularizacion.sql):
+- **NO** es una capa semántica de Data Warehouse (no usa Surrogate Keys ni dimensiones conformadas).
+- **ES una consolidación operacional (ODS/Reporting View)** utilizada directamente como sabana plana (Flat Table) para tableros de Business Intelligence (BI).
+- **ES parte de un proceso pseudo-ETL**: Mezcla la Extracción, Transformación (Homologación de nombres y casuísticas) y Carga en un solo paso vía Materialized View, exponiendo graves cuellos de botella de red.
+
+---
+
+## 3. Inconsistencias Estructurales Actuales
+
+1. **Acoplamiento Fuerte por dblink**: Cargar datos mediante `UNION ALL` usando dblinks transfiere millones de registros por la red de manera ineficiente antes de poder cruzarlos. La vista se quiebra si un servidor externo falla o tiene latencia.
+2. **Dependencia de Llaves Naturales**: Los JOIN locales con `r_perorga` se ejecutan lanzando strings a campos de texto (`y."USUARIO TAREA" = z."CEDULA/RUC"::text`). Un cambio en cédula romperá la integridad.
+3. **Falta de 1FN y 2FN (Anomalías)**: La materialized view es un gran sabana plana. Datos del proponente, ubicaciones, y estados se repiten masivamente por cada fila del trámite (Redundancia extrema).
+4. **Ausencia de Auditoría y Linaje**: No se cuenta con trazabilidad sobre los cambios a lo largo del tiempo de un trámite en particular.
+
+---
+
+## 4. Propuesta de Arquitectura Objetivo (To-Be)
+
+Aplicaremos los principios de **Ralph Kimball (Bottom-Up Data Mart)** para este requerimiento.
+
+* **Topología:** Modelo en Estrella (Star Schema).
+* **Granularidad:** A nivel de "Tarea Individual por Trámite/Proyecto" (Fact Tarea) y un acumulado o estado final a nivel de "Proyecto" (Fact Proyecto Consolidado).
+* **Surrogate Keys:** Enteros autoincrementables (SK) como PK temporal e independiente para evitar la variación de la llave natural operacional.
+* **Manejo de Dimensión Histórica:** Slowly Changing Dimensions (SCD Tipo 2) para el `Proponente` (si cambian su dirección o datos de empresa), reteniendo el tracking histórico en los hechos.
+
+### 4.1. Diagrama de Entidad Relación Lógico (Textual)
+
+**[ TABLAS DIMENSIONALES (Descriptivas) ]**
+- `dim_tiempo`: SK_Tiempo, Fecha_ID, Año, Mes, Trimestre, Dia_Semana, Es_Laborable.
+- `dim_geografia`: SK_Geografia, Provincia, Canton, Parroquia.
+- `dim_proponente` (SCD TIPO 2): SK_Proponente, Cedula_Ruc, Nombre, Direccion, Telefono, Correo, Tipo_Organizacion, Valid_From, Valid_To, Is_Current.
+- `dim_usuario` (SCD TIPO 1): SK_Usuario, Cedula_Ruc, Nombres, Direccion, Telefono, Correo, Rol.
+- `dim_estado_tramite`: SK_EstadoTramite, Estado_Proyecto, Finalizado_Con_Resolucion, Estado_Calculado.
+- `dim_sistema_origen`: SK_Sistema, Nombre_Sistema, Area_Responsable, Tipo_Sector, Tipo_Ente.
+- `dim_proceso`: SK_Proceso, Tipo_Permiso_Ambiental, Actividad_Economica, Codigo_Actividad, Proceso, Intersecta_Con.
+
+**[ TABLAS DE HECHOS (Mediciones) ]**
+- `fact_tramites_ambientales`: 
+  - *Foreign Keys:* SK_Tiempo_Registro, SK_Tiempo_Inicio, SK_Tiempo_Fin, SK_Geografia, SK_Proponente, SK_Usuario, SK_EstadoTramite, SK_Sistema, SK_Proceso.
+  - *Claves Degradadas:* Codigo_Proyecto (Numero Ticket OTRS/Expediente).
+  - *Metricas:* Superficie_Proyecto, Dias_Transcurridos (Calculado por motor pre-grabado), Cantidad_Tramites (Constante 1).
+
+---
+
+## 5. Diccionario de Datos (Propuesto Core Muestra)
+
+| Tabla Física | Campo | Tipo de Dato | Descripción Funcional | Origen (As-Is) |
+| --- | --- | --- | --- | --- |
+| `fact_tramites` | sk_proponente | INT | Clave sustituta del proponente en la fecha de la transacción | `CED/RUC PROPONENTE` (vía Dimensión) |
+| `fact_tramites` | sk_tiempo_registro | INT | Identificador de fecha (YYYYMMDD) del inicio del trámite | `FECHA REGISTRO` |
+| `fact_tramites` | dias_transcurridos | INT | Cálculo de días laborables netos, excluyendo fds/festivos. | `dias_laborable(inicio, fin)` |
+| `dim_proponente`| is_current | BOOLEAN | Control de SCD T2. Determina la validez del estado actual del Propietario. | Agregado en el proceso ETL. |
+| `dim_proceso` | tipo_permiso | VARCHAR | Categoría: Licencia Ambiental, Registro, etc. | `TIPO PERMISO AMBIENTAL` |
+
+---
+
+## 6. Matriz de Calidad de Datos (Reglas a Implementar en el ETL)
+
+| Dimensión de Calidad | Criterio de Falla a Validar | Acción de Curación de Datos (ETL) |
+| --- | --- | --- |
+| **Completitud** | Proponente sin Cédula/RUC o Usuario sin código. | Asignar al registro "SK_Desconocido" (-1) de la Dimensión asociada. |
+| **Consistencia** | Fechas de fin menor a fecha de inicio. | Insertar en tabla de Auditoría (Reject Record), reportar inconsistencia operacional. |
+| **Integridad Referencial** | JOIN con `r_perorga` no resulta en hit. | Crear un Dummy Record tipo "USUARIO NO REGISTRADO" en la Dimensión y enlazar Fact. |
+| **Exactitud** | TRAMITES "PROCESO FÍSICO" sin número de estudio > 0 | Aplicar la regla y validar con un script Python en Airflow antes de cargarlo al DW. |
+
+---
+
+## 7. Matriz de Riesgos de la Arquitectura Actual
+
+| ID | Riesgo Identificado | Impacto (1-5) | Probabilidad (1-5) | Mitigación Propuesta |
+|:---|:---|:---:|:---:|:---|
+| R1 | Caída de nodos `dblink` frena actualización total | 5 | 4 | Cambiar arquitectura a pipelines asincrónicos ETL/ELT con Apache Airflow / Pentaho PDI. |
+| R2 | Deterioro de Rendimiento `r_perorga` Full Scan | 4 | 5 | Incorporar índices a los campos de unión (`CEDULA/RUC`) o precargar dimensiones vía SKs intager. |
+| R3 | Tipos Inconsistentes Rompen UNION ALL | 4 | 3 | Desacoplar Staging Area de Capa Dimensión. Todo dato se ingresa crudo, luego se valida tipo. |
+
+---
+
+## 8. Análisis de Rendimiento y Recomendaciones
+
+### 8.1 Evaluacion Actual (As-Is)
+- **Cuello de Botella:** La vista exige a PostgreSQL realizar cruces (JOIN/UNION) sobre la red TCP (Latencia alta) antes del filtro de la vista. Además, la función `dias_laborable` ejecutada *Row-By-Row* generará penalidad de CPU.
+- **Índices Existentes:** Solamente se evidencia un índice Btree `vm_unificado_sistemas_bi_código_proyecto_idx` en la vista materializada.
+
+### 8.2 Estrategia de Historificación y Particionamiento
+1. **Rediseño del Flujo (ETL vs ELT):**
+   - Extraer tablas base desde los servidores de SUIA y JBPM hacia un esquema transitorio local llamado `stg_bi` (Staging). (Extraer completo 1 vez, y luego vía deltas o ventanas móviles usando CDC o incremental datetime).
+2. **Particionamiento PostgreSQL de Hechos:**
+   - La `fact_tramites_ambientales` debe tener particionamiento declarativo por Rango **(Range Partitioning por Mes o Año de `FECHA REGISTRO`)**.
+   - Reducirá masivamente los tiempos del query para dashboards que miren "el último año".
+3. **Optimización de Consultas:**
+   - Pre-calcular `DIAS TRANSCURRIDOS` dentro del proceso de ETL de lote nocturno, guardándolo como métrica entera, evitando la ejecución de la función pl/sql repetitiva al vuelo en el dashboard.
+
+---
+
+## 9. Código SQL Sugerido: Modelo Físico Dimensional Mínimo
+
+```sql
+-- 1. Dimensión Tiempo
+CREATE TABLE dw.dim_tiempo (
+    sk_tiempo INT PRIMARY KEY, -- Formato 20240101
+    fecha DATE NOT NULL,
+    anio SMALLINT,
+    mes SMALLINT,
+    nombre_mes VARCHAR(20),
+    dia_semana SMALLINT,
+    es_laborable BOOLEAN
+);
+
+-- 2. Dimensión Proponente (SCD 2)
+CREATE TABLE dw.dim_proponente (
+    sk_proponente SERIAL PRIMARY KEY,
+    cedula_ruc VARCHAR(20) NOT NULL,
+    nombre_proponente VARCHAR(255),
+    tipo_organizacion VARCHAR(100),
+    valido_desde TIMESTAMP NOT NULL,
+    valido_hasta TIMESTAMP DEFAULT '9999-12-31',
+    es_actual BOOLEAN DEFAULT TRUE
+);
+CREATE INDEX idx_dim_prop_cedula ON dw.dim_proponente(cedula_ruc);
+
+-- 3. Tabla de Hechos
+CREATE TABLE dw.fact_tramite (
+    sk_fact BIGSERIAL,
+    sk_tiempo_registro INT REFERENCES dw.dim_tiempo(sk_tiempo),
+    sk_proponente INT REFERENCES dw.dim_proponente(sk_proponente),
+    -- [Otras SK...]
+    codigo_proyecto VARCHAR(255) NOT NULL,
+    superficie FLOAT,
+    dias_transcurridos INT,
+    estado_tramite VARCHAR(150),
+    PRIMARY KEY(sk_fact, sk_tiempo_registro)
+) PARTITION BY RANGE (sk_tiempo_registro);
+-- ... Creación de particiones anuales/mensuales... --
+```
+
+---
+
+## 10. Roadmap de Implementación Sugerido (Fases)
+
+| Fase | Tarea | Tiempo Estimado | Complejidad |
+| --- | --- | --- | --- |
+| **Fase 1: Capa de Ingesta (Staging)** | Eliminar `dblink` transaccionales de la vista. Crear Jobs de Pentaho o Python para volcar la data cruda a esquema `stg_bi`. | 1 - 2 Semanas | Media |
+| **Fase 2: Modelamiento Físico** | Crear tablas esquemas En Estrella (`dw.dim_*` y `dw.fact_*`) con Surrogate Keys y Foreign Keys en DB Local. | 1 Semana | Baja |
+| **Fase 3: ETL Lógico (Transformación)** | Desarrollar PIPELINE ETL (Merge/Upsert), resolver lógica de Estados Complejos, poblar dimensiones implementando SCD Tipo 2. | 2 - 3 Semanas | Alta |
+| **Fase 4: Consumo BI (Semantic Layer)** | Crear una capa semántica de Views que la herramienta de BI (Streamlit/PowerBI/Tableau) lea. | 1 Semana | Media |
+| **Fase 5: Afinamiento y Catálogo** | Creación de índices en Dim/Fact, particionamiento de la fact y Diccionario de Datos del linaje en herramienta de Catálogo o Glosario. | 1 Semana | Media |

@@ -1,0 +1,337 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 22-81: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 132, in ejecutar_etl
+    logger.info("\u2554" + "\u2550" * 58 + "\u2557")
+Message: '\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 22: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 133, in ejecutar_etl
+    logger.info("\u2551  ETL DATA WAREHOUSE ù REGULARIZACIËN AMBIENTAL          \u2551")
+Message: '\u2551  ETL DATA WAREHOUSE ù REGULARIZACIËN AMBIENTAL          \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 22: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 134, in ejecutar_etl
+    logger.info("\u2551  Versi¾n Python ù Equivalente a Pentaho Job Maestro     \u2551")
+Message: '\u2551  Versi¾n Python ù Equivalente a Pentaho Job Maestro     \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 22-81: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 135, in ejecutar_etl
+    logger.info("\u2560" + "\u2550" * 58 + "\u2563")
+Message: '\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 22: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 136, in ejecutar_etl
+    logger.info(f"\u2551  Inicio: {fecha_ejecucion}                        \u2551")
+Message: '\u2551  Inicio: 2026-03-10 20:13:27                        \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 22: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 137, in ejecutar_etl
+    logger.info(f"\u2551  Pasos:  {paso_desde} a {paso_hasta} de 23                              \u2551")
+Message: '\u2551  Pasos:  1 a 1 de 23                              \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 22-81: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 138, in ejecutar_etl
+    logger.info("\u255a" + "\u2550" * 58 + "\u255d")
+Message: '\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d'
+Arguments: ()
+20:13:27 | INFO     | ============================================================
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u25b6' in position 48: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 160, in ejecutar_etl
+    resultado = funcion()
+  File "f:\Datawrehouse_RA\ETL_p\utils.py", line 105, in wrapper
+    logger.info(f"[{paso_nombre}] \u25b6 INICIANDO...")
+Message: '[SP_ORQUESTAR_EXTRACCION] \u25b6 INICIANDO...'
+Arguments: ()
+20:13:27 | INFO     | ============================================================
+20:13:27 | INFO     | [SP_ORQUESTAR_EXTRACCION] Ejecutando: SELECT dw.sp_orquestar_extraccion_remota()...
+--- Logging error ---
+Traceback (most recent call last):
+  File "f:\Datawrehouse_RA\ETL_p\utils.py", line 109, in wrapper
+    resultado = func(*args, **kwargs)
+  File "f:\Datawrehouse_RA\ETL_p\transformacion\transformacion_all.py", line 346, in sp_orquestar_extraccion_remota
+    execute_sp(CONN_DWH_LOCAL, "SELECT dw.sp_orquestar_extraccion_remota()", "SP_ORQUESTAR_EXTRACCION")
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Datawrehouse_RA\ETL_p\connections.py", line 189, in execute_sp
+    cur.execute(sp_call)
+    ~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.ProhibitedSqlStatementAttempted: statement returning results not allowed
+CONTEXT:  sentencia SQL: ½SELECT dblink_exec(
+        'dbname=suia_enlisy port=5632 host=172.16.0.179 user=postgres password=postgres',
+        'SELECT suia_iii.sp_coa_bi_v1_4_1()'
+    )╗
+funci¾n PL/pgSQL dw.sp_orquestar_extraccion_remota() en la lÝnea 2 en PERFORM
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2717' in position 48: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 160, in ejecutar_etl
+    resultado = funcion()
+  File "f:\Datawrehouse_RA\ETL_p\utils.py", line 117, in wrapper
+    logger.error(f"[{paso_nombre}] \u2717 ERROR despuÚs de {duracion:.1f}s: {e}")
+Message: "[SP_ORQUESTAR_EXTRACCION] \u2717 ERROR despuÚs de 59.0s: statement returning results not allowed\nCONTEXT:  sentencia SQL: ½SELECT dblink_exec(\n        'dbname=suia_enlisy port=5632 host=172.16.0.179 user=postgres password=postgres',\n        'SELECT suia_iii.sp_coa_bi_v1_4_1()'\n    )╗\nfunci¾n PL/pgSQL dw.sp_orquestar_extraccion_remota() en la lÝnea 2 en PERFORM\n"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 160, in ejecutar_etl
+    resultado = funcion()
+  File "f:\Datawrehouse_RA\ETL_p\utils.py", line 109, in wrapper
+    resultado = func(*args, **kwargs)
+  File "f:\Datawrehouse_RA\ETL_p\transformacion\transformacion_all.py", line 346, in sp_orquestar_extraccion_remota
+    execute_sp(CONN_DWH_LOCAL, "SELECT dw.sp_orquestar_extraccion_remota()", "SP_ORQUESTAR_EXTRACCION")
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "f:\Datawrehouse_RA\ETL_p\connections.py", line 189, in execute_sp
+    cur.execute(sp_call)
+    ~~~~~~~~~~~^^^^^^^^^
+psycopg2.errors.ProhibitedSqlStatementAttempted: statement returning results not allowed
+CONTEXT:  sentencia SQL: ½SELECT dblink_exec(
+        'dbname=suia_enlisy port=5632 host=172.16.0.179 user=postgres password=postgres',
+        'SELECT suia_iii.sp_coa_bi_v1_4_1()'
+    )╗
+funci¾n PL/pgSQL dw.sp_orquestar_extraccion_remota() en la lÝnea 2 en PERFORM
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2717' in position 32: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 168, in ejecutar_etl
+    logger.error(f"[Paso {num:02d}] \u2717 FALLË: {nombre} ù {e}")
+Message: "[Paso 01] \u2717 FALLË: Orquestaci¾n Remota v1.4.1 ù statement returning results not allowed\nCONTEXT:  sentencia SQL: ½SELECT dblink_exec(\n        'dbname=suia_enlisy port=5632 host=172.16.0.179 user=postgres password=postgres',\n        'SELECT suia_iii.sp_coa_bi_v1_4_1()'\n    )╗\nfunci¾n PL/pgSQL dw.sp_orquestar_extraccion_remota() en la lÝnea 2 en PERFORM\n"
+Arguments: ()
+20:14:26 | ERROR    | ETL DETENIDO por error en paso anterior.
+20:14:26 | INFO     | 
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 22-81: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 180, in ejecutar_etl
+    logger.info("\u2554" + "\u2550" * 58 + "\u2557")
+Message: '\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 22: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 181, in ejecutar_etl
+    logger.info("\u2551  RESUMEN DE EJECUCIËN                                   \u2551")
+Message: '\u2551  RESUMEN DE EJECUCIËN                                   \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 22-81: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 182, in ejecutar_etl
+    logger.info("\u2560" + "\u2550" * 58 + "\u2563")
+Message: '\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 22: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 187, in ejecutar_etl
+    logger.info(f"\u2551  {icono} Paso {num:02d}: {nombre:35s} {tiempo_str:>8s}  \u2551")
+Message: '\u2551  \u2717 Paso 01: Orquestaci¾n Remota v1.4.1             59.0s  \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 22-81: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 189, in ejecutar_etl
+    logger.info("\u2560" + "\u2550" * 58 + "\u2563")
+Message: '\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 22: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 190, in ejecutar_etl
+    logger.info(f"\u2551  Exitosos: {pasos_exitosos}  |  Saltados: {pasos_saltados}  |  Fallidos: {pasos_fallidos}           \u2551")
+Message: '\u2551  Exitosos: 0  |  Saltados: 0  |  Fallidos: 1           \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2551' in position 22: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 191, in ejecutar_etl
+    logger.info(f"\u2551  Tiempo total: {minutos}m {segundos:.1f}s                               \u2551")
+Message: '\u2551  Tiempo total: 0m 59.0s                               \u2551'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 22-81: character maps to <undefined>
+Call stack:
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 248, in <module>
+    exito = ejecutar_etl(paso_desde=args.desde, paso_hasta=args.hasta)
+  File "f:\Datawrehouse_RA\ETL_p\etl_main.py", line 192, in ejecutar_etl
+    logger.info("\u255a" + "\u2550" * 58 + "\u255d")
+Message: '\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d'
+Arguments: ()

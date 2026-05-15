@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Consultas Analíticas DWH v1.4 - Google Docs Ready</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 25px;
+        }
+
+        h1 {
+            color: #1a73e8;
+            border-bottom: 3px solid #1a73e8;
+            padding-bottom: 15px;
+            font-size: 26pt;
+            text-align: center;
+        }
+
+        h2 {
+            color: #202124;
+            border-bottom: 2px solid #dadce0;
+            padding-bottom: 8px;
+            margin-top: 50px;
+            font-size: 20pt;
+        }
+
+        h3 {
+            color: #1a73e8;
+            font-size: 16pt;
+            margin-top: 35px;
+            border-left: 6px solid #1a73e8;
+            padding-left: 15px;
+        }
+
+        p {
+            font-size: 11pt;
+            color: #5f6368;
+        }
+
+        pre,
+        code {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            color: #d81b60;
+            font-family: 'Consolas', 'Courier New', monospace;
+            padding: 15px;
+            border-radius: 6px;
+            display: block;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .footer {
+            margin-top: 80px;
+            font-size: 10pt;
+            color: #70757a;
+            text-align: right;
+            border-top: 2px solid #dadce0;
+            padding-top: 20px;
+        }
+
+        strong {
+            color: #1a73e8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Librería de Consultas Analíticas: DWH v1.4</h1>
+    <p style="text-align: center;"><strong>Extracción Estratégica de Información para Business Intelligence</strong></p>
+
+    <hr>
+
+    <h2>1. Consultas de Regularización Ambiental (Hechos)</h2>
+
+    <h3>1.1. Vista General de Proyectos (Matriz Maestra)</h3>
+    <p>Obtiene el detalle completo de los proyectos cargados, integrando todas sus dimensiones geográficas, de
+        proponente y estado.</p>
+    <code>
+    SELECT <br>
+    &nbsp;&nbsp;dp.codigo_proyecto AS "Código Proyecto",<br>
+    &nbsp;&nbsp;dp.nombre_proyecto AS "Nombre Proyecto",<br>
+    &nbsp;&nbsp;dprop.nombre_proponente AS "Proponente",<br>
+    &nbsp;&nbsp;da.actividad_economica AS "Actividad",<br>
+    &nbsp;&nbsp;dg.provincia AS "Provincia",<br>
+    &nbsp;&nbsp;dg.canton AS "Cantón",<br>
+    &nbsp;&nbsp;darea.nombre_area AS "Área Responsable",<br>
+    &nbsp;&nbsp;fr.interseccion_snap AS "Cruza SNAP",<br>
+    &nbsp;&nbsp;de.estado_proceso AS "Estado Proceso",<br>
+    &nbsp;&nbsp;dt.fecha AS "Fecha Registro"<br>
+    FROM dw.fact_regularizacion fr<br>
+    JOIN dw.dim_proyecto dp ON fr.sk_proyecto = dp.sk_proyecto<br>
+    JOIN dw.dim_proponente dprop ON fr.sk_proponente = dprop.sk_proponente<br>
+    JOIN dw.dim_actividad da ON fr.sk_actividad = da.sk_actividad<br>
+    JOIN dw.dim_geografia dg ON fr.sk_geografia = dg.sk_geografia<br>
+    JOIN dw.dim_estado de ON fr.sk_estado = de.sk_estado<br>
+    JOIN dw.dim_tiempo dt ON fr.sk_fecha_registro = dt.sk_tiempo<br>
+    JOIN dw.dim_area darea ON fr.sk_area = darea.sk_area<br>
+    ORDER BY dt.fecha DESC;
+    </code>
+
+    <h3>1.2. Proyectos con Intersección SNAP</h3>
+    <p>Filtra específicamente aquellos proyectos que cruzan áreas protegidas (Sistema Nacional de Áreas Protegidas).</p>
+    <code>
+    SELECT <br>
+    &nbsp;&nbsp;dp.codigo_proyecto,<br>
+    &nbsp;&nbsp;dp.nombre_proyecto,<br>
+    &nbsp;&nbsp;dg.provincia,<br>
+    &nbsp;&nbsp;fr.areas_protegidas AS "Detalle Áreas Protegidas"<br>
+    FROM dw.fact_regularizacion fr<br>
+    JOIN dw.dim_proyecto dp ON fr.sk_proyecto = dp.sk_proyecto<br>
+    JOIN dw.dim_geografia dg ON fr.sk_geografia = dg.sk_geografia<br>
+    WHERE fr.interseccion_snap = 'SI';
+    </code>
+
+    <hr>
+
+    <h2>2. Consultas Financieras (Pagos)</h2>
+
+    <h3>2.1. Resumen de Recaudación por Proponente</h3>
+    <p>Agrupación de ingresos totales por cada empresa o persona natural que realiza trámites.</p>
+    <code>
+    SELECT <br>
+    &nbsp;&nbsp;dprop.nombre_proponente AS "Proponente",<br>
+    &nbsp;&nbsp;dprop.ced_ruc_proponente AS "RUC",<br>
+    &nbsp;&nbsp;COUNT(fp.id_fact_pago) AS "Número de Pagos",<br>
+    &nbsp;&nbsp;SUM(fp.monto_pagado) AS "Total Recaudado"<br>
+    FROM dw.fact_pago fp<br>
+    JOIN dw.dim_proyecto dp ON fp.sk_proyecto = dp.sk_proyecto<br>
+    JOIN dw.dim_proponente dprop ON dp.sk_proponente = dprop.sk_proponente<br>
+    GROUP BY dprop.nombre_proponente, dprop.ced_ruc_proponente<br>
+    HAVING SUM(fp.monto_pagado) > 0<br>
+    ORDER BY SUM(fp.monto_pagado) DESC;
+    </code>
+
+    <hr>
+
+    <h2>3. Consultas Estadísticas</h2>
+
+    <h3>3.1. Distribución Geográfica por Provincia</h3>
+    <p>Contabiliza la densidad de proyectos por zona geográfica.</p>
+    <code>
+    SELECT <br>
+    &nbsp;&nbsp;dg.provincia,<br>
+    &nbsp;&nbsp;COUNT(fr.id_fact) AS "Total Proyectos",<br>
+    &nbsp;&nbsp;ROUND(CAST(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM dw.fact_regularizacion) AS NUMERIC), 2) AS "Porcentaje %"<br>
+    FROM dw.fact_regularizacion fr<br>
+    JOIN dw.dim_geografia dg ON fr.sk_geografia = dg.sk_geografia<br>
+    GROUP BY dg.provincia<br>
+    ORDER BY "Total Proyectos" DESC;
+    </code>
+
+    <hr>
+
+    <div class="footer">
+        <p><strong>Desarrollado por:</strong> Antigravity AI Data Engineering</p>
+        <p><strong>Uso:</strong> Especializado para PowerBI, Tableau o Generación de Reportes PDF.</p>
+        <p><strong>Fecha:</strong> 2026-03-10 | <strong>Versión:</strong> 1.4</p>
+    </div>
+
+</body>
+
+</html>

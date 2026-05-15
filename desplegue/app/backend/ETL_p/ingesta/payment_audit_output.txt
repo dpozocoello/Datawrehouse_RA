@@ -1,0 +1,34 @@
+### SCHEMAS on 179 (suia_enlisy) ###
+
+### PAYMENT RELATED TABLES on 179 ###
+jovenes_accion.dim_pagos
+coa_environmental_record.record_payment
+coa_mae.payment_commission
+coa_mae.payment_json
+coa_mae.payment
+coa_consultants.annual_payment
+return_payment_online.return_payment
+return_payment_online.documents_return_payment
+coa_drivers_course.repayment
+jovenes_accion.bloque1_noenviados_a_pago
+jovenes_accion.dim_pagos_columna
+jovenes_accion.reporte_bce_pago_4_bloque_2_5_05_2025
+jovenes_accion.pagos
+jovenes_accion.pagos_20250228
+jovenes_accion.pagos_consolidado_20250228
+jovenes_accion.pagos_consolidado
+jovenes_accion.pago_5bloque_1_rebote_acreditaciones
+jovenes_accion.pago5bloque2rebote_acreditaciones
+jovenes_accion.pagos_financiero_resp
+jovenes_accion.pagos_financiero
+jovenes_accion.pagos3
+jovenes_accion.pago5_bloque_1_dti
+jovenes_accion.base_usuarios_pago3_bloqueii
+jovenes_accion.dim_pagos_test
+jovenes_accion.dim_pagos_columna_test
+jovenes_accion.v_joven_curso_pago
+jovenes_accion.v_pago3
+suia_iii.payments
+suia_iii.payments_configurations
+biodiversity.technical_evaluation_galapagos
+monitoring_points.mp_payments

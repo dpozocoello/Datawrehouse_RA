@@ -1,0 +1,12 @@
+--- Final Consistency Check ---
+
+Table: dw.fact_chemical_import
+  Orphan (SK 0): 580
+
+Table: dw.fact_chemical_movement
+  Orphan (SK 0): 12553
+  Linked (MAE Project): 3
+
+Table: dw.fact_chemical_declaration
+  Orphan (SK 0): 2085
+  Linked (MAE Project): 4

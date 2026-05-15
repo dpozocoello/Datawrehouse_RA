@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>TRX_07_INGESTA_PAGOS_JBPM</name>
+    <description>Extrae pagos de jbpmdb/online_payment y carga en stg.online_payments_bi</description>
+    <extended_description>Origen: 172.16.0.226:5632/jbpmdb - Esquemas: online_payment
+Destino: localhost:5632/dw_reg_v1 - stg.online_payments_bi
+Extrae online_payments_historical JOIN online_payments (solo transacciones exitosas)</extended_description>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+  </info>
+  <notepads>
+    <notepad>
+      <note>TRANSFORMACION 7: Ingesta Pagos JBPM (online_payment)
+Origen: jbpmdb @ 172.16.0.226:5632 / online_payment schema
+Destino: dw_reg_v1 @ localhost / stg.online_payments_bi
+Solo transacciones con transaction_state = true</note>
+      <xloc>50</xloc><yloc>20</yloc><width>500</width><heigth>80</heigth>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>CONN_JBPM</name>
+    <server>172.16.0.226</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>jbpmdb</database>
+    <port>5632</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>CONN_DWH_LOCAL</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>dw_reg_v1</database>
+    <port>5632</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop><from>Input Pagos JBPM</from><to>Output STG Pagos JBPM</to><enabled>Y</enabled></hop>
+  </order>
+  <step>
+    <name>Input Pagos JBPM</name>
+    <type>TableInput</type>
+    <description>Lee online_payments_historical JOIN online_payments</description>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_JBPM</connection>
+    <sql>SELECT
+  p.id_online_payment    AS online_payment_id,
+  h.project_id           AS project_id,
+  h.tramit_number        AS tramit_number,
+  p.convenience_number   AS convenience_number,
+  p.bank_code            AS bank_code,
+  REPLACE(p.payment_value, ',', '.')::numeric(12,2) AS payment_value,
+  p.date_hour_transaction::timestamp AS date_hour_transaction,
+  p.transaction_type     AS transaction_type,
+  p.transaction_state    AS transaction_state
+FROM online_payment.online_payments_historical h
+  JOIN online_payment.online_payments p
+    ON h.online_payment_id = p.id_online_payment
+WHERE p.transaction_state = true</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <GUI><xloc>150</xloc><yloc>200</yloc><draw>Y</draw></GUI>
+  </step>
+  <step>
+    <name>Output STG Pagos JBPM</name>
+    <type>TableOutput</type>
+    <description>Escribe en stg.online_payments_bi</description>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_DWH_LOCAL</connection>
+    <schema>stg</schema>
+    <table>online_payments_bi</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <fields>
+      <field>
+        <column_name>online_payment_id</column_name>
+        <stream_name>online_payment_id</stream_name>
+      </field>
+      <field>
+        <column_name>project_id</column_name>
+        <stream_name>project_id</stream_name>
+      </field>
+      <field>
+        <column_name>tramit_number</column_name>
+        <stream_name>tramit_number</stream_name>
+      </field>
+      <field>
+        <column_name>convenience_number</column_name>
+        <stream_name>convenience_number</stream_name>
+      </field>
+      <field>
+        <column_name>bank_code</column_name>
+        <stream_name>bank_code</stream_name>
+      </field>
+      <field>
+        <column_name>payment_value</column_name>
+        <stream_name>payment_value</stream_name>
+      </field>
+      <field>
+        <column_name>date_hour_transaction</column_name>
+        <stream_name>date_hour_transaction</stream_name>
+      </field>
+      <field>
+        <column_name>transaction_type</column_name>
+        <stream_name>transaction_type</stream_name>
+      </field>
+      <field>
+        <column_name>transaction_state</column_name>
+        <stream_name>transaction_state</stream_name>
+      </field>
+    </fields>
+    <GUI><xloc>500</xloc><yloc>200</yloc><draw>Y</draw></GUI>
+  </step>
+</transformation>

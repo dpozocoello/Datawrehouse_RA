@@ -1,0 +1,4 @@
+--- Staging tables related to chemical imports ---
+                  table_name
+0         stg_import_request
+1  stg_detail_import_request

@@ -1,0 +1,213 @@
+erDiagram
+    aquatic_organic_effects {
+        string PK "aqor_id"
+        int columns "17"
+    }
+    compliance_report_pma {
+        string PK "corp_id"
+        int columns "21"
+    }
+    compliance_report_pma_extension {
+        string PK "crpe_id"
+        int columns "24"
+    }
+    corrective_preventive_actions {
+        string PK "cpac_id"
+        int columns "13"
+    }
+    crop_family_pma {
+        string PK "crfp_id"
+        int columns "12"
+    }
+    crop_pesticide {
+        string PK "crpe_id"
+        int columns "12"
+    }
+    crops {
+        string PK "crop_id, crop_id"
+        int columns "12"
+    }
+    culture_dose {
+        string PK "cudo_id"
+        int columns "12"
+    }
+    detail_pesticide_project {
+        string PK "depe_id, depe_id"
+        int columns "13"
+    }
+    documents_chemicals_pesticides {
+        string PK "doch_id"
+        int columns "16"
+    }
+    emergency_care_program {
+        string PK "ecpr_id"
+        int columns "11"
+    }
+    environmental_monitoring {
+        string PK "enmo_id"
+        int columns "16"
+    }
+    expired_product_ic {
+        string PK "expi_id"
+        int columns "15"
+    }
+    expired_products {
+        string PK "expr_id"
+        int columns "13"
+    }
+    form_comments_pesticides {
+        string PK "fope_id"
+        int columns "19"
+    }
+    form_comments_pesticides_cr {
+        string PK "fopc_id"
+        int columns "19"
+    }
+    incident_log {
+        string PK "inlo_id"
+        int columns "17"
+    }
+    integrated_management_plan {
+        string PK "inmp_id"
+        int columns "12"
+    }
+    measures_polluting_agents {
+        string PK "mpag_id"
+        int columns "11"
+    }
+    objective_group {
+        string PK "obgr_id"
+        int columns "9"
+    }
+    official_pronouncement {
+        string PK "ofpr_id"
+        int columns "15"
+    }
+    official_pronouncement_cr {
+        string PK "ofpc_id"
+        int columns "17"
+    }
+    pesticide_project {
+        string PK "chpe_id, chpe_id"
+        int columns "17"
+    }
+    pests {
+        string PK "pest_id, pest_id"
+        int columns "10"
+    }
+    planning_training_insecticide_crop {
+        string PK "ptic_id"
+        int columns "27"
+    }
+    possible_impacts {
+        string PK "poim_id"
+        int columns "14"
+    }
+    product_information_pma {
+        string PK "pinp_id"
+        int columns "18"
+    }
+    product_registration {
+        string PK "prre_id, prre_id"
+        int columns "13"
+    }
+    products_pqa {
+        string PK "prod_id"
+        int columns "32"
+    }
+    program_information {
+        string PK "prin_id"
+        int columns "11"
+    }
+    species_catalog_pqua {
+        string PK "spcp_id"
+        int columns "10"
+    }
+    species_risk_assessment {
+        string PK "spra_id"
+        int columns "12"
+    }
+    technical_report {
+        string PK "tere_id"
+        int columns "14"
+    }
+    technical_report_cr {
+        string PK "terc_id"
+        int columns "15"
+    }
+    training_pma {
+        string PK "trpm_id"
+        int columns "15"
+    }
+    training_preventive_corrective_action {
+        string PK "tpca_id"
+        int columns "24"
+    }
+    training_topics {
+        string PK "trto_id"
+        int columns "12"
+    }
+    type_observations {
+        string PK "tyob_id, tyob_id"
+        int columns "9"
+    }
+    type_observations_ic {
+        string PK "tyoi_id"
+        int columns "9"
+    }
+    types_aquatic_organisms {
+        string PK "tyaq_id, tyaq_id"
+        int columns "9"
+    }
+    waste_management_packaging {
+        string PK "wamp_id"
+        int columns "15"
+    }
+    waste_reduction_program {
+        string PK "wrpr_id"
+        int columns "28"
+    }
+    types_aquatic_organisms ||--o{ aquatic_organic_effects : "tyaq_id"
+    pesticide_project ||--o{ aquatic_organic_effects : "chpe_id"
+    product_information_pma ||--o{ compliance_report_pma : "pinp_id"
+    products_pqa ||--o{ compliance_report_pma : "prod_id"
+    compliance_report_pma ||--o{ compliance_report_pma_extension : "corp_id"
+    training_topics ||--o{ corrective_preventive_actions : "trto_id"
+    emergency_care_program ||--o{ corrective_preventive_actions : "ecpr_id"
+    compliance_report_pma ||--o{ crop_family_pma : "corp_id"
+    detail_pesticide_project ||--o{ crop_pesticide : "depe_id"
+    pests ||--o{ crop_pesticide : "pest_id"
+    detail_pesticide_project ||--o{ culture_dose : "depe_id"
+    crops ||--o{ detail_pesticide_project : "crop_id"
+    pesticide_project ||--o{ detail_pesticide_project : "chpe_id"
+    products_pqa ||--o{ detail_pesticide_project : "prod_id"
+    product_information_pma ||--o{ emergency_care_program : "pinp_id"
+    product_information_pma ||--o{ environmental_monitoring : "pinp_id"
+    product_information_pma ||--o{ expired_products : "pinp_id"
+    training_topics ||--o{ expired_products : "trto_id"
+    type_observations ||--o{ form_comments_pesticides : "tyob_id"
+    type_observations_ic ||--o{ form_comments_pesticides_cr : "tyoi_id"
+    product_information_pma ||--o{ measures_polluting_agents : "pinp_id"
+    pesticide_project ||--o{ official_pronouncement : "chpe_id"
+    compliance_report_pma ||--o{ official_pronouncement_cr : "corp_id"
+    products_pqa ||--o{ pesticide_project : "prod_id"
+    compliance_report_pma ||--o{ planning_training_insecticide_crop : "corp_id"
+    crop_family_pma ||--o{ planning_training_insecticide_crop : "crfp_id"
+    crops ||--o{ planning_training_insecticide_crop : "crop_id"
+    integrated_management_plan ||--o{ planning_training_insecticide_crop : "inmp_id"
+    product_information_pma ||--o{ possible_impacts : "pinp_id"
+    products_pqa ||--o{ product_information_pma : "prod_id"
+    product_registration ||--o{ products_pqa : "prre_id"
+    species_catalog_pqua ||--o{ species_risk_assessment : "spcp_id"
+    possible_impacts ||--o{ species_risk_assessment : "poim_id"
+    pesticide_project ||--o{ technical_report : "chpe_id"
+    compliance_report_pma ||--o{ technical_report_cr : "corp_id"
+    training_topics ||--o{ training_pma : "trto_parent_id"
+    product_information_pma ||--o{ training_pma : "pinp_id"
+    objective_group ||--o{ training_pma : "obgr_id"
+    measures_polluting_agents ||--o{ training_pma : "mpag_id"
+    compliance_report_pma ||--o{ training_preventive_corrective_action : "corp_id"
+    training_topics ||--o{ training_topics : "trto_id"
+    integrated_management_plan ||--o{ waste_management_packaging : "inmp_id"
+    product_information_pma ||--o{ waste_management_packaging : "pinp_id"
+    compliance_report_pma ||--o{ waste_reduction_program : "corp_id"

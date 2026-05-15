@@ -1,0 +1,60 @@
+# Adaptación de Consultas de Tickets al Data Warehouse
+
+Se adaptarán las consultas de reportería de los tickets que **actualmente dependen de `dblink` o `vm_unificado_sistemas_bi`** para que consuman directamente de `dw_reg_v1`.
+
+## Tickets Adaptables
+
+| # | Ticket | Consulta Actual | Adaptación DW |
+|---|--------|----------------|---------------|
+| 1 | **#10534406** (Pagos ETAPA) | `vm_unificado_sistemas_bi` + dblink JBPM | ✅ **Ya adaptada** en [consulta_pagos_dw.sql](file:///f:/Datawrehouse_RA/consulta_pagos_dw.sql) |
+| 2 | **#10535091** (Proyectos DRA) | `vm_unificado_sistemas_bi` + 2 dblinks (BAM + Usuarios) | `dw.fact_regularizacion` + dimensiones |
+| 3 | **#10535560** (Matriz Regularización) | `vm_unificado_sistemas_bi` + dblink SNAP | `dw.fact_regularizacion` (ya tiene SNAP integrado) |
+| 4 | **#10536002** (Validación Pago) | `online_payments` directo en JBPM | `stg.online_payments_bi` o `dw.fact_pago` |
+| 5 | **#10537181** (Reporte Operadores) | `vm_unificado_sistemas_bi` filtro por usuario | `dw.fact_regularizacion` + dims |
+
+## Tickets NO Adaptables (operacionales/fuera del DW)
+
+| Ticket | Razón |
+|--------|-------|
+| #10535688 (Archivo 90 días) | Script UPDATE operacional, no reportería |
+| #10536005 (Memorando DZ1) | Scripts UPDATE de estado de proyectos |
+| #10536435 (Sustancias Químicas) | Esquema `coa_chemical_sustances` no está en el DW |
+| #10536450 (Memorando DZ3) | Scripts UPDATE de propietario/técnico |
+
+## Proposed Changes
+
+### Adaptación de Consultas
+
+Cada consulta adaptada se guardará en la **misma carpeta del ticket**, con sufijo [_dw.sql](file:///f:/Datawrehouse_RA/consulta_pagos_dw.sql).
+
+---
+
+#### [NEW] consulta_DRA_proyectos_dw.sql
+**Ticket #10535091**: Reporte de proyectos a cargo de DRA, eliminando 2 dblinks (BAM y Usuarios).
+
+> [!IMPORTANT]
+> La información de BAM (tarea actual, estado, usuario asignado) ya está en `dw.fact_regularizacion` via el ETL. No se necesitan los dblinks remotos.
+
+---
+
+#### [NEW] consulta_matriz_regularizacion_dw.sql
+**Ticket #10535560**: Matriz de Regularización Ambiental con SNAP. Elimina `vm_unificado_sistemas_bi` y dblink a suia_bpms_enlisy.
+
+> [!NOTE]
+> `dw.fact_regularizacion` ya tiene el campo `interseccion_snap` cargado via TRX_06 + SP.
+
+---
+
+#### [NEW] consulta_validacion_pago_dw.sql
+**Ticket #10536002**: Validación de pago por tramit_number o client_id. Usa `stg.online_payments_bi` en lugar de conectarse directo a JBPM.
+
+---
+
+#### [NEW] consulta_reporte_operadores_dw.sql
+**Ticket #10537181**: Reporte de trámites por operador/usuario. Reemplaza `vm_unificado_sistemas_bi` con joins al modelo estrella.
+
+## Verification Plan
+
+### Manual Verification
+- Ejecutar cada consulta adaptada en DBeaver contra `dw_reg_v1`
+- Comparar resultados con la consulta original (conteos y muestreo)

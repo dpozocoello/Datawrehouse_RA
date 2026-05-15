@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>TRX_09_INGESTA_PAGOS_HIST</name>
+    <description>Extrae historial de pagos de jbpmdb/online_payment y carga en stg.online_payments_historical_bi</description>
+    <extended_description>Origen: 172.16.0.226:5632/jbpmdb - Esquema: online_payment
+Destino: localhost:5632/dw_reg_v1 - stg.online_payments_historical_bi
+Extrae online_payments_historical para recálculo de montos JBPM (ETL v3)</extended_description>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+  </info>
+  <notepads>
+    <notepad>
+      <note>TRANSFORMACION 9: Ingesta Pagos JBPM Históricos (online_payment)
+Origen: jbpmdb @ 172.16.0.226:5632 / online_payment schema
+Destino: dw_reg_v1 @ localhost / stg.online_payments_historical_bi
+Datos para recálculo de montos transaccionales (ETL v3)</note>
+      <xloc>50</xloc><yloc>20</yloc><width>500</width><heigth>80</heigth>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>CONN_JBPM</name>
+    <server>172.16.0.226</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>jbpmdb</database>
+    <port>5632</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>CONN_DWH_LOCAL</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>dw_reg_v1</database>
+    <port>5632</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop><from>Input Pagos Historicos</from><to>Output STG Pagos Historicos</to><enabled>Y</enabled></hop>
+  </order>
+  <step>
+    <name>Input Pagos Historicos</name>
+    <type>TableInput</type>
+    <description>Lee online_payments_historical desde jbpmdb</description>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_JBPM</connection>
+    <sql>SELECT
+  id_online_payment_historical,
+  description,
+  project_id,
+  CAST(NULLIF(REPLACE(retired_value, ',', '.'), '') AS DOUBLE PRECISION) AS retired_value,
+  sender_ip,
+  tramit_number,
+  update_date,
+  CAST(NULLIF(REPLACE(value_updated, ',', '.'), '') AS DOUBLE PRECISION) AS value_updated,
+  online_payment_id,
+  enabled,
+  user_create,
+  user_modification,
+  date_create,
+  date_modification,
+  reactivate,
+  observations
+FROM online_payment.online_payments_historical</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <GUI><xloc>150</xloc><yloc>200</yloc><draw>Y</draw></GUI>
+  </step>
+  <step>
+    <name>Output STG Pagos Historicos</name>
+    <type>TableOutput</type>
+    <description>Escribe en stg.online_payments_historical_bi</description>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_DWH_LOCAL</connection>
+    <schema>stg</schema>
+    <table>online_payments_historical_bi</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <fields>
+      <field><column_name>id_online_payment_historical</column_name><stream_name>id_online_payment_historical</stream_name></field>
+      <field><column_name>description</column_name><stream_name>description</stream_name></field>
+      <field><column_name>project_id</column_name><stream_name>project_id</stream_name></field>
+      <field><column_name>retired_value</column_name><stream_name>retired_value</stream_name></field>
+      <field><column_name>sender_ip</column_name><stream_name>sender_ip</stream_name></field>
+      <field><column_name>tramit_number</column_name><stream_name>tramit_number</stream_name></field>
+      <field><column_name>update_date</column_name><stream_name>update_date</stream_name></field>
+      <field><column_name>value_updated</column_name><stream_name>value_updated</stream_name></field>
+      <field><column_name>online_payment_id</column_name><stream_name>online_payment_id</stream_name></field>
+      <field><column_name>enabled</column_name><stream_name>enabled</stream_name></field>
+      <field><column_name>user_create</column_name><stream_name>user_create</stream_name></field>
+      <field><column_name>user_modification</column_name><stream_name>user_modification</stream_name></field>
+      <field><column_name>date_create</column_name><stream_name>date_create</stream_name></field>
+      <field><column_name>date_modification</column_name><stream_name>date_modification</stream_name></field>
+      <field><column_name>reactivate</column_name><stream_name>reactivate</stream_name></field>
+      <field><column_name>observations</column_name><stream_name>observations</stream_name></field>
+    </fields>
+    <GUI><xloc>500</xloc><yloc>200</yloc><draw>Y</draw></GUI>
+  </step>
+</transformation>

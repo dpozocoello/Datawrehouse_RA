@@ -1,0 +1,116 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+    <meta charset="utf-8">
+    <title>Especificación Técnica Maestra DWH RA v1.4</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>100</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+        @page { size: 8.5in 11in; margin: 1.0in 1.0in 1.0in 1.0in; }
+        body { font-family: 'Calibri', 'Arial', sans-serif; font-size: 11pt; line-height: 1.5; color: #333; }
+        h1 { color: #2e75b5; font-size: 28pt; border-bottom: 2pt solid #2e75b5; margin-bottom: 20pt; text-align: center; }
+        h2 { color: #2e75b5; font-size: 20pt; border-bottom: 1pt solid #dee2e6; margin-top: 30pt; margin-bottom: 15pt; }
+        h3 { color: #2e75b5; font-size: 16pt; margin-top: 20pt; font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 25pt; font-size: 10.5pt; }
+        th, td { border: 1pt solid #dee2e6; padding: 10pt; text-align: left; }
+        th { background-color: #f1f3f4; font-weight: bold; color: #2e75b5; }
+        pre, code { background-color: #f8f9fa; border: 0.5pt solid #c0c0c0; color: #a31515; font-family: 'Consolas', monospace; padding: 10pt; display: block; margin: 10pt 0; }
+        blockquote { background-color: #f9f9f9; border-left: 5pt solid #2e75b5; padding: 15pt; margin: 20pt 0; font-style: italic; }
+        .footer { margin-top: 60pt; font-size: 9pt; color: #7f8c8d; text-align: right; border-top: 0.5pt solid #bdc3c7; padding-top: 15pt; }
+    </style>
+</head>
+<body>
+
+    <h1>Especificación Técnica Maestra: Data Warehouse Regularización Ambiental (v1.4)</h1>
+    <p style="text-align: center; font-size: 14pt;"><b>Ingeniería de Datos, Normalización Experta y Arquitectura de Integridad</b></p>
+
+    <br>
+
+    <h2>1. Arquitectura del Sistema</h2>
+    <h3>1.1. Diagrama de Arquitectura de Capas</h3>
+    <p>La arquitectura v1.4 utiliza una estructura de tres niveles para garantizar la pureza del dato transaccional frente al dato analítico final.</p>
+    <blockquote>
+        [ FLUJO DE DATOS: Fuentes (SQL Server/Postgres) -> Staging (Ingesta Cruda) -> Data Warehouse (Hechos y Dimensiones) -> Catálogos de Referencia (INEC) ]
+    </blockquote>
+
+    <br>
+
+    <h2>2. Flujo de Ejecución Pentaho (ETL Orchestration)</h2>
+    <h3>2.1. Secuencia de Operaciones</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Orden</th>
+                <th>Operación Técnica</th>
+                <th>Protocolo</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Setup Reference Data</td><td>Initialization (SK=0)</td><td>Crítico</td></tr>
+            <tr><td>2</td><td>TRX_01 to TRX_11</td><td>Truncate & Load Ingesta</td><td>Daily</td></tr>
+            <tr><td>3</td><td>Consolidar Staging</td><td>SQL Unification</td><td>Daily</td></tr>
+            <tr><td>4</td><td>sp_carga_dim_area</td><td>Inferencia Experta v1.4</td><td>Crítico</td></tr>
+            <tr><td>5</td><td>sp_carga_hechos</td><td>Integridad Referencial</td><td>Daily</td></tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h2>3. Diccionario de Trazabilidad Técnica</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Componente</th>
+                <th>Origen (Source)</th>
+                <th>Capa stg (Postgres)</th>
+                <th>Capa dw (Postgres)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Proyectos RCOA</td><td>coa_mae.tmp_rcoa_bi</td><td>stg.suia_rcoa_bi</td><td>dw.fact_regularizacion</td></tr>
+            <tr><td>Proyectos SUIA</td><td>suia_iii.tmp_coa_bi</td><td>stg.suia_coa_bi</td><td>dw.fact_regularizacion</td></tr>
+            <tr><td>Oficinas Técnicas</td><td>public.areas</td><td>stg.suia_areas_bi</td><td>dw.dim_area</td></tr>
+            <tr><td>Geografía</td><td>geographical_locations</td><td>stg.geo_locations_bi</td><td>dw.dim_geografia</td></tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h2>4. Documentación de Scripts Críticos</h2>
+
+    <h3>4.1. sp_carga_dim_area (Expert Inference Engine)</h3>
+    <p>Este procedimiento almacena la inteligencia de ubicación política del DWH. Resuelve automáticamente áreas sin código geográfico mediante:</p>
+    <ul>
+        <li><b>Fase Recursiva</b>: Ascenso jerárquico SUIA.</li>
+        <li><b>Fase de Inferencia</b>: Mapeo manual de 75 áreas según la normativa institucional.</li>
+    </ul>
+
+    <code>
+        -- Ejemplo de l&oacute;gica de inferencia v1.4<br>
+        WHEN area_id = 1120 THEN 'NAPO' -- OFICINA T&Eacute;CNICA TENA<br>
+        WHEN area_id = 1081 THEN 'ESMERALDAS' -- DIRECCI&Oacute;N ZONAL 2
+    </code>
+
+    <h3>4.2. setup_reference_data_v1_4.sql (Integridad Física)</h3>
+    <p>Garantiza que el valor predeterminado <b>SK=0</b> esté presente antes de cada carga para evitar errores de Foreign Key.</p>
+
+    <br>
+
+    <h2>5. Saneamiento y Validación</h2>
+    <p>Se implementa un protocolo de <b>Auditoría Forense</b> que certifica la paridad de registros (Fuente vs DWH) y la integridad de los campos de texto largo (SNAP) para evitar pérdida de información histórica.</p>
+
+    <div class="footer">
+        <p><b>Ingeniería de Datos & Arquitectura:</b> Antigravity AI Engineering</p>
+        <p><b>Versión:</b> 1.4 "Full Technical Specification Master"</p>
+        <p><b>Fecha:</b> 2026-03-10</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+Executing etl_intersection_load.sql...
+ERROR: no existe la relación «dw.dim_intersection»
+LINE 9: UPDATE dw.dim_intersection di
+               ^
+

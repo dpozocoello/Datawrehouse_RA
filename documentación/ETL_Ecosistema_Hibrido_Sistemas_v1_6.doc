@@ -1,0 +1,109 @@
+
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+                h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+                h2 { color: #2980b9; margin-top: 30px; border-bottom: 1px solid #ddd; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+                th { background-color: #f2f2f2; font-weight: bold; }
+                code { background-color: #f8f9fa; color: #e83e8c; padding: 2px 4px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; }
+                pre { background-color: #f8f9fa; padding: 15px; border-left: 5px solid #2980b9; border-radius: 4px; overflow-x: auto; }
+                blockquote { border-left: 5px solid #ccc; margin: 20px 0; padding: 10px 20px; color: #666; font-style: italic; background: #f9f9f9; }
+            </style>
+        </head>
+        <body>
+            <h1 id="ecosistema-etl-hibrido-pentaho-y-python-v151">⚙️ Ecosistema ETL Híbrido: Pentaho y Python (v1.5.1)</h1>
+<p>El sistema de integración de datos (ETL) utiliza una arquitectura de "Mando y Ejecución" basada en dos motores complementarios.</p>
+<hr />
+<h2 id="1-el-cerebro-visual-pentaho-data-integration">1. El Cerebro Visual: Pentaho Data Integration</h2>
+<p>Pentaho (PDI) actúa como el orquestador visual y gestor de conectividad para procesos que requieren lógica de flujo de datos (Stream) e interfaz gráfica de usuario para monitoreo.</p>
+<h3 id="11-job-maestro-job_carga_dwh_regularizacionkjb">1.1 Job Maestro: <code>JOB_CARGA_DWH_REGULARIZACION.kjb</code></h3>
+<p>Ubicado en <code>F:\Datawrehouse_RA\Jobs\</code>, es el punto de control central.</p>
+<p><strong>Flujo de Trabajo Operativo:</strong>
+1.  <strong>Garantía de Referencia:</strong> Ejecuta scripts SQL para restaurar valores <code>SK=0</code>.
+2.  <strong>Llamada a Potencia Python:</strong> Dispara el orquestador <code>etl_main.py</code> para ingestas masivas.
+3.  <strong>Módulos KTR Especializados:</strong>
+    - <code>TRX_09_INGESTA_PAGOS_HIST.ktr</code>: Procesamiento de auditoría JBPM.
+    - <code>TRX_06_INGESTA_SNAP.ktr</code>: Extracción de variables de intersección ambiental.
+4.  <strong>Sincronización:</strong> Espera la finalización exitosa de los hilos de Python antes de proceder a la carga de Facts.</p>
+<hr />
+<h2 id="2-el-motor-de-alto-rendimiento-python-core">2. El Motor de Alto Rendimiento: Python Core</h2>
+<p>Python se utiliza para operaciones que demandan paralelismo, lógica de metadatos dinámica y manipulación masiva de datos (Big Data-ready).</p>
+<h3 id="21-modulos-de-ingesta-etl_pingesta">2.1 Módulos de Ingesta (<code>ETL_p/ingesta/</code>)</h3>
+<ul>
+<li><strong><code>ingesta_all.py</code></strong>: Motor de transferencia masiva Oracle/Postgres -&gt; Staging local.</li>
+<li><strong><code>ingesta_waste_chemical.py</code></strong>: Implementa lógica <code>UNION ALL</code> para múltiples orígenes de sustancias y residuos, inyectando IDs de documentos relacionados.</li>
+</ul>
+<h3 id="22-orquestador-central-etl_mainpy">2.2 Orquestador Central: <code>etl_main.py</code></h3>
+<p>Proporciona una interfaz de línea de comandos (CLI) para control granular.</p>
+<p><strong>Comandos Críticos:</strong></p>
+<pre><code class="language-bash"># Ejecución parcial (Ingesta Residuos/Químicos)
+python etl_main.py --desde 24 --hasta 24
+
+# Ejecución de Transformación v1.5
+python etl_main.py --desde 25 --hasta 25
+</code></pre>
+<hr />
+<h2 id="3-interaccion-y-traspaso-de-control">3. Interacción y Traspaso de Control</h2>
+<p>La arquitectura utiliza un modelo de <strong>Semaforización por Salida de Código (Exit Codes)</strong>:</p>
+<ol>
+<li><strong>Pentaho invoca Shell:</strong> Ejecuta el comando python.</li>
+<li><strong>Python procesa:</strong> Maneja internamente sus hilos de ejecución <code>ThreadPool</code>.</li>
+<li><strong>Reporte de Estado:</strong><ul>
+<li><code>Exit 0</code>: Pentaho continúa al siguiente nodo del Job.</li>
+<li><code>Exit 1</code>: Pentaho aborta el Job y activa alertas de error.</li>
+</ul>
+</li>
+<li><strong>Logging Cruzado:</strong> Los logs de Python se redireccionan al <code>Spoon Logging Area</code> mediante el stream de salida estándar (stdout).</li>
+</ol>
+<hr />
+<h2 id="4-matriz-de-procesos-y-herramientas">4. Matriz de Procesos y Herramientas</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Proceso</th>
+<th style="text-align: left;">Tecnología</th>
+<th style="text-align: left;">Motivo de Elección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ingesta JBPM Pagos</td>
+<td style="text-align: left;">Pentaho (KTR)</td>
+<td style="text-align: left;">Lógica de flujo compleja y transformación de strings.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ingesta SUIA/COA</td>
+<td style="text-align: left;">Python (ingesta.py)</td>
+<td style="text-align: left;">Velocidad en transferencia de red y paralelismo.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Inferencia Geográfica</td>
+<td style="text-align: left;">SQL (Postgres)</td>
+<td style="text-align: left;">Rendimiento óptimo en el motor de base de datos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Integración Residuos</td>
+<td style="text-align: left;">Híbrido (Py + SQL)</td>
+<td style="text-align: left;">Flexibilidad de metadatos en Py, carga masiva en SQL.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-prevencion-y-resolucion-de-conflictos">5. Prevención y Resolución de Conflictos</h2>
+<h3 id="51-bloqueos-de-transaccion-y-visibilidad-de-sesion">5.1 Bloqueos de Transacción y Visibilidad de Sesión</h3>
+<p>Debido a la naturaleza híbrida, se identificó un conflicto de visibilidad con las tablas <code>TEMP</code> en Pentaho. 
+- <strong>Solución implementada (v1.5.1):</strong> Migración de la lógica de optimización a tablas de staging persistentes (<code>stg.tmp_dim_proyecto_optimized</code>). Esto evita el error "consulta sin resultados" y garantiza que el join de hechos sea estable entre diferentes sesiones de base de datos.
+- <strong>Mantenimiento PIDs:</strong> Uso de <code>pg_terminate_backend</code> para liberar PIDs huérfanos antes de la carga masiva.</p>
+<h3 id="52-optimizacion-de-memoria">5.2 Optimización de Memoria</h3>
+<p>Pentaho limita el cache por paso a 10,000 filas para evitar <code>OutOfMemoryError</code>. Python utiliza generadores y <code>execute_batch</code> para manejar millones de registros con bajo consumo de RAM.</p>
+<hr />
+<p><strong>Ingeniería de Datos:</strong> Antigravity AI<br />
+<strong>Versión:</strong> 1.5.1 (Estabilización Pentaho)<br />
+<strong>Estado:</strong> Documentación Técnica Detallada</p>
+        </body>
+        </html>
+        

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Log de Brechas y Validaciones - Data Warehouse RA</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 40px; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; }
+        .risk-high { color: #d9534f; font-weight: bold; }
+        .risk-medium { color: #f0ad4e; font-weight: bold; }
+        .risk-low { color: #5cb85c; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Log de Brechas y Análisis Técnico (Fase 2)</h1>
+    <p><strong>Fecha de Análisis:</strong> 13 de Mayo de 2026</p>
+    <p><strong>Analista:</strong> Equipo Experto DWH (Antigravity)</p>
+
+    <h2>1. Clasificación Documental (Orden Técnico Sugerido)</h2>
+    <p>Basado en el escaneo de la carpeta <code>documentación</code>, se ha mapeado el contenido a las siguientes secciones maestras:</p>
+    <ul>
+        <li><strong>Sección 1 (Arquitectura):</strong> <code>DWH_Arquitectura_Integral_v1_6</code></li>
+        <li><strong>Sección 4 (Modelo Dimensional):</strong> <code>DWH_Diccionario_Tecnico_Datos_v1_6</code></li>
+        <li><strong>Sección 5 (ETL):</strong> <code>ETL_Arquitectura_Estratégica_Detallada</code></li>
+        <li><strong>Sección 9 (Operación):</strong> <code>Manual_Uso_DWH_Analitica_v1_6</code></li>
+    </ul>
+
+    <h2>2. Matriz de Brechas Detectadas</h2>
+    <table>
+        <tr>
+            <th>Componente Evaluado</th>
+            <th>Brecha Identificada (Gap)</th>
+            <th>Nivel de Riesgo</th>
+            <th>Acción Correctiva (Fase 3)</th>
+        </tr>
+        <tr>
+            <td>Modelo de Datos (ER)</td>
+            <td>El diagrama ER actual no refleja la nueva granularidad de <strong>Punto de Generación</strong> (v2.1).</td>
+            <td class="risk-high">Alto</td>
+            <td>Generar diagrama Mermaid actualizado de la Estrella y embeberlo en el documento de Modelo.</td>
+        </tr>
+        <tr>
+            <td>Flujos ETL y Linaje</td>
+            <td>Falta trazabilidad visual del viaje del dato desde SUIA III / COA hasta el Dashboard.</td>
+            <td class="risk-medium">Medio</td>
+            <td>Desarrollar diagrama de Linaje (Data Lineage) en el documento ETL_Ecosistema_Hibrido.</td>
+        </tr>
+        <tr>
+            <td>Glosario de Negocio</td>
+            <td>Inexistente de forma centralizada. Los términos varían entre los scripts y los manuales de usuario.</td>
+            <td class="risk-high">Alto</td>
+            <td>Crear "Sección 11 y 12" con FAQ y homologación de términos de negocio vs dashboard.</td>
+        </tr>
+        <tr>
+            <td>Control de Versiones</td>
+            <td>Inconsistencia de nombres (v1_4, v1_5, v1_6). Fragmentación del conocimiento.</td>
+            <td class="risk-low">Bajo</td>
+            <td>Consolidar en el Documento Maestro (Fase 4) y referenciar versiones obsoletas a carpeta de histórico.</td>
+        </tr>
+    </table>
+
+    <h2>3. Conclusión de la Fase 2</h2>
+    <p>La documentación base es sólida en la versión 1.6, pero requiere una actualización estructural para soportar las lógicas de negocio introducidas en la versión 2.1 (Geoposicionamiento inverso, manejo de unicidad de llaves compuestas). En la Fase 3, se actualizarán los documentos individuales inyectando los diagramas requeridos.</p>
+</body>
+</html>

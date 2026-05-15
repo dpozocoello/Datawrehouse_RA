@@ -1,0 +1,11 @@
+sk_proyecto
+codigo_proyecto
+nombre_proyecto
+resumen_proyecto
+direccion_proyecto
+tipo_permiso_ambiental
+tipo_sector
+tipo_ente
+sistema
+estrategico
+area_responsable

@@ -1,0 +1,6056 @@
+[
+  {
+    "area_id": 2,
+    "area_name": "DIRECCIÓN DE ADMINISTRACIÓN DE RECURSOS HUMANOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 3,
+    "area_name": "UNIDAD DE ADMINISTRACIÓN DE RECURSOS HUMANOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 4,
+    "area_name": "UNIDAD DE DESARROLLO INSTITUCIONAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 5,
+    "area_name": "DIRECCIÓN DE TECNOLOGÍAS DE LA INFORMACIÓN Y COMUNICACIÓNES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 6,
+    "area_name": "UNIDAD DE DESARROLLO TECNOLOGICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 7,
+    "area_name": "UNIDAD DE INFRAESTRUCTURA TECNOLOGICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 9,
+    "area_name": "SECRETARIA GENERAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 10,
+    "area_name": "COORDINACIÓN GENERAL DE ASESORIA JURIDICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 12,
+    "area_name": "DIRECCIÓN DE INFORMACIÓN, SEGUIMIENTO Y EVALUACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 13,
+    "area_name": "DIRECCIÓN DE PLANIFICACIÓN E INVERSIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 14,
+    "area_name": "DIRECCIÓN DE AUDITORÍA INTERNA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 15,
+    "area_name": "DIRECCIÓN DE COMUNICACIÓN SOCIAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 16,
+    "area_name": "CONSERVACIÓN Y DESARROLLO SUSTENTABLE PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 17,
+    "area_name": "ADMINISTRACIÓN DE RECURSOS HUMANOS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 18,
+    "area_name": "DESARROLLO INSTITUCIONAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 19,
+    "area_name": "GESTIÓN DEL TALENTO HUMANO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 20,
+    "area_name": "ADMINISTRACIÓN TURISTICA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 21,
+    "area_name": "ADMINISTRACIÓN SISTEMA DE GUIAS NATURALISTAS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 22,
+    "area_name": "GESTION ECOTURISTICA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 23,
+    "area_name": "MONITOREO Y CONTROL TURISTICO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 24,
+    "area_name": "AUDITORIA INTERNA DPNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 25,
+    "area_name": "AUDITORÍA INTERNA - EXÁMENES ESPECIALES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 26,
+    "area_name": "CEPA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 27,
+    "area_name": "COMUNICACIÓN AMBIENTAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 28,
+    "area_name": "EDUCACIÓN E INTERPRETACIÓN AMBIENTAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 29,
+    "area_name": "PARTICIPACIÓN SOCIAL e IDENTIDAD ISLEÑA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 30,
+    "area_name": "ADMINISTRACIÓN DE LA INVESTIGACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 31,
+    "area_name": "CONSERVACIÓN Y DESARROLLO AGROPECUARIO Y MANEJO DE USOS ESPECIALES PN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 32,
+    "area_name": "GESTION AMBIENTAL Y ORDENAMIENTO TERRITORIAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 33,
+    "area_name": "LABORATORIO FABRICIO VALVERDE PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 34,
+    "area_name": "CONSERVACIÓN Y RESTAURACIÓN DE LOS ECOSISTEMAS INSULARES PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 35,
+    "area_name": "CONTROL Y ERRADICACIÓN DE ANIMALES INTRODUCIDOS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 36,
+    "area_name": "CONTROL Y ERRADICACIÓN DE PLANTAS INTRODUCIDAS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 37,
+    "area_name": "CONTROL Y VIGILANCIA INSULAR PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 38,
+    "area_name": "MANEJO DE ESPECIES NATIVAS Y ENDEMICAS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 39,
+    "area_name": "CONSERVACIÓN Y USO RACIONAL DE LOS ECOSISTEMAS MARINOS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 40,
+    "area_name": "CONTROL Y VIGILANCIA MARINA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 41,
+    "area_name": "MANEJO PESQUERO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 42,
+    "area_name": "MONITOREO E INVESTIGACIÓN MARINA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 43,
+    "area_name": "DELEGADOS OPERATIVOS CONTRATACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 44,
+    "area_name": "COORDINACIÓN TECNICA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 45,
+    "area_name": "GESTION DOCUMENTARIA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 46,
+    "area_name": "DOCUMENTACIÓN Y ARCHIVO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 47,
+    "area_name": "GESTION FINANCIERA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 48,
+    "area_name": "ADMINISTRACIÓN CAJA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 49,
+    "area_name": "CONTABILIDAD PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 50,
+    "area_name": "PRESUPUESTO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 51,
+    "area_name": "GESTION JURIDICA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 52,
+    "area_name": "ASESORIA LEGAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 53,
+    "area_name": "GESTION TECNOLOGICA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 54,
+    "area_name": "ASISTENCIA TECNICA Y MANTENIMIENTO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 55,
+    "area_name": "SISTEMAS - APLICACIONES PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 56,
+    "area_name": "OFICINA TECNICA FLOREANA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 57,
+    "area_name": "CONSERVACIÓN RESTAURACIÓN ECOSISTEMAS INSULARES OF.TEC. FLOREANA DPNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 58,
+    "area_name": "CONSERVACIÓN Y USO RACIONAL ECOSISTEMAS MARINOS OF.TEC. FLOREANA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 59,
+    "area_name": "SERVICIOS INSTITUCIONALES OF.TEC. FLOREANA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 61,
+    "area_name": "CEPA OF. TEC. ISABELA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 62,
+    "area_name": "CONSERVACIÓN RESTAURACIÓN ECOSISTEMAS INSULARES OF.TEC. ISABELA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 63,
+    "area_name": "CONSERVACIÓN Y USO RACIONAL ECOSISTEMAS MARINOS - OF.TEC. ISABELA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 64,
+    "area_name": "GESTION FINANCIERA OF.TEC.ISABELA PNG ",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 65,
+    "area_name": "SERVICIOS INSTITUCIONALES OF.TEC. ISABELA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 66,
+    "area_name": "OFICINA TECNICA SAN CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 67,
+    "area_name": "ADMINISTRACIÓN TURISTICA OF.TEC.CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 68,
+    "area_name": "CEPA OF.TEC. CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 69,
+    "area_name": "CONSERVACIÓN RESTAURACIÓN ECOSISTEMAS INSULARES -OF.TEC.CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 70,
+    "area_name": "CONSERVACIÓN Y USO RACIONAL ECOSISTEMAS MARINOS -OF.TEC.CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 71,
+    "area_name": "INVESTIGACIÓNES MARINAS APLICADAS - OF. TEC. SAN CRISTOB - PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 72,
+    "area_name": "GESTION FINANCIERA OF.TEC. SAN CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 73,
+    "area_name": "SECRETARÍA DEL MDMQ",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 74,
+    "area_name": "GESTION JURIDICA OF. TEC. CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 75,
+    "area_name": "SERVICIOS INSTITUCIONALES OF.TEC.CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 76,
+    "area_name": "PLANIFICACIÓN INSTITUCIONAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 77,
+    "area_name": "PLANIFICACIÓN Y PROGRAMACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 78,
+    "area_name": "SEGUIMIENTO Y EVALUACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 79,
+    "area_name": "RELACIONES PÚBLICAS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 80,
+    "area_name": "RELACIONES PÚBLICAS Y MANEJO DE INFORMACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 81,
+    "area_name": "SERVICIOS INSTITUCIONALES PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 82,
+    "area_name": "GESTION DE BIENES PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 83,
+    "area_name": "MANTENIMIENTO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 84,
+    "area_name": "OBRA CIVIL Y FISCALIZACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 85,
+    "area_name": "PROVEEDURIA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 86,
+    "area_name": "SERVICIOS GENERALES PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 87,
+    "area_name": "PROGRAMA REPARACIÓN AMBIENTAL Y SOCIAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 88,
+    "area_name": "AREA LEGAL PRAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 89,
+    "area_name": "COORDINACIÓN ADMINISTRATIVA PRAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 90,
+    "area_name": "COORDINACIÓN FINANCIERA PRAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 91,
+    "area_name": "COORDINACIÓN TECNICA PRAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 94,
+    "area_name": "SUBSECRETARIA DE CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 95,
+    "area_name": "DIRECCIÓN NACIONAL DE ADAPTACIÓN AL CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 96,
+    "area_name": "DIRECCIÓN NACIONAL DE MITIGACIÓN DEL CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 97,
+    "area_name": "SUBSECRETARÍA DE GESTION MARINA Y COSTERA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 98,
+    "area_name": "SUBSECRETARÍA DE PATRIMONIO NATURAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 99,
+    "area_name": "DIRECCIÓN NACIONAL DE BIODIVERSIDAD",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 100,
+    "area_name": "DIRECCIÓN NACIONAL FORESTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 101,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA COTOPAXI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 102,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA COTOPAXI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 103,
+    "area_name": "UNIDAD DE AREAS PROTEGIDAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 104,
+    "area_name": "UNIDAD DE BIOSEGURIDAD",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 105,
+    "area_name": "UNIDAD DE VIDA SILVESTRE Y ECOSISTEMAS FRAGILES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 106,
+    "area_name": "UNIDAD DE ADMINISTRACIÓN Y CONTROL FORESTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 107,
+    "area_name": "UNIDAD DE DESARROLLO FORESTAL SUSTENTABLE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 108,
+    "area_name": "UNIDAD DE NORMATIVA FORESTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 109,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 110,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 111,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 112,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 113,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 114,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 115,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 116,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 117,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 118,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 119,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 120,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 121,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA MANABI (DPMSDT)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 122,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA MANABI (DPMSDT )",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 123,
+    "area_name": "UNIDAD DE MANEJO DE RECURSOS MARINO COSTEROS MANABI DPMSDT",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 124,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL MANABI (DPMSDT)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 125,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN MANABI (DPMSDT)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 126,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 127,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 128,
+    "area_name": "UNIDAD DE MANEJO DE RECURSOS MARINO COSTEROS GUAYAS DPGSELRB",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 129,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 130,
+    "area_name": "ADMINISTRACIÓN TURISTICA OF.TEC. ISABLEA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 131,
+    "area_name": "OFICINA TECNICA ISABELA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 132,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 133,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 134,
+    "area_name": "PROGRAMA NACIONAL PARA LA GESTIÓN INTEGRAL DE DESECHOS SÓLIDOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 135,
+    "area_name": "UNIDAD DE CALIDAD DE LOS RECURSOS NATURALES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 136,
+    "area_name": "UNIDAD DE PRODUCTOS DESECHOS PELIGROSOS Y NO PELIGROSOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 137,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 138,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 139,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 140,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL COTOPAXI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 141,
+    "area_name": "UNIDAD DE ACREDITACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 142,
+    "area_name": "UNIDAD DE LICENCIAMIENTO SEGUIMIENTO Y AUDITORIAS AMBIENTALES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 143,
+    "area_name": "UNIDAD DE TRANSPORTE Y MANTENIMIENTO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 144,
+    "area_name": "UNIDAD DE PRODUCCIÓN Y CONSUMO SUSTENTABLE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 145,
+    "area_name": "UNIDAD DE GESTIÓN Y EVALUACIÓN DE LA ADAPTACIÓN AL CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 146,
+    "area_name": "UNIDAD DE POLÍTICAS DE CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 147,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA BOLIVAR",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 148,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA BOLIVAR",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 149,
+    "area_name": "DIRECCIÓN ADMINISTRATIVA FINANCIERA SGMC",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 150,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL BOLIVAR",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 151,
+    "area_name": "DIRECCIÓN DE ASESORIA JURIDICA SGMC",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 152,
+    "area_name": "DIRECCIÓN DE GESTION Y COORDINACIÓN MARINA Y COSTERA SGMC",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 153,
+    "area_name": "DIRECCIÓN DE NORMATIVA Y PROYECTOS MARINOS Y COSTEROS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 154,
+    "area_name": "PROYECTO DE CONSERVACIÓN DE LA BIODIVERSIDAD MARINO COSTERA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 155,
+    "area_name": "PROYECTO DE MANEJO DE RECURSOS COSTEROS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 156,
+    "area_name": "PROYECTO DE REGULARIZACIÓN DE CAMARONERAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 157,
+    "area_name": "PROYECTO GUAYAQUIL ECOLOGICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 158,
+    "area_name": "UNIDAD DE COMUNICACIÓN SOCIAL SGMC",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 159,
+    "area_name": "UNIDAD DE ACCESO A RECURSOS GENETICOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 160,
+    "area_name": "UNIDAD DE GUARDALMACEN Y CONTROL DE BIENES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 161,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 162,
+    "area_name": "UNIDAD DE CONTABILIDAD",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 163,
+    "area_name": "UNIDAD DE PRESUPUESTO CORRIENTE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 164,
+    "area_name": "UNIDAD DE PRESUPUESTO DE INVERSIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 165,
+    "area_name": "UNIDAD DE TESORERIA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 166,
+    "area_name": "UNIDAD DE GESTION JURIDICA AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 167,
+    "area_name": "UNIDAD PROCESAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 168,
+    "area_name": "CENTRO DE ATENCIÓN AL CIUDADANO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 169,
+    "area_name": "UNIDAD AUDIOVISUAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 170,
+    "area_name": "UNIDAD DE IMAGEN COORPORATIVA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 171,
+    "area_name": "CONTRATACIÓN PÚBLICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 172,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA EL ORO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 173,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA EL ORO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 174,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL EL ORO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 175,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA ESMERALDAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 176,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA ESMERALDAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 177,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 179,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA ORELLANA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 180,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA CHIMBORAZO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 181,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA CHIMBORAZO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 182,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL CHIMBORAZO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 183,
+    "area_name": "UNIDAD DE MANEJO DE RECURSOS MARINO COSTEROS ESMERALDAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 184,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL ESMERALDAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 185,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA CAÑAR",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 186,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA CAÑAR",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 187,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL CAÑAR",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 188,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA CARCHI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 189,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA CARCHI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 190,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL CARCHI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 191,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA LOS RÍOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 192,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA LOS RÍOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 193,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL LOS RÍOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 194,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 195,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 196,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 197,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 198,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA PASTAZA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 199,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA SANTA ELENA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 200,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL SANTA ELENA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 201,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL SANTA ELENA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 202,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA SANTO DOMINGO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 203,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA SANTO DOMINGO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 204,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL SANTO DOMINGO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 205,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA SUCUMBIOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 206,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA SUCUMBIOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 207,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL SUCUMBIOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 208,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 209,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 210,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 211,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 212,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 213,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL SANTO DOMINGO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 214,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 215,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL LOS RÍOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 216,
+    "area_name": "COORDINACIÓN GENERAL ADMINISTRATIVA FINANCIERA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 217,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL COTOPAXI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 218,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA SANTA ELENA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 219,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL SUCUMBIOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 220,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL ORELLANA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 221,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 222,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL ORELLANA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 223,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL MANABI (DPMSDT)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 224,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL BOLIVAR",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 225,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL CAÑAR",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 226,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 227,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA ORELLANA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 228,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA PASTAZA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 229,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL PASTAZA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 230,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 231,
+    "area_name": "UNIDAD DE ASESORIA JURIDICA PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 232,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 233,
+    "area_name": "PROPONENTE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 234,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 235,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 236,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 3 (TUNGURAHUA, PASTAZA, COTOPAXI Y CHIMBORAZO) - DIRECCIÓN PROVINCIAL DE TUNGURAHUA",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 237,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 238,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL PASTAZA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 240,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL EL ORO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 241,
+    "area_name": "VICEMINISTRO DEL AMBIENTE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 242,
+    "area_name": "MINISTERIO DEL AMBIENTE - DESPACHO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 243,
+    "area_name": "DIRECCIÓN PROVINCIAL DE SANTA ELENA",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 245,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 2 (NAPO, PICHINCHA Y ORELLANA) -DIRECCIÓN PROVINCIAL DEL AMBIENTE DEL NAPO",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 246,
+    "area_name": "DIRECCIÓN PROVINCIAL DE SUCUMBÍOS",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 247,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL ESMERALDAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 248,
+    "area_name": "DIRECCIÓN PROVINCIAL DEL CARCHI",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 249,
+    "area_name": "DIRECCIÓN ADMINISTRATIVA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 250,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL CHIMBORAZO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 251,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 252,
+    "area_name": "UNIDAD DE ADQUISICIONES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 253,
+    "area_name": "SUBSECRETARIA DE CALIDAD AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 254,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 6 (AZUAY, CAÑAR, MORONA SANTIAGO) - DIRECCIÓN PROVINCIAL DEL AZUAY",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 255,
+    "area_name": "DIRECCIÓN PROVINCIAL DEL CAÑAR",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 256,
+    "area_name": "DIRECCIÓN PROVINCIAL DE ORELLANA",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 257,
+    "area_name": "DIRECCIÓN NACIONAL DE PREVENCIÓN DE LA CONTAMINACIÓN AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 258,
+    "area_name": "DIRECCIÓN PROVINCIAL DE MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 259,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 260,
+    "area_name": "DIRECCIÓN PROVINCIAL DE EL ORO",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 261,
+    "area_name": "COORDINACIÓN GENERAL ZONAL -ZONA 4 (MANABÍ Y SANTO DOMINGO DE LOS TSACHILAS) - DIRECCIÓN PROVINCIAL DE MANABI",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 262,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 7 (LOJA, EL ORO Y ZAMORA CHINCHIPE) - DIRECCIÓN PROVINCIAL DE LOJA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 263,
+    "area_name": "DIRECCIÓN PROVINCIAL DE COTOPAXI",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 264,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 1 (ESMERALDAS, CARCHI, IMBABURA Y SUCUMBIOS) - DIRECCIÓN PROVINCIAL DE IMBABURA",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 265,
+    "area_name": "DIRECCIÓN PROVINCIAL DE PASTAZA",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 266,
+    "area_name": "DIRECCIÓN PROVINCIAL DE SANTO DOMINGO DE LOS TSACHILAS",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 267,
+    "area_name": "DIRECCIÓN PROVINCIAL DE LOS RÍOS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 268,
+    "area_name": "DIRECCIÓN PROVINCIAL DE CHIMBORAZO",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 269,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 5 (GUAYAS, SANTA ELENA, LOS RÍOS Y BOLIVAR) - DIRECCIÓN PROVINCIAL DEL GUAYAS ",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 270,
+    "area_name": "DIRECCIÓN PROVINCIAL DE PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 271,
+    "area_name": "DIRECCIÓN PROVINCIAL DE ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 272,
+    "area_name": "DIRECCIÓN DEL PARQUE NACIONAL GALÁPAGOS",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 273,
+    "area_name": "DIRECCIÓN PROVINCIAL DE BOLÍVAR",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 274,
+    "area_name": "DIRECCIÓN PROVINCIAL DE ESMERALDAS",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 275,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL CARCHI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 276,
+    "area_name": "MINISTERIO DEL AMBIENTE - DESPACHO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 277,
+    "area_name": "PROPONENTE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 278,
+    "area_name": "UNIDAD DE DESARROLLO FORESTAL SUSTENTABLE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 279,
+    "area_name": "UNIDAD DE NORMATIVA FORESTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 280,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 281,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 282,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 283,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 284,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN IMBABURA (DPECIS)",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 285,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 286,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 287,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 288,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA EL ORO",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 289,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL EL ORO",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 290,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL EL ORO",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 291,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA ESMERALDAS",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 292,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL ESMERALDAS",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 293,
+    "area_name": "UNIDAD DE MANEJO DE RECURSOS MARINO COSTEROS ESMERALDAS",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 294,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL ESMERALDAS",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 295,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA CAÑAR",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 296,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL CAÑAR",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 297,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL CAÑAR",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 298,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA CARCHI",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 299,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA CARCHI",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 300,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL CARCHI",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 301,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL CARCHI",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 302,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 303,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 304,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 305,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA ORELLANA",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 306,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL ORELLANA",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 307,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL ORELLANA",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 308,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA PASTAZA",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 309,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA PASTAZA",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 310,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL PASTAZA",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 311,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL PASTAZA",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 312,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 313,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 314,
+    "area_name": "DIRECCIÓN NACIONAL DE PREVENCIÓN DE LA CONTAMINACIÓN AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 315,
+    "area_name": "DIRECCIÓN PROVINCIAL DE CHIMBORAZO",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 316,
+    "area_name": "DIRECCIÓN PROVINCIAL DE EL ORO",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 317,
+    "area_name": "DIRECCIÓN PROVINCIAL DE ESMERALDAS",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 318,
+    "area_name": "DIRECCIÓN PROVINCIAL DEL CAÑAR",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 319,
+    "area_name": "DIRECCIÓN PROVINCIAL DEL CARCHI",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 320,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA LOS RÍOS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 321,
+    "area_name": "DIRECCIÓN PROVINCIAL DE MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 322,
+    "area_name": "DIRECCIÓN PROVINCIAL DE ORELLANA",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 323,
+    "area_name": "DIRECCIÓN PROVINCIAL DE PASTAZA",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 324,
+    "area_name": "DIRECCIÓN PROVINCIAL DE PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 325,
+    "area_name": "DIRECCIÓN PROVINCIAL DE SANTA ELENA",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 326,
+    "area_name": "DIRECCIÓN PROVINCIAL DE SANTO DOMINGO DE LOS TSACHILAS",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 327,
+    "area_name": "DIRECCIÓN PROVINCIAL DE SUCUMBÍOS",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 328,
+    "area_name": "DIRECCIÓN PROVINCIAL DE ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 329,
+    "area_name": "UNIDAD DE ACCESO A RECURSOS GENÉTICOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 330,
+    "area_name": "UNIDAD DE ADMINISTRACIÓN Y CONTROL FORESTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 331,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA CAÑAR",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 332,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA EL ORO",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 333,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA ESMERALDAS",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 334,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL LOS RÍOS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 335,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA MORONA SANTIAGO",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 336,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 337,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA ORELLANA",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 338,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 339,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN NAPO (DPPNO)",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 340,
+    "area_name": "DIRECCIÓN PROVINCIAL DE LOS RÍOS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 341,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA LOS RÍOS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 342,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL LOS RÍOS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 343,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 344,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA SANTA ELENA",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 345,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL SANTA ELENA",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 346,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL SANTA ELENA",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 347,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 348,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 349,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 350,
+    "area_name": "DIRECCIÓN DE TECNOLOGÍAS DE LA INFORMACIÓN Y COMUNICACIÓNES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 351,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 352,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 353,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 354,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL ZAMORA CHINCHIPE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 355,
+    "area_name": "UNIDAD PROCESAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 356,
+    "area_name": "DIRECCIÓN DE INFORMACIÓN, SEGUIMIENTO Y EVALUACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 357,
+    "area_name": "DIRECCIÓN DE PLANIFICACIÓN E INVERSIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 358,
+    "area_name": "UNIDAD AUDIOVISUAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 359,
+    "area_name": "UNIDAD DE IMAGEN COORPORATIVA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 360,
+    "area_name": "DESARROLLO INSTITUCIONAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 361,
+    "area_name": "GESTIÓN DEL TALENTO HUMANO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 362,
+    "area_name": "AUDITORÍA INTERNA - EXÁMENES ESPECIALES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 363,
+    "area_name": "CEPA PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 364,
+    "area_name": "PROYECTO SOCIO BOSQUE",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 365,
+    "area_name": "LABORATORIO FABRICIO VALVERDE PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 366,
+    "area_name": "CONTROL Y VIGILANCIA INSULAR PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 367,
+    "area_name": "CONTROL Y VIGILANCIA MARINA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 368,
+    "area_name": "UNIDAD DE CALIDAD DE LOS RECURSOS NATURALES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 369,
+    "area_name": "MANEJO PESQUERO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 370,
+    "area_name": "UNIDAD DE PRODUCTOS DESECHOS PELIGROSOS Y NO PELIGROSOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 371,
+    "area_name": "CONTABILIDAD PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 372,
+    "area_name": "PRESUPUESTO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 373,
+    "area_name": "SISTEMAS - APLICACIONES PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 374,
+    "area_name": "ADMINISTRACIÓN CAJA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 375,
+    "area_name": "ADMINISTRACIÓN DE RECURSOS HUMANOS PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 376,
+    "area_name": "ADMINISTRACIÓN SISTEMA DE GUIAS NATURALISTAS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 377,
+    "area_name": "ADMINISTRACIÓN TURÍSTICA PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 378,
+    "area_name": "ASESORÍA LEGAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 379,
+    "area_name": "AUDITORÍA INTERNA DPNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 380,
+    "area_name": "CENTRO DE ATENCIÓN AL CIUDADANO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 381,
+    "area_name": "COMUNICACIÓN AMBIENTAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 382,
+    "area_name": "CONSERVACIÓN Y RESTAURACIÓN DE LOS ECOSISTEMAS INSULARES PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 383,
+    "area_name": "CONSERVACIÓN Y USO RACIONAL DE LOS ECOSISTEMAS MARINOS PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 384,
+    "area_name": "CONTRATACIÓN PÚBLICA",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 385,
+    "area_name": "CONTROL Y ERRADICACIÓN DE ANIMALES INTRODUCIDOS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 386,
+    "area_name": "CONTROL Y ERRADICACIÓN DE PLANTAS INTRODUCIDAS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 387,
+    "area_name": "COORDINACIÓN GENERAL DE PLANIFICACIÓN AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 388,
+    "area_name": "COORDINACIÓN TECNICA PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 389,
+    "area_name": "COORDINACIÓN GENERAL DE ASESORIA JURÍDICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 390,
+    "area_name": "COORDINACIÓN TECNICA PRAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 391,
+    "area_name": "DELEGADOS OPERATIVOS CONTRATACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 393,
+    "area_name": "DIRECCIÓN DE COMUNICACIÓN SOCIAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 394,
+    "area_name": "DIRECCIÓN NACIONAL DE CONTROL AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 395,
+    "area_name": "DOCUMENTACIÓN Y ARCHIVO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 396,
+    "area_name": "EDUCACIÓN E INTERPRETACIÓN AMBIENTAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 397,
+    "area_name": "GESTIÓN DOCUMENTARIA PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 398,
+    "area_name": "GESTIÓN ECOTURISTICA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 399,
+    "area_name": "GESTIÓN FINANCIERA PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 400,
+    "area_name": "GESTIÓN JURÍDICA PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 401,
+    "area_name": "MONITOREO E INVESTIGACIÓN MARINA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 402,
+    "area_name": "MONITOREO Y CONTROL TURÍSTICO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 403,
+    "area_name": "PARTICIPACIÓN SOCIAL e IDENTIDAD ISLEÑA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 404,
+    "area_name": "SECRETARÍA GENERAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 405,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA SUCUMBÍOS",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 406,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA SANTA ELENA",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 407,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 408,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL SUCUMBÍOS",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 409,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL SUCUMBÍOS",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 410,
+    "area_name": "UNIDAD DE GESTIÓN JURÍDICA AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 411,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA SUCUMBÍOS",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 412,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL BOLIVAR",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 413,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL BOLIVAR",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 414,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA COTOPAXI",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 415,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL COTOPAXI",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 416,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL COTOPAXI",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 417,
+    "area_name": "SERVICIOS INSTITUCIONALES OF.TEC. FLOREANA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 418,
+    "area_name": "CEPA OF. TEC. ISABELA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 419,
+    "area_name": "SERVICIOS INSTITUCIONALES OF.TEC. ISABELA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 420,
+    "area_name": "CEPA OF.TEC. CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 421,
+    "area_name": "INVESTIGACIÓNES MARINAS APLICADAS - OF. TEC. SAN CRISTOB - PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 422,
+    "area_name": "SERVICIOS INSTITUCIONALES OF.TEC.CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 423,
+    "area_name": "SERVICIOS INSTITUCIONALES PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 424,
+    "area_name": "MANTENIMIENTO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 425,
+    "area_name": "PROVEEDURIA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 426,
+    "area_name": "SERVICIOS GENERALES PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 427,
+    "area_name": "PROGRAMA NACIONAL PARA LA GESTIÓN INTEGRAL DE DESECHOS SÓLIDOS",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 428,
+    "area_name": "UNIDAD DE BIOSEGURIDAD",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 429,
+    "area_name": "VICEMINISTRO DEL AMBIENTE",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 430,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA CHIMBORAZO",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 431,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL CHIMBORAZO",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 432,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL CHIMBORAZO",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 433,
+    "area_name": "UNIDAD DE ADQUISICIONES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 434,
+    "area_name": "UNIDAD DE GUARDALMACEN Y CONTROL DE BIENES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 435,
+    "area_name": "UNIDAD DE TRANSPORTE Y MANTENIMIENTO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 436,
+    "area_name": "UNIDAD DE DESARROLLO INSTITUCIONAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 437,
+    "area_name": "UNIDAD DE GESTIÓN Y EVALUACIÓN DE LA ADAPTACIÓN AL CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 438,
+    "area_name": "UNIDAD DE POLÍTICAS DE CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 439,
+    "area_name": "ÁREA LEGAL PRAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 440,
+    "area_name": "ADMINISTRACIÓN TURÍSTICA OF.TEC. ISABLEA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 441,
+    "area_name": "ASISTENCIA TÉCNICA Y MANTENIMIENTO PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 442,
+    "area_name": "CONSERVACIÓN RESTAURACIÓN ECOSISTEMAS INSULARES -OF.TEC.CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 443,
+    "area_name": "CONSERVACIÓN RESTAURACIÓN ECOSISTEMAS INSULARES OF.TEC. FLOREANA DPNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 444,
+    "area_name": "CONSERVACIÓN RESTAURACIÓN ECOSISTEMAS INSULARES OF.TEC. ISABELA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 445,
+    "area_name": "CONSERVACIÓN Y USO RACIONAL ECOSISTEMAS MARINOS OF.TEC. FLOREANA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 446,
+    "area_name": "CONSERVACIÓN Y USO RACIONAL ECOSISTEMAS MARINOS - OF.TEC. ISABELA PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 447,
+    "area_name": "COORDINACIÓN ADMINISTRATIVA PRAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 448,
+    "area_name": "COORDINACIÓN FINANCIERA PRAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 449,
+    "area_name": "DIRECCIÓN ADMINISTRATIVA FINANCIERA DE LA SUB. GESTIÓN MARINA Y COSTERA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 450,
+    "area_name": "DIRECCIÓN NACIONAL DE BIODIVERSIDAD",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 451,
+    "area_name": "DIRECCIÓN NACIONAL DE MITIGACIÓN DEL CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 452,
+    "area_name": "DIRECCIÓN NACIONAL FORESTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 453,
+    "area_name": "GESTIÓN DE BIENES PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 454,
+    "area_name": "GESTIÓN FINANCIERA OF.TEC.ISABELA PNG ",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 455,
+    "area_name": "GESTIÓN FINANCIERA OF.TEC. SAN CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 456,
+    "area_name": "GESTIÓN JURÍDICA OF. TEC. CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 457,
+    "area_name": "GESTIÓN TECNOLÓGICA PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 458,
+    "area_name": "OBRA CIVIL Y FISCALIZACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 459,
+    "area_name": "OFICINA TÉCNICA FLOREANA PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 460,
+    "area_name": "OFICINA TÉCNICA ISABELA PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 461,
+    "area_name": "OFICINA TÉCNICA SAN CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 462,
+    "area_name": "PLANIFICACIÓN INSTITUCIONAL PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 463,
+    "area_name": "PLANIFICACIÓN Y PROGRAMACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 464,
+    "area_name": "PROGRAMA REPARACIÓN AMBIENTAL Y SOCIAL",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 465,
+    "area_name": "RELACIONES PÚBLICAS PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 466,
+    "area_name": "RELACIONES PÚBLICAS Y MANEJO DE INFORMACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 467,
+    "area_name": "SEGUIMIENTO Y EVALUACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 468,
+    "area_name": "SUBSECRETARÍA DE GESTIÓN MARINA Y COSTERA",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 469,
+    "area_name": "SUBSECRETARÍA DE CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 470,
+    "area_name": "SUBSECRETARÍA DE PATRIMONIO NATURAL",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 471,
+    "area_name": "UNIDAD DE ACREDITACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 472,
+    "area_name": "UNIDAD DE ADMINISTRACIÓN DE RECURSOS HUMANOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 473,
+    "area_name": "UNIDAD DE ÁREAS PROTEGIDAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 474,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA CHIMBORAZO",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 475,
+    "area_name": "UNIDAD DE DESARROLLO TECNOLÓGICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 476,
+    "area_name": "UNIDAD DE LICENCIAMIENTO SEGUIMIENTO Y AUDITORÍAS AMBIENTALES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 477,
+    "area_name": "UNIDAD DE PRODUCCIÓN Y CONSUMO SUSTENTABLE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 478,
+    "area_name": "UNIDAD DE VIDA SILVESTRE Y ECOSISTEMAS FRÁGILES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 479,
+    "area_name": "PROYECTO DE CONSERVACIÓN DE LA BIODIVERSIDAD MARINO COSTERA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 480,
+    "area_name": "PROYECTO DE MANEJO DE RECURSOS COSTEROS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 481,
+    "area_name": "PROYECTO DE REGULARIZACIÓN DE CAMARONERAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 482,
+    "area_name": "UNIDAD DE CONTABILIDAD",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 483,
+    "area_name": "UNIDAD DE PRESUPUESTO CORRIENTE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 484,
+    "area_name": "UNIDAD DE PRESUPUESTO DE INVERSIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 485,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 486,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 487,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 488,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 489,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 490,
+    "area_name": "UNIDAD DE MANEJO DE RECURSOS MARINO COSTEROS GUAYAS DPGSELRB",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 491,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 492,
+    "area_name": "UNIDAD ADMINISTRATIVO FINANCIERA AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 493,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 494,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 495,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 496,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 497,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 498,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA BOLIVAR",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 499,
+    "area_name": "DIRECCIÓN DE ADMINISTRACIÓN DE RECURSOS HUMANOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 500,
+    "area_name": "ADMINISTRACIÓN DE LA INVESTIGACIÓN PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 501,
+    "area_name": "ADMINISTRACIÓN TURÍSTICA OF.TEC.CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 502,
+    "area_name": "CONSERVACIÓN Y DESARROLLO AGROPECUARIO Y MANEJO DE USOS ESPECIALES PN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 503,
+    "area_name": "CONSERVACIÓN Y DESARROLLO SUSTENTABLE PNG",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 504,
+    "area_name": "CONSERVACIÓN Y USO RACIONAL ECOSISTEMAS MARINOS -OF.TEC.CRISTOBAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 505,
+    "area_name": "COORDINACIÓN GENERAL ADMINISTRATIVA FINANCIERA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 506,
+    "area_name": "DIRECCIÓN ADMINISTRATIVA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 507,
+    "area_name": "DIRECCIÓN DE NORMATIVA Y PROYECTOS MARINOS Y COSTEROS SGMC",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 508,
+    "area_name": "DIRECCIÓN DE GESTIÓN Y COORDINACIÓN MARINA Y COSTERA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 509,
+    "area_name": "DIRECCIÓN DE ASESORÍA JURÍDICA DE LA SUB. GESTIÓN MARINA Y COSTERA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 510,
+    "area_name": "DIRECCIÓN FINANCIERA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 511,
+    "area_name": "DIRECCIÓN NACIONAL DE ADAPTACIÓN AL CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 512,
+    "area_name": "GESTIÓN AMBIENTAL Y ORDENAMIENTO TERRITORIAL PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 513,
+    "area_name": "MANEJO DE ESPECIES NATIVAS Y ENDÉMICAS PNG",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 514,
+    "area_name": "PROYECTO GUAYAQUIL ECOLÓGICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 515,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA BOLIVAR",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 516,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 517,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA COTOPAXI",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 518,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 519,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 520,
+    "area_name": "UNIDAD DE CALIDAD AMBIENTAL MANABÍ (DPMSDT)",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 521,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 522,
+    "area_name": "UNIDAD DE COMUNICACIÓN SOCIAL SGMC",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 523,
+    "area_name": "UNIDAD DE INFRAESTRUCTURA TECNOLÓGICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 524,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN AZUAY (DPACMS)",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 525,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN GUAYAS (DPGSELRB)",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 526,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN LOJA (DPLEOZCH)",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 527,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN TUNGURAHUA (DPPCTCH)",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 528,
+    "area_name": "UNIDAD DE TESORERÍA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 529,
+    "area_name": "UNIDAD ADMINISTRATIVA FINANCIERA MANABÍ (DPMSDT)",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 530,
+    "area_name": "UNIDAD DE ASESORÍA JURÍDICA MANABÍ (DPMSDT )",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 531,
+    "area_name": "UNIDAD DE MANEJO DE RECURSOS MARINO COSTEROS MANABÍ DPMSDT",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 532,
+    "area_name": "UNIDAD DE PATRIMONIO NATURAL MANABÍ (DPMSDT)",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 533,
+    "area_name": "UNIDAD DE PLANIFICACIÓN Y COORDINACIÓN MANABÍ (DPMSDT)",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 534,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 1 (ESMERALDAS, CARCHI, IMBABURA Y SUCUMBIOS) - DIRECCIÓN PROVINCIAL DE IMBABURA",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 535,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 2 (NAPO, PICHINCHA Y ORELLANA) -DIRECCIÓN PROVINCIAL DEL AMBIENTE DEL NAPO",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 536,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 3 (TUNGURAHUA, PASTAZA, COTOPAXI Y CHIMBORAZO) - DIRECCIÓN PROVINCIAL DE TUNGURAHUA",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 537,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 5 (GUAYAS, SANTA ELENA, LOS RÍOS Y BOLIVAR) - DIRECCIÓN PROVINCIAL DEL GUAYAS ",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 538,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 6 (AZUAY, CAÑAR, MORONA SANTIAGO) - DIRECCIÓN PROVINCIAL DEL AZUAY",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 539,
+    "area_name": "COORDINACIÓN GENERAL ZONAL - ZONA 7 (LOJA, EL ORO Y ZAMORA CHINCHIPE) - DIRECCIÓN PROVINCIAL DE LOJA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 540,
+    "area_name": "COORDINACIÓN GENERAL ZONAL -ZONA 4 (MANABÍ Y SANTO DOMINGO DE LOS TSACHILAS) - DIRECCIÓN PROVINCIAL DE MANABÍ",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 541,
+    "area_name": "DIRECCIÓN PROVINCIAL DE COTOPAXI",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 542,
+    "area_name": "DIRECCIÓN PROVINCIAL DE BOLIVAR",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 543,
+    "area_name": "DIRECCIÓN DEL PARQUE NACIONAL GALÁPAGOS",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 544,
+    "area_name": "SECRETARÍA DEL MDMQ",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 547,
+    "area_name": "SUBSECRETARÍA DE CALIDAD AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 551,
+    "area_name": "GAD MUNICIPAL DE GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 552,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DEL GUAYAS",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 553,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE PICHINCHA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 554,
+    "area_name": "GAD MUNICIPAL DE CUENCA",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 556,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL DISTRITO METROPOLITANO DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 565,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE TELECOMUNICACIONES, AGUA POTABLE, ALCANTARILLADO Y SANEAMIENTO DE CUENCA",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 566,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE MOVILIDAD, TRANSITO Y TRANSPORTE DE CUENCA - EMOV EP.",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 567,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE ASEO DE CUENCA EMAC - EP",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 568,
+    "area_name": "EMUCE EP",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 569,
+    "area_name": "CORPORACION AEROPUERTARIA",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 570,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE SERVICIOS DE RASTRO Y PLAZAS DE GANADO EMURPLAG EP",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 571,
+    "area_name": "HOSPITAL MUNICIPAL DE LA MUJER Y EL NIÑO",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 572,
+    "area_name": "EMPRESA PÚBLICA MUNICIPAL DE DESARROLLO ECONÓMICO EDEC-EP",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 573,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE EL ORO",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 575,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE MANABÍ",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 576,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE COTOPAXI",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 577,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE LOJA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 578,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE NAPO",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 579,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE BOLÍVAR",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 580,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE CARCHI",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 581,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE CAÑAR",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 582,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE CHIMBORAZO",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 583,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO DE LA PROVINCIA DE ESMERALDAS",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 584,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE IMBABURA",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 585,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE LOS RÍOS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 586,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE TUNGURAHUA",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 587,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE SANTO DOMINGO DE LOS TSACHILAS",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 588,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE SANTA ELENA",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 589,
+    "area_name": "EMPRESA PÚBLICA  DE CONSTRUCCIONES “ESMERALDAS CONSTRUYE TU FUTURO”",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 590,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE SANEAMIENTO AMBIENTAL DE BABAHOYO - EMSABA EP",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 591,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL TERMINAL TERRESTRE BABAHOYO TTB-EP",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 592,
+    "area_name": "EMAPSA BF: EMPRESA MUNICIPAL DE AGUA POTABLE Y SANEAMIENTO AMBIENTAL",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 593,
+    "area_name": "EMPRESA DE TERMINAL TERRESTRE",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 594,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE AGUA POTABLE Y ALCANTARILLADO CANTON QUEVEDO",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 595,
+    "area_name": "EMPRESA DE MERCADOS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 596,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE CAMAL DEL CANTON QUEVEDO",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 597,
+    "area_name": "EMPRESA DE ASEO Y GESTIÓN AMBIENTAL",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 598,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE CEMENTERIOS DEL CANTON QUEVEDO",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 599,
+    "area_name": "FUNDACION QUEVEDO ES MI CIUDAD",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 600,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE PARQUES Y AREAS VERDES DEL CANTON QUEVEDO",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 601,
+    "area_name": "EMPRESA MUNICIPAL DE VIVIENDA DE INTERES SOCIAL DEL CANTON QUEVEDO",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 602,
+    "area_name": "EMPRESA MUNICIPAL DE AGUA POTABLE Y ALCANTARILLADO DE MONTALVO MONTAGUA",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 603,
+    "area_name": "EMPRESA MUNICIPAL DE AGUA POTABLE Y ALCANTARILLADO DEL CANTÓN VALENCIA",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 604,
+    "area_name": "EMPRESA PÚBLICA MUNICIPAL DE URBANIZACIÓN Y VIVIENDA DEL CANTÓN  VALENCIA",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 605,
+    "area_name": "EMPRESA PUBLICA VIAL PROVINCIAL DE LOS RIOS – EMVIALRIOS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 606,
+    "area_name": "EMPRESA PÚBLICA DE DESARROLLO PRODUCTIVO Y AGROPECUARIO DEL SUR",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 607,
+    "area_name": "EMPRESA PÚBLICA DE RIEGO Y DRENAJE DEL SUR",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 608,
+    "area_name": "EMPRESA PÚBLICA DE VIALIDAD DEL SUR",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 609,
+    "area_name": "CENTRO DE ATENCIÓN SOCIAL MATILDE HIDALGO",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 610,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL EMAPA - GERENTE ING. FIDEL CASTRO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 611,
+    "area_name": "EMPRESA PUBLICA DE GESTIÓN INTEGRAL DE DESECHOS SOLIDOS - GERENTE(E) ING. MIRIAM ZAPATA ROJAS -",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 612,
+    "area_name": "MUNICIPAL CUERPO DE BOMBEROS DE AMBATO - GERENTE LCDO. GREGORIO WASHINGTON HIDALGO LUCERO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 613,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL MERCADO MAYORISTA - GERENTE ING. ANGEL JACOBO SUAREZ",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 614,
+    "area_name": "EMPRESA PÚBLICA  MUNICIPAL MANCOMUNADA DE ASEO INTEGRAL PATATE PELILEO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 615,
+    "area_name": "CONCEJO CANTONAL PARA LA PROTECCIÓN DE  DERECHOS  DEL CANTÓN SAN PEDRO DE PELILEO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 616,
+    "area_name": "EMPRESA PÚBLICA  MUNICIPAL MANCOMUNADA DE ASEO INTEGRAL PATATE PELILEO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 617,
+    "area_name": "CONCEJO CANTONAL DE LA NIÑEZ Y ADOLESCENCIA DEL CANTÓN SANTIAGO DE PILLARO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 618,
+    "area_name": "INSTITUTO METROPOLITANO DE PATRIMONIO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 619,
+    "area_name": "AGENCIA DE COORDINACION DISTRITAL DEL COMERCIO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 620,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE AGUA POTABLE Y SANEAMIENTO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 621,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE ASEO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 622,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE DESARROLLO URBANO DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 623,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE GESTION DE DESTINO TURISTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 624,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE GESTION INTEGRAL DE RESIDUOS SOLIDOS EMGIRS-EP",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 625,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE HABITAT Y VIVIENDA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 626,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE LOGISTICA PARA LA SEGURIDAD Y LA CONVIVENCIA CIUDADANA EP",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 627,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE LOGISTICA Y COMERCIALIZACION",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 628,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE MOVILIDAD Y OBRAS PUBLICAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 629,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE RASTRO QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 630,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE SERVICIOS AEROPORTUARIOS Y GESTION DE ZONAS FRANCAS Y REGIMENES ESPECIALES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 631,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA DE TRANSPORTE DE PASAJEROS DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 632,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA MERCADO MAYORISTA DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 633,
+    "area_name": "EMPRESA PUBLICA METROPOLITANA METRO DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 634,
+    "area_name": "EMPRESA ELECTRICA QUITO S.A. E.E.Q.",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 635,
+    "area_name": "CORPORACION DE PROMOCION ECONOMICA CONQUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 636,
+    "area_name": "POLICIA METROPOLITANA DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 637,
+    "area_name": "EMPRESA PASTEURIZADORA QUITO S.A.",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 638,
+    "area_name": "HIDRO EQUINOCCIO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 639,
+    "area_name": "CIUDAD MITAD DEL MUNDO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 640,
+    "area_name": "PICHINCHA COMUNINICACIONES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 641,
+    "area_name": "EMPRESA PÚBLICA DE CONSTRUCCIONES SANTO DOMINGO DE LOS TSÁCHILAS - EPCO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 642,
+    "area_name": "EMPRESA PÚBLICA PROVINCIAL SANTO DOMINGO SOLIDARIO - EPSO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 643,
+    "area_name": "INFRAESTRUCTURA LOGÍSTICA Y CONECTIVIDAD ILCO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 644,
+    "area_name": "EMPRESA PÚBLICA MUNICIPAL DE TRANSPORTE TERRESTRE, TRÁNSITO, SEGURIDAD VIAL Y TERMINALES TERRESTRE DE SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 645,
+    "area_name": "PATRONATO MUNICIPAL DE INCLUSIÓN SOCIAL DEL GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 646,
+    "area_name": "EMPRESA PÚBLICA MUNICIPAL DE RASTRO Y PLAZAS DE GANADO DE SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 647,
+    "area_name": "EMPRESA PÚBLICA MUNICIPAL DE AGUA POTABLE Y ALCANTARILLADO DE SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 648,
+    "area_name": "CUERPO DE BOMBEROS DEL GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 649,
+    "area_name": "REGISTRO DE LA PROPIEDAD DEL CANTÓN SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 650,
+    "area_name": "PATRONATO PROVINCIAL DEL GADPCH",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 651,
+    "area_name": "EMPRESA PÚBLICA DEL COMPLEJO TURÍSTICO DE CHACHIMBIRO",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 652,
+    "area_name": "PATRONATO DE ACCIÓN SOCIAL DEL GOBIERNO PROVINCIAL DE IMBABURA",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 653,
+    "area_name": "EMPRESA PÚBLICA DE VIALIDAD IMBAVIAL EP",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 654,
+    "area_name": "EMPRESA PÚBLICA DE CONSTRUCCIONES",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 655,
+    "area_name": "GAD MUNICIPAL ANTONIO ANTE",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 656,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DE SUCUMBÍOS",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 658,
+    "area_name": "GAD MUNICIPAL DE SAN MIGUEL DE URCUQUÍ",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 659,
+    "area_name": "GAD MUNICIPAL DE ATACAMES",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 660,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN ELOY ALFARO",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 661,
+    "area_name": "GAD MUNICIPAL ESMERALDAS",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 662,
+    "area_name": "GAD MUNICIPAL MUISNE",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 663,
+    "area_name": "GAD MUNICIPAL QUININDÉ",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 664,
+    "area_name": "GAD MUNICIPAL DE RIOVERDE",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 665,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN BOLÍVAR",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 666,
+    "area_name": "GAD MUNICIPAL DE TULCÁN",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 667,
+    "area_name": "GAD MUNICIPAL DE CASCALES",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 668,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN GONZALO PIZARRO",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 669,
+    "area_name": "GAD MUNICIPAL DE LAGO AGRIO",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 670,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN SHUSHUFINDI",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 671,
+    "area_name": "GAD MUNICIPAL DE PUTUMAYO",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 672,
+    "area_name": "GAD MUNICIPAL DE SUCUMBÍOS",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 673,
+    "area_name": "GAD INTERCULTURAL Y PLURINACIONAL DEL MUNICIPIO DE CAYAMBE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 674,
+    "area_name": "GAD MUNICIPAL DE PEDRO MONCAYO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 675,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN PEDRO VICENTE MALDONADO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 676,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN PUERTO QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 677,
+    "area_name": "GAD MUNICIPAL RUMIÑAHUI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 678,
+    "area_name": "GAD MUNICIPAL DE FRANCISCO DE ORELLANA",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 679,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN LA JOYA DE LOS SACHAS",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 680,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN LORETO",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 681,
+    "area_name": "GAD MUNICIPAL DE ARCHIDONA",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 682,
+    "area_name": "GAD MUNICIPAL DE EL CHACO",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 683,
+    "area_name": "GAD MUNICIPAL CANTON RIOBAMBA",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 684,
+    "area_name": "GAD MUNICIPAL CANTON ALAUSI",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 685,
+    "area_name": "GAD MUNICIPAL CHAMBO",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 686,
+    "area_name": "GAD MUNICIPAL CANTON CHUNCHI",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 687,
+    "area_name": "GAD MUNICIPAL CANTON COLTA",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 688,
+    "area_name": "GAD MUNICIPAL CANTON CUMANDA",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 689,
+    "area_name": "GAD MUNICIPAL CANTON GUANO",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 690,
+    "area_name": "GAD MUNICIPAL PALLATANGA",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 691,
+    "area_name": "GAD MUNICIPAL DEL CANTON PENIPE",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 692,
+    "area_name": "GAD MUNICIPAL CANTON GUAMOTE",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 693,
+    "area_name": "GAD MUNICIPAL AMBATO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 694,
+    "area_name": "GAD MUNICIPAL CANTON BAÑOS",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 695,
+    "area_name": "GAD MUNICIPAL SAN PEDRO DE PELILEO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 696,
+    "area_name": "GAD MUNICIPAL SANTIAGO DE PILLARO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 697,
+    "area_name": "GAD MUNICIPAL CANTON PASTAZA",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 698,
+    "area_name": "GAD MUNICIPAL INTERCULTURAL CANTON SAQUISILI",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 699,
+    "area_name": "GAD MUNICIPAL CANTON LATACUNGA",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 700,
+    "area_name": "GAD MUNICIPAL CANTON LA MANA",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 701,
+    "area_name": "GAD MUNICIPAL CANTON PUJILI",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 702,
+    "area_name": "GAD MUNICIPAL CANTON PANGUA",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 703,
+    "area_name": "GAD MUNICIPAL SIGCHOS",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 704,
+    "area_name": "GAD MUNICIPAL CANTON MONTECRISTI",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 705,
+    "area_name": "GAD MUNICIPAL CANTON SUCRE",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 706,
+    "area_name": "GAD MUNICIPAL BABAHOYO",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 707,
+    "area_name": "GAD MUNICIPAL MOCACHE",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 708,
+    "area_name": "GAD MUNICIPAL CANTON MONTALVO",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 709,
+    "area_name": "GAD MUNICIPAL CANTON VALENCIA",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 710,
+    "area_name": "GAD MUNICIPAL CANTON VENTANAS",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 711,
+    "area_name": "GAD MUNICIPAL CANTON URDANETA",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 712,
+    "area_name": "GAD MUNICIPAL CHILLANES",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 713,
+    "area_name": "GAD MUNICIPAL CANTON CHIMBO",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 714,
+    "area_name": "GAD MUNICIPAL CANTON GUARANDA",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 715,
+    "area_name": "GAD MUNICIPAL SAN MIGUEL DE BOLIVAR",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 716,
+    "area_name": "GAD MUNICIPAL SANTA ELENA",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 717,
+    "area_name": "GAD MUNICIPAL CANTON DAULE",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 718,
+    "area_name": "GAD MUNICIPAL CANTON EL TRIUNFO",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 719,
+    "area_name": "MUY ILUSTRE MUNICIPALIDAD DE GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 720,
+    "area_name": "GAD MUNICIPAL CANTON ISIDRO AYORA",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 721,
+    "area_name": "GAD MUNICIPAL CANTON CRNEL. MARCELINO MARIDUEÑA",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 722,
+    "area_name": "GAD MUNICIPAL CANTON NARANJAL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 723,
+    "area_name": "GAD MUNICIPAL CANTON NOBOL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 724,
+    "area_name": "GAD MUNICIPAL PEDRO CARBO",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 725,
+    "area_name": "GAD MUNICIPAL SALITRE",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 726,
+    "area_name": "GAD MUNICIPAL CANTON SAMBORONDON",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 727,
+    "area_name": "GAD MUNICIPAL SIMON BOLIVAR",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 728,
+    "area_name": "GAD MUNICIPAL COLIMES",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 729,
+    "area_name": "GAD MUNICIPAL CAMILO PONCE ENRIQUEZ",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 730,
+    "area_name": "GAD MUNICIPAL CHORDELEG",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 731,
+    "area_name": "GAD MUNICIPAL GIRON",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 732,
+    "area_name": "GAD MUNICIPAL GUACHAPALA",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 733,
+    "area_name": "GAD MUNICIPAL GUALACEO",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 734,
+    "area_name": "GAD MUNICIPAL OÑA",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 735,
+    "area_name": "GAD MUNICIPAL PAUTE",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 736,
+    "area_name": "GAD MUNICIPAL PUCARA",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 737,
+    "area_name": "GAD MUNICIPAL SAN FERNANDO",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 738,
+    "area_name": "GAD MUNICIPAL SANTA ISABEL",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 739,
+    "area_name": "GAD MUNICIPAL SIGSIG",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 740,
+    "area_name": "GAD MUNICIPAL CANTON EL PAN",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 741,
+    "area_name": "GAD MUNICIPAL NABON",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 742,
+    "area_name": "GAD MUNICIPAL AZOGUES",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 743,
+    "area_name": "GAD MUNICIPAL CANTON BIBLIAN",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 744,
+    "area_name": "GAD MUNICIPAL DELEG",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 745,
+    "area_name": "GAD MUNICIPAL INTERCULTURAL COMUNITARIO EL TAMBO",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 746,
+    "area_name": "GAD MUNICIPAL GUALAQUIZA",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 747,
+    "area_name": "GAD MUNICIPAL HUAMBOYA",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 748,
+    "area_name": "GAD MUNICIPAL LOGROÑO",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 749,
+    "area_name": "GAD MUNICIPAL CANTON MORONA",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 750,
+    "area_name": "GAD MUNICIPAL PALORA",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 751,
+    "area_name": "GAD MUNICIPAL CANTON SANTIAGO",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 752,
+    "area_name": "GAD MUNICIPAL CANTON SUCUA",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 753,
+    "area_name": "GAD MUNICIPAL INTERCULTURAL Y MEGADIVERSO TAISHA",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 754,
+    "area_name": "GAD MUNICIPAL TIWINTZA",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 755,
+    "area_name": "GAD MUNICIPAL ARENILLAS",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 756,
+    "area_name": "GAD MUNICIPAL EL GUABO",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 757,
+    "area_name": "GAD MUNICIPAL PIÑAS",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 758,
+    "area_name": "GAD MUNICIPAL PORTOVELO",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 759,
+    "area_name": "GAD MUNICIPAL CATAMAYO",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 760,
+    "area_name": "GAD MUNICIPAL CANTON CHAGUARPAMBA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 761,
+    "area_name": "GAD MUNICIPAL CANTON GONZANAMA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 762,
+    "area_name": "GAD MUNICIPAL CANTON OLMEDO",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 763,
+    "area_name": "GAD MUNICIPAL QUILANGA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 764,
+    "area_name": "GAD MUNICIPAL CANTON SOZORANGA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 765,
+    "area_name": "GAD MUNICIPAL EL PANGUI",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 766,
+    "area_name": "GAD MUNICIPAL CANTON NANGARITZA",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 767,
+    "area_name": "GAD MUNICIPAL PAQUISHA",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 768,
+    "area_name": "GAD MUNICIPAL CANTON YACUAMBI",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 769,
+    "area_name": "GAD MUNICIPAL YANTZAZA",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 884,
+    "area_name": "GAD MUNICIPAL CANTON PORTOVIEJO",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 885,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE AGUA POTABLE Y ALCANTARILLADO DEL CANTON BOLIVAR EPMAPAB",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 886,
+    "area_name": "EMPRESA PUBLICA TERMINAL TERRESTRE Y COMUNICACION SOCIAL COCA-EP",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 887,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE FAENAMIENTO DE GANADO DEL CANTON FRANCISCO DE ORELLANA",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 888,
+    "area_name": "EMPRESA PUBLICA MUSEO ARQUEOLOGICO Y CENTRO CULTURAL DE ORELLANA",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 889,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE AGUA POTABLE Y ALCANTARILLADO DE LA CIUDAD DE CHUNCHI",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 890,
+    "area_name": "REGISTRO DE LA PROPIEDAD (GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE CHUNCHI)",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 891,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE AGUA POTABLE, ALCANTARILLADO Y SANEAMIENTO DE CUMANDA EPMAPSAC",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 892,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL MANCOMUNADA DE ASEO INTEGRAL DE PALLATANGA, CUMANDA Y GENERAL ANTONIO ELIZALDE (BUCAY) EMMAI-BCP-EP",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 893,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE AGUA POTABLE Y ALCANTARILLADO DE PASTAZA EMAPAST-EP",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 894,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE URBANIZACION Y VIVIENDA DE INTERES SOCIAL EMUVISP-EP",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 895,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL CANTÓN COLTA",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 896,
+    "area_name": "CUERPO DE BOMBEROS DEL CANTON PENIPE",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 897,
+    "area_name": "CONCEJO CANTONAL DE PROTECCION DE DERECHOS",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 898,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL AGROINDUSTRIAL EP EMPROFRUB",
+    "geo_path": "ECUADOR -> CHIMBORAZO",
+    "depth": 2
+  },
+  {
+    "area_id": 899,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN SAN LORENZO",
+    "geo_path": "ECUADOR -> ESMERALDAS",
+    "depth": 2
+  },
+  {
+    "area_id": 900,
+    "area_name": "GAD MUNICIPAL DE CUYABENO",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 901,
+    "area_name": "GAD MUNICIPAL DEL CANTÓN MEJÍA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 902,
+    "area_name": "GAD MUNICIPAL CANTON PEDERNALES",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 903,
+    "area_name": "GAD MUNICIPAL SANTO DOMINGO",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS -> SANTO DOMINGO",
+    "depth": 3
+  },
+  {
+    "area_id": 904,
+    "area_name": "GAD MUNICIPAL QUEVEDO",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 905,
+    "area_name": "GAD MUNICIPAL SAN JACINTO DE BUENA FE",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 906,
+    "area_name": "GAD MUNICIPAL BALAO",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 907,
+    "area_name": "GAD MUNICIPAL CANTON DURAN",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 908,
+    "area_name": "GAD MUNICIPAL PALESTINA",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 909,
+    "area_name": "GAD MUNICIPAL CANTON CAÑAR",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 910,
+    "area_name": "GAD MUNICIPAL CANTON ZAPOTILLO",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 911,
+    "area_name": "GAD MUNICIPAL CANTON MACARA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 912,
+    "area_name": "GAD MUNICIPAL DE TENA",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 913,
+    "area_name": "GAD MUNICIPAL SANTA ANA DE COTACACHI",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 915,
+    "area_name": "GAD MUNICIPAL DE PALTAS",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 916,
+    "area_name": "GAD MUNICIPAL SAN MIGUEL DE IBARRA",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 917,
+    "area_name": "GAD MUNICIPAL DE QUIJOS",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 918,
+    "area_name": "GAD MUNICIPAL BOLIVAR",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 919,
+    "area_name": "GAD MUNICIPAL CANTON JARAMIJO",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 920,
+    "area_name": "GAD MUNICIPAL CANTON PICHINCHA",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 927,
+    "area_name": "GAD MUNICIPAL CANTON NARANJITO",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 929,
+    "area_name": "GAD MUNICIPAL CANTON PLAYAS",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 931,
+    "area_name": "GAD MUNICIPAL BALZAR",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 934,
+    "area_name": "GAD MUNICIPAL CANTON GRAL. ANTONIO ELIZALDE BUCAY",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 935,
+    "area_name": "GAD MUNICIPAL SAN JACINTO DE YAGUACHI",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 936,
+    "area_name": "MUNICIPIO DE LOJA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 937,
+    "area_name": "GAD MUNICIPAL CANTON CELICA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 938,
+    "area_name": "GAD MUNICIPAL CANTON CHINCHIPE",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 939,
+    "area_name": "GAD MUNICIPAL CANTON PALANDA",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 968,
+    "area_name": "GAD MUNICIPAL DE MONTUFAR",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 969,
+    "area_name": "GAD MUNICIPAL SANTA CLARA",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 970,
+    "area_name": "GAD MUNICIPAL CANTON SALCEDO",
+    "geo_path": "ECUADOR -> COTOPAXI",
+    "depth": 2
+  },
+  {
+    "area_id": 971,
+    "area_name": "GAD MUNICIPAL CANTON MANTA",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 972,
+    "area_name": "GAD MUNICIPAL CANTON SANTA LUCIA",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 973,
+    "area_name": "GAD MUNICIPAL ALFREDO BAQUERIZO MORENO (JUJAN)",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 975,
+    "area_name": "GAD MUNICIPAL MILAGRO",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 976,
+    "area_name": "GAD MUNICIPAL SEVILLA DE ORO",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 977,
+    "area_name": "GAD MUNICIPAL CANTON LA TRONCAL",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 978,
+    "area_name": "GAD MUNICIPAL MACHALA",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 979,
+    "area_name": "GAD MUNICIPAL MARCABELI",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 980,
+    "area_name": "GAD MUNICIPAL SANTA ROSA",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 981,
+    "area_name": "GAD MUNICIPAL CANTON CALVAS",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 982,
+    "area_name": "GAD MUNICIPAL INTERCULTURAL SARAGURO",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 983,
+    "area_name": "GAD MUNICIPAL ZAMORA",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 984,
+    "area_name": "GAD MUNICIPAL CANTON CENTINELA DEL CONDOR",
+    "geo_path": "ECUADOR -> ZAMORA CHINCHIPE",
+    "depth": 2
+  },
+  {
+    "area_id": 985,
+    "area_name": "GAD MUNICIPAL DEL CANTON PASAJE",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 986,
+    "area_name": "GAD MUNICIPAL OTAVALO",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 987,
+    "area_name": "GAD MUNICIPAL CANTON MERA",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 988,
+    "area_name": "GAD CANTONAL ESPINDOLA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 989,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL LA CONCORDIA",
+    "geo_path": "ECUADOR -> SANTO DOMINGO DE LOS TSACHILAS",
+    "depth": 2
+  },
+  {
+    "area_id": 990,
+    "area_name": "GAD MUNICIPAL SAN VICENTE",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 991,
+    "area_name": "DIRECCIÓN DE ADMINISTRACIÓN DE PROCESOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 992,
+    "area_name": "DIRECCIÓN DE ADMINISTRACIÓN DEL TALENTO HUMANO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 993,
+    "area_name": "VICE DESPACHO MINISTERIAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 994,
+    "area_name": "AGENCIA DE REGULACIÓN Y CONTROL DE LA BIOSEGURIDAD Y CUARENTENA PARA GALÁPAGOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 996,
+    "area_name": "COORDINACIÓN GENERAL JURÍDICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 997,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL CANTÓN JAMA",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 998,
+    "area_name": "DIRECCIÓN DE GESTIÓN Y CAMBIO ORGANIZACIONAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1021,
+    "area_name": "INSTITUTO NACIONAL DE BIODIVERSIDAD INABIO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1022,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO PROVINCIAL DEL AZUAY",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1023,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL CANTON CHONE",
+    "geo_path": "ECUADOR -> MANABÍ -> CHONE",
+    "depth": 3
+  },
+  {
+    "area_id": 1038,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL CANTON SANTA ANA",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 1039,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL CANTON JUNIN",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 1040,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO INTERCULTURAL Y PARTICIPATIVO DEL CANTÓN SUSCAL",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 1041,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL SAN PEDRO DE HUACA",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 1042,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE SAN JUAN BOSCO ",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 1043,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE PABLO SEXTO",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 1044,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL  DE LIMON INDANZA",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 1045,
+    "area_name": "ELABORACIÓN DE MANUAL DE PROCEDIMIENTOS PARA LA APLICACIÓN DE LA NORMATIVA DE EVALUACIÓN AMBIENTAL DE PROYECTOS DEL SECTOR SANEAMIENTO AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1046,
+    "area_name": "GESTIÓN INTEGRADA PARA LA LUCHA CONTRA LA DESERTIFICACIÓN, DEGRADACIÓN DE LA TIERRA Y ADAPTACIÓN AL CAMBIO CLIMÁTICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1047,
+    "area_name": "DESARROLLO DE ENFOQUES DE MANEJO DE PAISAJES EN EL SISTEMA NACIONAL DE ÁREAS PROTEGIDAS DEL ECUADOR PARA MEJORAR LA CONSERVACIÓN DE LA VIDA SILVESTRE EN PELIGRO DE EXTINCIÓN MUNDIAL (PAISAJES)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1049,
+    "area_name": "SISTEMA DE INFORMACION AMBIENTAL (SUIA)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1050,
+    "area_name": "PROGRAMA DE CONSERVACIÓN DE BOSQUES Y REDD+ PROYECTO DE FORTALECIMIENTO AL SISTEMA NACIONAL DE MONITOREO DE BOSQUES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1051,
+    "area_name": "PROGRAMA NACIONAL DE REFORESTACIÓN CON FINES DE CONSERVACIÓN AMBIENTAL, PROTECCIÓN DE CUENCAS HIDROGRÁFICAS Y BENEFICIOS ALTERNOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1052,
+    "area_name": "PROGRAMA DE REPARACIÓN AMBIENTAL Y SOCIAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1053,
+    "area_name": "PROGRAMA DE APOYO AL SISTEMA NACIONAL DE ÁREAS PROTEGIDAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1054,
+    "area_name": "PROYECTO SISTEMA NACIONAL DE CONTROL FORESTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1055,
+    "area_name": "REGISTRO DE EMISIONES Y TRANSFERENCIAS DE CONTAMINANTES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1056,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL INTERCULTURAL Y PLURINACIONAL DEL CANTÓN ARAJUNO",
+    "geo_path": "ECUADOR -> PASTAZA",
+    "depth": 2
+  },
+  {
+    "area_id": 1057,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL  DEL CANTÓN CEVALLOS",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 1058,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL CANTON CHILLA",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 1059,
+    "area_name": "GOBIERNO AUTÓNMO DESCENTRALIZADO DEL CANTÓN ATAHUALPA",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 1060,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL CANTÓN SANTIAGO DE QUERO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 1061,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL CANTÓN QUINSALOMA",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 1063,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO DEL CANTÓN CALUMA",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 1137,
+    "area_name": "DIRECCIÓN DE BOSQUES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1138,
+    "area_name": "DIRECCIÓN DE ÁREAS PROTEGIDAS Y OTRAS FORMAS DE CONSERVACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1140,
+    "area_name": "DIRECCIÓN DE SUSTANCIAS QUÍMICAS, RESIDUOS Y DESECHOS PELIGROSOS Y NO PELIGROSOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1141,
+    "area_name": "ADMINISTRACION ESPECIAL TURISTICA LA MARISCAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1142,
+    "area_name": "ADMINISTRACION MUNICIPAL ZONA CENTRO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1143,
+    "area_name": "ADMINISTRACION MUNICIPAL ZONA ELOY ALFARO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1144,
+    "area_name": "ADMINISTRACION ZONAL CALDERON",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1145,
+    "area_name": "AGENCIA DE COORDINACION DISTRITAL DEL COMERCIO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1146,
+    "area_name": "AGENCIA METROPOLITANA DE CONTROL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1147,
+    "area_name": "AGENCIA METROPOLITANA DE CONTROL DE TRANSPORTE TERRESTRE TRANSITO Y SEGURIDAD VIAL DEL DISTRITO METROPOLITANO DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1148,
+    "area_name": "AGENCIA METROPOLITANA DE PROMOCION ECONOMICO CONQUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1149,
+    "area_name": "COMISION METROPOLITANA DE LUCHA CONTRA LA CORRUPCION",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1150,
+    "area_name": "CONSEJO METROPOLITANO DE PROTECCION INTEGRAL A LA NIÑEZ Y ADOLESCENCIA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1151,
+    "area_name": "CORPORACION INSTITUTO DE LA CIUDAD DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1152,
+    "area_name": "CUERPO DE BOMBEROS DEL DISTRITO METROPOLITANO DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1153,
+    "area_name": "FONDO AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1154,
+    "area_name": "FUNDACION MUNICIPAL TEATRO NACIONAL SUCRE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1155,
+    "area_name": "FUNDACION MUSEOS DE LA CIUDAD",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1156,
+    "area_name": "INSTITUTO METROPOLITANO DE PATRIMONIO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1157,
+    "area_name": "MUNICIPAL / MUNICIPIO DISTRITO METROPOLITANO QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1158,
+    "area_name": "MUNICIPIO DE QUITO ZONA LA DELICIA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1159,
+    "area_name": "MUNICIPIO DE QUITO ZONA NORTE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1160,
+    "area_name": "MUNICIPIO DE QUITO ZONA QUITUMBE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1161,
+    "area_name": "MUNICIPIO DE QUITO ZONA VALLE DE LOS CHILLOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1162,
+    "area_name": "MUNICIPIO DE QUITO ZONA VALLE DE TUMBACO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1163,
+    "area_name": "POLICIA METROPOLITANA DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1164,
+    "area_name": "RADIO DISTRITO FM 102.9",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1165,
+    "area_name": "REGISTRO DE LA PROPIEDAD DEL DISTRITO METROPOLITANO DE QUITO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1166,
+    "area_name": "UNIDAD DE SALUD CENTRO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1167,
+    "area_name": "UNIDAD DE SALUD NORTE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1168,
+    "area_name": "UNIDAD DE SALUD SUR",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1169,
+    "area_name": "UNIDAD ESPECIAL REGULA TU BARRIO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1170,
+    "area_name": "UNIDAD PATRONATO MUNICIPAL SAN JOSE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1171,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE MOVILIDAD, TRANSITO Y TRANSPORTE DE CUENCA - EMOV EP.",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1172,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE ASEO DE CUENCA EMAC - EP",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1173,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE TELECOMUNICACIONES, AGUA POTABLE, ALCANTARILLADO Y SANEAMIENTO DE CUENCA - ETAPA EP",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1174,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE MOVILIDAD, TRANSITO Y TRANSPORTE DE CUENCA",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1175,
+    "area_name": "EMPRESA MUNICIPAL DE ASEO DE CUENCA",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1176,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE TELECOMUNICACIONES, AGUA POTABLE, ALCANTARILLADO Y SANEAMIENTO DE CUENCA",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1177,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE SERVICIOS DE CEMENTERIOS, SALAS DE VELACIONES Y EXEQUIAS DEL CANTON CUENCA EMUCE EP",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1178,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE TRANSITO DE GUAYAQUIL, EP",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1179,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL REGISTRO DE LA PROPIEDAD DE GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1180,
+    "area_name": "EMPRESA MUNICIPAL DE AGUA POTABLE Y ALCANTARILLADO DE GUAYAQUIL,EP EMAPAG EP",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1186,
+    "area_name": "DIRECCIÓN DE INFORMACIÓN AMBIENTAL Y AGUA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1187,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE LAS LAJAS",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 1188,
+    "area_name": "EMPRESA PÚBLICA MUNICIPAL PARA LA GESTIÓN DE LA INNOVACIÓN Y COMPETITIVIDAD E.P.I.C.O.",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1189,
+    "area_name": "EMPRESA PÚBLICA MUNICIPAL DE VIVIENDA DEL CANTÓN GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1190,
+    "area_name": "EMPRESA PÚBLICA MUNICIPAL DE TURISMO, PROMOCIÓN CÍVICA Y RELACIONES INTERNACIONALES DE GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1191,
+    "area_name": "EMPRESA PÚBLICA MUNICIPAL DE ACCION SOCIAL Y EDUCACIÓN DE GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1192,
+    "area_name": "FUNDACIÓN TERMINAL TERRESTRE DE GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1193,
+    "area_name": "GUAYAQUIL SIGLO XXI FUNDACIÓN MUNICIPAL PARA LA REGENERACION URBANA",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1194,
+    "area_name": "CORPORACIÓN REGISTRO CIVIL DE GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1195,
+    "area_name": "FUNDACION MUNICIPAL TRANSPORTE MASIVO URBANO DE GUAYAQUIL METROVIA",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1196,
+    "area_name": "FUNDACIÓN AUTORIDAD AEROPORTUARIA DE GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1197,
+    "area_name": "CORPORACIÓN PARA LA SEGURIDAD CIUDADANA DE GUAYAQUL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1198,
+    "area_name": "ADMINISTRADORA MUNICIPAL DE FONDOS Y FIDEICOMISOS ADMUNIFONDOS",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1199,
+    "area_name": "BENEMÉRITO CUERPO DE BOMBEROS DE GUAYAQUIL",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1200,
+    "area_name": "MALECÓN 2000",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1201,
+    "area_name": "EMPRESA PUBLICA MUNICIPAL DE URBANIZACIÓN Y VIVIENDA DE CUENCA. EMUVI EP.",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1202,
+    "area_name": "EMPRESA PUBLICA FARMACIAS MUNICIPALES SOLIDARIAS. FARMASOL EP.",
+    "geo_path": "ECUADOR -> AZUAY",
+    "depth": 2
+  },
+  {
+    "area_id": 1203,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE VINCES",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 1204,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DEL CANTÓN PALENQUE",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 1205,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE ESPEJO",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 1206,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE MIRA",
+    "geo_path": "ECUADOR -> CARCHI",
+    "depth": 2
+  },
+  {
+    "area_id": 1207,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE SUCUMBÍOS",
+    "geo_path": "ECUADOR -> SUCUMBIOS",
+    "depth": 2
+  },
+  {
+    "area_id": 1208,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE PIMAMPIRO",
+    "geo_path": "ECUADOR -> IMBABURA",
+    "depth": 2
+  },
+  {
+    "area_id": 1209,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE AGUARICO",
+    "geo_path": "ECUADOR -> ORELLANA",
+    "depth": 2
+  },
+  {
+    "area_id": 1210,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE LOS BANCOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1211,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE CARLOS JULIO AROSEMENA",
+    "geo_path": "ECUADOR -> NAPO",
+    "depth": 2
+  },
+  {
+    "area_id": 1212,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE MOCHA",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 1213,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE PATATE",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 1214,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE TISALEO",
+    "geo_path": "ECUADOR -> TUNGURAHUA",
+    "depth": 2
+  },
+  {
+    "area_id": 1215,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE 24 DE MAYO",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 1216,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE EL CARMEN",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 1217,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE FLAVIO ALFARO",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 1218,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE JIPIJAPA",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 1219,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE PAJÁN",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 1220,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE PUERTO LÓPEZ",
+    "geo_path": "ECUADOR -> MANABÍ -> PUERTO LÓPEZ",
+    "depth": 3
+  },
+  {
+    "area_id": 1221,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE ROCAFUERTE",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 1222,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE TOSAGUA",
+    "geo_path": "ECUADOR -> MANABÍ",
+    "depth": 2
+  },
+  {
+    "area_id": 1223,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE LOMAS DE SARGENTILLO",
+    "geo_path": "ECUADOR -> GUAYAS",
+    "depth": 2
+  },
+  {
+    "area_id": 1224,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE BABA",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 1225,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE PALENQUE",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 1226,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE PUEBLOVIEJO",
+    "geo_path": "ECUADOR -> LOS RÍOS",
+    "depth": 2
+  },
+  {
+    "area_id": 1227,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE ECHEANDIA",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 1228,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE LAS NAVES",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 1229,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE SAN MIGUEL",
+    "geo_path": "ECUADOR -> BOLIVAR",
+    "depth": 2
+  },
+  {
+    "area_id": 1230,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE LA LIBERTAD",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 1231,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE SALINAS",
+    "geo_path": "ECUADOR -> SANTA ELENA",
+    "depth": 2
+  },
+  {
+    "area_id": 1232,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE SUSCAL",
+    "geo_path": "ECUADOR -> CAÑAR",
+    "depth": 2
+  },
+  {
+    "area_id": 1233,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE SANTIAGO DE MÉNDEZ",
+    "geo_path": "ECUADOR -> MORONA SANTIAGO",
+    "depth": 2
+  },
+  {
+    "area_id": 1234,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE CANTÓN BALSAS",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 1235,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE HUAQUILLAS",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 1236,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE ZARUMA",
+    "geo_path": "ECUADOR -> EL ORO",
+    "depth": 2
+  },
+  {
+    "area_id": 1237,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE LOJA",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 1238,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE PINDAL",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 1239,
+    "area_name": "GOBIERNO AUTÓNOMO DESCENTRALIZADO MUNICIPAL DE PUYANGO",
+    "geo_path": "ECUADOR -> LOJA",
+    "depth": 2
+  },
+  {
+    "area_id": 1240,
+    "area_name": "SUBSECRETARÍA DE RECURSOS HÍDRICOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1241,
+    "area_name": "DIRECCIÓN TÉCNICA DE LOS RECURSOS HÍDRICOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1242,
+    "area_name": "DIRECCIÓN DE ADMINISTRACIÓN Y CALIDAD DEL RECURSO HÍDRICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1243,
+    "area_name": "DIRECCIÓN SOCIAL Y ARTICULACIÓN DEL RECURSO HÍDRICO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1244,
+    "area_name": "SUBSECRETARÍA DE AGUA POTABLE, SANEAMIENTO, RIEGO Y DRENAJE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1245,
+    "area_name": "DIRECCIÓN DE FOMENTO DE AGUA POTABLE, SANEAMIENTO, RIEGO Y DRENAJE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1246,
+    "area_name": "DIRECCIÓN DE RIEGO Y DRENAJE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1247,
+    "area_name": "DIRECCIÓN DE AGUA POTABLE Y SANEAMIENTO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1249,
+    "area_name": "DIRECCIÓN DE CONTROL AMBIENTAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1250,
+    "area_name": "DIRECCIÓN DE PRODUCCIÓN Y DESARROLLO SOSTENIBLE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1262,
+    "area_name": "REGISTRO DE EMISIONES Y TRANSFERENCIAS DE CONTAMINANTES. (RETC)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1263,
+    "area_name": "VICEMINISTERIO DEL AMBIENTE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1265,
+    "area_name": "EMPRESA PÚBLICA DEL AGUA EPA EP",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1266,
+    "area_name": "AGENCIA DE REGULACIÓN Y CONTROL DE LA BIOSEGURIDAD Y CUARENTENA PARA GALÁPAGOS",
+    "geo_path": "ECUADOR -> GALAPAGOS",
+    "depth": 2
+  },
+  {
+    "area_id": 1267,
+    "area_name": "INSTITUTO NACIONAL DE METEOROLOGÍA E HIDROLOGÍA – INAMHI",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1268,
+    "area_name": "AGENCIA DE REGULACION Y CONTROL DEL AGUA - ARCA ",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1270,
+    "area_name": "DIRECCION DE PATROCINIO JUDICIAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1271,
+    "area_name": "DIRECCION DE ASESORIA JURIDICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1272,
+    "area_name": "DIRECCION DE COACTIVAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1275,
+    "area_name": "DIRECCIÓN DE EDUCACIÓN AMBIENTAL Y AGUA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1276,
+    "area_name": "CONSERVACIÓN Y DESARROLLO DE LA CUENCA DEL RÍO PAUTE Y SUS AFLUENTES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1277,
+    "area_name": "INSTITUTO NACIONAL DE BIODIVERSIDAD – INABIO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1278,
+    "area_name": "SISTEMA NACIONAL DE CONTROL FORESTAL (CONTROL FORESTAL)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1279,
+    "area_name": "PROGRAMA NACIONAL DE REFORESTACIÓN CON FINES DE CONSERVACIÓN AMBIENTAL, PROTECCIÓN DE CUENCAS HIDROGRÁFICAS Y BENEFICIOS ALTERNOS (REFORESTACIÓN) ",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1280,
+    "area_name": "APOYO AL SISTEMA NACIONAL DE ÁREAS PROTEGIDAS (SNAP)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1281,
+    "area_name": "PROGRAMA CONSERVACIÓN DE BOSQUES Y REDD+   (REDD+)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1282,
+    "area_name": "PROGRAMA AMAZONÍA SIN FUEGO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1283,
+    "area_name": "PROYECTO SOCIO BOSQUE DE CONSERVACIÓN.   (PSB)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1284,
+    "area_name": "PROYECTO DE RECUPERACION DE LAS AREAS PROTEGIDAS DE LA CIUDAD DE GUAYAQUIL-ESTERO SALADO E ISLA SANTAY  (PRESIS)",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1285,
+    "area_name": "PROGRAMA DE FORTALECIMIENTO INSTITUCIONAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1286,
+    "area_name": "COORDINACIÓN GENERAL DE PLANIFICACIÓN Y GESTIÓN ESTRATÉGICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1287,
+    "area_name": "DIRECCIÓN DE SEGUIMIENTO Y EVALUACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1288,
+    "area_name": "DIRECCIÓN DE PROCESOS, SERVICIOS Y GESTIÓN DEL CAMBIO ",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1289,
+    "area_name": "DIRECCIÓN DE COOPERACIÓN INTERNACIONAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1290,
+    "area_name": "VICEMINISTERIO DEL AGUA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1291,
+    "area_name": "Por asignar",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1292,
+    "area_name": "PROYECTO DE AGUA POTABLE Y SANEAMIENTO PARA COMUNIDADES RURALES Y PEQUEÑOS MUNICIPIOS PAS-EE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1293,
+    "area_name": "Proyecto de Gestión de Residuos Sólidos y Economía Circular Inclusiva",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1294,
+    "area_name": "SISTEMA INTEGRADO DE TRANSICIÓN ECOLÓGICA AMBIENTE Y AGUA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1295,
+    "area_name": "PROMADEC III",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1298,
+    "area_name": "PROYECTO NACIONAL DE RESTAURACIÓN DEL PAISAJE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1299,
+    "area_name": "PROYECTO SOCIO BOSQUE II",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1300,
+    "area_name": "SISTEMA NACIONAL DE CONTROL FORESTAL Y VIDA SILVESTRE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1301,
+    "area_name": "APOYO AL SISTEMA NACIONAL DE ÁREAS PROTEGIDAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1302,
+    "area_name": "FOMENTO A LA GESTIÓN DE AGUA POTABLE SANEAMIENTO RIEGO Y DRENAJE - FOGAPRYD",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1303,
+    "area_name": "PROYECTO DE EDUCACIÓN AMBIENTAL PARA PROMOVER LA ECONOMÍA CIRCULAR EN LOS HOGARES MI BARRIO VERDE",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1304,
+    "area_name": "COORDINACIÓN DEL DESPACHO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1305,
+    "area_name": "OTROS MINISTERIOS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1306,
+    "area_name": "MINISTERIO DE ACUACULTURA Y PESCA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1307,
+    "area_name": "MINISTERIO DE AGRICULTURA Y GANADERÍA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1308,
+    "area_name": "MINISTERIO DE CULTURA Y PATRIMONIO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1309,
+    "area_name": "MINISTERIO DE DEFENSA NACIONAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1310,
+    "area_name": "MINISTERIO DE DESARROLLO URBANO Y VIVIENDA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1311,
+    "area_name": "MINISTERIO DE ECONOMÍA Y FINANZAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1312,
+    "area_name": "MINISTERIO DE EDUCACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1313,
+    "area_name": "MINISTERIO DE ENERGÍA Y RECURSOS NATURALES NO RENOVABLES",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1314,
+    "area_name": "MINISTERIO DE GOBIERNO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1315,
+    "area_name": "MINISTERIO DE INCLUSIÓN ECONÓMICA Y SOCIAL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1316,
+    "area_name": "MINISTERIO DE PRODUCCIÓN, COMERCIO EXTERIOR, INVERSIONES Y PESCA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1317,
+    "area_name": "MINISTERIO DE RELACIONES EXTERIORES Y MOVILIDAD HUMANA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1318,
+    "area_name": "MINISTERIO DE SALUD PÚBLICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1319,
+    "area_name": "MINISTERIO DE TRABAJO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1320,
+    "area_name": "MINISTERIO DE TRANSPORTE Y OBRAS PÚBLICAS",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1321,
+    "area_name": "MINISTERIO DE TURISMO",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1322,
+    "area_name": "MINISTERIO DE TELECOMUNICACIONES Y SOCIEDAD DE LA INFORMACIÓN",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1323,
+    "area_name": "DIRECCIÓN MARINO COSTERO Y OCEANICA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1324,
+    "area_name": "PICHINCHA HUMANA",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  },
+  {
+    "area_id": 1325,
+    "area_name": "AGENCIA DE REGULACION Y CONTROL DE ELECTRICIDAD, ARCONEL",
+    "geo_path": "ECUADOR -> PICHINCHA",
+    "depth": 2
+  }
+]

@@ -1,0 +1,30 @@
+Deep Audit for Project 542234
+
+--- coa_mae.certificate_intersection_coa ---
+cein_id: 220077
+prco_id: 542234
+cein_code: MAE-SUIA-RA-DZDCH-2026-02106
+cein_date_generates: None
+cein_intersects: None
+cein_status: True
+cein_creation_date: 2026-03-19 19:14:20.560000
+cein_creator_user: 1891760430001
+cein_date_update: 2026-03-19 19:50:16.342000
+cein_user_update: 1891760430001
+cein_observation_bd: None
+cein_location: <center><table border="1" cellpadding="5" cellspacing="0" class="w600Table" style="width: 100%;border-collapse:collapse;font-size:12px;font-family: arial,helvetica,sans-serif;"><tbody><tr BGCOLOR="#B2B2B2"><td><strong>Provincia</strong></td><td><strong>Cant¾n</strong></td><td><strong>Parroquia</strong></td></tr><tr><td>TUNGURAHUA</td><td>AMBATO</td><td>SAN FERNANDO (PASA SAN FERNANDO)</td></tr><tr><td>TUNGURAHUA</td><td>AMBATO</td><td>PILAGUIN (PILAHUIN)</td></tr></tbody></table></center>
+cein_layers: Zona Intangible (26/02/2020)<br/>Bosque y Vegetaci¾n Natural (31/12/2023)<br/>Organizaci¾n Territorial Provincial (26/02/2020)<br/>Sistema Nacional de ┴rea Protegida / SNAP (30/01/2024)<br/>Reserva de Biosfera (26/02/2020)<br/>Zona de Amortiguamiento Yasuni (26/03/2023)<br/>Patrimonio Forestal Nacional (25/03/2022)<br/>Humedal RAMSAR (26/02/2020)<br/>Cobertura y Uso de la Tierra (26/02/2020)<br/>ECOSISTEMAS (26/02/2020)<br/>┴rea bajo Conservaci¾n - PSB (31/12/2022)<br/>ZONIFICACION SNAP (16/03/2020)<br/>LIMITE INTERNO 20 KM (17/03/2020)<br/>MAR TERRITORIAL (17/06/2020)<br/>OFICINAS_TECNICAS (09/07/2020)<br/>Cobertura y Uso de la Tierra 2018 (23/12/2022)<br/>Cobertura y Uso de la Tierra 2022 (31/10/2023)<br/>AREA BAJO ACCIONES DEáRESTAURACIËN (11/07/2024)<br/>
+cein_viability_intersection: 
+cein_other_intersection: ECOSISTEMAS: ARBUSTAL SIEMPREVERDE Y HERBAZAL DEL P┴RAMO (ASSN01)<br/>ECOSISTEMAS: HERBAZAL Y ARBUSTAL SIEMPREVERDE SUBNIVAL DEL P┴RAMO (HSNN03)<br/>ECOSISTEMAS: HERBAZAL DEL P┴RAMO (HSSN02)<br/>ECOSISTEMAS: ARBUSTAL SIEMPREVERDE MONTANO DEL NORTE DE LOS ANDES (ASMN01)<br/>ECOSISTEMAS: HERBAZAL INUNDABLE DEL P┴RAMO (HSSN04)<br/>ECOSISTEMAS: HERBAZAL H┌MEDO MONTANO ALTO SUPERIOR DEL P┴RAMO (HSSN03)<br/>ECOSISTEMAS: BOSQUE SIEMPREVERDE DEL P┴RAMO (BSSN01)<br/>Cobertura y Uso de la Tierra: P┴RAMO<br/>Cobertura y Uso de la Tierra: MOSAICO AGROPECUARIO<br/>Cobertura y Uso de la Tierra: VEGETACIËN ARBUSTIVA<br/>Cobertura y Uso de la Tierra: PLANTACIËN FORESTAL<br/>Cobertura y Uso de la Tierra: INFRAESTRUCTURA<br/>Cobertura y Uso de la Tierra: NATURAL<br/>Cobertura y Uso de la Tierra: AREA POBLADA<br/>Cobertura y Uso de la Tierra 2022: PARAMO<br/>Cobertura y Uso de la Tierra 2022: MOSAICO AGROPECUARIO<br/>Cobertura y Uso de la Tierra 2022: PASTIZAL<br/>Cobertura y Uso de la Tierra 2022: VEGETACION ARBUSTIVA Y HERBACEA<br/>Cobertura y Uso de la Tierra 2022: PLANTACION FORESTAL<br/>Cobertura y Uso de la Tierra 2022: INFRAESTRUCTURA<br/>Cobertura y Uso de la Tierra 2022: CUERPO DE AGUA NATURAL<br/>Cobertura y Uso de la Tierra 2022: AREA POBLADA<br/>
+cein_trade_date: 2026-03-19 19:50:16.314000
+cein_task_id: None
+cein_update_number: 0
+cein_url_code_validation: https://regularizacion-control.ambiente.gob.ec/suia-iii/validacion/validarCertificado.jsf?faces-redirect=true&p=SbrznTTImeOfwugiWP1SHILTGQXLzquFjncNRf29fU%2BZYdBUWn96NNxnBlImcdpaGLqahm1xl2psi7NbNe7mdw%3D%3D
+cein_user_sign: 0202081535
+area_id: 1086
+
+--- coa_mae.details_intersection_project_licencing ---
+Global Error: relation "coa_mae.details_intersection_project_licencing" does not exist
+LINE 1: SELECT * FROM coa_mae.details_intersection_project_licencing...
+                      ^
+

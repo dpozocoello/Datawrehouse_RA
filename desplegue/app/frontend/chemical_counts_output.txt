@@ -1,0 +1,11 @@
+--- Table Row Counts ---
+dw.dim_chemical_importer: 0 rows
+dw.dim_chemical_storage: 20 rows
+dw.dim_chemical_substance: 2466 rows
+dw.fact_chemical_application: 12 rows
+dw.fact_chemical_declaration: 0 rows
+dw.fact_chemical_import: 0 rows
+dw.fact_chemical_movement: 0 rows
+stg.stg_fact_chemical_application: 2159 rows
+stg.stg_chemical_substances_declaration: 2161 rows
+stg.stg_chemical_substances_movements: 14002 rows

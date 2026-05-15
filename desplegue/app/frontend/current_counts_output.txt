@@ -1,0 +1,5 @@
+--- Current Row Counts ---
+dw.dim_chemical_importer: 535 rows
+dw.fact_chemical_import: 0 rows
+dw.fact_chemical_movement: 0 rows
+dw.fact_chemical_declaration: 0 rows

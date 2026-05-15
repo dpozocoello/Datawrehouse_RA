@@ -1,0 +1,15 @@
+Tables in suia_bpms_enlisy_app:
+   table_schema           table_name
+0        public           attachment
+1        public        audittaskimpl
+2        public       bamtasksummary
+3        public    booleanexpression
+4        public      casefiledatalog
+..          ...                  ...
+63       public              taskdef
+64       public            taskevent
+65       public     taskvariableimpl
+66       public  variableinstancelog
+67       public         workiteminfo
+
+[68 rows x 2 columns]

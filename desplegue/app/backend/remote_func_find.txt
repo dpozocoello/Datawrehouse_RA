@@ -1,0 +1,2 @@
+Schema: suia_iii | Func: sp_coa_bi
+Schema: suia_iii | Func: sp_coa_bi_inactivos

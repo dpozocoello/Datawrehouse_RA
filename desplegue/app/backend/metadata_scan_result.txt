@@ -1,0 +1,36 @@
+
+--- Schema: coa_waste_generator_record ---
+  Table: waste_generator_record_coa
+    Columns: ['ware_id', 'ware_code', 'ware_status', 'user_id', 'ware_delete_reason', 'ware_deactivation_date', 'wapo_id', 'ware_creation_date', 'ware_creator_user', 'ware_date_update', 'ware_user_update', 'ware_observation_bd', 'ware_responsibility_held', 'ware_finalized', 'ware_send_date_information']
+  Table: waste_generator_catalog
+    Columns: ['waca_id', 'waca_code', 'waca_description', 'waca_status', 'waca_creation_date', 'waca_creator_user', 'waca_date_update', 'waca_user_update', 'waca_observation_bd']
+  Table: generation_points_waste
+    Columns: ['gewa_id', 'gepo_id', 'wwgp_id', 'gewa_status', 'gewa_creation_date', 'gewa_creator_user', 'gewa_date_update', 'gewa_user_update', 'gewa_observation_bd']
+  Table: waste_waste_generation_points
+    Columns: ['wwgp_id', 'wwgp_status', 'wada_id', 'wwgp_generate_waste', 'wwgp_quantity_tons', 'wwgp_quantity_kilograms', 'wwgp_creation_date', 'wwgp_creator_user', 'wwgp_date_update', 'wwgp_user_update', 'wwgp_observation_bd', 'wwgp_internal_management', 'wwgp_other', 'ware_id', 'wwgp_search_added', 'wwgp_waste_description', 'wwgp_quantity_unit', 'wwgp_management_individual', 'wwgp_management_system_name', 'wwgp_management_system_date']
+
+--- Schema: waste_dangerous ---
+  Table: catalogs_waste
+    Columns: ['cawa_id', 'cawa_key', 'cawa_name', 'cawa_status', 'user_id_add', 'cawa_date_add', 'user_id_update', 'cawa_date_update', 'cawp_id']
+  Table: generator_record
+    Columns: ['gere_id', 'proc_id', 'gere_type', 'gere_document_status', 'gere_code', 'gere_code_annual_statement', 'gere_code_single_manifest', 'gere_date_actualization', 'gere_number_technical_report', 'gere_number_office_response', 'gere_date_response', 'gere_annex', 'gere_waste', 'gere_observations', 'gere_status', 'user_id_add', 'gere_date_add', 'user_id_update', 'gere_date_update', 'gere_office_admission_number', 'gere_date_admission_procedure', 'gere_id_parent', 'gere_observation_bd', 'gere_status_date']
+  Table: catalogs
+    Columns: ['cata_id', 'cata_parent_id', 'cata_description', 'cata_status', 'user_id_add', 'cata_date_add', 'user_id_update', 'cata_date_update']
+  Table: dangerous_waste NOT FOUND.
+  Table: dw_classification NOT FOUND.
+
+--- Schema: coa_chemical_sustances ---
+  Table: chemical_sustances_records
+    Columns: ['chsr_id', 'prco_id', 'chsr_identification_rep_legal', 'chsr_name_rep_legal', 'chsr_address_rep_legal', 'chsr_phone_rep_legal', 'chsr_email_rep_legal', 'chsr_technological_change', 'chsr_reduction_substance', 'chsr_application_number', 'chsr_substance_registration', 'chsr_creation_date', 'chsr_creator_user', 'chsr_date_update', 'chsr_user_update', 'chsr_observation_bd', 'geca_id', 'chsr_status', 'chsr_rep_estudent', 'chsr_valid_since', 'chsr_valid_until', 'geca_id_pronouncement', 'chsr_additional_responses', 'chsr_additional_justifications', 'area_id', 'chsr_craft_operator', 'chsr_observation_status', 'chsr_status_date', 'user_id', 'chsr_consumption', 'chsr_status_import_declaration', 'chsr_code']
+  Table: chemical_substances_declaration
+    Columns: ['chsd_id', 'chsr_id', 'dach_id', 'chsd_operator', 'chsd_year', 'chsd_unit', 'chsd_starting_amount', 'chsd_end_quantity', 'chsd_declaration_on_time', 'chsd_fine_statement', 'geca_id_parameter_ci', 'chsd_status', 'chsd_status_date', 'chsd_creation_date', 'chsd_creator_user', 'chsd_date_update', 'chsd_user_update', 'chsd_observation_bd', 'chsd_month', 'chsd_declaration_status_geca_id', 'chsd_pending_payment', 'chsd_procedure_code', 'chsd_date_observation_bd']
+  Table: location_substances
+    Columns: ['losu_id', 'mach_id', 'gelo_id', 'geca_id', 'losu_email', 'losu_phone', 'losu_adress', 'losu_status', 'losu_creation_date', 'losu_creator_user', 'losu_date_update', 'losu_user_update', 'losu_observation_bd', 'losu_process_activity', 'losu_average_product', 'losu_average_sustance', 'losu_observations', 'chsr_id', 'losu_inspection', 'losu_support', 'losu_complies', 'losu_observations_complies', 'losu_inspection_date', 'losu_support_date', 'losu_complies_date', 'user_id_support', 'area_id_support', 'losu_place', 'losu_coor_x', 'losu_coor_y']
+  Table: chemical_substances_movements
+    Columns: ['chsm_id', 'chsd_id', 'geca_id', 'chsm_invoice', 'chsm_operator', 'chsm_entry', 'chsm_exit', 'geca_id_presentation', 'chsm_presentation_option', 'chsm_finished_product', 'chsm_packaging_quantity', 'chsm_packaging_serial_number', 'chsm_status', 'chsm_observation_status', 'chsm_review', 'chsm_review_date', 'chsm_creation_date', 'chsm_creator_user', 'chsm_date_update', 'chsm_user_update', 'chsm_observation_bd', 'chsm_right', 'chsm_description', 'chsr_id', 'inre_id']
+
+--- Schema: chemical_pesticides ---
+  Table: product_registration
+    Columns: ['prre_id', 'prre_number_trade_agrocalidad', 'prre_date_agrocalidad_trade', 'prre_start_date', 'prre_end_date', 'prre_income_month', 'prre_status', 'prre_creator_user', 'prre_creation_date', 'prre_user_update', 'prre_date_update', 'prre_observations_bdd', 'prre_date_observations_bdd']
+  Table: products_pqa
+    Columns: ['prod_id', 'prod_ruc', 'prod_operator_name', 'prod_legal_representative', 'prod_register_date', 'prod_trade_name_product', 'prod_product_composition', 'prod_value', 'prod_unit_measurement', 'prod_formulation', 'prod_formulation_abbreviation', 'prod_toxicological_category', 'prod_status', 'prod_creator_user', 'prod_creation_date', 'prod_user_update', 'prod_date_update', 'prod_observations_bdd', 'prod_date_observations_bdd', 'prod_extension', 'prod_register_number', 'prre_id', 'geca_id', 'prod_status_updated', 'geca_id_product_type_final', 'geca_id_container_type_final', 'geca_id_toxicological_category_final', 'geca_id_stripe_color_final', 'prod_other_product_type', 'prod_is_physical', 'prod_is_registered_pma', 'prod_pma_completed']

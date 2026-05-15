@@ -1,0 +1,34 @@
+Iniciando cruce y validación de proyectos recuperados...
+
+==================================================
+RESULTADOS DE LA VALIDACIÓN FORENSE
+==================================================
+Total Proyectos Marcados 'RECUPERADO' en DWH Local : 14,493
+Total Encontrados en Servidores Origen (CSV)       : 14,422
+Total Huérfanos Absolutos (No encontrados origen)  : 71
+Nivel de Identidad Positiva en Origen              : 99.51%
+
+=== DISTRIBUCIÓN POR TABLAS DE ORIGEN (Proyectos Identificados) ===
+           servidor        esquema                      tabla  proyectos_unicos
+JBPM (172.16.0.226) online_payment online_payments_historical             14272
+JBPM (172.16.0.226)         public                      cruze              9587
+SUIA (172.16.0.179)         public         tmp_accion_emision              7312
+SUIA (172.16.0.179)       suia_iii   tmp_pronunciamientos_bck              1664
+JBPM (172.16.0.226) suia_licensing                    reports                54
+JBPM (172.16.0.226) suia_licensing            tdr_eia_license                39
+SUIA (172.16.0.179)         public               vw_proyectos                 8
+SUIA (172.16.0.179)         public      archivo_proyectos_log                 3
+JBPM (172.16.0.226) online_payment            online_payments                 1
+
+=== ANÁLISIS DE HUÉRFANOS ABSOLUTOS ===
+Trámites marcados como recuperados en DWH que no aparecieron en ninguna de las tablas analizadas en 179/226.
+
+Origen (Según fact_pago) de los Huérfanos Absolutos:
+origen_pago
+SUIA_RCOA    65
+Name: codigo_proyecto, dtype: int64
+
+Ejemplo de Códigos Huérfanos:
+['MAATE-RA-2025-543020', 'MAATE-RA-2025-567466', 'MAATE-RA-2025-549984', 'MAATE-RA-2025-565416', 'MAATE-RA-2025-556998', 'MAATE-RA-2025-553491', 'MAATE-RA-2025-555315', 'MAATE-RA-2025-567753', 'MAATE-RA-2025-549537', 'MAATE-RA-2025-562493']
+==================================================
+

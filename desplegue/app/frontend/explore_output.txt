@@ -1,0 +1,33 @@
+=== BÚSQUEDA DE TABLAS RELACIONADAS A DESECHOS, RESIDUOS Y SUSTANCIAS QUÍMICAS ===
+
+--- Estructura de la tabla: dw.fact_waste_generation ---
+  sk_proyecto (bigint)
+  waste_generator_key (bigint)
+  sk_tiempo (bigint)
+  waste_type_key (bigint)
+  dangerous_waste_key (bigint)
+  danger_class_key (bigint)
+  geo_location_key (bigint)
+  quantity_generated (numeric)
+  quantity_delivered (numeric)
+  quantity_stored (numeric)
+  unit (character varying)
+  record_year (integer)
+
+--- Estructura de la tabla: dw.dim_waste_generator ---
+  waste_generator_key (bigint)
+  waste_generator_id (bigint)
+  generator_name (character varying)
+  generator_type (character varying)
+  province (character varying)
+  canton (character varying)
+  codigo (character varying)
+  effective_from (timestamp without time zone)
+  effective_to (timestamp without time zone)
+  is_current (boolean)
+  date_add (timestamp without time zone)
+  date_update (timestamp without time zone)
+
+--- Campos nuevos en dw.dim_proyecto ---
+
+--- Campos nuevos en dw.fact_regularizacion ---

@@ -1,0 +1,32 @@
+# INFORME DE VALIDACIÓN DE INTERSECCIONES AMBIENTALES
+Fecha Auditoría: 2026-04-01 13:24:47.591306
+
+## Resumen de Consistencia
+- Total Proyectos Analizados: 223667
+- Proyectos con Discrepancias: 248
+- Consistencia General: 99.89%
+
+### Por Categoría
+- SNAP: 223544 / 223667 (99.95%)
+- Bosques Protectores: 223485 / 223667 (99.92%)
+- Patrimonio Forestal: 223667 / 223667 (100.00%)
+- Zonas Intangibles: 223553 / 223667 (99.95%)
+
+## Proyectos en Producción INCORRECTOS o FALTANTES en DWH (Top 15)
+              project_code  SNAP_PROD  BOSQUES_PROD  PATRIMONIO_PROD  INTANGIBLES_PROD  SNAP_BPM  SNAP_DWH  BOSQUES_DWH  PATRIMONIO_DWH  INTANGIBLES_DWH  SNAP_CONSIST  BOSQUES_CONSIST  PATRIMONIO_CONSIST  INTANGIBLES_CONSIST
+4730   MAAE-RA-2020-368613      False          True            False             False     False     False        False           False            False          True            False                True                 True
+4733   MAAE-RA-2020-368616      False          True            False             False     False     False        False           False            False          True            False                True                 True
+4800   MAAE-RA-2020-368683       True         False            False             False     False     False        False           False            False         False             True                True                 True
+4924   MAAE-RA-2020-368809       True         False            False             False     False     False        False           False            False         False             True                True                 True
+6931   MAAE-RA-2020-370807      False          True            False             False     False     False        False           False            False          True            False                True                 True
+7003   MAAE-RA-2020-370879       True          True            False             False     False     False        False           False            False         False            False                True                 True
+8723   MAAE-RA-2020-372582       True         False            False             False     False     False        False           False            False         False             True                True                 True
+8727   MAAE-RA-2020-372586       True         False            False             False     False     False        False           False            False         False             True                True                 True
+8728   MAAE-RA-2020-372587       True         False            False             False     False     False        False           False            False         False             True                True                 True
+8754   MAAE-RA-2020-372615      False          True            False             False     False     False        False           False            False          True            False                True                 True
+8905   MAAE-RA-2020-372769       True         False            False             False     False     False        False           False            False         False             True                True                 True
+9801   MAAE-RA-2020-373648       True          True            False             False     False     False        False           False            False         False            False                True                 True
+9802   MAAE-RA-2020-373649       True          True            False             False     False     False        False           False            False         False            False                True                 True
+10762  MAAE-RA-2020-374608       True         False            False             False     False     False        False           False            False         False             True                True                 True
+10764  MAAE-RA-2020-374610       True         False            False             False     False     False        False           False            False         False             True                True                 True
+        

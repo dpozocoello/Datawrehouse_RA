@@ -1,0 +1,3 @@
+--- Checking for Generic Project ---
+   sk_proyecto codigo_proyecto       nombre_proyecto resumen_proyecto direccion_proyecto tipo_permiso_ambiental tipo_sector tipo_ente sistema estrategico area_responsable
+0            0             N/A  PROYECTO NO DEFINIDO             None               None                   None        None      None    None        None             None

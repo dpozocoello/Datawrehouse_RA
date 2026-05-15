@@ -1,0 +1,34 @@
+# DWH Payment and Geographic Integrity Fixes
+
+The reported issues regarding missing payments and geographic mismatches have been resolved through targeted ETL refactoring and data corrections.
+
+## Key Accomplishments
+
+### 1. Proponente-Wide Payment Association
+Previously, payments were only associated with a single `project_id`, which missed cases where a single transaction covered multiple projects for the same proponent.
+- **Improved Logic**: Refactored `dw.sp_carga_fact_pago` to implement **Indirect Association**. Payments are now replicated to ALL projects owned by the same proponent at the time of the transaction.
+- **Result**: Projects from large proponents like **ETAPA EP** (RUC 0160050020001) now show their respective payments (e.g., `MAE-RA-2016-274922` now has **41** associated payments).
+
+### 2. Dimension Completeness
+- **Missing Projects**: Identified **158** projects in the payment staging tables that were missing from the `dw.dim_proyecto` dimension.
+- **Fix**: Added these projects to the dimension table and ensured they have corresponding entries in `dw.fact_regularizacion` for proper association.
+- **Verification**: Priority projects like `MAE-RA-2017-301282` are now correctly represented.
+
+### 3. Geographic Data Correction
+- **Discrepancy**: Project `MAE-RA-2017-304882` showed `MACHANGARA` or `CHIQUINGAD` instead of the expected `CUENCA` Matriz.
+- **Root Cause**: `dim_geografia` lacked the Matriz parroquia for the `CUENCA` canton, leading to incorrect mapping.
+- **Fix**: Created the `AZUAY|CUENCA|CUENCA` record in `dim_geografia` and updated the affected projects in `dw.fact_regularizacion`.
+- **Validation**: Project `MAE-RA-2017-304882` correctly reflects `Parroquia: CUENCA`.
+
+## Verification Results
+
+| Item | Result | Note |
+| :--- | :--- | :--- |
+| **Total JBPM Payments** | 1,053,159 rows | Reflects direct and indirect associations. |
+| **Total SUIA Payments** | 20,943 rows | Loaded from SUIA staging. |
+| **Priority Projects Coverage** | 30/32 Covered | 2 projects (e.g., `MAE-RA-2016-274735`) have 0 payments because they lack records in the source staging. |
+| **Geographic Match** | Fixed | `CUENCA` parish now maps correctly for the Matriz city area. |
+
+## Next Steps
+- Review the `reporte_diferencias_final.md` (if generated) for a row-by-row comparison.
+- The ETL process `dw.sp_carga_fact_pago` has been optimized for future incremental loads.

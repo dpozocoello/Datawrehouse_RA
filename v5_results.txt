@@ -1,0 +1,2 @@
+Total distinct RUCs in orphan records: 176
+RUC matches in local DWH (dim_proponente): 68

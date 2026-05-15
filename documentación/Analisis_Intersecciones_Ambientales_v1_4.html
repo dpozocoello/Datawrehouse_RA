@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis de Arquitectura Ambiental v1.4 - Google Docs Ready</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px;
+        }
+
+        h1 {
+            color: #1a73e8;
+            border-bottom: 3px solid #1a73e8;
+            padding-bottom: 10px;
+            font-size: 24pt;
+            text-align: center;
+        }
+
+        h2 {
+            color: #202124;
+            border-bottom: 2px solid #dadce0;
+            padding-bottom: 5px;
+            margin-top: 40px;
+            font-size: 18pt;
+        }
+
+        h3 {
+            color: #1a73e8;
+            font-size: 14pt;
+            margin-top: 25px;
+            border-left: 5px solid #1a73e8;
+            padding-left: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 10pt;
+        }
+
+        th,
+        td {
+            border: 1px solid #dadce0;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: #1a73e8;
+            font-weight: bold;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .mermaid {
+            background-color: #f1f3f4;
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            border: 1px dashed #70757a;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 9pt;
+            color: #70757a;
+            text-align: right;
+            border-top: 1px solid #dadce0;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Análisis de Arquitectura: Intersecciones de Biodiversidad (v1.4)</h1>
+    <p style="text-align: center;"><strong>Evaluación Forense de Datos e Ingeniería de Capas Ambientales</strong></p>
+
+    <hr>
+
+    <h2>1. Diagnóstico de Funciones de Origen</h2>
+    <p>Tras auditar los scripts <code>sp_coa_bi.sql</code> y <code>sp_rcoa_bi.sql</code> en el servidor 172.16.0.179, se
+        identifica una brecha estructural en la captura de información geográfica ambiental.</p>
+
+    <h3>1.1. Restricción Operativa (Filtro Rígido)</h3>
+    <p>Ambas funciones poseen un filtro por código de capa (Laye_ID) que restringe la salida a solo un tipo de
+        intersección ambiental.</p>
+    <ul>
+        <li><strong>Configuración Actual:</strong> <code>LAYE_ID = 3</code> (SNAP)</li>
+        <li><strong>Resultado:</strong> Pérdida total de datos de Patrimonio Forestal y Zonas Intangibles.</li>
+    </ul>
+
+    <h3>1.2. Mapeo del Catálogo de Capas Reales</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Capa Ambiental</th>
+                <th>Estado Actual en ETL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td>SNAP (Sistema Nacional de Áreas Protegidas)</td>
+                <td><strong>CAPTURADO</strong></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Zonas Intangibles</td>
+                <td><strong>OMITIDO</strong></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Patrimonio Forestal del Estado</td>
+                <td><strong>OMITIDO</strong></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Bosques Protectores</td>
+                <td><strong>OMITIDO</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="warning">
+        <strong>ALERTA TÉCNICA:</strong> Se ha cuantificado una omisión de aproximadamente 113,000 registros históricos
+        debido a esta arquitectura de filtro rígido. Se recomienda la refactorización inmediata de los Stored
+        Procedures.
+    </div>
+
+    <hr>
+
+    <h2>2. Propuesta de Arquitectura Dimensional</h2>
+    <p>Para solventar esta debilidad, se recomienda transformar el modelo Star Schema plano a un modelo con
+        <strong>Tabla Puente (Bridge Table)</strong> para soportar intersecciones múltiples.</p>
+
+    <h3>2.1. Nuevo Esquema de Datos</h3>
+    <div class="mermaid">
+        CUADRO ARQUITECTÓNICO: FACT_REGULARIZACION &lt;--&gt; BRIDGE_INTERSECCION &lt;--&gt; DIM_CAPA_AMBIENTAL
+    </div>
+
+    <hr>
+
+    <h2>3. Recomendaciones Finales</h2>
+    <ol>
+        <li><strong>Normalización:</strong> No almacenar los nombres de áreas protegidas como texto largo en la Fact
+            Table; migrar a IDs referenciados.</li>
+        <li><strong>Escalabilidad:</strong> La implementación de <code>dw.dim_capa_ambiental</code> permitirá al
+            analista filtrar proyectos por categoría (ej: "Ver solo proyectos en Zonas Intangibles") con un solo clic en
+            el Dashboard.</li>
+    </ol>
+
+    <div class="footer">
+        <p><strong>Arquitecto de Datos:</strong> Antigravity AI Engineering</p>
+        <p><strong>Versión:</strong> 1.4 | <strong>Fecha:</strong> 2026-03-10</p>
+    </div>
+
+</body>
+
+</html>

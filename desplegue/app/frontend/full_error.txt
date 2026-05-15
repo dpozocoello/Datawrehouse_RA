@@ -1,0 +1,41 @@
+(psycopg2.errors.AmbiguousColumn) la referencia a la columna «provincia» es ambigua
+LINE 4:             COALESCE(NULLIF(TRIM(provincia),  ''), 'No Defin...
+                                         ^
+DETAIL:  Podría referirse tanto a una variable PL/pgSQL como a una columna de una tabla.
+QUERY:  WITH ProyectoGeo AS (
+        SELECT DISTINCT ON (codigo_proyecto)
+            codigo_proyecto, 
+            COALESCE(NULLIF(TRIM(provincia),  ''), 'No Definida')::TEXT as p,
+            COALESCE(NULLIF(TRIM(canton),     ''), 'No Definido')::TEXT as c,
+            COALESCE(NULLIF(TRIM(zona_administrativa), ''), 'N/A')::TEXT as z,
+            COALESCE(NULLIF(TRIM(oficina_tecnica), ''), 'N/A')::TEXT as o
+        FROM dw.v_dashboard_regularizacion
+        ORDER BY codigo_proyecto, fecha_inicio_proceso DESC
+    )
+    SELECT
+        pg.p,
+        pg.c,
+        pg.z,
+        pg.o,
+        COALESCE(t.waste_name, 'Sin Clasificación')::TEXT AS tipo_desecho,
+        f.record_year::INTEGER AS anio,
+        COALESCE(f.unit, 'u')::TEXT AS unidad,
+        SUM(f.quantity_generated)::NUMERIC AS total_generado,
+        SUM(f.quantity_delivered)::NUMERIC AS total_entregado,
+        (SUM(f.quantity_generated) - SUM(f.quantity_delivered))::NUMERIC AS diferencia_gestion,
+        ROUND(
+            CASE WHEN SUM(f.quantity_generated) > 0
+                 THEN (SUM(f.quantity_delivered) / SUM(f.quantity_generated)) * 100
+                 ELSE 0 END, 2
+        )::NUMERIC AS pct_entregado,
+        COUNT(DISTINCT f.waste_generator_key)::BIGINT AS num_generadores
+    FROM dw.fact_waste_generation f
+    JOIN dw.dim_waste_type t ON f.waste_type_key = t.waste_type_key
+    JOIN dw.dim_proyecto p ON f.sk_proyecto = p.sk_proyecto
+    JOIN ProyectoGeo pg ON p.codigo_proyecto = pg.codigo_proyecto
+    WHERE f.record_year BETWEEN p_start_year AND p_end_year
+    GROUP BY 1, 2, 3, 4, 5, 6, 7
+CONTEXT:  función PL/pgSQL dashboard.get_waste_kpi_integrated(integer,integer) en la línea 3 en RETURN QUERY
+
+[SQL: SELECT * FROM dashboard.get_waste_kpi_integrated(2024, 2024)]
+(Background on this error at: https://sqlalche.me/e/20/f405)

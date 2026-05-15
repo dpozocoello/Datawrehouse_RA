@@ -1,0 +1,7 @@
+--- Example 2: MAATE-RA-2024-519793 ---
+Project: [(449186, 'MAATE-RA-2024-519793')]
+Mapping for ID 449186: []
+
+--- Example 1: MAE-RA-2015-220472 (Re-check) ---
+Project 1 (Suffix 220472): []
+Mapping for ware_id 10578: [(9623, 10578, None, True, '6', datetime.datetime(2024, 6, 20, 20, 14, 28, 888000), '0190325822001', None, None, None, 220472, 'digitalizacion', None, 1634, None, None)]

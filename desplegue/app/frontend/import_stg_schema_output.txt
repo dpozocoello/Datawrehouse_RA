@@ -1,0 +1,27 @@
+--- Schema for stg.stg_import_request ---
+                      column_name                    data_type
+0                         inre_id                       bigint
+1                         chsr_id                       bigint
+2                         mach_id             double precision
+3                         dach_id             double precision
+4              inre_authorization                      boolean
+5   inre_begin_authorization_date  timestamp without time zone
+6     inre_end_authorization_date  timestamp without time zone
+7            inre_processing_code                         text
+8         inre_document_autorizes                         text
+9                          req_no                         text
+10                      inre_type                         text
+11                    inre_status                      boolean
+
+
+--- Schema for stg.stg_detail_import_request ---
+            column_name         data_type
+0               deir_id            bigint
+1               inre_id            bigint
+2  deir_available_space  double precision
+3       deir_net_weight  double precision
+4     deir_gross_weight  double precision
+5               gelo_id  double precision
+6               achs_id  double precision
+
+

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificación Técnica Maestra DWH v1.4 - Google Docs Ready</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #1a73e8;
+            border-bottom: 3px solid #1a73e8;
+            padding-bottom: 15px;
+            font-size: 28pt;
+            text-align: center;
+        }
+
+        h2 {
+            color: #202124;
+            border-bottom: 2px solid #dadce0;
+            padding-bottom: 8px;
+            margin-top: 50px;
+            font-size: 22pt;
+        }
+
+        h3 {
+            color: #1a73e8;
+            font-size: 18pt;
+            margin-top: 35px;
+            border-left: 6px solid #1a73e8;
+            padding-left: 15px;
+        }
+
+        h4 {
+            color: #5f6368;
+            font-size: 15pt;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 11pt;
+        }
+
+        th,
+        td {
+            border: 1px solid #dadce0;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f3f4;
+            color: #1a73e8;
+            font-weight: bold;
+        }
+
+        pre,
+        code {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            color: #d81b60;
+            font-family: 'Consolas', 'Courier New', monospace;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            overflow-x: auto;
+        }
+
+        blockquote {
+            background: #e8f0fe;
+            border-left: 8px solid #1a73e8;
+            margin: 25px 0;
+            padding: 20px;
+            font-style: italic;
+            border-radius: 6px;
+        }
+
+        .mermaid {
+            background: #fff;
+            border: 1px solid #dadce0;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-style: italic;
+            color: #5f6368;
+        }
+
+        .footer {
+            margin-top: 80px;
+            font-size: 11pt;
+            color: #70757a;
+            text-align: right;
+            border-top: 2px solid #dadce0;
+            padding-top: 20px;
+        }
+
+        .highlight {
+            color: #1a73e8;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Especificación Técnica Maestra: DWH Regularización Ambiental (v1.4)</h1>
+    <p style="text-align: center; font-size: 14pt;"><strong>Ingeniería de Datos, Normalización Experta y Arquitectura de
+            Integridad</strong></p>
+
+    <hr>
+
+    <h2>1. Arquitectura del Sistema</h2>
+    <h3>1.1. Diagrama de Arquitectura de Capas</h3>
+    <p>El sistema implementa una arquitectura de tres capas para asegurar la trazabilidad y resiliencia informática.</p>
+    <div class="mermaid">
+        [DIAGRAMA DE ARQUITECTURA: Source -> Staging -> Data Warehouse -> Reference]
+    </div>
+
+    <hr>
+
+    <h2>2. Flujo de Ejecución Pentaho (ETL Orchestration)</h2>
+    <h3>2.2. Orquestación Cronológica</h3>
+    <p>El Job Maestro <code>JOB_CARGA_DWH_REGULARIZACION</code> sigue una secuencia crítica para garantizar la
+        integridad referencial.</p>
+    <div class="mermaid">
+        [FLUJO ETL: Setup (SK=0) -> Ingesta STG -> Consolidación -> Carga Dim Area -> Carga Fact Tables]
+    </div>
+
+    <hr>
+
+    <h2>3. Diccionario Técnico de Datos (Matriz de Trazabilidad)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th>Componente Funcional</th>
+                <th>Tabla Origen</th>
+                <th>Tabla Staging (stg)</th>
+                <th>Tabla DW (dw)</th>
+                <th>Proceso de Transformación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Proyectos RCOA</td>
+                <td><code>coa_mae.tmp_rcoa_bi</code></td>
+                <td><code>suia_rcoa_bi</code></td>
+                <td><code>fact_regularizacion</code></td>
+                <td>TRX_01 + sp_consolidar</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Proyectos SUIA</td>
+                <td><code>suia_iii.tmp_coa_bi</code></td>
+                <td><code>suia_coa_bi</code></td>
+                <td><code>fact_regularizacion</code></td>
+                <td>TRX_02 + sp_consolidar</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Oficinas Técnicas</td>
+                <td><code>public.areas</code></td>
+                <td><code>suia_areas_bi</code></td>
+                <td><code>dim_area</code></td>
+                <td>TRX_10 + sp_carga_dim_area</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Geografía Política</td>
+                <td><code>geographical_locations</code></td>
+                <td><code>geographical_locations_bi</code></td>
+                <td><code>dim_geografia</code></td>
+                <td>TRX_11 + ref.inec_dpa_2024</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Pagos JBPM/SUIA</td>
+                <td><code>online_payments</code></td>
+                <td><code>jbpm_pagos_bi</code></td>
+                <td><code>fact_pago</code></td>
+                <td>TRX_07/08 + sp_carga_fact_pago</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>4. Documentación de Scripts y Procedimientos Críticos</h2>
+
+    <h3>4.1. <code>sp_carga_dim_area</code> (Motor de Inferencia v1.4)</h3>
+    <p>Este procedimiento es el corazón de la normalización. Resuelve el 100% de las áreas (incluyendo 111 brechas con
+        <code>gelo_id</code> NULL).</p>
+
+    <h4>Lógica de Negocio Informática:</h4>
+    <ul>
+        <li><strong>Recursividad</strong>: Utiliza un <code>WITH RECURSIVE</code> para escalar la jerarquía geográfica.
+        </li>
+        <li><strong>Fallback Experto</strong>: Activa un motor de 75 mapeos manuales para casos huérfanos.</li>
+        <li><strong>Validación INEC</strong>: Verifica resultados contra <code>ref.inec_dpa_2024</code>.</li>
+    </ul>
+
+    <code>
+        -- Fragmento crítico: fallback de inferencia<br>
+        CASE <br>
+        &nbsp;&nbsp;WHEN f.area_id = 1120 THEN 'NAPO' -- OFICINA TÉCNICA TENA<br>
+        &nbsp;&nbsp;WHEN f.area_id = 1081 THEN 'ESMERALDAS' -- DIRECCIÓN ZONAL 2<br>
+        END as provincia
+    </code>
+
+    <h3>4.2. <code>setup_reference_data_v1_4.sql</code> (Integridad)</h3>
+    <p>Garantiza el éxito de las llaves foráneas incluso tras limpiezas totales.</p>
+    <p>Realiza un <code>INSERT ON CONFLICT DO NOTHING</code> para el registro <code>SK=0</code> en todas las
+        dimensiones.</p>
+
+    <hr>
+
+    <h2>5. Protocolo de Saneamiento y Mantenimiento</h2>
+    <h3>5.1. Procedimiento ante Limpieza (Reset)</h3>
+    <ol>
+        <li>Ejecutar <code>TRUNCATE TABLE</code> en tablas de hechos y dimensiones.</li>
+        <li><strong>OBLIGATORIO</strong>: Ejecutar <code>setup_reference_data_v1_4.sql</code> para restaurar
+            <code>SK=0</code>.</li>
+    </ol>
+
+    <hr>
+
+    <h2>6. Estrategia de Validación Forense</h2>
+    <p>Procedimiento para certificar la carga v1.4:</p>
+    <ul>
+        <li><strong>Test de Paridad</strong>: Diferencia (Fuente - DWH) = 0.</li>
+        <li><strong>Auditoría de Nulidad</strong>: Inexistencia de NULLs en llaves foráneas (usar SK=0).</li>
+        <li><strong>Integridad de Texto</strong>: Verificación de campos HTML en SNAP (Tipo <code>TEXT</code>).</li>
+    </ul>
+
+    <div class="footer">
+        <p><strong>Arquitecto de Datos:</strong> Antigravity AI Engineering</p>
+        <p><strong>Versión:</strong> 1.4 "Full Technical Specification Master"</p>
+        <p><strong>Fecha:</strong> 2026-03-10</p>
+    </div>
+
+</body>
+
+</html>

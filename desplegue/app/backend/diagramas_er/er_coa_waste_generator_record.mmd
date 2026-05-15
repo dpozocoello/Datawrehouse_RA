@@ -1,0 +1,74 @@
+erDiagram
+    coordinates_coa {
+        string PK "coor_id"
+        int columns "14"
+    }
+    documents_coa_waste_generator_record {
+        string PK "dowa_id"
+        int columns "19"
+    }
+    generation_points_coa {
+        string PK "gepo_id"
+        int columns "9"
+    }
+    generation_points_waste {
+        string PK "gewa_id"
+        int columns "9"
+    }
+    recovery_points_coa {
+        string PK "repo_id"
+        int columns "15"
+    }
+    recovery_point_shapes_coa {
+        string PK "rpsh_id, rpsh_id"
+        int columns "9"
+    }
+    waste_ciuu {
+        string PK "waci_id"
+        int columns "18"
+    }
+    waste_generator_catalog {
+        string PK "waca_id"
+        int columns "9"
+    }
+    waste_generator_record_coa {
+        string PK "ware_id, ware_id"
+        int columns "15"
+    }
+    waste_generator_record_document {
+        string PK "wgrd_id"
+        int columns "11"
+    }
+    waste_generator_record_office_pronouncement {
+        string PK "wgro_id"
+        int columns "10"
+    }
+    waste_generator_record_project_licencing_coa {
+        string PK "wapr_id"
+        int columns "16"
+    }
+    waste_policies_coa {
+        string PK "wapo_id, wapo_id"
+        int columns "10"
+    }
+    waste_policies_coa_waste_dangerous {
+        string PK "wawa_id"
+        int columns "9"
+    }
+    waste_waste_generation_points {
+        string PK "wwgp_id, wwgp_id"
+        int columns "20"
+    }
+    recovery_point_shapes_coa ||--o{ coordinates_coa : "rpsh_id"
+    waste_generator_record_coa ||--o{ documents_coa_waste_generator_record : "ware_id"
+    waste_waste_generation_points ||--o{ generation_points_waste : "wwgp_id"
+    generation_points_coa ||--o{ generation_points_waste : "gepo_id"
+    waste_generator_record_coa ||--o{ recovery_points_coa : "ware_id"
+    generation_points_coa ||--o{ recovery_points_coa : "gepo_id"
+    recovery_points_coa ||--o{ recovery_point_shapes_coa : "repo_id"
+    waste_policies_coa ||--o{ waste_generator_record_coa : "wapo_id"
+    waste_generator_record_coa ||--o{ waste_generator_record_document : "ware_id"
+    waste_generator_record_coa ||--o{ waste_generator_record_office_pronouncement : "ware_id"
+    waste_generator_record_coa ||--o{ waste_generator_record_project_licencing_coa : "ware_id"
+    waste_policies_coa ||--o{ waste_policies_coa_waste_dangerous : "wapo_id"
+    waste_generator_record_coa ||--o{ waste_waste_generation_points : "ware_id"

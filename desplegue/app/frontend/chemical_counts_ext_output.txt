@@ -1,0 +1,5 @@
+--- Table Row Counts (Extended) ---
+stg.stg_chemical_substance: 3162 rows
+stg.stg_chemical_storage: 20 rows
+stg.stg_chemical_sustances_records: 535 rows
+dw.dim_chemical_importer: 0 rows

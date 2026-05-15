@@ -1,0 +1,11 @@
+=== CONTEO DE REGISTROS EN TABLAS CORE ===
+dw.fact_regularizacion                   : 1,135,450 registros
+dw.dim_proyecto                          : 343,872 registros
+dw.dim_geografia                         : 1,392 registros
+dw.fact_pago                             : 91,148 registros
+dw.v_integridad_dashboard                : 5 registros
+
+=== PRUEBA DE QUERY RESUMEN INTEGRIDAD ===
+('JBPM-HIDRO', 6787, 0, 6787, Decimal('0.00'))
+('RCOA-BI', 423378, 0, 423378, Decimal('0.00'))
+('JBPM-SECTOR', 79302, 0, 79302, Decimal('0.00'))

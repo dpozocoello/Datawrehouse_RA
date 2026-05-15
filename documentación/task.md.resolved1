@@ -1,0 +1,24 @@
+# Implementación Completa del Data Warehouse (Regularización Ambiental)
+
+## Fase 1: Análisis y Diseño
+- [x] Extraer las conexiones utilizadas en los dblinks.
+- [x] Documentar los esquemas de BD origen (DDL real).
+- [x] Diseñar el flujo ETL (ELT).
+- [x] Crear base de datos `dw_reg_v1`.
+
+## Fase 2: DDL Completo
+- [x] Crear esquemas `stg` y `dw`.
+- [x] Crear tablas staging completas (6 tablas).
+- [x] Crear dimensiones completas (7 dimensiones).
+- [x] Crear fact table enriquecida con índices.
+
+## Fase 3: Carga de Datos (ETL)
+- [x] Cargar datos desde `suia_enlisy` -> `stg.suia_rcoa_bi` (419,839 filas) y `stg.suia_coa_bi` (415,544 filas).
+- [x] Cargar datos desde `jbpmdb_prod_old` -> `stg.jbpm_sector_bi` (79,302 filas).
+- [x] Cargar datos desde `jbpmdb` -> `stg.jbpm_4cat_bi` (220,774 filas) y `stg.jbpm_hidro_bi` (6,787 filas).
+- [x] Consolidar staging (1,142,246 filas).
+
+## Fase 4: Transformación Dimensional
+- [x] Poblar todas las dimensiones (328K proyectos, 138K proponentes, 91K usuarios).
+- [x] Poblar la fact table consolidada (1,142,246 filas).
+- [x] Validar conteos y consistencia de datos.

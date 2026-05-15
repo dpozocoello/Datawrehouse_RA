@@ -1,0 +1,33 @@
+🔐 Credenciales de Acceso Base - ECO-SIEAA
+Este documento contiene las credenciales iniciales para los perfiles del sistema.
+
+CAUTION
+
+SEGURIDAD CRÍTICA: Por razones de seguridad, todas estas cuentas tienen habilitada la opción must_change_password. El sistema solicitará un cambio de clave obligatorio tras el primer inicio de sesión exitoso. Borre este archivo después de guardar las claves.
+
+Listado de Usuarios y Claves
+Perfil / Rol	Usuario Institucional	Contraseña Temporal
+Administrador	admin.sieaa	EcoSieaa2026*
+Gerencia	gerencia.mae	EcoSieaa2026*
+Mesa de Ayuda	soporte.sieaa	EcoSieaa2026*
+Desarrollador	dev.javier	EcoSieaa2026*
+Calidad (QA)	test.qa	EcoSieaa2026*
+Instrucciones de Activación
+Para activar estos usuarios en su base de datos local, ejecute el script de inicialización que he preparado:
+
+bash
+python init_users.py
+Notas Técnicas:
+Hashing: Las contraseñas se guardan en la base de datos usando bcrypt, por lo que no son legibles ni siquiera para administradores de DB.
+Acceso: Una vez activos, puede ingresar desde el enlace local: http://localhost:8105
+
+
+// ejecicion desde powershell
+
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; cd D:\Datawrehouse_RA\ETL_p; C:\Python314\python.exe etl_main.py 2>&1 | Tee-Object -FilePath "D:\Datawrehouse_RA\logs\etl_manual_$(Get-Date -Format 'yyyy-MM-dd_HHmm').log"
+
+
+---- otrs
+
+
+y se requeire generr leyendo la base de datos que esta en la ip: 172.16.0.231 puerto 5432, usuario postgres, clave postgres base de datos otrs,,  se requeire generr 

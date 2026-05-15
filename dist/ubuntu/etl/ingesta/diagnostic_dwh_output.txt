@@ -1,0 +1,13 @@
+### SCHEMA FOR dw.fact_waste_generation ###
+('sk_proyecto', 'bigint', None)
+('waste_generator_key', 'bigint', None)
+('sk_tiempo', 'bigint', None)
+('waste_type_key', 'bigint', None)
+('dangerous_waste_key', 'bigint', None)
+('danger_class_key', 'bigint', None)
+('geo_location_key', 'bigint', None)
+('quantity_generated', 'numeric', None)
+('quantity_delivered', 'numeric', None)
+('quantity_stored', 'numeric', None)
+('unit', 'character varying', 50)
+('record_year', 'integer', None)

@@ -1,0 +1,17 @@
+--- INICIANDO AUDITORÍA DE INTERSECCIONES ---
+1. Consultando capas y proyectos en suia_enlisy...
+!!!! ERROR DURANTE LA AUDITORÍA: (psycopg2.errors.UndefinedTable) relation "coa_mae.layers_coa" does not exist
+LINE 8:             JOIN coa_mae.layers_coa lc ON iplc.laye_id = lc....
+                         ^
+
+[SQL: 
+            SELECT 
+                plc.prco_cua as project_code,
+                lc.laye_id,
+                lc.laye_name
+            FROM coa_mae.intersections_project_licencing_coa iplc
+            JOIN coa_mae.project_licencing_coa plc ON iplc.prco_id = plc.prco_id
+            JOIN coa_mae.layers_coa lc ON iplc.laye_id = lc.laye_id
+            WHERE iplc.inpr_status = TRUE
+        ]
+(Background on this error at: https://sqlalche.me/e/20/f405)

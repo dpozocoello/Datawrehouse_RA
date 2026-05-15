@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>TRX_01_INGESTA_SUIA_RCOA</name>
+    <description>Extrae datos de coa_mae.tmp_rcoa_bi (suia_enlisy) y los carga en stg.suia_rcoa_bi (dw_reg_v1)</description>
+    <extended_description>Origen: 172.16.0.179:5632/suia_enlisy - Esquema: coa_mae - Tabla: tmp_rcoa_bi
+Destino: localhost:5432/dw_reg_v1 - Esquema: stg - Tabla: suia_rcoa_bi
+Estrategia: TRUNCATE + INSERT (carga completa diaria)</extended_description>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+  </info>
+  <notepads>
+    <notepad>
+      <note>TRANSFORMACION 1: Ingesta SUIA RCOA (coa_mae.tmp_rcoa_bi)
+Origen: suia_enlisy @ 172.16.0.179:5632
+Destino: dw_reg_v1 @ localhost:5432 / stg.suia_rcoa_bi</note>
+      <xloc>50</xloc>
+      <yloc>20</yloc>
+      <width>450</width>
+      <heigth>60</heigth>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>CONN_SUIA_ENLISY</name>
+    <server>172.16.0.179</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>suia_enlisy</database>
+    <port>5632</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5632</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>CONN_DWH_LOCAL</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>dw_reg_v1</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Input SUIA RCOA</from>
+      <to>Output STG RCOA</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Input SUIA RCOA</name>
+    <type>TableInput</type>
+    <description>Lee datos de coa_mae.tmp_rcoa_bi</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_SUIA_ENLISY</connection>
+    <sql>SELECT
+  "CÓDIGO PROYECTO"               AS codigo_proyecto,
+  "NOMBRE PROYECTO"               AS nombre_proyecto,
+  "RESUMEN PROYECTO"              AS resumen_proyecto,
+  "DIRECCIÓN PROYECTO"            AS direccion_proyecto,
+  "FECHA REGISTRO"                AS fecha_registro,
+  "CÓDIGO ACTIVIDAD"              AS codigo_actividad,
+  "ACTIVIDAD ECONÓMICA"           AS actividad_economica,
+  "CED/RUC PROPONENTE"            AS ced_ruc_proponente,
+  "NOMBRE PROPONENTE"             AS nombre_proponente,
+  "ÁREA RESPONSABLE PROYECTO"     AS area_responsable_proyecto,
+  "TIPO SECTOR"                   AS tipo_sector,
+  "TIPO PERMISO AMBIENTAL"        AS tipo_permiso_ambiental,
+  "TIPO ENTE"                     AS tipo_ente,
+  "PROVINCIA"                     AS provincia,
+  "CANTON"                        AS canton,
+  "PARROQUIA"                     AS parroquia,
+  "PROCESO"                       AS proceso,
+  "ESTADO PROCESO"                AS estado_proceso,
+  "FECHA INICIO PROCESO"::timestamp AS fecha_inicio_proceso,
+  "FECHA FIN PROCESO"::timestamp  AS fecha_fin_proceso,
+  "TAREA"                         AS tarea,
+  "ESTADO TAREA"                  AS estado_tarea,
+  "FECHA INICIO TAREA"            AS fecha_inicio_tarea,
+  "FECHA FIN TAREA"               AS fecha_fin_tarea,
+  "USUARIO TAREA"                 AS usuario_tarea,
+  "ESTADO PROYECTO"               AS estado_proyecto,
+  "INTERSECTA CON"                AS intersecta_con,
+  "AREAS PROTEGIDAS"              AS areas_protegidas,
+  "SISTEMA"                       AS sistema,
+  "NOMBRE ZONA"                   AS nombre_zona,
+  "FINALIZADO CON RESOLUCION"     AS finalizado_con_resolucion,
+  "NUMERO RESOLUCION"             AS numero_resolucion,
+  "FECHA RESOLUCION"              AS fecha_resolucion,
+  "ID AREA"                       AS id_area,
+  "ESTADO TRÁMITE"                AS estado_tramite,
+  "SUPERFICIE PROYECTO"           AS superficie_proyecto,
+  current_timestamp               AS fecha_carga
+FROM coa_mae.tmp_rcoa_bi</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <GUI>
+      <xloc>150</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Output STG RCOA</name>
+    <type>TableOutput</type>
+    <description>Escribe en stg.suia_rcoa_bi</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_DWH_LOCAL</connection>
+    <schema>stg</schema>
+    <table>suia_rcoa_bi</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <GUI>
+      <xloc>500</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+</transformation>

@@ -1,0 +1,81 @@
+
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+                h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+                h2 { color: #2980b9; margin-top: 30px; border-bottom: 1px solid #ddd; }
+                table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+                th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+                th { background-color: #f2f2f2; font-weight: bold; }
+                code { background-color: #f8f9fa; color: #e83e8c; padding: 2px 4px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; }
+                pre { background-color: #f8f9fa; padding: 15px; border-left: 5px solid #2980b9; border-radius: 4px; overflow-x: auto; }
+                blockquote { border-left: 5px solid #ccc; margin: 20px 0; padding: 10px 20px; color: #666; font-style: italic; background: #f9f9f9; }
+            </style>
+        </head>
+        <body>
+            <h1 id="informe-de-ejecucion-tecnica-arquitectura-dwh-v16">Informe de Ejecución Técnica: Arquitectura DWH v1.6</h1>
+<p><strong>Módulo: Registro Generador, Sustancias Químicas y Trazabilidad Financiera</strong></p>
+<hr />
+<h2 id="1-resumen-de-la-intervencion">1. Resumen de la Intervención</h2>
+<p>Se ha completado satisfactoriamente la Fase v1.6 del proyecto Data Warehouse. Esta intervención integra por primera vez datos de <strong>Registro Generador de Desechos (COA)</strong> y una capa de <strong>Trazabilidad Forense de Saldos</strong> desde JBPM, resolviendo brechas de información financiera y regulatoria.</p>
+<h3 id="11-servidor-de-ejecucion">1.1. Servidor de Ejecución</h3>
+<ul>
+<li><strong>Host</strong>: Local (Servidor DWH)</li>
+<li><strong>Motor</strong>: PostgreSQL 16+</li>
+<li><strong>Enfoque</strong>: Orquestación Híbrida (Python Multiorigen + SQL)</li>
+<li><strong>Fecha de Ejecución</strong>: 2026-03-13 | 11:45 COT</li>
+</ul>
+<hr />
+<h2 id="2-acciones-realizadas-detalle-v16">2. Acciones Realizadas (Detalle v1.6)</h2>
+<h3 id="21-refuerzo-de-la-estructura-ddl">2.1. Refuerzo de la Estructura (DDL)</h3>
+<p>Se aplicaron cambios estructurales para soportar la nueva analítica:
+- <strong><code>dw.dim_waste_generator</code></strong>: Adición de la columna <code>ruc_generator</code> (Identificación mandatoria v1.6).
+- <strong><code>dw.fact_payment_traceability</code></strong>: [NUEVO] Hechos con deltas financieros de billetera virtual.
+- <strong><code>dw.dim_process_flow</code></strong>: Clasificador de flujos BPM específicos para RGD.</p>
+<h3 id="22-ingesta-multifuente-python-engine">2.2. Ingesta Multifuente (Python Engine)</h3>
+<p>Se reemplazó la extracción simple por un motor dual:
+- <strong>Extracción SUIA (.179)</strong>: Masters de usuarios para mapeo de RUCs.
+- <strong>Extracción JBPM (.226)</strong>: Auditoría histórica de pagos (<code>online_payments_historical</code>).</p>
+<hr />
+<h2 id="3-metricas-de-ejecucion-final">3. Métricas de Ejecución Final</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dimensión / Hecho</th>
+<th style="text-align: left;">Registros Procesados</th>
+<th style="text-align: left;">Estado v1.6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Generadores (con RUC)</strong></td>
+<td style="text-align: left;">15,849</td>
+<td style="text-align: left;">✅ Verificado 100%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Trazabilidad de Pagos</strong></td>
+<td style="text-align: left;">43</td>
+<td style="text-align: left;">✅ Delta Detectado</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Integridad SK=0</strong></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">✅ Estabilizado</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-estado-final-del-ecosistema">4. Estado Final del Ecosistema</h2>
+<ul>
+<li><strong>Manual de Usuario</strong>: Actualizado a v1.6 con guías de trazabilidad.</li>
+<li><strong>Diccionario de Datos</strong>: Elevado a v1.6 (67 tablas documentadas).</li>
+<li><strong>Motor ETL</strong>: Validado y operativo con soporte para deltas financieros.</li>
+</ul>
+<hr />
+<p><strong>Ingeniero de Sistemas Senior</strong>: Antigravity AI Data Architecture<br />
+<strong>Estado</strong>: ✅ CERRADO Y DOCUMENTADO</p>
+        </body>
+        </html>
+        

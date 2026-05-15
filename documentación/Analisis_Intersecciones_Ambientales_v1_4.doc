@@ -1,0 +1,81 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+    <meta charset="utf-8">
+    <title>Análisis de Arquitectura Ambiental v1.4</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>101</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+        @page { size: 8.5in 11in; margin: 1.0in 1.0in 1.0in 1.0in; }
+        body { font-family: 'Calibri', 'Arial', sans-serif; font-size: 11pt; line-height: 1.5; color: #333; }
+        h1 { color: #2e75b5; font-size: 24pt; border-bottom: 2pt solid #2e75b5; margin-bottom: 15pt; text-align: center; }
+        h2 { color: #2e75b5; font-size: 18pt; border-bottom: 1pt solid #bdc3c7; margin-top: 25pt; margin-bottom: 15pt; }
+        h3 { color: #2e75b5; font-size: 14pt; margin-top: 15pt; font-weight: bold; }
+        p, li { margin-bottom: 8pt; text-align: justify; }
+        table { border-collapse: collapse; width: 100%; margin: 15pt 0; }
+        th, td { border: 1pt solid #dee2e6; padding: 8pt; text-align: left; }
+        th { background-color: #f8f9fa; font-weight: bold; }
+        .highlight { background-color: #fff2cc; border-left: 2pt solid #d4a017; padding: 10pt; }
+        .footer { margin-top: 40pt; font-size: 9pt; color: #7f8c8d; text-align: right; border-top: 0.5pt solid #bdc3c7; padding-top: 10pt; }
+    </style>
+</head>
+<body>
+
+    <h1>Auditoría de Arquitectura: Intersecciones de Biodiversidad (v1.4)</h1>
+    <p style="text-align: center;"><b>Análisis de Integridad de Datos SNAP, Patrimonio Forestal y Zonas Intangibles</b></p>
+
+    <br>
+
+    <h2>1. Resumen de Hallazgos en Funciones de Extracción</h2>
+    <p>Se ha realizado un análisis técnico sobre las funciones <b>sp_coa_bi.sql</b> y <b>sp_rcoa_bi.sql</b>, las cuales son responsables del pre-procesamiento de datos desde el esquema transaccional hacia el consolidado de BI.</p>
+
+    <h3>1.1. Debilidad de Filtrado de Capas</h3>
+    <p>La lógica actual de ambas funciones aplica un filtro restrictivo sobre las tablas de intersección geográfica (<code>suia_iii.intersections_project</code>). Este filtro se limita a capturar exclusivamente la capa <b>SNAP (Laye_ID = 3)</b>.</p>
+
+    <h3>1.2. Inventario de Capas según Servidor de Producción (172.16.0.179)</h3>
+    <table border="1">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th>ID Capa</th>
+                <th>Nombre Descripción</th>
+                <th>Estado en ETL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><b>3</b></td><td>SNAP (Áreas Protegidas)</td><td><b>REPROCESADO</b></td></tr>
+            <tr><td><b>2</b></td><td>Zonas Intangibles</td><td><b>OMITIDO</b></td></tr>
+            <tr><td><b>11</b></td><td>Patrimonio Forestal del Estado</td><td><b>OMITIDO</b></td></tr>
+            <tr><td><b>4</b></td><td>Bosques Protectores</td><td><b>OMITIDO</b></td></tr>
+        </tbody>
+    </table>
+
+    <div class="highlight">
+        <p><b>ALERTA DE SEGURIDAD DE DATOS:</b> Existen aproximadamente <b>113,632 registros de intersección</b> correspondientes a Patrimonio Forestal y Zonas Intangibles que no se están reflejando en el Dashboard actual. Esto representa una brecha crítica en el reporte de cumplimiento ambiental.</p>
+    </div>
+
+    <br>
+
+    <h2>2. Resolución de Arquitectura y Nueva Dimensión</h2>
+    <p>Debido a que un mismo proyecto puede presentar intersecciones múltiples (multi-valued attribute), no es eficiente añadir columnas de texto adicionales. La solución técnica correcta es la implementación de una <b>Dimensión de Capas Ambientales</b>.</p>
+
+    <h3>2.1. Nueva Estructura Propuesta</h3>
+    <ul>
+        <li><b>dw.dim_capa_ambiental:</b> Catálogo normalizado de tipos de intersección.</li>
+        <li><b>dw.bridge_interseccion_ambiental:</b> Tabla de resolución many-to-many que permitirá cuantificar la superficie de intersección por cada tipo de capa para cada proyecto.</li>
+    </ul>
+
+    <br>
+
+    <div class="footer">
+        <p><b>Ingeniería de Arquitectura de Datos:</b> Antigravity AI Engineering</p>
+        <p><b>Fecha del Informe:</b> 10 de Marzo de 2026 | <b>Versión:</b> 1.4</p>
+    </div>
+
+</body>
+</html>

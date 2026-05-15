@@ -1,0 +1,36 @@
+--- Sample from stg.stg_chemical_substance ---
+   chemical_id       substance_name           cas_number classification chemical_type
+0          243                 None                 None  SUSTANCIA_COA      CHEMICAL
+1          256  MAATE-RSQ-2023-0006  MAATE-RSQ-2023-0006  SUSTANCIA_COA      CHEMICAL
+2          274                 None                 None  SUSTANCIA_COA      CHEMICAL
+3          301                 None                 None  SUSTANCIA_COA      CHEMICAL
+4          264                 None                 None  SUSTANCIA_COA      CHEMICAL
+
+
+--- Sample from stg.stg_chemical_sustances_records ---
+   chsr_id   prco_id chsr_identification_rep_legal                chsr_name_rep_legal chsr_substance_registration            chsr_code chsr_valid_since        chsr_valid_until  chsr_status
+0      243       NaN                 0701786881001           QUEZADA VEGA LUIS FELIPE                        None                 None       2023-01-24 2023-12-31 00:00:00.000        False
+1      256  111220.0                    1104524994      SALINAS SALINAS PAUL LEONARDO                        None  MAATE-RSQ-2023-0006       2023-01-24 2023-12-31 00:00:00.000         True
+2      274       NaN                 0703419986001        GAONA ALVAREZ ANGEL VICENTE                        None                 None       2024-03-26 2024-12-31 15:21:02.112        False
+3      301       NaN                    0703039412  MOTOCHE GONZALEZ FRANKLIN ANTONIO                        None                 None       2024-03-06 2024-12-31 08:48:16.172        False
+4      264       NaN                 1101707139001   FIGUEROA ORDOÐEZ VICENTE RODRIGO                        None                 None       2024-02-16 2024-12-31 16:32:15.594        False
+
+
+--- Sample from stg.stg_chemical_substances_declaration ---
+   chsd_id  chsr_id dach_id chsd_operator  chsd_year chsd_unit  chsd_starting_amount chsd_end_quantity chsd_declaration_on_time  chsd_fine_statement geca_id_parameter_ci  chsd_status chsd_status_date      chsd_creation_date chsd_creator_user chsd_date_update chsd_user_update chsd_observation_bd  chsd_month  chsd_declaration_status_geca_id  chsd_pending_payment chsd_procedure_code chsd_date_observation_bd
+0       10       18    None          None       2022      None                   0.0              None                     None                  NaN                 None        False             None 2022-04-08 08:59:53.895     1791840712001             None             None                None           3                            240.0                 False                None                     None
+1       17       18    None          None       2022      None                   NaN              None                     None                  NaN                 None        False             None 2022-04-08 09:10:44.608     1791840712001             None             None                None           8                            240.0                 False                None                     None
+2       18       18    None          None       2022      None                   NaN              None                     None                  NaN                 None        False             None 2022-04-08 09:11:08.919     1791840712001             None             None                None          10                            240.0                 False                None                     None
+3       28       18    None          None       2022      None                   NaN              None                     None                 60.0                 None        False             None 2022-04-08 13:25:01.855     1791840712001             None             None                None           1                            240.0                  True                None                     None
+4       29       18    None          None       2022      None                   NaN              None                     None                 60.0                 None        False             None 2022-04-08 13:25:01.864     1791840712001             None             None                None           2                            240.0                  True                None                     None
+
+
+--- Sample from stg.stg_chemical_substances_movements ---
+   chsm_id  chsd_id  geca_id          chsm_invoice  chsm_operator  chsm_entry  chsm_exit  geca_id_presentation chsm_presentation_option chsm_finished_product  chsm_packaging_quantity chsm_packaging_serial_number  chsm_status chsm_observation_status chsm_review chsm_review_date      chsm_creation_date chsm_creator_user        chsm_date_update chsm_user_update chsm_observation_bd chsm_right chsm_description chsr_id inre_id
+0        1       36      171                  None            NaN         0.0        0.0                   NaN                     None                  None                      NaN                         None         True                    None        None             None 2022-04-11 13:36:26.937     0991134352001 2022-04-11 13:36:29.821    0991134352001                None       None             None    None    None
+1        3       36      171                  None            NaN         0.0        0.0                   NaN                     None                  None                      NaN                         None         True                    None        None             None 2022-04-12 15:03:17.942     0991134352001 2022-04-12 15:03:47.498    0991134352001                None       None             None    None    None
+2       11       38      163  003-002-000068212           16972.0         NaN     2500.0                 174.0                     None                  None                     50.0                   TB50_Corea        False                    None        None             None 2022-05-06 17:59:59.205     0990839557001 2022-05-10 15:20:56.907    0990839557001                None       None       09-0155J-I    None    None
+3       12       38      163  003-002-000068047           16972.0         NaN    10000.0                 174.0                     None                  None                    200.0                   TB50_Corea        False                    None        None             None 2022-05-06 17:59:59.241     0990839557001 2022-05-10 15:20:56.936    0990839557001                None       None       09-0155J-I    None    None
+4       13       38      163  003-002-000083844           16972.0         NaN     5000.0                 174.0                     None                  None                    100.0                   TB50_Corea        False                    None        None             None 2022-05-06 18:00:04.485     0990839557001 2022-05-10 15:20:56.963    0990839557001                None       None       09-0155J-I    None    None
+
+

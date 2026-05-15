@@ -1,0 +1,230 @@
+# Diccionario de Datos Auténtico y Modelo de Relaciones
+
+Al establecer conexiones de bajo nivel con las bases de datos de origen a través de psql, hemos extraído los esquemas reales (DDL de columnas y tipos de datos) que conforman el Data Warehouse y las vistas analizadas.
+
+A continuación, la estructura física comprobable en los servidores.
+
+---
+
+## 1. Servidor: `172.16.0.179:5632` (SUIA ENLISY)
+**Base de Datos:** `suia_enlisy`
+
+### 1.1 Esquema `suia_iii` | Tabla `tmp_coa_bi`
+| Columna | Tipo de Dato |
+| :--- | :--- |
+| `CÓDIGO PROYECTO` | character varying |
+| `NOMBRE PROYECTO` | character varying |
+| `RESUMEN PROYECTO` | text |
+| `DIRECCIÓN PROYECTO` | text |
+| `FECHA REGISTRO` | date |
+| `CÓDIGO ACTIVIDAD` | text |
+| `ACTIVIDAD ECONÓMICA` | text |
+| `CED/RUC PROPONENTE` | character varying |
+| `NOMBRE PROPONENTE` | character varying |
+| `ÁREA RESPONSABLE PROYECTO` | character varying |
+| `TIPO SECTOR` | character varying |
+| `TIPO PERMISO AMBIENTAL` | character varying |
+| `TIPO ENTE` | character varying |
+| `PROVINCIA` | character varying |
+| `CANTON` | character varying |
+| `PARROQUIA` | character varying |
+| `PROCESO` | character varying |
+| `ESTADO PROCESO` | character varying |
+| `FECHA INICIO PROCESO` | date |
+| `FECHA FIN PROCESO` | date |
+| `TAREA` | character varying |
+| `ESTADO TAREA` | character varying |
+| `FECHA INICIO TAREA` | timestamp without time zone |
+| `FECHA FIN TAREA` | timestamp without time zone |
+| `USUARIO TAREA` | character varying |
+| `ESTADO PROYECTO` | character varying |
+| `INTERSECTA CON` | text |
+| `AREAS PROTEGIDAS` | text |
+| `SISTEMA` | character varying |
+| `NOMBRE ZONA` | character varying |
+| `FINALIZADO CON RESOLUCION` | character varying |
+| `NUMERO RESOLUCION` | character varying |
+| `FECHA RESOLUCION` | timestamp without time zone |
+| `OBSERVADO` | character varying |
+| `SUPERFICIE PROYECTO` | double precision |
+| `ID AREA` | integer |
+| `ESTADO TRÁMITE` | character varying |
+| `FECHA_CARGA` | timestamp without time zone |
+| `CODIGO CATEGORIA` | text |
+| `GENERA RESIDUOS` | text |
+| `RESIDUOS PELIGROSOS` | text |
+| `SUSTANCIAS QUIMICA` | text |
+| `TRANSPORTE PRODUCTOS QUIMICOS` | text |
+
+### 1.2 Esquema `coa_mae` | Tabla `tmp_rcoa_bi`
+Contiene la gran mayoría de columnas idénticas a `suia_iii.tmp_coa_bi`, pero con adiciones específicas:
+- `PROYECTO DECLARADO` | text
+- `USA SUSTANCIAS` | text
+- `INTERSECTA` | text
+- `REMOCION` | text
+- `TRANSPORTE` | text
+
+### 1.3 Esquema `public` | Tabla `areas` (v1.1)
+Catalog de oficinas y zonas administrativas.
+| Columna | Tipo de Dato |
+| :--- | :--- |
+| `area_id` | integer |
+| `area_name` | character varying |
+| `area_abbreviation` | character varying |
+| `area_parent_id` | integer |
+| `zone_id` | integer |
+| `area_status` | boolean |
+| `area_campus` | character varying |
+| `gelo_id` | integer | (v1.2) |
+
+### 1.4 Esquema `public` | Tabla `geographical_locations` (v1.2)
+Catálogo de la jerarquía geográfica nacional.
+| Columna | Tipo de Dato |
+| :--- | :--- |
+| `gelo_id` | integer |
+| `gelo_name` | character varying |
+| `gelo_parent_id` | integer |
+| `gelo_codification_inec` | character varying |
+
+### 1.5 Esquema `ref` | Tabla `inec_dpa_2024` (v1.3)
+Catálogo oficial maestro para normalización de provincias.
+| Columna | Tipo de Dato |
+| :--- | :--- |
+| `codigo_provincia` | char(2) |
+| `nombre_provincia` | character varying |
+
+---
+
+## 2. Servidor: `172.16.0.226:5432` (JBPM DB HISTÓRICOS Y ACTUAL)
+
+### 2.1 Base de Datos `jbpmdb_prod_old` | Vista `vm_sector_subsector_bi`
+Destacan los siguientes tipos de datos respecto a sus homólogos transaccionales:
+- `NOMBRE PROYECTO`, `NOMBRE PROPONENTE`, `ÁREA RESPONSABLE PROYECTO`, `TIPO PERMISO AMBIENTAL`, `PROVINCIA`, `ESTADO TRÁMITE` están tipados como **`text`**.
+- Mantiene métricas agregadas como **`max` (bigint)**.
+- `ENTE ACREDITADO` | text
+- `ESTRATÉGICO` | text
+
+### 2.2 Base de Datos `jbpmdb` | Vista `vm_cuatro_categorias_bi`
+- `FECHA INICIO PROCESO` y `FECHA FIN PROCESO` difieren de `suia_enlisy` al ser **`timestamp without time zone`** (en lugar de `date`).
+- Mapea un campo `CATEGORIA` (character varying) y `ESTRATÉGICO` (character varying).
+
+### 2.3 Base de Datos `jbpmdb` | Vista `vwt_hidrocarbonos_bi`
+Maneja nomenclaturas ligeramente distintas (que son alisadas en el `UNION ALL` de la base de datos de BI):
+- `RESUMEN` -> Equivalente a Resumen Proyecto.
+- `CATEGORÍA` -> character varying
+- `CED/RUC EMPRESA` y `NOMBRE EMPRESA` -> Homólogos a Proponente.
+- `ca_categoria` -> character varying
+
+---
+
+## 3. Servidor: `172.16.0.179:5632` (SUIA BPMS ENLISY APP)
+**Base de Datos:** `suia_bpms_enlisy_app` (Motor Transaccional JBPM)
+
+### 3.1 `processinstancelog` (Instancias de Proceso)
+Es la tabla padre del flujo.
+- `processinstanceid` (BIGINT) - PK
+- `processid`, `processname`, `processversion` (character varying)
+- `status` (INTEGER) - 1: En trámite, 2: Completado, 3: Abortado.
+- `start_date`, `end_date` (timestamp without time zone)
+- `user_identity` (character varying)
+
+### 3.2 `variableinstancelog` (Variables del Proceso)
+Almacena la data guardada en código por la instancia de proceso.
+- `id` (BIGINT) - PK
+- `processinstanceid` (BIGINT) - FK
+- `variableid` (character varying) - Nombre clave de variable. Ej. *"snap"*.
+- `value` (character varying) - Valor de la variable.
+- `log_date` (timestamp without time zone)
+
+### 3.3 `bamtasksummary` (Resumen Tareas)
+- `pk` (BIGINT) - PK
+- `taskid` (BIGINT) - FK a la tabla real de task.
+- `processinstanceid` (BIGINT) - FK a Process.
+- `taskname`, `status`, `userid` (character varying)
+- `startdate`, `enddate`, `createddate` (timestamp without time zone)
+- `duration` (BIGINT)
+
+### 3.4 `task` (Especificación Tarea)
+- `id` (BIGINT) - PK (Se cruza con `taskid` referenciado antes).
+- `processinstanceid` (BIGINT)
+- `name`, `status`, `subject`, `description` (character varying)
+- `actualowner_id`, `createdby_id` (character varying)
+- `activationtime`, `createdon` (timestamp without time zone)
+
+### 3.5 `taskevent` (Log Tareas)
+- `id` (BIGINT) - PK
+- `taskid` (BIGINT) - FK a `task`.
+- `type` (character varying) - Tipo de evento (Ej. *'COMPLETED'*).
+- `userid` (character varying) - Funcionario que generó el evento.
+- `logtime` (timestamp without time zone)
+
+---
+
+## 4. Estructura de Relaciones y Data Warehouse (Unificado)
+
+### 4.1 Unión (Transformación de Dimensiones)
+Todas las tablas origen (`tmp_coa_bi`, `tmp_rcoa_bi`, `vm_sector_subsector_bi`, `vm_cuatro_categorias_bi`, `vwt_hidrocarbonos_bi`) alimentan mediante un **`UNION ALL`** a la tabla/vista materializada virtual alojada en BI: `bi_dashboard.vm_unificado_sistemas_bi`.
+
+En este proceso de extracción, bases de datos que no poseen `SUPERFICIE PROYECTO` o `ID AREA` inyectan **`0`**. Columnas como `ESTRATÉGICO`, si no existen, inyectan **`''`**.
+
+### 4.2 Cruce Geográfico y Funcionario
+Una vez consolidado el bloque `UNION ALL` (alias `y`), el Data Warehouse interno resuelve a ODS cruzando con `r_perorga`:
+1.  `LEFT JOIN r_perorga z ON z."CEDULA/RUC"::text = y."USUARIO TAREA"`
+2.  `LEFT JOIN r_perorga w ON y."CED/RUC PROPONENTE" = w."CEDULA/RUC"::text`
+
+### 4.3 Dimensiones de Soporte (v1.1)
+#### Tabla `dw.dim_area`
+| Columna | Descripción |
+| :--- | :--- |
+| `sk_area` | Surrogate Key (PK) |
+| `id_area` | ID Original del SUIA |
+| `nombre_area` | Nombre de la Oficina Técnica / Dirección |
+| `zona` | Zona Administrativa |
+| `campus` | Sede o Campus |
+| `provincia` | Provincia validada contra INEC (v1.3) |
+| `canton` | Cantón resuelto (v1.3) |
+| `parroquia` | Parroquia resuelta (v1.3) |
+
+### 4.4 Consulta de Busqueda Intersecciones y JBPM
+La consulta de BI para obtener las intersecciones (SNAP) de cualquier trámite sigue esta estructura de cruce:
+
+```sql
+SELECT v.value AS codigoProyecto -- Se asume que este valor es el ID Proyecto
+FROM variableinstancelog v
+     LEFT JOIN processinstancelog p ON p.processinstanceid = v.processinstanceid
+     LEFT JOIN bamtasksummary t ON t.processinstanceid = p.processinstanceid
+     LEFT JOIN task ta ON p.processinstanceid = ta.processinstanceid AND ta.id = t.taskid
+WHERE v.variableid IN ('tramite', 'numero_tramite')
+  AND p.status IN (1, 2)
+  AND EXISTS ( -- Valida el SNAP
+      SELECT 1 FROM variableinstancelog snap
+      WHERE snap.processinstanceid = p.processinstanceid
+      AND snap.variableid ILIKE '%snap%'
+  )
+```
+Dicho resultado es luego unificado en la base final a través de un `LEFT JOIN` con el código del proyecto.
+
+### 4.5 Tabla de Hechos: `dw.fact_regularizacion` (Actualizada)
+### 4.4 Tabla de Hechos: `dw.fact_regularizacion` (Actualizada)
+| Columna | Tipo | Nota |
+| :--- | :--- | :--- |
+| `sk_area` | integer | FK a `dim_area` |
+| `interseccion_snap` | **text** | Soportado para descripciones largas (>40k) |
+| `areas_protegidas` | **text** | Soportado para descripciones largas |
+
+### 4.5 Reglas de Negocio de Pagos (Fact Pago)
+
+Para el reporte y análisis de integridad de pagos, se deben aplicar las siguientes reglas sobre la tabla `dw.fact_pago`:
+
+1.  **Filtro de Procesos Reales:** No se debe filtrar estrictamente por `proceso_bpm` no nulo en listados generales para evitar la pérdida de registros históricos o pagos manuales. Sin embargo, se debe priorizar la visualización de este campo si existe.
+2.  **Consolidación de Trámites y Orígenes:** Debido a que un mismo pago puede estar registrado en múltiples fuentes (JBPM y SUIA_RCOA), se debe aplicar una lógica de conciliación:
+    *   **Llave de Conciliación:** Se debe consolidar usando `COALESCE(numero_tramite, numero_transaccion)` y la `fecha_pago`.
+    *   **Agrupación:** Agrupar por la llave de conciliación para asegurar un solo registro por evento de pago real.
+    *   **Métricas:** Utilizar `MAX()` para todos los campos descriptivos y el monto para unificar la visión más completa del trámite (priorizando detalles de SUIA_RCOA para `proceso_bpm` y `tarea_bpm`).
+### 4.6 Reglas de Reportes y Análisis
+Para asegurar la consistencia en los nuevos módulos del dashboard, se aplican las siguientes reglas:
+
+1.  **Conteo de Proyectos (Geográfico):** Se utiliza `COUNT(DISTINCT codigo_proyecto)` sobre la vista `dw.v_dashboard_regularizacion` para evitar sobre-conteo por múltiples tareas o trámites internos.
+2.  **Reporte de Pagos Consolidado:** 
+    - Se cruza `dw.fact_pago` con `dw.dim_proyecto` y `dw.fact_regularizacion` para obtener la oficina técnica y ubicación geográfica actual del proyecto.
+    - Se aplica la misma lógica de **Deduplicación Cross-Origin** (agrupación por trámite y fecha) para que el reporte descargable no duplique montos que aparecen tanto en JBPM como en SUIA_RCOA.

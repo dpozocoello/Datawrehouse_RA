@@ -1,0 +1,19 @@
+--- Sampling coa_chemical_sustances.vw_proyectos_declaracion ---
+Empty DataFrame
+Columns: [prco_id, prco_cua, chsu_id, mach_id, dach_description, dach_type_chemistry_substance, dach_cas_code, prco_project_completion_date, chsr_id, chsr_valid_since, chsr_valid_until, chsd_id, chsd_year, chsd_month, estado_declaraci¾n]
+Index: []
+
+--- Sampling coa_chemical_sustances.vw_registro_sustancia_quimica ---
+   id_row         id_oce  ... cod_subpartida_arancelaria cupo_disponible
+0   36974  0190137643001  ...                 2837.11.10        800000.0
+1   17980  0190137643001  ...                 2837.11.10        800000.0
+2    8921  0190137643001  ...                 2837.11.10        800000.0
+3   11497  0790103092001  ...                 2837.11.10       1500000.0
+4   17653  0991134352001  ...                 2837.11.10       3000000.0
+5   30697  0991134352001  ...                 2837.11.10       3000000.0
+6   30727  0990839557001  ...                 2837.11.10       1269000.0
+7   18793  0990839557001  ...                 2837.11.10       1269000.0
+8    8920  0990839557001  ...                 2837.11.10       1165500.0
+9    7384  1191710688001  ...                 2837.11.10        228000.0
+
+[10 rows x 8 columns]

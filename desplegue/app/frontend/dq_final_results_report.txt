@@ -1,0 +1,23 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.1, pytest-9.0.2, pluggy-1.6.0 -- D:\DashboardRA\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\DashboardRA
+plugins: mock-3.15.1
+collecting ... collected 6 items
+
+QA_Suite/test_dq_pillars.py::test_accuracy_csv_vs_dw PASSED              [ 16%]
+QA_Suite/test_dq_pillars.py::test_accuracy_counts PASSED                 [ 33%]
+QA_Suite/test_dq_pillars.py::test_completeness_mandatory_fields PASSED   [ 50%]
+QA_Suite/test_dq_pillars.py::test_consistency_geography FAILED           [ 66%]
+QA_Suite/test_dq_pillars.py::test_validity_ranges SKIPPED (La tabla ...) [ 83%]
+QA_Suite/test_dq_pillars.py::test_timeliness_last_load PASSED            [100%]
+
+================================== FAILURES ===================================
+_________________________ test_consistency_geography __________________________
+QA_Suite\test_dq_pillars.py:74: in test_consistency_geography
+    assert df['inconsistentes'].iloc[0] == 0, "Existen provincias en DW que no coinciden con el catßlogo INEC Nacional."
+E   AssertionError: Existen provincias en DW que no coinciden con el catßlogo INEC Nacional.
+E   assert np.int64(6) == 0
+=========================== short test summary info ===========================
+FAILED QA_Suite/test_dq_pillars.py::test_consistency_geography - AssertionErr...
+=================== 1 failed, 4 passed, 1 skipped in 56.52s ===================

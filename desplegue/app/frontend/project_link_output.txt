@@ -1,0 +1,12 @@
+--- Linking stg.stg_chemical_sustances_records to dw.dim_proyecto ---
+   chsr_id   prco_id  sk_proyecto       codigo_proyecto
+0        1   36256.0        26115    MAE-RA-2019-436256
+1        1   36256.0        32032  MAATE-RA-2024-536256
+2       19   25962.0        22138    MAE-RA-2015-225962
+3      227  407453.0        47093    MAE-RA-2019-407453
+4        2   36277.0        54238    MAE-RA-2019-436277
+5      161   92069.0         9624    MAE-RA-2018-392069
+6        2   36277.0        55671    MAE-RA-2015-136277
+7       10   52059.0        56670    MAE-RA-2020-352059
+8      152   89072.0        74151     MAE-RA-2014-89072
+9       14   58062.0        82176    MAE-RA-2016-258062

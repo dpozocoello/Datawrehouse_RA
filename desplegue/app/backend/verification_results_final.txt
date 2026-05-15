@@ -1,0 +1,8 @@
+        tabla        | count  
+---------------------+--------
+ fact_pago           |      0
+ fact_regularizacion |      0
+ dim_proyecto        | 293767
+ stg_rcoa            | 421158
+(4 rows)
+

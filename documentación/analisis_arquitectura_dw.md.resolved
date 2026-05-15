@@ -1,0 +1,168 @@
+# Análisis Arquitectónico y Propuesta de Data Warehouse: Regularización Ambiental y SNAP
+
+Como Arquitecto de Datos y Administrador de Base de Datos, he analizado en profundidad la vista materializada [vista_regularizacion.sql](file:///F:/Datawrehouse_RA/vista_regularizacion.sql) y las consultas en [busqueda_intersecciones.sql](file:///F:/Datawrehouse_RA/busqueda_intersecciones.sql). 
+
+A continuación, presento un resumen de los hallazgos críticos de la arquitectura actual (que depende altamente de `dblink`) y el diseño de la nueva arquitectura de Data Warehouse que utiliza **Cadenas de Conexión (ETL/ELT)**, separando adecuadamente el DDL y el DML, y optimizando las relaciones.
+
+---
+
+## 1. Análisis del Estado Actual (Anti-patrones identificados)
+
+### Dependencia Crítica de `dblink`
+La vista materializada `vm_unificado_sistemas_bi` y los scripts de intersecciones utilizan `dblink` directamente en tiempo de consulta o materialización para agrupar datos de múltiples bases de datos transaccionales (OLTP):
+- `172.16.0.179:5632/suia_enlisy` 
+- `172.16.0.226:5432/jbpmdb_prod_old`
+- `172.16.0.226:5432/jbpmdb`
+- `172.16.0.179:5632/suia_bpms_enlisy_app` (BPM)
+
+*Problemas:* 
+- **Rendimiento:** Ejecutar `dblink` durante las vistas es extremadamente lento. Carga la red de forma ineficiente y bloquea transacciones del lado del BI.
+- **Acoplamiento:** El Data Warehouse está estrechamente acoplado con las bases transaccionales, corriendo el riesgo de que si una BD fuente colapsa, el BI también falla.
+- **Consultas al aire (BPM):** En [busqueda_intersecciones.sql](file:///F:/Datawrehouse_RA/busqueda_intersecciones.sql), se hace un `JOIN` con un `dblink` al hilo del BPM (`variableinstancelog`, `bamtasksummary`), lo cual es computacionalmente costoso para un sistema analítico, escaneando variables con formato `ILIKE '%snap%'`.
+
+---
+
+## 2. Nueva Arquitectura Data Warehouse (Sin dblink)
+
+Para eliminar `dblink` basándonos puramente en **cadenas de conexión (Connection Strings)**, debemos implementar un proceso **ETL (Extract, Transform, Load)** o ELT. La arquitectura constará de 3 capas en nuestro motor de BI / Data Warehouse.
+
+### Capa 1: Staging Area (ODS - Operational Data Store)
+A través de herramientas ETL (como Pentaho, Apache Airflow o scripts de Python con `psycopg2`), nos conectamos mediante las cadenas de conexión JDBC/ODBC a las 4 bases de datos fuente en horarios de bajo tráfico (Ej. 3:00 AM). 
+
+**DDL Recomendado (Ejemplo de Tablas Staging):**
+```sql
+CREATE SCHEMA IF NOT EXISTS stg;
+
+-- Tablas tipo TRUNCATE e INSERT diario desde las fuentes:
+CREATE TABLE stg.suia_enlisy_tmp_coa_bi (...);
+CREATE TABLE stg.suia_enlisy_tmp_rcoa_bi (...);
+CREATE TABLE stg.jbpmdb_vm_cuatro_categorias_bi (...);
+CREATE TABLE stg.jbpmdb_vwt_hidrocarbonos_bi (...);
+
+-- Tablas del BPM para cálculo del SNAP:
+CREATE TABLE stg.bpms_variableinstancelog (...);
+CREATE TABLE stg.bpms_bamtasksummary (...);
+CREATE TABLE stg.bpms_processinstancelog (...);
+CREATE TABLE stg.bpms_task (...);
+```
+
+### Capa 2: Modelo Multidimensional (Star Schema)
+Para optimizar los reportes, transformaremos el `UNION ALL` gigantesco en un modelo de **Estrella (Star Schema)**.
+
+#### Tablas de Dimensión (Dimensiones Descriptivas)
+Las dimensiones contendrán llaves subrogadas (SK).
+
+```sql
+CREATE SCHEMA IF NOT EXISTS dw;
+
+CREATE TABLE dw.dim_proponente (
+    sk_proponente SERIAL PRIMARY KEY,
+    cedula_ruc VARCHAR(20) UNIQUE,
+    nombre VARCHAR(500),
+    direccion TEXT,
+    telefono VARCHAR(50),
+    email VARCHAR(200),
+    tipo_organizacion VARCHAR(100)
+);
+
+CREATE TABLE dw.dim_proyecto (
+    sk_proyecto SERIAL PRIMARY KEY,
+    codigo_proyecto VARCHAR(255) UNIQUE,
+    nombre_proyecto TEXT,
+    resumen_proyecto TEXT,
+    direccion_proyecto TEXT,
+    tipo_sector VARCHAR(200),
+    tipo_permiso_ambiental VARCHAR(200),
+    estrategico VARCHAR(100)
+);
+
+CREATE TABLE dw.dim_geografia (
+    sk_geografia SERIAL PRIMARY KEY,
+    provincia VARCHAR(100),
+    canton VARCHAR(100),
+    parroquia VARCHAR(100)
+);
+
+CREATE TABLE dw.dim_actividad (
+    sk_actividad SERIAL PRIMARY KEY,
+    codigo_ciiu VARCHAR(50),
+    actividad_economica TEXT
+);
+
+CREATE TABLE dw.dim_usuario (
+    sk_usuario SERIAL PRIMARY KEY,
+    cedula_ruc VARCHAR(20),
+    nombre TEXT,
+    rol VARCHAR(100)
+);
+
+CREATE TABLE dw.dim_estado_tramite (
+    sk_estado SERIAL PRIMARY KEY,
+    estado_tramite VARCHAR(150),       -- ej: 'FINALIZADO NO FAVORABLE', 'PROCESO FISICO'
+    estado_proyecto VARCHAR(150),
+    estado_proceso VARCHAR(150)
+);
+
+-- Dimensión tiempo estándar (YYYYMMDD)
+CREATE TABLE dw.dim_tiempo (
+    sk_tiempo INT PRIMARY KEY,
+    fecha DATE,
+    anio INT,
+    mes INT,
+    dia_laborable BOOLEAN
+);
+```
+
+#### Tabla de Hechos (Fact Table)
+Aquí almacenaremos las métricas y las "llaves foráneas" a las dimensiones calculadas.
+
+```sql
+CREATE TABLE dw.fact_regularizacion (
+    sk_proponente INT REFERENCES dw.dim_proponente(sk_proponente),
+    sk_proyecto INT REFERENCES dw.dim_proyecto(sk_proyecto),
+    sk_geografia INT REFERENCES dw.dim_geografia(sk_geografia),
+    sk_actividad INT REFERENCES dw.dim_actividad(sk_actividad),
+    sk_usuario_tarea INT REFERENCES dw.dim_usuario(sk_usuario),
+    sk_estado INT REFERENCES dw.dim_estado_tramite(sk_estado),
+    
+    -- Fechas
+    sk_fecha_registro INT REFERENCES dw.dim_tiempo(sk_tiempo),
+    sk_fecha_inicio_proceso INT REFERENCES dw.dim_tiempo(sk_tiempo),
+    sk_fecha_fin_proceso INT REFERENCES dw.dim_tiempo(sk_tiempo),
+    
+    -- Cálculos e Intersecciones
+    interseccion_snap BOOLEAN,        -- Variable lógica ya procesada
+    superficie_proyecto NUMERIC(15,2),
+    dias_transcurridos INT,
+    estudios INT,
+    registros INT
+);
+```
+
+---
+
+## 3. Lógica DML (Transformación sin dblink)
+
+Para generar la información reportada en [busqueda_intersecciones.sql](file:///F:/Datawrehouse_RA/busqueda_intersecciones.sql), se deben ejecutar sentencias DML (INSERT/UPDATE) desde el staging (stg) al Data Warehouse (dw) procesándolo internamente, en lugar de consultar remotamente.
+
+**Cálculo de intersección SNAP en el ETL (Reemplazo del Dblink de `suia_bpms_enlisy_app`):**
+
+```sql
+-- DML para pre-calcular si un proyecto intercepta con el SNAP
+-- Esto se ejecuta para cargar la tabla de hechos o una tabla intermedia
+WITH proyectos_snap AS (
+    SELECT DISTINCT v.value AS codigo_proyecto
+    FROM stg.bpms_variableinstancelog v
+    INNER JOIN stg.bpms_bamtasksummary b ON v.processinstanceid = b.processinstanceid
+    WHERE v.variableid ILIKE '%snap%'
+      AND b.status = 'Completed'
+)
+-- La inserción en el hecho validaría si existe en proyectos_snap
+-- CASE WHEN ps.codigo_proyecto IS NOT NULL THEN TRUE ELSE FALSE END AS interseccion_snap
+...
+```
+
+**Beneficios de esta arquitectura:**
+1. **Seguridad y Trazabilidad:** Al evitar el `dblink`, se previene la inyección y el error por desincronización de credenciales. Todo se maneja por conexiones seguras centralizadas en un software tipo ETL.
+2. **Rendimiento OLAP:** Consultar si un trámite pasa por SNAP demorará milisegundos en la `fact_regularizacion` (gracias a que es un valor `Boolean` precalculado) en lugar de segundos/minutos buscando en el log de variables del BPM remotamente.
+3. **Escalabilidad:** Si cambia la fuente del BPM, no se ropen las vistas del BI, solo se ajusta el job del ETL. Se logran análisis históricos limpios y versionables.

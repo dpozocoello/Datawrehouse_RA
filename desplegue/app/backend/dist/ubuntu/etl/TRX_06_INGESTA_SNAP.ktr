@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>TRX_06_INGESTA_SNAP</name>
+    <description>Extrae variables SNAP del BPM y carga en stg.jbpm_snap_variables</description>
+    <extended_description>Origen: 172.16.0.179:5632/suia_bpms_enlisy_app - Tablas BPM
+Destino: localhost:5632/dw_reg_v1 - stg.jbpm_snap_variables
+Logica: Identifica procesos que tienen variable SNAP activa</extended_description>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+  </info>
+  <notepads>
+    <notepad>
+      <note>TRANSFORMACION 6: Ingesta SNAP (BPM Variables)
+Origen: suia_bpms_enlisy_app @ 172.16.0.179:5632
+Destino: dw_reg_v1 @ localhost / stg.jbpm_snap_variables
+NOTA: Este query filtra solo procesos con variable SNAP activa</note>
+      <xloc>50</xloc><yloc>20</yloc><width>500</width><heigth>70</heigth>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>CONN_SUIA_BPMS</name>
+    <server>172.16.0.179</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>suia_bpms_enlisy_app</database>
+    <port>5632</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>CONN_DWH_LOCAL</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>dw_reg_v1</database>
+    <port>5632</port>
+    <username>postgres</username>
+    <password>postgres</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop><from>Input SNAP Variables</from><to>Output STG SNAP</to><enabled>Y</enabled></hop>
+  </order>
+  <step>
+    <name>Input SNAP Variables</name>
+    <type>TableInput</type>
+    <description>Lee variables SNAP filtradas del motor BPM</description>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_SUIA_BPMS</connection>
+    <sql>SELECT DISTINCT
+  v.value                AS codigo_proyecto,
+  p.processinstanceid    AS processinstanceid,
+  p.processname          AS nombre_proceso,
+  p.status               AS estado_proceso,
+  p.start_date           AS fecha_inicio_proceso,
+  p.end_date             AS fecha_fin_proceso
+FROM variableinstancelog v
+  LEFT JOIN processinstancelog p ON p.processinstanceid = v.processinstanceid
+WHERE v.variableid IN ('tramite', 'numero_tramite')
+  AND p.status IN (1, 2)
+  AND EXISTS (
+      SELECT 1
+      FROM variableinstancelog snap
+      WHERE snap.processinstanceid = p.processinstanceid
+        AND snap.variableid ILIKE '%snap%'
+  )</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <GUI><xloc>150</xloc><yloc>200</yloc><draw>Y</draw></GUI>
+  </step>
+  <step>
+    <name>Output STG SNAP</name>
+    <type>TableOutput</type>
+    <description>Escribe en stg.jbpm_snap_variables</description>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+    <partitioning><type>none</type></partitioning>
+    <connection>CONN_DWH_LOCAL</connection>
+    <schema>stg</schema>
+    <table>jbpm_snap_variables</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <GUI><xloc>500</xloc><yloc>200</yloc><draw>Y</draw></GUI>
+  </step>
+</transformation>

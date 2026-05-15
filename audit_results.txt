@@ -1,0 +1,37 @@
+--- 1. Connection Test ---
+SUCCESS: Connected to 172.16.0.179:5632/suia_enlisy
+
+--- 2. Chemical Metadata Audit ---
+Tables in coa_chemical_sustances:
+              table_schema                         table_name
+0   coa_chemical_sustances           activity_characteristics
+1   coa_chemical_sustances        activity_chemical_sustances
+2   coa_chemical_sustances                     activity_level
+3   coa_chemical_sustances    chemical_substances_declaration
+4   coa_chemical_sustances      chemical_substances_movements
+5   coa_chemical_sustances         chemical_sustances_records
+6   coa_chemical_sustances              detail_import_request
+7   coa_chemical_sustances   documents_coa_chemical_sustances
+8   coa_chemical_sustances   form_comments_chemical_sustances
+9   coa_chemical_sustances                       hire_service
+10  coa_chemical_sustances                     import_request
+11  coa_chemical_sustances                 import_request_ext
+12  coa_chemical_sustances                location_substances
+13  coa_chemical_sustances               permission_statement
+14  coa_chemical_sustances                     reports_trades
+15  coa_chemical_sustances     responsable_chemical_sustances
+16  coa_chemical_sustances                 technical_analysis
+17  coa_chemical_sustances                               temp
+18  coa_chemical_sustances           vw_proyectos_declaracion
+19  coa_chemical_sustances      vw_registro_sustancia_quimica
+20  coa_chemical_sustances  vw_registro_sustancia_quimica_bdd
+
+Mapping Audit (Records -> coa_mae):
+                                 metric  value
+0                         Total Records    535
+1  Orphan Projects (No Link to coa_mae)    513
+
+Declaration Audit (Declarations -> Header):
+                                    metric  value
+0                       Total Declarations   2161
+1  Orphan Declarations (No Link to Header)      0

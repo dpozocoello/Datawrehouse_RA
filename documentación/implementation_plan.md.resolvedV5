@@ -1,0 +1,39 @@
+# Pentaho ETL Synchronization and Integrity Fixes
+
+This plan outlines the updates required in the database stored procedures and DDL files to ensure that the Data Warehouse (DWH) maintains the integrity and performance standards achieved during recent manual validations, especially for the Pentaho-based execution.
+
+## Proposed Changes
+
+The Pentaho jobs ([JOB_CARGA_DWH_REGULARIZACION.kjb](file:///f:/Datawrehouse_RA/Jobs/JOB_CARGA_DWH_REGULARIZACION.kjb)) rely on three key stored procedures. We will update their definitions in the DDL files and the database.
+
+---
+
+### [Component] Database DDL and Stored Procedures
+
+Summary: Update the project and geography ingestion logic and optimize payment replication.
+
+#### [MODIFY] [ddl_dwh_completo.sql](file:///f:/Datawrehouse_RA/ddl_dwh_completo.sql)
+#### [MODIFY] [ddl_modulo_pagos.sql](file:///f:/Datawrehouse_RA/ddl_modulo_pagos.sql)
+
+1.  **`dw.sp_carga_dimensiones`**:
+    *   Add logic to insert `dim_proyecto` from `stg.online_payments_bi` and `stg.financial_transaction_bi` to cover projects that only exist in payment logs.
+    *   Ensure the `AZUAY|CUENCA|CUENCA` (Matriz) geographic record is created.
+2.  **`dw.sp_carga_hechos`**:
+    *   Ensure all projects in `dim_proyecto` have at least one entry in `dw.fact_regularizacion` (using placeholders for missing metadata) to allow proponent-based payment association.
+3.  **`dw.sp_carga_fact_pago`**:
+    *   Replace the current nested join logic with the **Optimized Temporary Table** logic.
+    *   This prevents the "infinite loop" or major slowdown when replicating payments for large proponents (like ETAPA EP).
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Run the Pentaho Job [JOB_CARGA_DWH_REGULARIZACION.kjb](file:///f:/Datawrehouse_RA/Jobs/JOB_CARGA_DWH_REGULARIZACION.kjb) (or its SQL equivalent) and verify:
+  - Completion time is within acceptable limits (should be ~10 mins total).
+  - Row counts in `dw.fact_pago` reach the expected ~1M count.
+  - No timeouts or orphan sessions are left in the database.
+
+### Manual Verification
+- Query `dw.fact_pago` for project `MAE-RA-2016-274922` and verify it has associated payments.
+- Query `dw.fact_regularizacion` for project `MAE-RA-2017-304882` and verify the `sk_geografia` points to `CUENCA|CUENCA`.

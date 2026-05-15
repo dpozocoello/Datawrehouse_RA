@@ -1,0 +1,8 @@
+        tabla        | count 
+---------------------+-------
+ fact_regularizacion |     0
+ fact_pago           |     0
+ dim_proyecto        |     0
+ stg_rcoa            |     0
+(4 rows)
+

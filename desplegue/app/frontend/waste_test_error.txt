@@ -1,0 +1,24 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.1, pytest-9.0.2, pluggy-1.6.0 -- D:\DashboardRA\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\DashboardRA
+plugins: mock-3.15.1
+collecting ... collected 5 items
+
+QA_Suite/test_waste_data.py::test_waste_summary_not_empty PASSED         [ 20%]
+QA_Suite/test_waste_data.py::test_waste_schema PASSED                    [ 40%]
+QA_Suite/test_waste_data.py::test_waste_metrics_integrity FAILED         [ 60%]
+QA_Suite/test_waste_data.py::test_waste_geographic_consistency PASSED    [ 80%]
+QA_Suite/test_waste_data.py::test_waste_fact_vs_dim_integrity PASSED     [100%]
+
+================================== FAILURES ===================================
+________________________ test_waste_metrics_integrity _________________________
+QA_Suite\test_waste_data.py:46: in test_waste_metrics_integrity
+    assert (df['total_generado'] >= 0).all(), "Existen valores negativos en total_generado"
+E   AssertionError: Existen valores negativos en total_generado
+E   assert np.False_
+E    +  where np.False_ = all()
+E    +    where all = 0       NaN\n1       NaN\n2       NaN\n3       NaN\n4       NaN\n       ... \n2107    0.1\n2108    0.1\n2109    0.1\n2110    0.1\n2111    0.1\nName: total_generado, Length: 2112, dtype: float64 >= 0.all
+=========================== short test summary info ===========================
+FAILED QA_Suite/test_waste_data.py::test_waste_metrics_integrity - AssertionE...
+======================== 1 failed, 4 passed in 50.60s =========================

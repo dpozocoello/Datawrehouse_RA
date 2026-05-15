@@ -1,0 +1,7 @@
+### AUDIT COA (suia_iii) ###
+Total Generators in suia_iii: 17495
+Generators with Project link in suia_iii: 6978
+
+### AUDIT RCOA (coa_waste_generator_record) ###
+Total Generators in RCOA: 16059
+Generators with Project link in RCOA: 11942

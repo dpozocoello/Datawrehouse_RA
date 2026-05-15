@@ -1,0 +1,4 @@
+=== MORE RAW DATA CHECK ===
+coa_chemical_sustances.chemical_substances_declaration: 2161
+coa_chemical_sustances.chemical_substances_movements: 14002
+==========================

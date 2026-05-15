@@ -1,0 +1,100 @@
+--- Counting chsr_code in stg.stg_chemical_sustances_records ---
+chsr_code NOT NULL: 7
+chsr_code NULL: 528
+
+--- Sampling stg.stg_chemical_sustances_records ---
+ID: 243 | Code: None | Prco: None
+ID: 256 | Code: MAATE-RSQ-2023-0006 | Prco: 111220.0
+ID: 274 | Code: None | Prco: None
+ID: 301 | Code: None | Prco: None
+ID: 264 | Code: None | Prco: None
+--- Checking for duplicate chsd_id in stg ---
+Duplicate chsd_id found: 0
+
+--- Checking for duplicate chsm_id in stg ---
+Duplicate chsm_id found: 0
+
+--- Checking Geography and Logs ---
+dim_geografia Key 0: 1
+etl_process_log columns:
+  - id (integer)
+  - process_name (character varying)
+  - start_time (timestamp without time zone)
+  - end_time (timestamp without time zone)
+  - status (character varying)
+  - rows_inserted (integer)
+  - rows_updated (integer)
+  - error_message (text)
+  - execution_mode (character varying)
+
+--- Verifying Virtual Projects in dim_proyecto ---
+Virtual Projects (Tier 3): 0
+--- Checking Dimension Indexes ---
+
+--- Verifying Key 0 in Dimensions ---
+dim_proyecto Key 0: 1
+dim_chemical_substance Key 0: 1
+dim_chemical_importer Key 0: 1
+dim_tiempo Key 0: 1
+
+--- Sampling dw.dim_tiempo ---
+SK: 0 | Fecha: 1900-01-01
+SK: 189921 | Fecha: 2005-01-01
+SK: 189922 | Fecha: 2005-01-02
+SK: 189923 | Fecha: 2005-01-03
+SK: 189924 | Fecha: 2005-01-04
+
+--- Checking dw.dim_tiempo range ---
+sk_tiempo Range: 0 to 199416
+
+--- Checking dw.dim_tiempo columns ---
+Column: sk_tiempo | Type: integer
+Column: fecha | Type: date
+Column: anio | Type: integer
+Column: mes | Type: integer
+Column: dia | Type: integer
+Column: trimestre | Type: integer
+Column: nombre_mes | Type: character varying
+Column: dia_semana | Type: character varying
+
+--- Checking dw.fact_chemical_movement constraints ---
+Constraint: fact_chemical_movement_chemical_key_fkey | Def: FOREIGN KEY (chemical_key) REFERENCES dw.dim_chemical_substance(chemical_key)
+Constraint: fact_chemical_movement_importer_key_fkey | Def: FOREIGN KEY (importer_key) REFERENCES dw.dim_chemical_importer(importer_key)
+Constraint: fact_chemical_movement_sk_proyecto_fkey | Def: FOREIGN KEY (sk_proyecto) REFERENCES dw.dim_proyecto(sk_proyecto)
+Constraint: fact_chemical_movement_sk_tiempo_fkey | Def: FOREIGN KEY (sk_tiempo) REFERENCES dw.dim_tiempo(sk_tiempo)
+Constraint: unique_chemical_movement | Def: UNIQUE (sk_proyecto, chemical_key, importer_key, sk_tiempo, invoice_number)
+
+--- Checking dw.fact_chemical_movement triggers ---
+
+--- Checking dw.fact_chemical_import constraints ---
+Constraint: fact_chemical_import_chemical_key_fkey | Def: FOREIGN KEY (chemical_key) REFERENCES dw.dim_chemical_substance(chemical_key)
+Constraint: fact_chemical_import_geo_location_key_fkey | Def: FOREIGN KEY (geo_location_key) REFERENCES dw.dim_geografia(sk_geografia)
+Constraint: fact_chemical_import_importer_key_fkey | Def: FOREIGN KEY (importer_key) REFERENCES dw.dim_chemical_importer(importer_key)
+Constraint: fact_chemical_import_sk_proyecto_fkey | Def: FOREIGN KEY (sk_proyecto) REFERENCES dw.dim_proyecto(sk_proyecto)
+Constraint: fact_chemical_import_sk_tiempo_fkey | Def: FOREIGN KEY (sk_tiempo) REFERENCES dw.dim_tiempo(sk_tiempo)
+Constraint: unique_chemical_import | Def: UNIQUE (sk_proyecto, chemical_key, importer_key, sk_tiempo, document_number)
+
+--- Last 5 ETL Logs ---
+ID: 15 | Process: Waste Chemical ETL | Start: 2026-03-26 12:26:23.050768 | Status: SUCCESS
+ID: 14 | Process: Waste Chemical ETL | Start: 2026-03-26 12:19:22.322380 | Status: SUCCESS
+ID: 11 | Process: Waste Chemical ETL | Start: 2026-03-26 11:47:04.928644 | Status: SUCCESS
+ID: 10 | Process: Waste Chemical ETL | Start: 2026-03-26 11:35:54.592742 | Status: SUCCESS
+ID: 9 | Process: Waste Chemical ETL | Start: 2026-03-26 11:20:53.251617 | Status: SUCCESS
+
+--- Checking dw.dim_proyecto constraints ---
+
+--- Checking dw.dim_proyecto columns ---
+Column: sk_proyecto | Type: integer
+Column: codigo_proyecto | Type: character varying
+Column: nombre_proyecto | Type: text
+Column: resumen_proyecto | Type: text
+Column: direccion_proyecto | Type: text
+Column: tipo_permiso_ambiental | Type: character varying
+Column: tipo_sector | Type: character varying
+Column: tipo_ente | Type: text
+Column: sistema | Type: character varying
+Column: estrategico | Type: text
+Column: area_responsable | Type: text
+
+--- Applying Refactored SP ---
+SP applied successfully.

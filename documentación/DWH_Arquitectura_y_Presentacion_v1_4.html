@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DWH Arquitectura v1.4.1 - Biodiversidad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #1a73e8;
+            border-bottom: 2px solid #1a73e8;
+        }
+
+        h2 {
+            color: #202124;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #1a73e8;
+        }
+
+        pre {
+            background: #f1f3f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .update-box {
+            background: #e8f0fe;
+            border-left: 5px solid #1a73e8;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DWH Arquitectura y Presentación v1.4.1</h1>
+
+    <div class="update-box">
+        <strong>Actualización v1.4.1:</strong> Se ha normalizado el modelo de biodiversidad mediante una solución de
+        Tabla Puente para capturar SNAP, Patrimonio Forestal, Bosques Protectores y Zonas Intangibles.
+    </div>
+
+    <h2>2. Arquitectura de Datos (E-T-L)</h2>
+
+    <h3>Capa 1: Staging (stg)</h3>
+    <p>Captura de 11 fuentes principales. Refactorizado para capturar múltiples capas ambientales.</p>
+
+    <h3>Capa 2: Data Warehouse (dw)</h3>
+    <p>Modelo Estrella con Tabla Puente.</p>
+    <ul>
+        <li><strong>dim_capa_ambiental</strong>: Catálogo de tipos de intersección.</li>
+        <li><strong>bridge_interseccion_ambiental</strong>: Relación N:M entre proyectos y capas.</li>
+    </ul>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="https://mermaid.ink/img/pako:eNptkEELwjAMhf9KyGmD-ge96E0QD8K6h-0S2mptm7SjtY79d-sYOnAHDyHve_mSkKVUKRWhwYfGoC6NqV_K-CHpYV7Y964Zbeea0ZarYfSRXv0ZPT1D9C5_jS_CEnOEFuYV2p_V4B-8Nq6B9a1u9GvUCW3jOsh_1t7mInrVz6In-6R9sk-K8-mBvE9Y0oIDnZ-6YfEDXNScAz6_SpgCH8-PAnR-6pYhD_jSChDwqYV_8AI6N6_A_lcX"
+            alt="Diagrama de Arquitectura">
+    </div>
+
+</body>
+
+</html>

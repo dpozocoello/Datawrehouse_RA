@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Uso DWH y Operación - v2.1</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; }
+        h1, h2, h3 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+        th, td { border: 1px solid #bdc3c7; padding: 10px; text-align: left; }
+        th { background-color: #ecf0f1; }
+        .change-control { background-color: #f9f9f9; padding: 10px; border-left: 5px solid #9b59b6; margin-bottom: 20px; }
+        .code-block { background-color: #2c3e50; color: #ecf0f1; padding: 10px; border-radius: 5px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Manual de Operación, Seguridad y Consumo</h1>
+    
+    <div class="change-control">
+        <h3>Control de Cambios</h3>
+        <table>
+            <tr><th>Fecha</th><th>Versión</th><th>Autor</th><th>Resumen de Cambios</th></tr>
+            <tr><td>13/05/2026</td><td>2.1.0</td><td>Antigravity (Equipo DWH)</td><td>Inclusión de Runbooks para errores de unicidad y pautas de consumo para el Dashboard ECO-SIEAA.</td></tr>
+        </table>
+    </div>
+
+    <h2>1. Seguridad y Accesos (Sección 8)</h2>
+    <p>El esquema <code>dw</code> es de solo lectura (<code>SELECT</code>) para los usuarios de reporting (ej. <code>dashboard_user</code>). Los permisos de <code>INSERT/UPDATE/DELETE</code> están restringidos exclusivamente al usuario de servicio del ETL y al rol de administrador (<code>postgres</code> o equivalente). Los datos confidenciales como RUC de generadores están protegidos mediante vistas de seguridad si es requerido por el nivel de acceso.</p>
+
+    <h2>2. Operación y Monitoreo (Sección 9)</h2>
+    <h3>Runbook: Solución al Error <code>UniqueViolation</code></h3>
+    <p>Si durante la ejecución el log arroja "llave duplicada viola restricción de unicidad", significa que una versión antigua de las restricciones sigue viva. Siga estos pasos:</p>
+    <div class="code-block">
+        1. Ejecutar script de emergencia para forzar la eliminación:<br>
+        python D:\Datawrehouse_RA\scratch\force_cleanup.py<br><br>
+        2. Re-aplicar el Procedimiento Almacenado y DDL:<br>
+        python D:\Datawrehouse_RA\scratch\apply_sql_changes.py<br><br>
+        3. Lanzar nuevamente el Orquestador:<br>
+        python D:\Datawrehouse_RA\run_full_rgd_etl.py
+    </div>
+
+    <h2>3. Consumo y Dashboarding (Sección 10)</h2>
+    <p>El consumo primario se realiza a través del módulo RGD (tab 9) en el Dashboard ECO-SIEAA Analytics. </p>
+    <ul>
+        <li><strong>Navegación Jerárquica:</strong> Las visualizaciones tipo <em>Sunburst</em> o <em>Treemap</em> ahora deben utilizar la ruta: <code>Provincia -> Cantón -> Punto de Generación -> Tipo de Desecho</code> gracias a la nueva <code>dim_punto_generacion</code>.</li>
+        <li><strong>Filtros Temporales:</strong> Todo cruce debe hacerse utilizando la <code>sk_tiempo</code>, filtrando sobre la vista de fechas sincronizada para garantizar que los gráficos interactivos cambien en bloque.</li>
+    </ul>
+
+</body>
+</html>

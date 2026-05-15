@@ -1,0 +1,68 @@
+# Data Warehouse dw_reg_v1 — Implementación Completada
+
+## Resultados de Carga ETL
+
+### Capa Staging (Datos Crudos Extraídos)
+| Tabla STG | Origen | Registros |
+|:---|:---|---:|
+| `stg.suia_rcoa_bi` | `suia_enlisy` / `coa_mae.tmp_rcoa_bi` | **419,839** |
+| `stg.suia_coa_bi` | `suia_enlisy` / `suia_iii.tmp_coa_bi` | **415,544** |
+| `stg.jbpm_4cat_bi` | `jbpmdb` / `vm_cuatro_categorias_bi` | **220,774** |
+| `stg.jbpm_sector_bi` | `jbpmdb_prod_old` / `vm_sector_subsector_bi` | **79,302** |
+| `stg.jbpm_hidro_bi` | `jbpmdb` / `vwt_hidrocarbonos_bi` | **6,787** |
+| `stg.consolidado_proyectos` | UNION ALL de todos los anteriores | **1,142,246** |
+
+### Capa Dimensional (Modelo Estrella)
+| Dimensión | Registros |
+|:---|---:|
+| `dw.dim_proyecto` | **328,197** |
+| `dw.dim_proponente` | **138,039** |
+| `dw.dim_usuario` | **91,437** |
+| `dw.dim_tiempo` | **9,496** |
+| `dw.dim_actividad` | **3,351** |
+| `dw.dim_geografia` | **1,390** |
+| `dw.dim_estado` | **21** |
+
+### Fact Table
+| Tabla | Registros |
+|:---|---:|
+| `dw.fact_regularizacion` | **1,142,246** |
+
+### Distribución por Origen
+| Origen | Total |
+|:---|---:|
+| RCOA | 419,839 |
+| COA | 415,544 |
+| JBPM_4CAT | 220,774 |
+| JBPM_SECTOR | 79,302 |
+| JBPM_HIDRO | 6,787 |
+
+### Top 10 Provincias
+| Provincia | Total |
+|:---|---:|
+| Pichincha | 152,278 |
+| Guayas | 132,520 |
+| Cotopaxi | 90,562 |
+| Manabí | 73,836 |
+| Tungurahua | 65,528 |
+| El Oro | 62,708 |
+| Azuay | 55,287 |
+| Esmeraldas | 43,408 |
+| Los Ríos | 40,474 |
+| Chimborazo | 39,733 |
+
+### Intersecciones SNAP (Muestra)
+| Tipo Intersección | Total |
+|:---|---:|
+| NO | 648,798 |
+| Cobertura y Uso de la Tierra: AREA POBLADA | 54,996 |
+| Cobertura y Uso de la Tierra: MOSAICO AGROPECUARIO | 32,853 |
+| Bosques protectores / Zona de protección | 13,920 |
+| SNAP / Zona de protección SNAP | 9,907 |
+
+## Scripts Generados
+| Archivo | Descripción |
+|:---|:---|
+| [ddl_dwh_completo.sql](file:///F:/Datawrehouse_RA/ddl_dwh_completo.sql) | DDL completo: esquemas, staging, dimensiones, fact table, funciones |
+| [etl_carga_datos.sql](file:///F:/Datawrehouse_RA/etl_carga_datos.sql) | ETL de carga inicial desde los 4 servidores remotos |
+| [etl_fix_final.sql](file:///F:/Datawrehouse_RA/etl_fix_final.sql) | Script de corrección y carga final verificada |

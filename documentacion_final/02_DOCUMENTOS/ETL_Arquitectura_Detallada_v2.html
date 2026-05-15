@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Procesos ETL y Reglas de Negocio - v2.1</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; }
+        h1, h2, h3 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+        th, td { border: 1px solid #bdc3c7; padding: 10px; text-align: left; }
+        th { background-color: #ecf0f1; }
+        .change-control { background-color: #f9f9f9; padding: 10px; border-left: 5px solid #e67e22; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Procesos ETL, Reglas de Negocio y Auditoría</h1>
+    
+    <div class="change-control">
+        <h3>Control de Cambios</h3>
+        <table>
+            <tr><th>Fecha</th><th>Versión</th><th>Autor</th><th>Resumen de Cambios</th></tr>
+            <tr><td>13/05/2026</td><td>2.1.0</td><td>Antigravity (Equipo DWH)</td><td>Inclusión del Módulo Python <code>geo_resolver.py</code> y reglas de cast explícito para evitar <code>DatatypeMismatch</code>.</td></tr>
+        </table>
+    </div>
+
+    <h2>1. Flujos ETL/ELT y Dependencias (Sección 5)</h2>
+    <p>El orquestador principal es <code>run_full_rgd_etl.py</code>. El flujo de trabajo se divide en 3 pasos críticos:</p>
+    <ol>
+        <li><strong>Python Ingestion (Source to STG):</strong> Ejecuta <code>ingesta_waste_chemical.py</code>. Extrae datos crudos de las vistas del sistema transaccional (SUIA/COA). Se añadieron JOINs a <code>public.provinces</code> y <code>public.cantons</code> en la fuente para traer nombres reales.</li>
+        <li><strong>Geo-Resolution (Step 1.5):</strong> Si existen coordenadas pero no hay provincia/cantón, el script <code>geo_resolver.py</code> utiliza un archivo GeoJSON de fronteras administrativas para hacer un <em>Reverse Geocoding (Point-in-Polygon)</em> en memoria y actualiza la tabla de staging.</li>
+        <li><strong>SQL Transformation (STG to DW):</strong> Llama al <code>sp_etl_waste_chemical()</code>. Traslada los datos al Data Warehouse aplicando deduplicación y reglas de negocio.</li>
+    </ol>
+
+    <h2>2. Reglas de Negocio y Transformaciones (Sección 6)</h2>
+    <ul>
+        <li><strong>Deduplicación <code>DISTINCT ON</code>:</strong> El SP utiliza <code>SELECT DISTINCT ON</code> sobre las llaves primarias. Es obligatorio que el bloque <code>ORDER BY</code> coincida posicionalmente con las llaves para evitar el error de base de datos <code>InvalidColumnReference</code>.</li>
+        <li><strong>Casting Explícito:</strong> Todas las métricas numéricas en staging (inferidas como TEXT o FLOAT por Pandas) son forzadas a <code>::numeric</code> o <code>::bigint</code> antes de la inserción.</li>
+        <li><strong>Manejo de Nulos (Fallback):</strong> Cualquier llave foránea que venga nula o no cruce, se asigna al valor por defecto <code>0</code> (Dimensión "N/A" o "Desconocido").</li>
+    </ul>
+
+    <h2>3. Calidad, Auditoría y Trazabilidad (Sección 7)</h2>
+    <p>El sistema cuenta con una tabla de auditoría <code>dw.etl_process_log</code> que registra:</p>
+    <ul>
+        <li>Nombre del proceso y modo de ejecución.</li>
+        <li>Tiempo de inicio, fin y duración.</li>
+        <li>Estado (SUCCESS/FAILED) y el <code>error_message</code> exacto capturado por el orquestador.</li>
+    </ul>
+    <p>Adicionalmente, se recomienda correr el script <code>check_gen_points.py</code> semanalmente para identificar puntos huérfanos geográficamente que necesiten calibración manual en la fuente.</p>
+
+</body>
+</html>

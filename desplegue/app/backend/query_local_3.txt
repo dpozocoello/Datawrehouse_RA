@@ -1,0 +1,2 @@
+--- Distinct Project Codes for RGD 10578 in STG ---
+Result: [('SN-PROY', 40)]

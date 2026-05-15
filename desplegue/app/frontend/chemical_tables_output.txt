@@ -1,0 +1,15 @@
+--- Chemical Related Tables ---
+   table_schema                           table_name
+0            dw                dim_chemical_importer
+1            dw                 dim_chemical_storage
+2            dw               dim_chemical_substance
+3            dw            fact_chemical_application
+4            dw            fact_chemical_declaration
+5            dw                 fact_chemical_import
+6            dw               fact_chemical_movement
+7           stg                 stg_chemical_storage
+8           stg               stg_chemical_substance
+9           stg  stg_chemical_substances_declaration
+10          stg    stg_chemical_substances_movements
+11          stg       stg_chemical_sustances_records
+12          stg        stg_fact_chemical_application

@@ -1,0 +1,16 @@
+
+### COLUMNS FOR suia_iii.hazardous_wastes_waste_dangerous_general_data ###
+                 column_name          data_type
+0                    hwwg_id            integer
+1                hwwg_status            boolean
+2         hwwg_quantity_tons   double precision
+3        hwwg_quantity_units   double precision
+4                    wdca_id            integer
+5                    psty_id            integer
+6  hwwg_waste_category_other  character varying
+
+### SAMPLE DETAIL ROW ###
+{'hwwg_id': 4, 'hwwg_status': True, 'hwwg_quantity_tons': 1.104, 'hwwg_quantity_units': 48.0, 'wdca_id': 37, 'psty_id': 4, 'hwwg_waste_category_other': 'llantas'}
+
+### SAMPLE ROW ###
+{'hwge_id': 22094, 'hwge_status': True, 'hwge_creation_date': Timestamp('2021-11-24 21:10:32.308000'), 'hwge_date_update': Timestamp('2022-10-20 14:12:43.835000'), 'hwge_creator_user': '0992137517001', 'hwge_user_update': '0992137517001', 'hwge_removal_inside': False, 'hwge_extended_responsibility': False, 'wapo_id': None, 'pren_id': None, 'sety_id': 3, 'user_id': 13420, 'hwge_request': 'MAAE-SOL-RGD-2021-24206', 'hwge_code': 'SUIA-09-2022-MAATE-OTAM-DZDCH-00110', 'area_id': 1123, 'waac_id': None, 'docu_id': 21392948, 'hwge_finalized': True, 'hwge_explanatory_answers': None, 'docu_elim_id': None, 'hwge_justifications': None, 'hwge_physical': False, 'hwge_observations': None, 'hwge_delete_reason': None, 'hwge_input_system': None, 'hwge_cube_status': True, 'hwge_date_desactivation': None, 'hwge_linkage': None, 'hwge_id_history': None, 'enaa_id': None}
